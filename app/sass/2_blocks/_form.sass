@@ -1,0 +1,189 @@
+.form
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	padding: 25px 0
+	font-size: .88rem
+	line-height: 1.5
+
+.form > p
+	width: 100%
+	margin-top: 0
+
+.form > ol
+	padding-left: 0
+	margin-top: 0
+	list-style: none
+	counter-reset: item
+
+.form > ol > li::before
+	content: counter(item) '. '
+	counter-increment: item
+	font-weight: 700
+
+.field-groupe
+	outline: none
+	border: none
+	width: 100%
+	padding: 0
+	margin: 0
+	margin-bottom: 20px
+	width: 100%
+
+	&._w-fix-220
+		width: 220px
+
+.field-groupe .groupe-title
+	font-size: 1rem
+	line-height: 1.5
+	margin-bottom: 16px
+
+.form label
+	display: block
+	font-size: .75rem
+	line-height: 1.5
+	margin-bottom: 5px
+
+.tf-wrapper
+	font-size: .75rem
+
+.tf-wrapper > label
+	position: relative
+	display: block
+	font-size: 0
+	line-height: 0
+
+	&::before
+		content: attr(data-content)
+		font-size: .75rem
+		line-height: 1
+		position: absolute
+		top: -2rem
+		transition: 0.2s
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+
+.tf-wrapper > input:not([value=""]) ~ label::before,
+.tf-wrapper > input:focus ~ label::before
+	top: -2.9rem
+
+.chbx-wrapper
+	font-size: .88rem
+	margin-bottom: 5px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-start
+
+	&:last-child
+		margin-bottom: 0
+
+.chbx-wrapper > input[type="checkbox"]
+	display: none
+
+.chbx-wrapper > input[type="checkbox"]:checked ~ label::before
+	background-color: #00cc99
+
+.chbx-wrapper > input[type="checkbox"]:checked ~ label::after
+	content: ""
+	width: 12px
+	height: 9px
+	border-right: 3px solid #fff
+	border-bottom: 1px solid #fff
+	position: absolute
+	top: 5.5px
+	left: 1.5px
+	transform: rotate(45deg) scaleX(.4)
+
+.chbx-wrapper > label
+	padding-left: 35px
+	position: relative
+	font-size: inherit
+	margin-bottom: 0
+	cursor: pointer
+
+	&::before
+		content: ""
+		display: block
+		width: 13px
+		height: 13px
+		border: 1px solid #00cc99
+		border-radius: 2px
+		position: absolute
+		top: 5px
+		left: 0
+
+.text-field
+	width: 100%
+	border: none
+	border-bottom: 1px solid #ccc
+	outline: none
+	padding: 12px 0 8px
+	display: block
+	font-size: .75rem
+	line-height: 1.2
+	margin-bottom: 10px
+	color: #615faf
+	font-weight: 700
+
+.field-notify
+	color: #999
+	font-size: .7rem
+	line-height: .7
+	font-weight: 400
+
+.form .dropzone
+	width: 100%
+	min-height: 50px
+	border: none
+	background-color: #e6e6e6
+	padding: 0
+
+.form .dropzone .dz-message
+	margin-top: 0
+	margin-bottom: 0
+	padding-top: 10px
+
+.form .dropzone .dz-preview .dz-success-mark,
+.form .dropzone .dz-preview .dz-error-mark
+	margin-left: -27px
+	margin-top: -33px
+
+.form .dropzone .dz-preview .dz-details
+	padding-left: 0
+	padding-right: 0
+	padding-top: 0
+	padding-bottom: 0
+	font-size: 10px
+
+.form .dropzone .dz-preview .dz-details .dz-size
+	margin-bottom: .5rem
+	font-size: 10px
+
+.form .dropzone .dz-preview .dz-remove
+	font-size: 10px
+
+.form .dropzone .dz-preview
+	margin: 0
+	margin-right: 10px
+	min-height: 50px
+
+.form .dropzone .dz-preview.dz-image-preview
+	background-color: transparent
+
+.form .dropzone .dz-preview .dz-image
+	width: 60px
+	height: 40px
+	border-radius: 0
+
+.form .dropzone .dz-preview .dz-error-message
+	top: 70px
+	left: -40px

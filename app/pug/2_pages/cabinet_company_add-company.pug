@@ -1,0 +1,142 @@
+extends ../0_base/template
+
+block title
+	title Личный кабинет
+
+block content
+	.wrapper.cabinet
+	
+		h1.page-title.like-h2.
+			Личный кабинет. Гид
+
+		aside.col._1-4.sidebar
+			.add-menu
+				a(href="#").btn._add добавить
+				
+				ul.dropdown
+					li._with-sub-dropdown
+
+						a(href="#") Как добраться
+
+						ul.sub-dropdown
+							li
+								a(href="#") На такси
+							li
+								a(href="#") На автобусе
+							li
+								a(href="#") На попутке
+							li
+								a(href="#") На метро
+
+					li._with-sub-dropdown
+						a(href="#") Где поселиться
+
+						ul.sub-dropdown
+							li
+								a(href="#") Гостиницы
+							li
+								a(href="#") Домашние отели
+							li
+								a(href="#") Квартиры посуточно
+							li
+								a(href="#") Кемпинги
+							li
+								a(href="#") Частный сектор
+							li
+								a(href="#") Мини отели
+							li
+								a(href="#") Мотели
+							li
+								a(href="#") Отели
+							li
+								a(href="#") Хостелы
+
+					li._with-sub-dropdown
+						a(href="#") Где поесть
+
+					li._with-sub-dropdown
+						a(href="#") Что посмотреть
+
+					li._with-sub-dropdown
+						a(href="#") Где отдохнуть
+
+					li._with-sub-dropdown
+						a(href="#") Что купить
+
+					li._with-sub-dropdown
+						a(href="#") Для туристов
+
+			nav.personal-menu
+				ul
+					li
+						a(href="#" style="background-position: 0 0;") Личные данные
+					li
+						a(href="#" style="background-position: 0 -451px;") Службы такси (3)
+					li
+						a(href="#" style="background-position: 0 -451px;") Зоопарки (4)
+					li
+						a(href="#" style="background-position: 0 -451px;") Отели (1)
+					li
+						a(href="#" style="background-position: 0 -451px;") Сувениры (20)
+					li
+						a(href="#" style="background-position: 0 -374px;") Рассылка
+					li
+						a(href="#" style="background-position: 0 -420px;") Оплата
+					li
+						a(href="#" style="background-position: 0 -225px;")._is-blue Настройки
+					li
+						a(href="#" style="background-position: 0 20px;")._is-blue Выйти
+					li
+						a(href="#" style="background-position: 0 20px;")._is-blue Удалить аккаунт
+
+		main.col._3-4.content._bg-white
+			.col._1-4
+				.change-pic._userpic
+					#changeUserPic.dropzone
+					a(href="#") загрузить
+					span.field-notify не больше 3 мб.
+
+			.col._3-4
+				form(action="#" method="post")#add-guide.form
+					fieldset.field-groupe._w-fix-220
+						.tf-wrapper
+							input(type="text" name="full-name" id="full-name" value="").text-field
+							label(for="full-name" data-content="ФИО")
+
+						.tf-wrapper
+							input(type="text" name="phone" id="phone" value="").text-field
+							label(for="phone" data-content="телефон")
+
+						.tf-wrapper
+							input(type="text" name="web-site" id="web-site" value="").text-field
+							label(for="web-site" data-content="веб-сайт")
+
+						.tf-wrapper
+							input(type="email" name="email" id="email" value="").text-field
+							label(for="email" data-content="email")
+
+						.tf-wrapper
+							input(type="text" name="lang" id="lang" value="").text-field
+							label(for="lang" data-content="языки")
+
+						.tf-wrapper
+							input(type="text" name="excursion-lang" id="excursion-lang" value="").text-field
+							label(for="excursion-lang" data-content="язык экскурсий")
+						
+					fieldset.field-groupe
+						label(for="bio") Биография, опыт работы:
+						textarea(name="bio", cols="30", rows="6" id="bio")
+
+					fieldset.field-groupe
+						label Фотографии 8 шт.
+						.dropzone#dzImgsAddGuide
+						span.field-notify.
+							тип файла jpg, jpeg, gif, png не больше 3 Мб
+
+					fieldset.field-groupe
+						label Лицензия гида
+						.dropzone#dzLicenceAddGuide
+						span.field-notify.
+							тип файла jpg, jpeg, gif, png не больше 3 Мб
+
+					button(type="button").btn Сохранить

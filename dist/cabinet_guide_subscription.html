@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Личный кабинет</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css"/>
+  </head>
+  <body>
+    <div class="wrapper cabinet">
+      <h1 class="page-title like-h2">
+        Личный кабинет. Гид
+        
+      </h1>
+      <aside class="col _1-4 sidebar">
+        <div class="add-menu"><a class="btn _add" href="#">добавить</a>
+          <ul class="add-menu-dropdown">
+            <li><a href="#">Карточка Гида</a></li>
+            <li><a href="#">Экскурсия</a></li>
+            <li><a href="#">Рассказ</a></li>
+            <li><a href="#">Фотоальбом</a></li>
+            <li><a href="#">Видеозапись</a></li>
+          </ul>
+        </div>
+        <nav class="personal-menu">
+          <ul>
+            <li><a href="#" style="background-position: 0 0;">Карточка гида</a></li>
+            <li><a href="#" style="background-position: 0 -45px;">Экскурсии (23)</a></li>
+            <li><a href="#" style="background-position: 0 -91px;">Рассказы</a></li>
+            <li><a href="#" style="background-position: 0 -135px;">Фотоальбомы (23)</a></li>
+            <li><a href="#" style="background-position: 0 -180px;">Видеозаписи</a></li>
+            <li><a href="#" style="background-position: 0 -374px;">Рассылка</a></li>
+            <li><a href="#" style="background-position: 0 -420px;">Оплата</a></li>
+            <li><a class="_is-blue _is-active" href="#" style="background-position: 0 -225px;">Настройки</a></li>
+            <li><a class="_is-blue" href="#" style="background-position: 0 20px;">Выйти</a></li>
+            <li><a class="_is-blue" href="#" style="background-position: 0 20px;">Удалить аккаунт</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="col _3-4 content _bg-white _with-pd-l">
+        <div class="col">
+          <form class="form" action="#" method="post">
+            <p>
+              Выберите разделы на рассылку которых вы хотите подписаться:
+              
+            </p>
+            <fieldset class="field-groupe">
+              <legend class="groupe-title">
+                В России
+                
+              </legend>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-1" id="subscribe-ctg-1"/>
+                <label for="subscribe-ctg-1">Видеогиды</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-2" id="subscribe-ctg-2"/>
+                <label for="subscribe-ctg-2">Выставки</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-3" id="subscribe-ctg-3"/>
+                <label for="subscribe-ctg-3">Гиды</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-4" id="subscribe-ctg-4"/>
+                <label for="subscribe-ctg-4">Карты</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-5" id="subscribe-ctg-5"/>
+                <label for="subscribe-ctg-5">Музеи России</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-6" id="subscribe-ctg-6"/>
+                <label for="subscribe-ctg-6">Отели</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-7" id="subscribe-ctg-7"/>
+                <label for="subscribe-ctg-7">Праздники</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-8" id="subscribe-ctg-8"/>
+                <label for="subscribe-ctg-8">Статьи</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-9" id="subscribe-ctg-9"/>
+                <label for="subscribe-ctg-9">Сувениры</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-10" id="subscribe-ctg-10"/>
+                <label for="subscribe-ctg-10">Турфирмы</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-11" id="subscribe-ctg-11"/>
+                <label for="subscribe-ctg-11">Туры</label>
+              </div>
+            </fieldset>
+            <fieldset class="field-groupe">
+              <legend class="groupe-title">
+                За рубежом
+                
+              </legend>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-12" id="subscribe-ctg-12"/>
+                <label for="subscribe-ctg-12">Выставки за рубежом</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-13" id="subscribe-ctg-13"/>
+                <label for="subscribe-ctg-13">Гиды за рубежом</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-14" id="subscribe-ctg-14"/>
+                <label for="subscribe-ctg-14">Карты</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-15" id="subscribe-ctg-15"/>
+                <label for="subscribe-ctg-15">Отдых за рубежом</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-16" id="subscribe-ctg-16"/>
+                <label for="subscribe-ctg-16">Статьи и рассказы за рубежом</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-17" id="subscribe-ctg-17"/>
+                <label for="subscribe-ctg-17">Праздники за рубежом</label>
+              </div>
+              <div class="chbx-wrapper">
+                <input type="checkbox" name="subscribe-ctg-18" id="subscribe-ctg-18"/>
+                <label for="subscribe-ctg-18">Туры за рубежом</label>
+              </div>
+            </fieldset>
+            <button class="btn" type="button">Подписаться на рассылку</button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>

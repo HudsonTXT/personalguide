@@ -1,0 +1,35 @@
+mixin excursionCard()
+	article.card-item&attributes(attributes)
+		.card-tools
+			a(href="#").card-tool._del
+			a(href="#").card-tool._view
+			a(href="#").card-tool._edit
+
+		.img
+			img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+		header
+			.user
+				.user-pic
+					a(href="#")
+						img(src="media/img-p/2.jpg", alt="")
+				a(href="#").user-name.
+					Рита
+
+			.comments._good
+				a(href="#").comments-count.
+					345
+				.comments-icon
+
+		a(href="#").title.
+			Санкт-Петербург Есенина в компании поэта
+
+		p.text.
+			О личностном и творческом 
+			становлении великого поэта на 
+			экскурсии по местам его славы
+
+		footer
+			p.price
+				b 1600 
+				span руб. 
+				span за экскурсию

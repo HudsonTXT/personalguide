@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Личный кабинет</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css"/>
+  </head>
+  <body>
+    <div class="wrapper cabinet">
+      <h1 class="page-title like-h2">
+        Личный кабинет. Гид
+        
+      </h1>
+      <aside class="col _1-4 sidebar">
+        <div class="add-menu"><a class="btn _add" href="#">добавить</a>
+          <ul class="dropdown">
+            <li class="_with-sub-dropdown"><a href="#">Как добраться</a>
+              <ul class="sub-dropdown">
+                <li><a href="#">На такси</a></li>
+                <li><a href="#">На автобусе</a></li>
+                <li><a href="#">На попутке</a></li>
+                <li><a href="#">На метро</a></li>
+              </ul>
+            </li>
+            <li class="_with-sub-dropdown"><a href="#">Где поселиться</a>
+              <ul class="sub-dropdown">
+                <li><a href="#">Гостиницы</a></li>
+                <li><a href="#">Домашние отели</a></li>
+                <li><a href="#">Квартиры посуточно</a></li>
+                <li><a href="#">Кемпинги</a></li>
+                <li><a href="#">Частный сектор</a></li>
+                <li><a href="#">Мини отели</a></li>
+                <li><a href="#">Мотели</a></li>
+                <li><a href="#">Отели</a></li>
+                <li><a href="#">Хостелы</a></li>
+              </ul>
+            </li>
+            <li class="_with-sub-dropdown"><a href="#">Где поесть</a></li>
+            <li class="_with-sub-dropdown"><a href="#">Что посмотреть</a></li>
+            <li class="_with-sub-dropdown"><a href="#">Где отдохнуть</a></li>
+            <li class="_with-sub-dropdown"><a href="#">Что купить</a></li>
+            <li class="_with-sub-dropdown"><a href="#">Для туристов</a></li>
+          </ul>
+        </div>
+        <nav class="personal-menu">
+          <ul>
+            <li><a href="#" style="background-position: 0 0;">Личные данные</a></li>
+            <li><a href="#" style="background-position: 0 -451px;">Службы такси (3)</a></li>
+            <li><a href="#" style="background-position: 0 -451px;">Зоопарки (4)</a></li>
+            <li><a href="#" style="background-position: 0 -451px;">Отели (1)</a></li>
+            <li><a href="#" style="background-position: 0 -451px;">Сувениры (20)</a></li>
+            <li><a href="#" style="background-position: 0 -374px;">Рассылка</a></li>
+            <li><a href="#" style="background-position: 0 -420px;">Оплата</a></li>
+            <li><a class="_is-blue" href="#" style="background-position: 0 -225px;">Настройки</a></li>
+            <li><a class="_is-blue" href="#" style="background-position: 0 20px;">Выйти</a></li>
+            <li><a class="_is-blue" href="#" style="background-position: 0 20px;">Удалить аккаунт</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="col _3-4 content _bg-white">
+        <div class="col _1-4">
+          <div class="change-pic _userpic">
+            <div class="dropzone" id="changeUserPic"></div><a href="#">загрузить</a><span class="field-notify">не больше 3 мб.</span>
+          </div>
+        </div>
+        <div class="col _3-4">
+          <form class="form" action="#" method="post" id="add-guide">
+            <fieldset class="field-groupe _w-fix-220">
+              <div class="tf-wrapper">
+                <input class="text-field" type="text" name="full-name" id="full-name" value=""/>
+                <label for="full-name" data-content="ФИО"></label>
+              </div>
+              <div class="tf-wrapper">
+                <input class="text-field" type="text" name="phone" id="phone" value=""/>
+                <label for="phone" data-content="телефон"></label>
+              </div>
+              <div class="tf-wrapper">
+                <input class="text-field" type="text" name="web-site" id="web-site" value=""/>
+                <label for="web-site" data-content="веб-сайт"></label>
+              </div>
+              <div class="tf-wrapper">
+                <input class="text-field" type="email" name="email" id="email" value=""/>
+                <label for="email" data-content="email"></label>
+              </div>
+              <div class="tf-wrapper">
+                <input class="text-field" type="text" name="lang" id="lang" value=""/>
+                <label for="lang" data-content="языки"></label>
+              </div>
+              <div class="tf-wrapper">
+                <input class="text-field" type="text" name="excursion-lang" id="excursion-lang" value=""/>
+                <label for="excursion-lang" data-content="язык экскурсий"></label>
+              </div>
+            </fieldset>
+            <fieldset class="field-groupe">
+              <label for="bio">Биография, опыт работы:</label>
+              <textarea name="bio" cols="30" rows="6" id="bio"></textarea>
+            </fieldset>
+            <fieldset class="field-groupe">
+              <label>Фотографии 8 шт.</label>
+              <div class="dropzone" id="dzImgsAddGuide"></div><span class="field-notify">
+                тип файла jpg, jpeg, gif, png не больше 3 Мб
+                </span>
+            </fieldset>
+            <fieldset class="field-groupe">
+              <label>Лицензия гида</label>
+              <div class="dropzone" id="dzLicenceAddGuide"></div><span class="field-notify">
+                тип файла jpg, jpeg, gif, png не больше 3 Мб
+                </span>
+            </fieldset>
+            <button class="btn" type="button">Сохранить</button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>
