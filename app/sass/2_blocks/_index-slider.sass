@@ -1,0 +1,113 @@
+.index-slider
+	margin-bottom: 50px
+
+	&:last-child
+		margin-bottom: 0
+
+.index-slider .slider-header
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding-bottom: 13px
+
+.index-slider .category-marker
+	width: 70px
+	height: 80px
+	margin: 0 auto
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	position: relative
+
+	&::before
+		content: ""
+		display: block
+		width: 70px
+		height: 70px
+		border-radius: 100% 100% 0 100%
+		background-color: #00cc99
+		position: absolute
+		top: -2px
+		left: 0
+		transform: rotate(45deg)
+
+
+.index-slider .category-marker img
+	width: initial
+	height: initial
+	z-index: 1
+	margin-top: -12px
+	transform: scale(1.45)
+
+.index-slider .category-title
+
+.index-slider .slider-content
+	padding-top: 20px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-start
+	
+	> .col._1-4
+		width: calc(25% - 10px)
+
+	> .col._3-4
+		width: calc(75% - 10px)
+
+	> .col:first-child
+		margin-right: 20px
+
+.index-slider .slide
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+
+	&._title-slide
+		padding-left: 60px
+		padding-right: 60px
+
+.index-slider .slide-items 
+	> .col._1-3
+		width: calc(33.33% - 13.33px)
+
+	> .col
+		margin-right: 20px
+
+		&:last-child
+			margin-right: 0
+
+.index-slider .slide-items._masonry 
+	> .col._1-3
+		width: calc(33.33% - 10px)
+
+	> .col._2-3
+		width: calc(66.66% - 10px)
+
+	.card-item + .card-item
+		margin-top: 20px
+
+.index-slider .slide .to-all
+	margin-left: auto
+	margin-top: 22px
+
+.index-slider .slide._title-slide .to-all
+	margin: 30px auto
+
+.index-slider .slide._title-slide .section-title
+	padding-top: 20px
+	padding-bottom: 20px
+	margin-bottom: 0

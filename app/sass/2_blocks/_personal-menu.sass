@@ -9,16 +9,15 @@
 
 .personal-menu li
 	margin-bottom: 20px
+	vertical-align: top
 
 	&:last-child
 		margin-bottom: 0
 
-.personal-menu a
+.personal-menu li > .menu-link
 	text-decoration: none
-	padding-left: 28px
-	background: transparent url(../media/img/icons.png) no-repeat
 
-	&:hover
+	&[href]:hover
 		color: #615faf
 
 	&._is-blue
@@ -27,3 +26,6 @@
 	&._is-active
 		font-weight: 700
 		color: #615faf
+
+.personal-menu li > .menu-link > .ic
+	margin-right: 5px

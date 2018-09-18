@@ -1,0 +1,30 @@
+.fotorama__caption__wrap
+	background-color: #fff;
+	background: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0,.8));
+	color: #fff;
+	width: 100%;
+	padding: 70px 20px 20px;
+	max-height: 200px;
+	overflow: hidden;
+
+.fotorama__arr
+	background: none
+	width: 11px
+	height: 19px
+	
+	&::before,
+	&::after
+		content: ""
+		display: block
+		width: 14px
+		height: 1px
+		background-color: #fff
+		position: absolute
+		top: 50%
+		left: 0
+
+	&--prev::before
+		translate: rotate(45deg)
+
+	&--prev::after
+		translate: rotate(-45deg)

@@ -8,14 +8,26 @@ html(lang="ru")
 		link(rel="stylesheet", href="css/styles.css")
 
 		script(src="https://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", crossorigin="anonymous")
-		script(src="https://cloud.tinymce.com/stable/tinymce.min.js")
-		script.
-			tinymce.init({ selector:'textarea' });
+		
 		script(src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js")
 		link(rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css")
 
+		script(src="js/libs/redactor.min.js")
+		link(rel="stylesheet" href="css/libs/redactor.css")
+
+		link(href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet")
+		link(href="css/libs/fotorama-custom.css" rel="stylesheet")
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js")
+
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js")
+
 	body
+		
+		include site-header
 
 		block content
-	
-	script(src="js/script.js")
+
+		include site-footer
+
+		script(src="js/script.js")

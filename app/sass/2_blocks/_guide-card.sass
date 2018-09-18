@@ -1,0 +1,136 @@
+.guide-card
+	width: 100%
+	border-bottom: 1px solid #eeeff4
+	padding: 15px 20px
+
+	&._special
+		background-color: #f4f5fa
+
+	&._col
+		padding: 0
+		border-bottom: none
+
+		.guide-person
+			flex-direction: column
+
+		.guide-pic
+			width: 146px
+			height: 146px
+			margin-right: 0
+			margin-bottom: 15px
+
+		.guide-info
+			text-align: center
+			margin-bottom: 10px
+
+		.social
+			margin-bottom: 10px
+
+		.personal-menu
+			padding-top: 0
+
+.guide-person,
+.guide-excurses,
+.guide-menu
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	flex-direction: row
+
+.guide-person
+	padding-bottom: 15px
+
+.guide-excurses,
+.guide-menu
+	> .col._1-3
+		width: calc(33.33% - 13.33px)
+		margin-right: 20px
+
+		&:last-child
+			margin-right: 0
+
+.guide-pic
+	width: 56px
+	height: 56px
+	margin: 0
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	overflow: hidden
+	border-radius: 50%
+	flex-shrink: 0
+	margin-right: 15px
+
+.guide-info
+	margin-right: auto
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	line-height: 1.3
+
+.guide-name
+	font-size: 1rem
+	font-weight: 700
+	text-decoration: none
+	color: #6563a4
+
+.guide-location
+	font-size: .75rem
+
+.guide-card .social
+	margin-right: 12px
+
+.guide-licence-btn
+	display: block
+	font-size: .813rem
+	line-height: 1
+	text-decoration: none
+	padding: 4.5px 9px 4.5px 27px
+	border: 1px solid #c8c8c8
+	border-radius: 10px
+	background: url(../media/img/icons.png) no-repeat 7px -728px
+
+.guide-card .card-item
+	position: relative
+
+.guide-card .card-item .card-title,
+.guide-card .card-item .card-footer
+	position: absolute
+	left: 15px
+	right: 15px
+
+.guide-card .card-item .card-title
+	top: 15px
+	word-wrap: break-word
+	max-height: 77px
+	overflow: hidden
+
+.guide-card .card-item .card-footer
+	bottom: 15px
+
+.guide-card .card-item .card-img::before
+	content: ""
+	display: block
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background-color: rgba(255, 255, 255, .7)
+
+.guide-card .personal-menu
+	font-size: .8rem
+	padding-top: 15px
+
+.guide-card .personal-menu li
+	margin-bottom: 0

@@ -1,62 +1,15 @@
-extends ../0_base/template
+extends ../0_base/cabinet_like-guide
 
 include ../1_blocks/excursion-card
 
-block title
-	title Личный кабинет
+block main
+	.content-block
+		h2.like-h2.block-title Экскурсии
 
-block content
-	.wrapper.cabinet
-		h1.page-title.like-h2.
-			Личный кабинет. Гид
-
-		aside.col._1-4.sidebar
-			.add-menu
-				a(href="#").btn._add добавить
-
-				ul.add-menu-dropdown
-					li
-						a(href="#") Карточка Гида
-					li
-						a(href="#") Экскурсия
-					li
-						a(href="#") Рассказ
-					li
-						a(href="#") Фотоальбом
-					li
-						a(href="#") Видеозапись
-
-			nav.personal-menu
-				ul
-					li
-						a(href="#" style="background-position: 0 0;") Карточка гида
-					li
-						a(href="#" style="background-position: 0 -45px;")._is-active Экскурсии (23)
-					li
-						a(href="#" style="background-position: 0 -91px;") Рассказы
-					li
-						a(href="#" style="background-position: 0 -135px;") Фотоальбомы (23)
-					li
-						a(href="#" style="background-position: 0 -180px;") Видеозаписи
-					li
-						a(href="#" style="background-position: 0 -374px;") Рассылка
-					li
-						a(href="#" style="background-position: 0 -420px;") Оплата
-					li
-						a(href="#" style="background-position: 0 -225px;")._is-blue Настройки
-					li
-						a(href="#" style="background-position: 0 20px;")._is-blue Выйти
-					li
-						a(href="#" style="background-position: 0 20px;")._is-blue Удалить аккаунт
-
-		main.col._3-4.content
-			h2.like-h1.section-title Экскурсии
-
-			.items-container._max-3
-				+excursionCard._extended
-				+excursionCard._extended
-				+excursionCard._extended
-				+excursionCard._extended
-				+excursionCard._extended
-				+excursionCard._extended
-				+excursionCard._extended
+		.items-grid._3-in-row
+			+excursionCard._editor
+			+excursionCard._editor
+			+excursionCard._editor
+			+excursionCard._editor
+			+excursionCard._editor
+			+excursionCard._editor

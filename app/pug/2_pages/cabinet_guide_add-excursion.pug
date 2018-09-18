@@ -1,82 +1,36 @@
-extends ../0_base/template
+extends ../0_base/cabinet_like-guide
 
-block title
-	title Личный кабинет
-
-block content
-	.wrapper.cabinet
-		h1.page-title.like-h2.
-			Личный кабинет. Гид
-
-		aside.col._1-4.sidebar
-			.add-menu
-				a(href="#").btn._add добавить
-
-				ul.add-menu-dropdown
-					li
-						a(href="#") Карточка Гида
-					li
-						a(href="#") Экскурсия
-					li
-						a(href="#") Рассказ
-					li
-						a(href="#") Фотоальбом
-					li
-						a(href="#") Видеозапись
-
-			nav.personal-menu
-				ul
-					li
-						a(href="#" style="background-position: 0 0;") Карточка гида
-					li
-						a(href="#" style="background-position: 0 -45px;") Экскурсии (23)
-					li
-						a(href="#" style="background-position: 0 -91px;") Рассказы
-					li
-						a(href="#" style="background-position: 0 -135px;") Фотоальбомы (23)
-					li
-						a(href="#" style="background-position: 0 -180px;") Видеозаписи
-					li
-						a(href="#" style="background-position: 0 -374px;") Рассылка
-					li
-						a(href="#" style="background-position: 0 -420px;") Оплата
-					li
-						a(href="#" style="background-position: 0 -225px;")._is-blue Настройки
-					li
-						a(href="#" style="background-position: 0 20px;")._is-blue Выйти
-					li
-						a(href="#" style="background-position: 0 20px;")._is-blue Удалить аккаунт
-
-		main.col._3-4.content._bg-white
+block main
+	.container._white-bg
+		form(action="#" method="post").form
 			.col._1-4
-				.change-pic
+				.change-pic._top-displaced
 					#changeUserPic.dropzone
 					a(href="#") загрузить
 					span.field-notify не больше 3 мб.
 
 			.col._3-4
-				form(action="#" method="post")#add-guide.form
-					fieldset.field-groupe._w-fix-220
-						.tf-wrapper
-							input(type="text" name="excursion-name" id="excursion-name" value="").text-field
-							label(for="excursion-name" data-content="Название экскурсии")
+				fieldset.fields-groupe
+					.tf-wrapper._w-220
+						input(type="text" name="excursion-name" id="excursion-name" value="").text-field
+						label(for="excursion-name" data-content="Название экскурсии")
 
-						.tf-wrapper
-							input(type="text" name="excursion-city" id="excursion-city" value="").text-field
-							label(for="excursion-city" data-content="Город")
+					.tf-wrapper._w-220
+						input(type="text" name="excursion-city" id="excursion-city" value="").text-field
+						label(for="excursion-city" data-content="Город")
 
-						.tf-wrapper
-							input(type="text" name="excursion-price" id="excursion-price" value="").text-field
-							label(for="excursion-price" data-content="Стоимость")
-						
-					fieldset.field-groupe
-						label(for="bio") В прайс включено:
-						textarea(name="bio", cols="30", rows="6" id="bio")
+					.tf-wrapper._w-220
+						input(type="text" name="excursion-price" id="excursion-price" value="").text-field
+						label(for="excursion-price" data-content="Стоимость")
+					
+				fieldset.fields-groupe
+					label(for="bio") В прайс включено:
+					textarea(name="bio", cols="30", rows="6" id="bio").editor
 
-					fieldset.field-groupe
-						label Фотографии 8 шт.
-						.dropzone#dzImgsAddGuide
-						span.field-notify.
-							тип файла jpg, jpeg, gif, png не больше 3 Мб
+				fieldset.fields-groupe
+					label Фотографии 8 шт.
+					.dropzone#dzImgsAddGuide
+					span.field-notify.
+						тип файла jpg, jpeg, gif, png не больше 3 Мб
 
-					button(type="button").btn Сохранить
+				button(type="button").btn Сохранить

@@ -1,0 +1,157 @@
+extends ../0_base/template
+
+block title
+	title Карточка товара
+
+block content
+	main.wrapper
+		.page-header
+			h1.page-title Карточка отеля
+
+			nav.breadcrumbs
+				ul
+					li: a(href="#") Главная
+					li: a(href="#") Рестораны Россия
+					li: a(href="#") Рестораны Екатеринбург
+
+		.columns-grid._2-cols
+			.col._1-4
+				article.card-item
+					.card-img
+						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+					.card-header
+						a(href="#").on-map На карте
+						a(href="#").comments._good 345
+					p.card-text.
+						г. Екатеринбург, <br>
+						ул. Метталургов, д. 6 <br>
+						+7 982 <a href="#" class="link">показать</a><br>
+						<a href="#">www.manilovka-ekb.ru</a>
+
+					.card-footer
+						p.card-price <b>1600</b> руб. средний чек
+				
+				.action-btns
+					a(href="#").btn Оставить отзыв
+					a(href="#").btn._is-blue Отправить сообщение
+
+			.col._3-4
+				.content-block
+					h2.like-h2.block-title О нас
+
+					p.
+						Таврия, место пересечения гастрономических культур, символ веселого деревенского 
+						раздолья, так удачно показанного в "Свадьбе в Малиновке", вызвала к жизни идею 
+						ресторана, где официанты расточают улыбки так же щедро как шеф-повар - смак.
+
+					p.
+						Ресторан рассчитан на друзей и дружеские компании.<br>
+						Цены более чем демократичные. Все зависит от того, что есть да пить. Безалкогольная 
+						трапеза может обойтись и в тысячу рублей, а с возлияниями здесь все зависит от 
+						аппетитов. В общем, "заходите граждане, мы Вас вкусно угостим!"
+
+				.content-block
+					h2.like-h2.block-title Интерьер
+
+					p.
+						В полном соответствии с первоисточником, "Малиновка", как свадебная шкатулка, 
+						наполнена ценностями - театральными и подлинными.
+						Ручеек, как и крынки, туеса, рушники и лапти - все настоящее.
+						Равно как и пулемет "Максим" и действующая русская печь, в которой пекут пироги.
+						Познакомьтесь подробнее с интерьером наших залов:
+
+				.content-block
+					h2.like-h2.block-title Мексиканский зал
+
+					.gallery
+						a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item
+							img(src="media/img-p/excursion-1.jpg", alt="")
+						a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item
+							img(src="media/img-p/excursion-1.jpg", alt="")
+						a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item
+							img(src="media/img-p/excursion-1.jpg", alt="")
+
+				.content-block
+					h2.like-h2.block-title Центральный зал
+
+					.gallery
+						a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item
+							img(src="media/img-p/excursion-1.jpg", alt="")
+				
+				.content-block
+					h2.like-h2.block-title Меню
+
+					p.
+						В меню значатся блюда знакомые, но приготовленные с той особинкой, что отличает 
+						рестораны высокого класса. Вкус привычный, а интонация смещена в сторону Апеннин. 
+						На посол огурчиков идет сорт Меринда, а сало делают по рецепту крохотной 
+						итальянской деревеньки. Тщательно отобранные продукты и новейшие технологии 
+						приводят к появлению на свет кулинарного шедевра.
+					
+					p.
+						Претензии на эксклюзивность вполне оправданы - вареников такого вкуса, как в 
+						"Малиновке" вам ни одна Бабушка не состряпает!
+
+				.content-block
+					h2.like-h2.block-title Оставить отзыв
+					
+					form(action="#" method="post").form._feedback
+						.col._2-3
+							fieldset.fields-groupe
+								.tf-wrapper._w-220
+									input(type="text" name="name" id="name" value="").text-field
+									label(for="name" data-content="Имя")
+								.tf-wrapper._w-220
+									input(type="email" name="email" id="email" value="").text-field
+									label(for="email" data-content="email")
+
+							fieldset.fields-groupe
+								textarea(name="feedback", cols="30", rows="4", placeholder="Оставьте свой отзыв")
+							
+							fieldset.fields-groupe
+								.dropzone#feedbackAttachments
+								span.field-notify.
+									тип файла jpg, jpeg, gif, png не больше 3 Мб
+
+							button(type="submit").btn отправить
+
+				.content-block
+					h2.like-h2.block-title Отзывы
+
+					.feedback-item
+						p.feedback-text.
+							Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
+							эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
+							искромётно стилизовали народные, украсили искрящимися улыбками, светом 
+							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
+						
+						.feedback-attachments
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+
+						.feedback-foo
+							.feedback-author
+								.author-pic
+									img(src="media/img-p/1.jpg", alt="")
+								a(href="#").author-name Катерина
+							time(datetime="21-07-2017") 21.07.2017
+
+					.feedback-item
+						p.feedback-text.
+							Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
+							эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
+							искромётно стилизовали народные, украсили искрящимися улыбками, светом 
+							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
+
+						.feedback-foo
+							.feedback-author
+								.author-pic
+									img(src="media/img-p/1.jpg", alt="")
+								a(href="#").author-name Катерина
+							time(datetime="21-07-2017") 21.07.2017

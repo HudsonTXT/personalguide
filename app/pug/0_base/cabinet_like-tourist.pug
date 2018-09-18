@@ -1,0 +1,44 @@
+extends ../0_base/cabinet-template
+
+block title
+	title Личный кабинет
+
+block content
+	main.wrapper
+		.page-header
+			h1.like-h3.
+				Личный кабинет. Путешественник
+		
+		.columns-grid._cabinet-page
+			.col._1-4
+				aside.sidebar
+					.add-menu
+						a(href="#").btn._add добавить
+						
+						ul.dropdown
+							li
+								a(href="#") Рассказ
+							li
+								a(href="#") Фотоальбом
+
+					nav.personal-menu
+						ul
+							li
+								a(href="#").menu-link <i class="ic _person"></i> Личные данные
+							li
+								a(href="#").menu-link <i class="ic _horn-1"></i> Рассказы
+							li
+								a(href="#").menu-link <i class="ic _book"></i> Фотоальбомы (23)
+							li
+								a(href="#").menu-link <i class="ic _horn-2"></i> Рассылка
+							li
+								a(href="#").menu-link <i class="ic _person"></i> Оплата
+							li
+								a(href="#").menu-link._is-blue <i class="ic _setting"></i> Настройки
+							li
+								a(href="#").menu-link._is-blue <i class="ic _null"></i> Выйти
+							li
+								a(href="#").menu-link._is-blue <i class="ic _null"></i> Удалить аккаунт
+			.col._3-4
+				block main
+			

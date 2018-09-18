@@ -1,84 +1,39 @@
-extends ../0_base/template
+extends ../0_base/cabinet_like-guide
 
-block title
-	title Личный кабинет
-
-block content
-	.wrapper.cabinet
-		h1.page-title.like-h2.
-			Личный кабинет. Гид
-
-		aside.col._1-4.sidebar
-			.add-menu
-				a(href="#").btn._add добавить
-				
-				ul.add-menu-dropdown
-					li
-						a(href="#") Карточка Гида
-					li
-						a(href="#") Экскурсия
-					li
-						a(href="#") Рассказ
-					li
-						a(href="#") Фотоальбом
-					li
-						a(href="#") Видеозапись
-
-			nav.personal-menu
-				ul
-					li
-						a(href="#" style="background-position: 0 0;") Карточка гида
-					li
-						a(href="#" style="background-position: 0 -45px;") Экскурсии (23)
-					li
-						a(href="#" style="background-position: 0 -91px;") Рассказы
-					li
-						a(href="#" style="background-position: 0 -135px;") Фотоальбомы (23)
-					li
-						a(href="#" style="background-position: 0 -180px;") Видеозаписи
-					li
-						a(href="#" style="background-position: 0 -374px;") Рассылка
-					li
-						a(href="#" style="background-position: 0 -420px;") Оплата
-					li
-						a(href="#" style="background-position: 0 -225px;")._is-blue._is-active Настройки
-					li
-						a(href="#" style="background-position: 0 20px;")._is-blue Выйти
-					li
-						a(href="#" style="background-position: 0 20px;")._is-blue Удалить аккаунт
-
-		main.col._3-4.content._bg-white._with-pd-l
+block main
+	.container._white-bg
+		form(action="#" method="post").form._pdg-l70
 			.col
-				form(action="#" method="post").form
-					fieldset.field-groupe._w-fix-220
-						legend.groupe-title.
-							Изменить пароль
+				fieldset.fields-groupe
+					legend.groupe-title.
+						Изменить пароль
 
-						.tf-wrapper
-							input(type="password" name="old-password" id="old-password" value="").text-field
-							label(for="old-password" data-content="Старый пароль")
+					.tf-wrapper._w-220
+						input(type="password" name="old-password" id="old-password" value="").text-field
+						label(for="old-password" data-content="Старый пароль")
 
-						.tf-wrapper
-							input(type="password" name="new-password" id="new-password" value="").text-field
-							label(for="new-password" data-content="Новый пароль")
+					.tf-wrapper._w-220
+						input(type="password" name="new-password" id="new-password" value="").text-field
+						label(for="new-password" data-content="Новый пароль")
 
-						.tf-wrapper
-							input(type="password" name="rpt-new-pasword" id="rpt-new-pasword" value="").text-field
-							label(for="rpt-new-pasword" data-content="Повторите пароль")
+					.tf-wrapper._w-220
+						input(type="password" name="rpt-new-pasword" id="rpt-new-pasword" value="").text-field
+						label(for="rpt-new-pasword" data-content="Повторите пароль")
 
-					button(type="button").btn Изменить
+				button(type="button").btn Изменить
 
-				form(action="#" method="post").form
-					fieldset.field-groupe._w-fix-220
-						legend.groupe-title.
-							Адрес электронной почты
+		form(action="#" method="post").form._pdg-l70
+			.col
+				fieldset.fields-groupe
+					legend.groupe-title.
+						Адрес электронной почты
 
-						.tf-wrapper
-							input(type="text" name="full-name" id="full-name" value="").text-field
-							label(for="full-name" data-content="Текущий адрес")
+					.tf-wrapper._w-220
+						input(type="text" name="full-name" id="full-name" value="").text-field
+						label(for="full-name" data-content="Текущий адрес")
 
-						.tf-wrapper
-							input(type="text" name="phone" id="phone" value="").text-field
-							label(for="phone" data-content="Новый адрес")
+					.tf-wrapper._w-220
+						input(type="text" name="phone" id="phone" value="").text-field
+						label(for="phone" data-content="Новый адрес")
 
-					button(type="button").btn Сохранить адрес
+				button(type="button").btn Сохранить адрес

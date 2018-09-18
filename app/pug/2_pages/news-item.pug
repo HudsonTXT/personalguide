@@ -1,0 +1,146 @@
+extends ../0_base/template
+
+include ../1_blocks/card_news
+
+block title
+	title Новости
+
+block content
+	main.wrapper
+		.page-header
+			nav.breadcrumbs
+				ul
+					li: a(href="#") Главная
+					li: a(href="#") Статьи России
+					li: a(href="#") Что делать, если потерял документы на тур?
+
+		.columns-grid._2-cols
+			.col._1-4
+				+cardNews()
+				+cardNews()
+				+cardNews()
+				+cardNews()
+
+			.col._3-4
+				.content-block
+					.article
+						.article-header
+							img(src="media/img-p/excursion-1.jpg", alt="")
+
+							.article-info
+								span.article-title Что делать, если потерял документы на тур?
+								a(href="#").article-author Екатерина,
+								time(datetime="28-08-2018").article-date 28.08.2018
+								a(href="#").article-comments-link 342 <i class="ic _fdb-grn"></i>
+
+						p.
+							<b>Ваучер.</b> Ваучер понадобится только при заселении в отель. Но и без этого документа 
+							вас без труда проводят в апартаменты, ведь ваши данные уже есть в базе туроператора. 
+							Поэтому достаточно предъявить паспорт, и заказанная и оплаченная услуга будет 
+							предоставлена. Маленький Лайфхак. Сделайте лишнюю копию ваучера и носите его с 
+							собой в поездке вместо паспорта - в нем есть вся необходимая информация, если вдруг 
+							вас по какой-то причине остановит полицейский.
+						p.
+							<b>Трансфер.</b> Трансфер нужен для встречи и сопровождения до места вашего проживания. 
+							Обратившись с паспортом к встречающему сотруднику в аэропорту, вас проводят и 
+							посадят в ожидающий транспорт., ведь все данные уже есть в базе, и вас ждут и встречают.
+
+						.fotorama(data-nav="thumbs", data-width="100%")
+							img(src="media/img-p/excursion-1.jpg", alt="", data-caption="описание изображения описание изображения описание изображения описание изображения описание изображения описание изображения ")
+							img(src="media/img-p/excursion-1.jpg", alt="")
+							img(src="media/img-p/excursion-1.jpg", alt="")
+							img(src="media/img-p/excursion-1.jpg", alt="")
+							img(src="media/img-p/excursion-1.jpg", alt="")
+							img(src="media/img-p/excursion-1.jpg", alt="")
+							img(src="media/img-p/excursion-1.jpg", alt="")
+							img(src="media/img-p/excursion-1.jpg", alt="")
+							img(src="media/img-p/excursion-1.jpg", alt="")
+							img(src="media/img-p/excursion-1.jpg", alt="")
+							img(src="media/img-p/excursion-1.jpg", alt="")
+
+						p.
+							<b>Ваучер.</b> Ваучер понадобится только при заселении в отель. Но и без этого документа 
+							вас без труда проводят в апартаменты, ведь ваши данные уже есть в базе туроператора. 
+							Поэтому достаточно предъявить паспорт, и заказанная и оплаченная услуга будет 
+							предоставлена. Маленький Лайфхак. Сделайте лишнюю копию ваучера и носите его с 
+							собой в поездке вместо паспорта - в нем есть вся необходимая информация, если вдруг 
+							вас по какой-то причине остановит полицейский.
+						p.
+							<b>Трансфер.</b> Трансфер нужен для встречи и сопровождения до места вашего проживания. 
+							Обратившись с паспортом к встречающему сотруднику в аэропорту, вас проводят и 
+							посадят в ожидающий транспорт., ведь все данные уже есть в базе, и вас ждут и встречают.
+				
+				.content-block
+					.items-grid._3-in-row
+						+cardNews()
+						+cardNews()
+						+cardNews()
+						+cardNews()
+						+cardNews()
+						+cardNews()
+
+				.content-block
+					h2.like-h2.block-title Оставить отзыв
+
+					form(action="#" method="post").form._feedback
+						.col._2-3
+							fieldset.fields-groupe
+								.tf-wrapper._w-220
+									input(type="text" name="name" id="name" value="").text-field
+									label(for="name" data-content="Имя")
+								.tf-wrapper._w-220
+									input(type="email" name="email" id="email" value="").text-field
+									label(for="email" data-content="email")
+
+							fieldset.fields-groupe
+								textarea(name="feedback", cols="30", rows="4", placeholder="Оставьте свой отзыв")
+							
+							fieldset.fields-groupe
+								.dropzone#feedbackAttachments
+								span.field-notify.
+									тип файла jpg, jpeg, gif, png не больше 3 Мб
+
+							button(type="submit").btn отправить
+
+				.content-block
+					h2.like-h2.block-title Отзывы
+
+					.feedback-item
+						p.feedback-text.
+							Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
+							эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
+							искромётно стилизовали народные, украсили искрящимися улыбками, светом 
+							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
+						
+						.feedback-attachments
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+
+						.feedback-foo
+							.feedback-author
+								.author-pic
+									img(src="media/img-p/1.jpg", alt="")
+								a(href="#").author-name Катерина
+							time(datetime="21-07-2017") 21.07.2017
+
+					.feedback-item
+						p.feedback-text.
+							Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
+							эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
+							искромётно стилизовали народные, украсили искрящимися улыбками, светом 
+							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
+
+						.feedback-foo
+							.feedback-author
+								.author-pic
+									img(src="media/img-p/1.jpg", alt="")
+								a(href="#").author-name Катерина
+							time(datetime="21-07-2017") 21.07.2017
+ 
+

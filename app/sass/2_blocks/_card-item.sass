@@ -5,31 +5,71 @@
 	display: -o-flex
 	display: flex
 	flex-direction: column
-	min-width: 160px
-	max-width: 240px
 	width: 100%
-	background-color: #fff
-	padding: 10px
-	border-radius: 5px
-	transition: .2s
 	font-size: .813rem
-	line-height: 1.5
+	line-height: 1
 	position: relative
 
-	&:hover
-		box-shadow: 0 0 15px -6px
+	&._editor
+		background-color: #fff
+		border-radius: 5px
+		transition: .2s
+		padding: 10px
 
-	&._extended:hover
+	&._editor:hover
 		margin-top: -20px
+		box-shadow: 0 0 15px -7px
 
-	&:hover .card-tools
+	&._editor:hover .card-tools
 		height: 20px
 		opacity: 1
 		position: relative
 		top: -4px
 
-.card-item .img
+	&._row
+		flex-direction: row
+		
+		.card-content
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			padding-left: 20px
+			flex: 1 1 0
+
+			> *
+				order: 2
+
+			.card-title
+				order: 0
+				padding-top: 0
+				margin-bottom: 10px
+
+			.card-header
+				order: 1
+				padding-top: 0
+				margin-bottom: 10px
+
+		.card-img
+			height: auto
+			min-height: 146px
+			max-height: 300px
+
+		.card-img img
+			min-height: initial
+
+	&._big
+
+		.card-img
+			height: 305px
+			max-width: 100%
+
+.card-item .card-img
 	width: 100%
+	max-width: 220px
+	margin: 0 auto
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -39,26 +79,56 @@
 	align-items: center
 	overflow: hidden
 	height: 146px
+	background-color: #eeeff4
 
-.card-item header,
-.card-item footer
+.card-item .card-img img
+	min-height: 100%
+
+.card-item .card-content
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+
+.card-item .card-header,
+.card-item .card-footer
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
 	display: -o-flex
 	display: flex
 	align-items: center
+	justify-content: space-between
 
-.card-item header
-	margin-bottom: 5px
+.card-item .card-header
 	font-size: .7rem
-	line-height: 1
+	min-height: 26px
+	padding-top: 5px
 
-.card-item header a
+.card-item .card-header a
 	text-decoration: none
 
-.card-item footer
+	&:hover
+		text-decoration: underline
+
+.card-item .card-footer
+	padding-top: 8px
 	margin-top: auto
+
+.card-params
+	list-style: none
+	margin: 0
+	padding: 0
+	padding-top: 5px
+	line-height: 1.3
+
+.card-params > li
+	margin-bottom: 10px
+	
+	&:last-child
+		margin-bottom: 0
 
 .card-item .user
 	display: -webkit-flex
@@ -86,62 +156,55 @@
 	line-height: 0s
 
 .card-item .comments
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
-	align-items: center
-
-.card-item .comments-icon
-	width: 16px
-	height: 10px
-	background-color: #e6e6e6
+	padding-right: 22px
 	position: relative
-	margin-left: 5px
-	border-radius: 1px
+	padding-top: 4.5px
+	padding-bottom: 4.5px
 
 	&::before
 		content: ""
-		display: block
+		width: 20px
+		height: 20px
 		position: absolute
-		top: 2px
-		right: -1px
-		width: 0
-		border: 7px solid transparent
-		border-left-color: #e6e6e6
+		top: 50%
+		margin-top: -10px
+		right: 0
+		background: url(../media/img/icons.png) no-repeat 2px -527px
 
-.card-item .comments._good .comments-icon
-	background-color: #00cc99
+.card-item .on-map
+	padding-left: 25px
+	position: relative
+	padding-top: 4.5px
+	padding-bottom: 4.5px
+
 	&::before
-		border-left-color: #00cc99
+		content: ""
+		width: 20px
+		height: 20px
+		position: absolute
+		top: 50%
+		margin-top: -10px
+		left: 0
+		background: url(../media/img/icons.png) no-repeat 0 -571px
 
-.card-item .comments._bad .comments-icon
-	background-color: #ff0099
-	&::before
-		border-left-color: #ff0099
-
-.card-item .title
+.card-item .card-title
 	font-size: 1rem
-	line-height: 1.5
+	line-height: 1.3
 	color: #615faf
 	font-weight: 700
 	text-decoration: none
-	max-height: 72px
-	overflow: hidden
-	margin-bottom: 5px
+	padding-top: 5px
 
-.card-item .text
+.card-item .card-text
+	padding-top: 5px
 	margin: 0
-	margin-bottom: 8px
-	max-height: 57px
-	overflow: hidden
+	line-height: 1.3
 
-.card-item .price
+.card-item .card-price
 	font-size: .75rem
 	margin: 0
 
-.card-item .price > b
+.card-item .card-price > b
 	font-size: 1.125rem
 	color: #000
 
@@ -169,7 +232,7 @@
 		content: "null"
 		display: block
 		position: absolute
-		top: -35px
+		top: -31px
 		right: -10px
 		background-color: rgba(0, 0, 0, .5)
 		padding: 4px 15px
@@ -181,7 +244,7 @@
 		content: ""
 		display: block
 		position: absolute
-		top: -11px
+		top: -12px
 		right: 4px
 		border: 6px solid transparent
 		border-top-color: rgba(0, 0, 0, .5)

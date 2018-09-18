@@ -1,0 +1,56 @@
+extends ../0_base/template
+
+include ../1_blocks/card_excursion
+include ../1_blocks/card_story
+include ../1_blocks/card_photo
+
+block title
+	title Страница гида
+
+block content
+	main.wrapper
+		.page-header
+			h1.page-title Хусанова Рита Бинсыровна
+
+			nav.breadcrumbs
+				ul
+					li: a(href="#") Главная
+					li: a(href="#") Гиды России
+					li: a(href="#") Гиды Екатеринбурга
+
+		.columns-grid._2-cols
+			.col._1-4
+				.guide-card._col
+					.guide-person
+						.guide-pic
+							img(src="media/img-p/guide-1.jpg", alt="Фото гида")
+
+						.guide-info
+							span.guide-location.
+								Свердловская область, Екатеринбург,
+								Челябинск, Миасс, Златоуст
+
+						.social
+							a(href="#").item._wa
+							a(href="#").item._vi
+							a(href="#").item._tg
+							a(href="#").item._ins
+
+						a(href="#").guide-licence-btn.
+							Лицензия гида
+
+					nav.personal-menu
+						ul
+							li: a.menu-link <i class="ic _phone"></i> +7 982 <a href="#" class="link">показать</a>
+							li: a(href="#").menu-link <i class="ic _horn-1"></i> Экскурсии (24)
+							li: a(href="#").menu-link <i class="ic _book"></i> Рассказы (2)
+							li: a(href="#").menu-link <i class="ic _cam"></i> Фотоальбомы (4)
+							li: a(href="#").menu-link <i class="ic _vid"></i> Видеозаписи (24)
+							li: a(href="#").menu-link <i class="ic _fdb-grn"></i> Отзывы (32)
+				
+				.action-btns
+					a(href="#").btn Оставить отзыв
+					a(href="#").btn._is-blue Отправить сообщение
+
+			.col._3-4
+				block page-content

@@ -1,0 +1,147 @@
+extends ../0_base/guide-page
+
+block page-content
+	.content-block
+		h2.like-h2.block-title Биография, опыт работы:
+
+		p.
+			Добрый день, уважаемые гости города Екатеринбурга!<br>
+			Последние 18 лет моя основная профессия - экскурсовод.<br>
+			Образование: Уральский госуниверситет им. Горького,<br>
+			Российская международная академия туризма.<br>
+			Мое кредо: каждый гость - это VIP!<br>
+			Буду рада каждой встрече!<br>
+			Контакты: мой сайт <a href="#">www.rndv.3dn.ru</a>
+
+	.content-block
+		h2.like-h2.block-title Описание:
+
+		p.
+			Предлагаю для гостей и жителей Екатеринбурга стандартные, обзорные и тематические экскурсии, а также собственные авторские маршруты. Все программы аттестованы ... имею аккредитацию гида 1-й категории.
+			Могу составить экскурсионный маршрут для любой категории туристов и для любого возраста по Екатеринбургу и Уралу.<br>
+			Основные маршруты:<br>
+			Екатеринбург - столица Урала<br>
+			Вечерний Екатеринбург<br>
+			Екатеринбург - город семи чудес<br>
+			Город которого нет<br>
+			На границу Европы и Азии<br>
+			Романовы на Урале (Ганина Яма)<br>
+			советский Свердловск<br>
+			Опорный край державы<br>
+			Город Ельцина<br>
+			Екатеринбург театральный<br>
+			Екатеринбург литературный<br>
+			Родина Российского золота (Березовский)<br>
+			Тайны наклонной башни (Невьянск)<br>
+			Колокольная столица Урала (Каменск Уральский)<br>
+			Усадьба Чайковских в Алапаевске<br>
+			Подвиг разведчика (Талица-Зырянка - родина Николая Кузнецова) и др.
+
+		p.
+			По вашему желанию можно заказать пешеходные экскурсии, на легковом автомобиле (мой стаж вождения 12 лет), а также автобус для любого количества экскурсантов.
+
+	.content-block
+		h2.like-h2.block-title Экскурсии
+
+		.items-grid._3-in-row
+			+cardExcurs()
+			+cardExcurs()
+			+cardExcurs()
+			+cardExcurs()
+			+cardExcurs()
+			+cardExcurs()
+	
+	.content-block
+		h2.like-h2.block-title Рассказы
+
+		.items-grid._3-in-row
+			+cardExcurs()
+			+cardExcurs()
+			+cardExcurs()
+
+	.content-block
+		h2.like-h2.block-title Фотоальбомы
+
+		.gallery
+			.gallery-item: +cardStory()._big
+			.gallery-item: +cardPhoto()
+			.gallery-item: +cardPhoto()
+			.gallery-item: +cardPhoto()
+			.gallery-item: +cardStory()._big
+			.gallery-item: +cardPhoto()
+			.gallery-item: +cardPhoto()
+			.gallery-item: +cardPhoto()
+			.gallery-item: +cardPhoto()
+	
+	.content-block
+		h2.like-h2.block-title Видеозаписи
+
+		.items-grid._3-in-row
+			+cardExcurs()
+			+cardExcurs()
+			+cardExcurs()
+
+	.content-block
+		h2.like-h2.block-title Оставить отзыв
+		
+		.col._2-3
+			form(action="#" method="post").form._feedback
+				.col
+					fieldset.fields-groupe
+						.tf-wrapper._w-220
+							input(type="text" name="name" id="name" value="").text-field
+							label(for="name" data-content="Имя")
+						.tf-wrapper._w-220
+							input(type="email" name="email" id="email" value="").text-field
+							label(for="email" data-content="email")
+
+					fieldset.fields-groupe
+						textarea(name="feedback", cols="30", rows="4", placeholder="Оставьте свой отзыв")
+					
+					fieldset.fields-groupe
+						.dropzone#feedbackAttachments
+						span.field-notify.
+							тип файла jpg, jpeg, gif, png не больше 3 Мб
+
+					a(href="#").btn отправить
+
+	.content-block
+		h2.like-h2.block-title Отзывы
+
+		.feedback-item
+			p.feedback-text.
+				Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
+				эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
+				искромётно стилизовали народные, украсили искрящимися улыбками, светом 
+				счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
+			
+			.feedback-attachments
+				a(href="#").feedback-img
+					img(src="media/img-p/excursion-1.jpg", alt="")
+				a(href="#").feedback-img
+					img(src="media/img-p/excursion-1.jpg", alt="")
+				a(href="#").feedback-img
+					img(src="media/img-p/excursion-1.jpg", alt="")
+				a(href="#").feedback-img
+					img(src="media/img-p/excursion-1.jpg", alt="")
+
+			.feedback-foo
+				.feedback-author
+					.author-pic
+						img(src="media/img-p/1.jpg", alt="")
+					a(href="#").author-name Катерина
+				time(datetime="21-07-2017") 21.07.2017
+
+		.feedback-item
+			p.feedback-text.
+				Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
+				эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
+				искромётно стилизовали народные, украсили искрящимися улыбками, светом 
+				счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
+
+			.feedback-foo
+				.feedback-author
+					.author-pic
+						img(src="media/img-p/1.jpg", alt="")
+					a(href="#").author-name Катерина
+				time(datetime="21-07-2017") 21.07.2017

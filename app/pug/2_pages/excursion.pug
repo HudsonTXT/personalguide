@@ -1,0 +1,125 @@
+extends ../0_base/template
+
+block title
+	title Карточка экскурсии
+
+block content
+	main.wrapper
+		.page-header
+			h1.page-title Все главные достопримечательности
+
+			nav.breadcrumbs
+				ul
+					li: a(href="#") Главная
+					li: a(href="#") Экскурсии России
+					li: a(href="#") Экскурсии Екатеринбург
+
+		.columns-grid._2-cols
+			.col._1-4
+				article.card-item
+					.card-img
+						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+					.card-header
+						.user
+							.user-pic
+								a(href="#"): img(src="media/img-p/2.jpg", alt="")
+							a(href="#").user-name.
+								Рита
+
+						a(href="#").comments._good 345
+
+					.card-footer
+						p.card-price <b>1600</b> руб. за экскурсию
+				
+				.action-btns
+					a(href="#").btn._is-bordered Заказать экскурсию
+					a(href="#").btn Оставить отзыв
+					a(href="#").btn._is-blue Отправить сообщение
+
+			.col._3-4
+				.content-block
+					h2.like-h2.block-title Описание
+
+					p.
+						Приглашаем жителей и гостей нашего города на обзорную экскурсию.<br>
+						Обзорные экскурсии по Екатеринбургу — быстрый способ познакомиться с городом, 
+						если вы ограничены во времени — приехали по делам, на обучение, навестить 
+						родственников или просто оказались здесь проездом.Во время экскурсии вы 
+						познакомитесь с историей возникновения и развития Екатеринбурга, крупнейшего 
+						города на Урале, индустриального, административного и культурного центра 
+						Свердловской области. Побываете на месте рождения города-завода — плотине, 
+						перекрывшей реку Исеть и ласково называемой горожанами — Плотинка и в 
+						Историческом сквере. Увидите памятник основателям города.  Приглашаем жителей и 
+						гостей нашего города на обзорную экскурсию.
+
+					.gallery
+						a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item
+							img(src="media/img-p/excursion-1.jpg", alt="")
+						a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item
+							img(src="media/img-p/excursion-1.jpg", alt="")
+						a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item
+							img(src="media/img-p/excursion-1.jpg", alt="")
+
+				.content-block
+					h2.like-h2.block-title Оставить отзыв
+					
+					form(action="#" method="post").form._feedback
+						.col._2-3
+							fieldset.fields-groupe
+								.tf-wrapper._w-220
+									input(type="text" name="name" id="name" value="").text-field
+									label(for="name" data-content="Имя")
+								.tf-wrapper._w-220
+									input(type="email" name="email" id="email" value="").text-field
+									label(for="email" data-content="email")
+
+							fieldset.fields-groupe
+								textarea(name="feedback", cols="30", rows="4", placeholder="Оставьте свой отзыв")
+							
+							fieldset.fields-groupe
+								.dropzone#feedbackAttachments
+								span.field-notify.
+									тип файла jpg, jpeg, gif, png не больше 3 Мб
+
+							button(type="submit").btn отправить
+
+				.content-block
+					h2.like-h2.block-title Отзывы
+
+					.feedback-item
+						p.feedback-text.
+							Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
+							эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
+							искромётно стилизовали народные, украсили искрящимися улыбками, светом 
+							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
+						
+						.feedback-attachments
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+
+						.feedback-foo
+							.feedback-author
+								.author-pic
+									img(src="media/img-p/1.jpg", alt="")
+								a(href="#").author-name Катерина
+							time(datetime="21-07-2017") 21.07.2017
+
+					.feedback-item
+						p.feedback-text.
+							Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
+							эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
+							искромётно стилизовали народные, украсили искрящимися улыбками, светом 
+							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
+
+						.feedback-foo
+							.feedback-author
+								.author-pic
+									img(src="media/img-p/1.jpg", alt="")
+								a(href="#").author-name Катерина
+							time(datetime="21-07-2017") 21.07.2017

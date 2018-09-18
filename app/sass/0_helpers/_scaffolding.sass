@@ -7,7 +7,6 @@ body
 	font-size: 16px
 	line-height: 24px
 	color: #666
-	background-color: #f7f7f7
 
 img
 	width: 100%
@@ -21,39 +20,53 @@ img
 a
 	color: inherit
 
+p
+	margin: 15px 0
+
 p._text-center
 	text-align: center
 
-.container
-	max-width: 1024px
-	margin: 0 auto
-	padding-left: 30px
-	padding-right: 30px
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
+ol
+	padding-left: 0
+	margin-top: 0
+	list-style: none
+	counter-reset: item
 
-.page-title
-	font-weight: 400
-	width: 100%
-	padding: 0 10px
-	margin-bottom: 18px
+ol > li::before
+	content: counter(item) '. '
+	counter-increment: item
+	font-weight: 700
+
+.link
+	color: #615faf
+	font-size: .875rem
+	line-height: 1
+	text-decoration: underline
 
 .section-title
 	font-weight: 400
 	width: 100%
 	text-align: center
-	margin: 0
-	margin-bottom: 38px
+	margin: 0 auto
 
 // TITLES
 
+.like-h1,
+.like-h2,
+.like-h3,
+.like-h4,
+.like-h5,
+.like-h6
+	font-weight: 400
+	margin: 0
+	margin-bottom: 20px
+	padding: 0
+
 .like-h1
-	font-size: 1.5rem
-	line-height: 1
+	font-size: 1.88rem
 
 .like-h2
+	font-size: 1.5rem
+
+.like-h3
 	font-size: 1.13rem
-	line-height: 1

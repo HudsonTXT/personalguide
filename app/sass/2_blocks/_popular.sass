@@ -1,0 +1,55 @@
+.popular-items
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.popular-item
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: calc(16.6% - 16.66px)
+	margin-right: 20px
+	
+	&:last-child
+		margin-right: 0
+
+.popular-item .img
+	width: 82px
+	height: 82px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	overflow: hidden
+	border-radius: 50%
+	margin-bottom: 10px
+
+.popular-item .img img
+	min-height: 100%
+
+.popular-item .title
+	font-size: .86rem
+	line-height: 1.1
+	color: #615faf
+	font-weight: 700
+	text-decoration: none
+	text-align: center
+	word-wrap: break-word
+	word-break: break-all
+
+.popular-item .link
+	text-decoration: none
+	color: inherit
+	font-size: .813rem
+	text-align: center
+	margin: 10px auto 0

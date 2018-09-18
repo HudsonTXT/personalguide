@@ -1,0 +1,28 @@
+extends ../0_base/template
+
+include ../1_blocks/card_story
+
+block title
+	title Новости
+
+block content
+	main.wrapper
+		.page-header
+			h1.page-title._grey._center Статьи
+
+		.columns-grid._2-cols
+			.col._1-4
+				.ads
+				.ads
+
+			.col._3-4
+				.items-grid._3-in-row
+					+cardStory()
+					+cardStory()
+					+cardStory()
+					+cardStory()
+					+cardStory()
+					+cardStory()
+					+cardStory()
+					+cardStory()
+					+cardStory()

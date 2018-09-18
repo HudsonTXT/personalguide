@@ -1,0 +1,111 @@
+extends ../0_base/template
+
+block title
+	title Карточка экскурсии
+
+block content
+	main.wrapper
+		.page-header
+			h1.page-title Пепельница "Лапоть"
+
+			nav.breadcrumbs
+				ul
+					li: a(href="#") Главная
+					li: a(href="#") Сувениры
+					li: a(href="#") Сувениры Россия
+					li: a(href="#") Сувениры Екатеринбург
+
+		.columns-grid._2-cols
+			.col._1-4
+				article.card-item
+					.card-img
+						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+
+					.card-header
+						span Свердловская область, Екатеринбург
+
+					ul.card-params
+						li
+							b Материал:<br>
+							span Чугун
+						li
+							b Размер:<br>
+							span 100х7х2 см
+						li
+							b Вес:<br>
+							span 100 гр
+				
+				.action-btns
+					a(href="#").btn Купить
+
+			.col._3-4
+				.content-block
+					h2.like-h2.block-title Описание
+
+					p.
+						Пепельница "Лапоть". Фаянс, глазурь. СССР (?), середина XX века. Размер 6 х 11,5 х 2,2 см. 
+						Сохранность очень хорошая.
+
+				.content-block
+					h2.like-h2.block-title Оставить отзыв
+					
+					form(action="#" method="post").form._feedback
+						.col._2-3
+							fieldset.fields-groupe
+								.tf-wrapper._w-220
+									input(type="text" name="name" id="name" value="").text-field
+									label(for="name" data-content="Имя")
+								.tf-wrapper._w-220
+									input(type="email" name="email" id="email" value="").text-field
+									label(for="email" data-content="email")
+
+							fieldset.fields-groupe
+								textarea(name="feedback", cols="30", rows="4", placeholder="Оставьте свой отзыв")
+							
+							fieldset.fields-groupe
+								.dropzone#feedbackAttachments
+								span.field-notify.
+									тип файла jpg, jpeg, gif, png не больше 3 Мб
+
+							button(type="submit").btn отправить
+
+				.content-block
+					h2.like-h2.block-title Отзывы
+
+					.feedback-item
+						p.feedback-text.
+							Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
+							эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
+							искромётно стилизовали народные, украсили искрящимися улыбками, светом 
+							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
+						
+						.feedback-attachments
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+								img(src="media/img-p/excursion-1.jpg", alt="")
+
+						.feedback-foo
+							.feedback-author
+								.author-pic
+									img(src="media/img-p/1.jpg", alt="")
+								a(href="#").author-name Катерина
+							time(datetime="21-07-2017") 21.07.2017
+
+					.feedback-item
+						p.feedback-text.
+							Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
+							эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
+							искромётно стилизовали народные, украсили искрящимися улыбками, светом 
+							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
+
+						.feedback-foo
+							.feedback-author
+								.author-pic
+									img(src="media/img-p/1.jpg", alt="")
+								a(href="#").author-name Катерина
+							time(datetime="21-07-2017") 21.07.2017

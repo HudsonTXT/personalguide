@@ -1,6 +1,6 @@
 .change-pic
 	width: 100%
-	margin-top: -28px
+	max-width: 146px
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -12,6 +12,9 @@
 	border: none
 	background-color: transparent
 
+	&._top-displaced
+		margin-top: -45px
+
 .change-pic .dropzone
 	padding: 0
 	border: 0
@@ -21,7 +24,16 @@
 	min-height: 0
 
 .change-pic .dropzone.dz-clickable .dz-message
-	margin-top: 25px
+	margin-top: 10px
+
+.change-pic .dropzone.dz-clickable .dz-message > span
+	font-size: 0
+	line-height: 0
+
+	&::before
+		content: "Перетащите файлы или кликните, что бы загрузить"
+		font-size: .7rem
+		line-height: 1.5
 
 .change-pic .dropzone .dz-preview,
 .change-pic .dropzone .dz-preview .dz-image
@@ -50,4 +62,4 @@
 	height: 140px
 
 .change-pic._userpic .dropzone.dz-clickable .dz-message
-	margin-top: 50px
+	margin-top: 40px

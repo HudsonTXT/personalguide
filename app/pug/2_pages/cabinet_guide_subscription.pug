@@ -1,120 +1,74 @@
-extends ../0_base/template
+extends ../0_base/cabinet_like-guide
 
-block title
-	title Личный кабинет
-
-block content
-	.wrapper.cabinet
-		h1.page-title.like-h2.
-			Личный кабинет. Гид
-
-		aside.col._1-4.sidebar
-			.add-menu
-				a(href="#").btn._add добавить
-				
-				ul.add-menu-dropdown
-					li
-						a(href="#") Карточка Гида
-					li
-						a(href="#") Экскурсия
-					li
-						a(href="#") Рассказ
-					li
-						a(href="#") Фотоальбом
-					li
-						a(href="#") Видеозапись
-
-			nav.personal-menu
-				ul
-					li
-						a(href="#" style="background-position: 0 0;") Карточка гида
-					li
-						a(href="#" style="background-position: 0 -45px;") Экскурсии (23)
-					li
-						a(href="#" style="background-position: 0 -91px;") Рассказы
-					li
-						a(href="#" style="background-position: 0 -135px;") Фотоальбомы (23)
-					li
-						a(href="#" style="background-position: 0 -180px;") Видеозаписи
-					li
-						a(href="#" style="background-position: 0 -374px;") Рассылка
-					li
-						a(href="#" style="background-position: 0 -420px;") Оплата
-					li
-						a(href="#" style="background-position: 0 -225px;")._is-blue._is-active Настройки
-					li
-						a(href="#" style="background-position: 0 20px;")._is-blue Выйти
-					li
-						a(href="#" style="background-position: 0 20px;")._is-blue Удалить аккаунт
-
-		main.col._3-4.content._bg-white._with-pd-l
+block main
+	.container._white-bg
+		form(action="#" method="post").form._pdg-l70
 			.col
-				form(action="#" method="post").form
-					p.
-						Выберите разделы на рассылку которых вы хотите подписаться:
+				p.
+					Выберите разделы на рассылку которых вы хотите подписаться:
 
-					fieldset.field-groupe
-						legend.groupe-title.
-							В России
+				fieldset.fields-groupe
+					legend.groupe-title.
+						В России
 
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-1" id="subscribe-ctg-1")
-							label(for="subscribe-ctg-1") Видеогиды
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-2" id="subscribe-ctg-2")
-							label(for="subscribe-ctg-2") Выставки
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-3" id="subscribe-ctg-3")
-							label(for="subscribe-ctg-3") Гиды
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-4" id="subscribe-ctg-4")
-							label(for="subscribe-ctg-4") Карты
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-5" id="subscribe-ctg-5")
-							label(for="subscribe-ctg-5") Музеи России
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-6" id="subscribe-ctg-6")
-							label(for="subscribe-ctg-6") Отели
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-7" id="subscribe-ctg-7")
-							label(for="subscribe-ctg-7") Праздники
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-8" id="subscribe-ctg-8")
-							label(for="subscribe-ctg-8") Статьи
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-9" id="subscribe-ctg-9")
-							label(for="subscribe-ctg-9") Сувениры
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-10" id="subscribe-ctg-10")
-							label(for="subscribe-ctg-10") Турфирмы
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-11" id="subscribe-ctg-11")
-							label(for="subscribe-ctg-11") Туры
-					
-					fieldset.field-groupe
-						legend.groupe-title.
-							За рубежом
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-1" id="subscribe-ctg-1")
+						label(for="subscribe-ctg-1") Видеогиды
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-2" id="subscribe-ctg-2")
+						label(for="subscribe-ctg-2") Выставки
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-3" id="subscribe-ctg-3")
+						label(for="subscribe-ctg-3") Гиды
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-4" id="subscribe-ctg-4")
+						label(for="subscribe-ctg-4") Карты
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-5" id="subscribe-ctg-5")
+						label(for="subscribe-ctg-5") Музеи России
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-6" id="subscribe-ctg-6")
+						label(for="subscribe-ctg-6") Отели
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-7" id="subscribe-ctg-7")
+						label(for="subscribe-ctg-7") Праздники
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-8" id="subscribe-ctg-8")
+						label(for="subscribe-ctg-8") Статьи
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-9" id="subscribe-ctg-9")
+						label(for="subscribe-ctg-9") Сувениры
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-10" id="subscribe-ctg-10")
+						label(for="subscribe-ctg-10") Турфирмы
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-11" id="subscribe-ctg-11")
+						label(for="subscribe-ctg-11") Туры
+				
+				fieldset.fields-groupe
+					legend.groupe-title.
+						За рубежом
 
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-12" id="subscribe-ctg-12")
-							label(for="subscribe-ctg-12") Выставки за рубежом
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-13" id="subscribe-ctg-13")
-							label(for="subscribe-ctg-13") Гиды за рубежом
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-14" id="subscribe-ctg-14")
-							label(for="subscribe-ctg-14") Карты
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-15" id="subscribe-ctg-15")
-							label(for="subscribe-ctg-15") Отдых за рубежом
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-16" id="subscribe-ctg-16")
-							label(for="subscribe-ctg-16") Статьи и рассказы за рубежом
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-17" id="subscribe-ctg-17")
-							label(for="subscribe-ctg-17") Праздники за рубежом
-						.chbx-wrapper
-							input(type="checkbox" name="subscribe-ctg-18" id="subscribe-ctg-18")
-							label(for="subscribe-ctg-18") Туры за рубежом
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-12" id="subscribe-ctg-12")
+						label(for="subscribe-ctg-12") Выставки за рубежом
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-13" id="subscribe-ctg-13")
+						label(for="subscribe-ctg-13") Гиды за рубежом
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-14" id="subscribe-ctg-14")
+						label(for="subscribe-ctg-14") Карты
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-15" id="subscribe-ctg-15")
+						label(for="subscribe-ctg-15") Отдых за рубежом
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-16" id="subscribe-ctg-16")
+						label(for="subscribe-ctg-16") Статьи и рассказы за рубежом
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-17" id="subscribe-ctg-17")
+						label(for="subscribe-ctg-17") Праздники за рубежом
+					.chbx-wrapper
+						input(type="checkbox" name="subscribe-ctg-18" id="subscribe-ctg-18")
+						label(for="subscribe-ctg-18") Туры за рубежом
 
-					button(type="button").btn Подписаться на рассылку
+				button(type="button").btn Подписаться на рассылку

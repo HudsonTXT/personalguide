@@ -1,0 +1,33 @@
+.breadcrumbs ul
+	padding: 0
+	margin: 0
+	list-style: none
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.breadcrumbs li
+	margin-right: 12px
+	position: relative
+	color: #999999
+	font-size: .75rem
+	line-height: 1
+
+	&::before
+		content: "/"
+		position: absolute
+		right: -9px
+	
+	&:last-child
+		margin-right: 0
+
+	&:last-child::before
+		display: none
+
+.breadcrumbs a
+	text-decoration: none
+
+	&:hover
+	 	text-decoration: underline

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Все гиды</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css"/>
+    <script src="js/libs/redactor.min.js"></script>
+    <link rel="stylesheet" href="css/libs/redactor.css"/>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"/>
+    <link href="css/libs/fotorama-custom.css" rel="stylesheet"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script>
+  </head>
+  <body>
+    <header class="site-header _full">
+      <div class="full-content"><a class="btn _city-choise" href="#"><i class="ic _world"></i>Страны и города</a>
+        <form class="search-form _in-header" action="#" method="get">
+          <input class="serach-field" type="text" name="search-request" placeholder="Куда отправитесь?"/>
+          <button class="search-submit" type="submit"><img src="media/img/search-icon.png" alt=""/></button>
+        </form>
+        <div class="user-block"><a class="user-pic js-open-user-menu" href="#"><img src="media/img-p/1.jpg" alt=""/></a>
+          <div class="user-menu-popup js-user-menu-popup">
+            <ul class="user-menu-list">
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Мой профиль</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Настройки</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Выйти</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <nav class="site-nav">
+        <div class="nav-wrapper"><a class="choice-city-btn _is-hide js-down-anim" href="#"><img src="media/img/logo-icon.png" alt=""/></a>
+          <ul class="nav-list">
+            <li class="nav-item _is-active"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-7.png" alt="" width="21" height="18"/></a><a class="nav-link" href="#">О месте</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-1.png" alt="" width="21" height="22"/></a><a class="nav-link" href="#">Для Туристов</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-2.png" alt="" width="18" height="16"/></a><a class="nav-link" href="#">Где поселиться</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-3.png" alt="" width="16" height="26"/></a><a class="nav-link" href="#">Где поесть</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-4.png" alt="" width="21" height="17"/></a><a class="nav-link" href="#">Что посмотреть</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-5.png" alt="" width="23" height="23"/></a><a class="nav-link" href="#">Где отдохнуть</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-6.png" alt="" width="24" height="21"/></a><a class="nav-link" href="#">Что купить</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-8.png" alt="" width="25" height="12"/></a><a class="nav-link" href="#">Как добраться</a></li>
+          </ul><a class="search-btn _is-hide js-down-anim" href="#"><img src="media/img/search-icon.png" alt=""/></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="row _grey">
+        <div class="wrapper">
+          <div class="tabs js-tabs"><a class="item _is-active" href="#all_guides">Гиды</a><a class="item" href="#all_excurs">Экскурсии</a><a class="item" href="#all_photos">Фото</a><a class="item" href="#">Видео</a><a class="item" href="#">Веб-камеры</a></div>
+        </div>
+      </div>
+      <div class="wrapper" id="all_guides">
+        <div class="content-block">
+          <h2 class="like-h2 block-title">Самые популярные гиды</h2>
+          <div class="popular-items">
+            <div class="popular-item">
+              <div class="img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="title" href="#">Иванов Иван Иванович</a><a class="link" href="#">
+                Экскурсии (24)
+                </a>
+            </div>
+            <div class="popular-item">
+              <div class="img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="title" href="#">Иванов Иван Иванович</a><a class="link" href="#">
+                Экскурсии (24)
+                </a>
+            </div>
+            <div class="popular-item">
+              <div class="img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="title" href="#">Иванов Иван Иванович</a><a class="link" href="#">
+                Экскурсии (24)
+                </a>
+            </div>
+            <div class="popular-item">
+              <div class="img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="title" href="#">Иванов Иван Иванович</a><a class="link" href="#">
+                Экскурсии (24)
+                </a>
+            </div>
+            <div class="popular-item">
+              <div class="img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="title" href="#">Иванов Иван Иванович</a><a class="link" href="#">
+                Экскурсии (24)
+                </a>
+            </div>
+            <div class="popular-item">
+              <div class="img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="title" href="#">Иванов Иван Иванович</a><a class="link" href="#">
+                Экскурсии (24)
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="ads _728x92"></div>
+        </div>
+        <div class="content-block">
+          <h2 class="like-h2 block-title">Гиды и экскурсоводы Екатеринбурга</h2>
+          <div class="columns-grid _2-cols">
+            <div class="col _1-4">
+              <div class="ads"></div>
+              <div class="ads"></div>
+            </div>
+            <div class="col _3-4">
+              <div class="guide-card _special">
+                <div class="guide-person">
+                  <div class="guide-pic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div>
+                  <div class="guide-info"><a class="guide-name" href="#">Вербер Регина Фанисовна</a><span class="guide-location">
+                      Свердловская область, Екатеринбург
+                      </span></div>
+                  <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div><a class="guide-licence-btn" href="#">
+                    Лицензия гида
+                    </a>
+                </div>
+                <div class="guide-excurses">
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="guide-menu">
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link"><i class="ic _phone"></i> +7 982 <a href="#" class="link">показать</a></a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _link"></i> www.prostor-gid.ru</a></li>
+                        <li><a class="menu-link"><i class="ic _lang"></i> Язык экскурсий: Русский</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="guide-card">
+                <div class="guide-person">
+                  <div class="guide-pic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div>
+                  <div class="guide-info"><a class="guide-name" href="#">Вербер Регина Фанисовна</a><span class="guide-location">
+                      Свердловская область, Екатеринбург
+                      </span></div>
+                  <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div><a class="guide-licence-btn" href="#">
+                    Лицензия гида
+                    </a>
+                </div>
+                <div class="guide-excurses">
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="guide-menu">
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link"><i class="ic _phone"></i> +7 982 <a href="#" class="link">показать</a></a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _link"></i> www.prostor-gid.ru</a></li>
+                        <li><a class="menu-link"><i class="ic _lang"></i> Язык экскурсий: Русский</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="guide-card">
+                <div class="guide-person">
+                  <div class="guide-pic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div>
+                  <div class="guide-info"><a class="guide-name" href="#">Вербер Регина Фанисовна</a><span class="guide-location">
+                      Свердловская область, Екатеринбург
+                      </span></div>
+                  <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div><a class="guide-licence-btn" href="#">
+                    Лицензия гида
+                    </a>
+                </div>
+                <div class="guide-excurses">
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="guide-menu">
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link"><i class="ic _phone"></i> +7 982 <a href="#" class="link">показать</a></a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _link"></i> www.prostor-gid.ru</a></li>
+                        <li><a class="menu-link"><i class="ic _lang"></i> Язык экскурсий: Русский</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="guide-card">
+                <div class="guide-person">
+                  <div class="guide-pic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div>
+                  <div class="guide-info"><a class="guide-name" href="#">Вербер Регина Фанисовна</a><span class="guide-location">
+                      Свердловская область, Екатеринбург
+                      </span></div>
+                  <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div><a class="guide-licence-btn" href="#">
+                    Лицензия гида
+                    </a>
+                </div>
+                <div class="guide-excurses">
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="guide-menu">
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link"><i class="ic _phone"></i> +7 982 <a href="#" class="link">показать</a></a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _link"></i> www.prostor-gid.ru</a></li>
+                        <li><a class="menu-link"><i class="ic _lang"></i> Язык экскурсий: Русский</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="guide-card">
+                <div class="guide-person">
+                  <div class="guide-pic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div>
+                  <div class="guide-info"><a class="guide-name" href="#">Вербер Регина Фанисовна</a><span class="guide-location">
+                      Свердловская область, Екатеринбург
+                      </span></div>
+                  <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div><a class="guide-licence-btn" href="#">
+                    Лицензия гида
+                    </a>
+                </div>
+                <div class="guide-excurses">
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col _1-3">
+                    <div class="card-item">
+                      <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
+                      <div class="card-footer">
+                        <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="guide-menu">
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link"><i class="ic _phone"></i> +7 982 <a href="#" class="link">показать</a></a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _link"></i> www.prostor-gid.ru</a></li>
+                        <li><a class="menu-link"><i class="ic _lang"></i> Язык экскурсий: Русский</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="col _1-3">
+                    <nav class="personal-menu">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="pagination _pdg-vert40"><a class="item _is-active" href="#">1</a><a class="item" href="#">2</a><a class="item" href="#">3</a><a class="item" href="#">4</a><a class="item" href="#">...</a><a class="item" href="#">8</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper _pdg-both-60" id="all_excurs">
+        <div class="content-block">
+          <h2 class="like-h2 block-title">Самые популярные экскурсии</h2>
+          <div class="popular-items">
+            <div class="popular-item">
+              <div class="img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div><a class="title" href="#">
+                Все главные достопримечательности
+                </a>
+            </div>
+            <div class="popular-item">
+              <div class="img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div><a class="title" href="#">
+                Все главные достопримечательности
+                </a>
+            </div>
+            <div class="popular-item">
+              <div class="img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div><a class="title" href="#">
+                Все главные достопримечательности
+                </a>
+            </div>
+            <div class="popular-item">
+              <div class="img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div><a class="title" href="#">
+                Все главные достопримечательности
+                </a>
+            </div>
+            <div class="popular-item">
+              <div class="img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div><a class="title" href="#">
+                Все главные достопримечательности
+                </a>
+            </div>
+            <div class="popular-item">
+              <div class="img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div><a class="title" href="#">
+                Все главные достопримечательности
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="items-grid _1-in-row">
+          <article class="card-item _row">
+            <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="user">
+                  <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
+                </div><a class="comments _good" href="#">345</a>
+              </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+              <p class="card-text">
+                О личностном и творческом 
+                становлении великого поэта на 
+                экскурсии по местам его славы
+              </p>
+              <div class="card-footer">
+                <p class="card-price"><b>1600 </b><span>руб. </span><span>за экскурсию</span></p><a class="link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="card-item _row">
+            <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="user">
+                  <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
+                </div><a class="comments _good" href="#">345</a>
+              </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+              <p class="card-text">
+                О личностном и творческом 
+                становлении великого поэта на 
+                экскурсии по местам его славы
+              </p>
+              <div class="card-footer">
+                <p class="card-price"><b>1600 </b><span>руб. </span><span>за экскурсию</span></p><a class="link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="card-item _row">
+            <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="user">
+                  <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
+                </div><a class="comments _good" href="#">345</a>
+              </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+              <p class="card-text">
+                О личностном и творческом 
+                становлении великого поэта на 
+                экскурсии по местам его славы
+              </p>
+              <div class="card-footer">
+                <p class="card-price"><b>1600 </b><span>руб. </span><span>за экскурсию</span></p><a class="link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="card-item _row">
+            <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="user">
+                  <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
+                </div><a class="comments _good" href="#">345</a>
+              </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+              <p class="card-text">
+                О личностном и творческом 
+                становлении великого поэта на 
+                экскурсии по местам его славы
+              </p>
+              <div class="card-footer">
+                <p class="card-price"><b>1600 </b><span>руб. </span><span>за экскурсию</span></p><a class="link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="card-item _row">
+            <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="user">
+                  <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
+                </div><a class="comments _good" href="#">345</a>
+              </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+              <p class="card-text">
+                О личностном и творческом 
+                становлении великого поэта на 
+                экскурсии по местам его славы
+              </p>
+              <div class="card-footer">
+                <p class="card-price"><b>1600 </b><span>руб. </span><span>за экскурсию</span></p><a class="link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="card-item _row">
+            <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+            <div class="card-content">
+              <div class="card-header">
+                <div class="user">
+                  <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
+                </div><a class="comments _good" href="#">345</a>
+              </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+              <p class="card-text">
+                О личностном и творческом 
+                становлении великого поэта на 
+                экскурсии по местам его славы
+              </p>
+              <div class="card-footer">
+                <p class="card-price"><b>1600 </b><span>руб. </span><span>за экскурсию</span></p><a class="link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="wrapper" id="all_photos">
+        <div class="content-block">
+          <h2 class="like-h2 block-title">Все фотоальбомы</h2>
+          <div class="columns-grid _2-cols">
+            <div class="col _1-4">
+              <div class="ads"></div>
+            </div>
+            <div class="col _3-4">
+              <div class="gallery">
+                <div class="gallery-item">
+                  <div class="card-item _big">
+                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                    <div class="card-header">
+                      <div class="user">
+                        <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">
+                          Рита
+                          </a>
+                      </div><a class="comments _good" href="#">345</a>
+                    </div><a class="card-title" href="#">Санкт-Петербург</a>
+                    <p class="card-text">
+                      О личностном и творческом становлении великого поэта на 
+                      экскурсии по местам его славы. О личностном и творческом 
+                      становлении великого поэта на экскурсии по местам его славы.
+                      
+                    </p>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <div class="card-item">
+                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                    <div class="card-header">
+                      <div class="user">
+                        <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">
+                          Рита
+                          </a>
+                      </div><a class="comments _good" href="#">345</a>
+                    </div><a class="card-title" href="#">
+                      Санкт-Петербург
+                      </a>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <div class="card-item">
+                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                    <div class="card-header">
+                      <div class="user">
+                        <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">
+                          Рита
+                          </a>
+                      </div><a class="comments _good" href="#">345</a>
+                    </div><a class="card-title" href="#">
+                      Санкт-Петербург
+                      </a>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <div class="card-item">
+                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                    <div class="card-header">
+                      <div class="user">
+                        <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">
+                          Рита
+                          </a>
+                      </div><a class="comments _good" href="#">345</a>
+                    </div><a class="card-title" href="#">
+                      Санкт-Петербург
+                      </a>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <div class="card-item _big">
+                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                    <div class="card-header">
+                      <div class="user">
+                        <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">
+                          Рита
+                          </a>
+                      </div><a class="comments _good" href="#">345</a>
+                    </div><a class="card-title" href="#">Санкт-Петербург</a>
+                    <p class="card-text">
+                      О личностном и творческом становлении великого поэта на 
+                      экскурсии по местам его славы. О личностном и творческом 
+                      становлении великого поэта на экскурсии по местам его славы.
+                      
+                    </p>
+                  </div>
+                </div>
+                <div class="gallery-item">
+                  <div class="card-item">
+                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                    <div class="card-header">
+                      <div class="user">
+                        <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">
+                          Рита
+                          </a>
+                      </div><a class="comments _good" href="#">345</a>
+                    </div><a class="card-title" href="#">Санкт-Петербург</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrapper footer-top">
+        <div class="col _1-3">
+          <div class="site-logo"><img src="media/img/site-logo.png" alt=""/></div>
+          <p>
+            Туристический портал для тех, кто 
+            путешествует или собирается 
+            путешествовать по России и за рубежом.
+            
+          </p>
+        </div>
+        <div class="col _2-3">
+          <nav class="footer-nav">
+            <ul>
+              <li class="groupe-title">Туристу</li>
+              <li><a href="#">Ж/Д билеты</a></li>
+              <li><a href="#">Авиабилеты</a></li>
+              <li><a href="#">Аренда жилья</a></li>
+              <li><a href="#">Прокат авто</a></li>
+              <li><a href="#">Страхование</a></li>
+            </ul>
+            <ul>
+              <li class="groupe-title">Интересное</li>
+              <li><a href="#">Статьи</a></li>
+              <li><a href="#">Зарубежные статьи</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Рассказы</a></li>
+            </ul>
+            <ul>
+              <li class="groupe-title">Информация</li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Условия использования</a></li>
+              <li><a href="#">Информация для гидов</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="wrapper footer-bottom"><span class="foo-copyright">
+          © Personal Guide. All rights Reserved.
+          </span>
+        <div class="social"><a class="item _vk" href="#"></a><a class="item _fb" href="#"></a><a class="item _yt" href="#"></a></div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

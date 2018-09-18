@@ -5,28 +5,50 @@
 	display: -ms-flex
 	display: -o-flex
 	display: flex
-	flex-direction: column
-	align-items: flex-start
-	padding: 25px 0
 	font-size: .88rem
 	line-height: 1.5
+	position: relative
+	margin-bottom: 40px
 
-.form > p
+	&:last-child
+		margin-bottom: 0
+
+	&._feedback
+		padding-left: 45px
+
+		&::before
+			content: ""
+			display: block
+			width: 25px	
+			height: 19px
+			background: url(../media/img/icons.png) no-repeat 0 -1006px
+			position: absolute
+			top: 15px
+			left: 0
+
+	&._pdg-l70
+		padding-left: 70px
+
+	&._pdg-l45
+		padding-left: 45px
+
+.form textarea
 	width: 100%
-	margin-top: 0
+	font-size: .75rem
+	padding: 8px 10px
+	outline: none
+	-webkit-appearance: none
+	appearance: none
 
-.form > ol
-	padding-left: 0
-	margin-top: 0
-	list-style: none
-	counter-reset: item
+.form > .col
+	&:first-child:not(:only-child)
+		margin-right: 20px
+	._1-4
+		width: calc(25% - 10px)
+	._3-4
+		width: calc(75% - 10px)
 
-.form > ol > li::before
-	content: counter(item) '. '
-	counter-increment: item
-	font-weight: 700
-
-.field-groupe
+.fields-groupe
 	outline: none
 	border: none
 	width: 100%
@@ -35,10 +57,7 @@
 	margin-bottom: 20px
 	width: 100%
 
-	&._w-fix-220
-		width: 220px
-
-.field-groupe .groupe-title
+.fields-groupe .groupe-title
 	font-size: 1rem
 	line-height: 1.5
 	margin-bottom: 16px
@@ -50,7 +69,26 @@
 	margin-bottom: 5px
 
 .tf-wrapper
+	width: 100%
 	font-size: .75rem
+	position: relative
+
+	&._select::before
+		content: ""
+		width: 12px
+		height: 12px
+		border-bottom: 2px solid #cccccc
+		border-left: 2px solid #cccccc
+		transform: rotate(-45deg)
+		position: absolute
+		top: 9px
+		right: 2px
+
+		&:hover::before
+			border-color: #615faf
+
+	&._w-220
+		width: 220px
 
 .tf-wrapper > label
 	position: relative
@@ -72,6 +110,39 @@
 .tf-wrapper > input:not([value=""]) ~ label::before,
 .tf-wrapper > input:focus ~ label::before
 	top: -2.9rem
+
+.tf-wrapper > .cleaner-btn
+	display: block
+	width: 12px
+	height: 12px
+	position: absolute
+	top: 12px
+	right: 0
+	border: none
+	outline: none
+	margin: 0
+	padding: 0
+	cursor: pointer
+	background-color: transparent
+
+	&::before,
+	&::after
+		content: ""
+		width: 14px
+		height: 2px
+		border-radius: 2px
+		background-color: #00cc99
+		transform: rotate(50deg)
+		position: absolute
+		top: 50%
+		right: 0
+
+	&::after
+		transform: rotate(-50deg)
+
+	&:hover::before,
+	&:hover::after
+		background-color: #615faf
 
 .chbx-wrapper
 	font-size: .88rem
@@ -121,7 +192,8 @@
 		top: 5px
 		left: 0
 
-.text-field
+.text-field,
+.select-field
 	width: 100%
 	border: none
 	border-bottom: 1px solid #ccc
@@ -131,8 +203,26 @@
 	font-size: .75rem
 	line-height: 1.2
 	margin-bottom: 10px
-	color: #615faf
-	font-weight: 700
+	color: inherit
+	font-weight: 400
+	background-color: transparent
+
+	&:focus
+		color: #615faf
+		font-weight: 700
+
+.select-field
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+
+	&:focus
+		font-weight: 400
+		color: inherit
+
+	&:hover
+		color: #615faf
+		font-weight: 700
 
 .field-notify
 	color: #999
@@ -151,6 +241,15 @@
 	margin-top: 0
 	margin-bottom: 0
 	padding-top: 10px
+
+.form .dropzone.dz-clickable .dz-message > span
+	font-size: 0
+	line-height: 0
+
+	&::before
+		content: "Перетащите файлы или кликните, что бы загрузить"
+		font-size: .7rem
+		line-height: 1.5
 
 .form .dropzone .dz-preview .dz-success-mark,
 .form .dropzone .dz-preview .dz-error-mark

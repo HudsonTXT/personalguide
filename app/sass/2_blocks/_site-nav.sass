@@ -1,0 +1,142 @@
+.site-nav
+	margin-bottom: -65px
+	margin-top: auto
+	padding-top: 15px
+	padding-bottom: 15px
+	z-index: 100
+	width: 100%
+	background: linear-gradient(to bottom, transparent 0%, transparent 39%, #fff 39%, #fff 100%)
+	overflow: hidden
+
+.site-nav .nav-wrapper
+	max-width: 1280px
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-start
+	margin-left: auto
+	margin-right: auto
+
+.site-nav .nav-list
+	min-width: 780px
+	max-width: 940px
+	width: 100%
+	margin: 0 auto
+	list-style: none
+	padding: 0
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	transition: width .2s
+
+.site-nav .nav-item
+	font-size: .88rem
+	line-height: 1
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: center
+	flex: 1 1 110px
+	text-align: center
+
+	&._is-active
+		color: #000
+		pointer-events: none
+
+		.nav-item-icon
+			background-color: transparent
+
+		.nav-item-icon::before
+			content: ""
+			display: block
+			width: 50px
+			height: 50px
+			background-color: #00cc99
+			border: 3px solid #fff
+			border-radius: 50% 50% 0 50%
+			position: absolute
+			left: 0
+			top: 0
+			box-shadow: 3px 3px 10px -3px
+			transform: rotate(45deg)
+
+.site-nav .nav-item-icon
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	background-color: #00cc99
+	margin-bottom: 12px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+
+.site-nav .nav-item-icon img
+	width: unset
+	height: unset
+	z-index: 1
+
+.site-nav .nav-link
+	text-decoration: none
+
+.site-nav .choice-city-btn
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 50px
+	height: 65px
+	margin: 0 15px
+	background-color: #615faf
+	border-radius: 0 0 50px 50px
+	flex-shrink: 0
+	margin-top: -15px
+	transition: .3s
+
+.site-nav .choice-city-btn img
+	margin-bottom: -4px
+	width: initial
+	height: initial
+
+.site-nav .search-btn
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 52px
+	height: 52px
+	background-color: #615faf
+	border: 2px solid #fff
+	border-radius: 50%
+	box-shadow: 0 3px 10px -3px
+	margin: 0 15px
+	flex-shrink: 0
+	transition: .3s
+
+.site-nav .search-btn img
+	width: initial
+	height: initial
+
+.site-nav .choice-city-btn._is-hide,
+.site-nav .search-btn._is-hide
+	transform: translateY(-150%)
+	pointer-events: none

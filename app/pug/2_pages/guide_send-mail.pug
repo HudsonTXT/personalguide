@@ -1,0 +1,26 @@
+extends ../0_base/guide-page
+
+block page-content
+	.content-block
+		h2.like-h2.block-title Отправить сообщение
+
+		form(action="#" method="post").form._pdg-l45
+			.col._2-3
+				fieldset.fields-groupe
+					.tf-wrapper._w-220
+						input(type="text" name="name" id="name" value="").text-field
+						label(for="name" data-content="Ваше имя")
+					.tf-wrapper._w-220
+						input(type="email" name="email" id="email" value="").text-field
+						label(for="email" data-content="email")
+					.tf-wrapper._w-220
+						input(type="tel" name="tel" id="tel" value="").text-field
+						label(for="tel" data-content="телефон")
+					.tf-wrapper
+						input(type="text" name="mail-theme" id="mail-theme" value="").text-field
+						label(for="mail-theme" data-content="Тема")
+							
+				fieldset.fields-groupe
+					textarea(name="feedback", cols="30", rows="4", placeholder="Сообщение")
+
+				button(type="submit").btn отправить

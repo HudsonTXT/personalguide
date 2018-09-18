@@ -2,90 +2,177 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8"/>
-    <title>Личный кабинет</title>
+    <title>Личный кабинет. Гид.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-    <script>tinymce.init({ selector:'textarea' });</script>
+    <!--script(src="https://cloud.tinymce.com/stable/tinymce.min.js")-->
+    <!--script.tinymce.init({ selector:'textarea' });
+    -->
     <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
     <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css"/>
+    <script src="js/libs/redactor.min.js"></script>
+    <link rel="stylesheet" href="css/libs/redactor.css"/>
   </head>
-  <body>
-    <div class="wrapper cabinet">
-      <h1 class="page-title like-h2">
-        Личный кабинет. Гид
-        
-      </h1>
-      <aside class="col _1-4 sidebar">
-        <div class="add-menu"><a class="btn _add" href="#">добавить</a>
-          <ul class="add-menu-dropdown">
-            <li><a href="#">Карточка Гида</a></li>
-            <li><a href="#">Экскурсия</a></li>
-            <li><a href="#">Рассказ</a></li>
-            <li><a href="#">Фотоальбом</a></li>
-            <li><a href="#">Видеозапись</a></li>
-          </ul>
+  <body class="cabinet">
+    <header class="site-header _full">
+      <div class="full-content"><a class="btn _city-choise" href="#"><i class="ic _world"></i>Страны и города</a>
+        <form class="search-form _in-header" action="#" method="get">
+          <input class="serach-field" type="text" name="search-request" placeholder="Куда отправитесь?"/>
+          <button class="search-submit" type="submit"><img src="media/img/search-icon.png" alt=""/></button>
+        </form>
+        <div class="user-block"><a class="user-pic js-open-user-menu" href="#"><img src="media/img-p/1.jpg" alt=""/></a>
+          <div class="user-menu-popup js-user-menu-popup">
+            <ul class="user-menu-list">
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Мой профиль</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Настройки</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Выйти</a></li>
+            </ul>
+          </div>
         </div>
-        <nav class="personal-menu">
-          <ul>
-            <li><a href="#" style="background-position: 0 0;">Карточка гида</a></li>
-            <li><a href="#" style="background-position: 0 -45px;">Экскурсии (23)</a></li>
-            <li><a href="#" style="background-position: 0 -91px;">Рассказы</a></li>
-            <li><a href="#" style="background-position: 0 -135px;">Фотоальбомы (23)</a></li>
-            <li><a href="#" style="background-position: 0 -180px;">Видеозаписи</a></li>
-            <li><a href="#" style="background-position: 0 -374px;">Рассылка</a></li>
-            <li><a href="#" style="background-position: 0 -420px;">Оплата</a></li>
-            <li><a class="_is-blue _is-active" href="#" style="background-position: 0 -225px;">Настройки</a></li>
-            <li><a class="_is-blue" href="#" style="background-position: 0 20px;">Выйти</a></li>
-            <li><a class="_is-blue" href="#" style="background-position: 0 20px;">Удалить аккаунт</a></li>
-          </ul>
-        </nav>
-      </aside>
-      <main class="col _3-4 content _bg-white _with-pd-l">
-        <div class="col">
-          <form class="form" action="#" method="post">
-            <fieldset class="field-groupe _w-fix-220">
-              <legend class="groupe-title">
-                Изменить пароль
-                
-              </legend>
-              <div class="tf-wrapper">
-                <input class="text-field" type="password" name="old-password" id="old-password" value=""/>
-                <label for="old-password" data-content="Старый пароль"></label>
-              </div>
-              <div class="tf-wrapper">
-                <input class="text-field" type="password" name="new-password" id="new-password" value=""/>
-                <label for="new-password" data-content="Новый пароль"></label>
-              </div>
-              <div class="tf-wrapper">
-                <input class="text-field" type="password" name="rpt-new-pasword" id="rpt-new-pasword" value=""/>
-                <label for="rpt-new-pasword" data-content="Повторите пароль"></label>
-              </div>
-            </fieldset>
-            <button class="btn" type="button">Изменить</button>
-          </form>
-          <form class="form" action="#" method="post">
-            <fieldset class="field-groupe _w-fix-220">
-              <legend class="groupe-title">
-                Адрес электронной почты
-                
-              </legend>
-              <div class="tf-wrapper">
-                <input class="text-field" type="text" name="full-name" id="full-name" value=""/>
-                <label for="full-name" data-content="Текущий адрес"></label>
-              </div>
-              <div class="tf-wrapper">
-                <input class="text-field" type="text" name="phone" id="phone" value=""/>
-                <label for="phone" data-content="Новый адрес"></label>
-              </div>
-            </fieldset>
-            <button class="btn" type="button">Сохранить адрес</button>
-          </form>
+      </div>
+      <nav class="site-nav">
+        <div class="nav-wrapper"><a class="choice-city-btn _is-hide js-down-anim" href="#"><img src="media/img/logo-icon.png" alt=""/></a>
+          <ul class="nav-list">
+            <li class="nav-item _is-active"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-7.png" alt="" width="21" height="18"/></a><a class="nav-link" href="#">О месте</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-1.png" alt="" width="21" height="22"/></a><a class="nav-link" href="#">Для Туристов</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-2.png" alt="" width="18" height="16"/></a><a class="nav-link" href="#">Где поселиться</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-3.png" alt="" width="16" height="26"/></a><a class="nav-link" href="#">Где поесть</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-4.png" alt="" width="21" height="17"/></a><a class="nav-link" href="#">Что посмотреть</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-5.png" alt="" width="23" height="23"/></a><a class="nav-link" href="#">Где отдохнуть</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-6.png" alt="" width="24" height="21"/></a><a class="nav-link" href="#">Что купить</a></li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-8.png" alt="" width="25" height="12"/></a><a class="nav-link" href="#">Как добраться</a></li>
+          </ul><a class="search-btn _is-hide js-down-anim" href="#"><img src="media/img/search-icon.png" alt=""/></a>
         </div>
-      </main>
-    </div>
+      </nav>
+    </header>
+    <main class="wrapper">
+      <div class="page-header">
+        <h1 class="like-h3">
+          Личный кабинет. Гид
+          
+        </h1>
+      </div>
+      <div class="columns-grid _cabinet-page">
+        <div class="col _1-4">
+          <aside class="sidebar">
+            <div class="add-menu"><a class="btn _add" href="#">добавить</a>
+              <ul class="dropdown">
+                <li><a href="#">Карточка Гида</a></li>
+                <li><a href="#">Экскурсия</a></li>
+                <li><a href="#">Рассказ</a></li>
+                <li><a href="#">Фотоальбом</a></li>
+                <li><a href="#">Видеозапись</a></li>
+              </ul>
+            </div>
+            <nav class="personal-menu">
+              <ul>
+                <li><a class="menu-link" href="#"><i class="ic _person"></i> Карточка гида</a></li>
+                <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (23)</a></li>
+                <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы</a></li>
+                <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (23)</a></li>
+                <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи</a></li>
+                <li><a class="menu-link" href="#"><i class="ic _horn-2"></i> Рассылка</a></li>
+                <li><a class="menu-link" href="#"><i class="ic _person"></i> Оплата</a></li>
+                <li><a class="menu-link _is-blue" href="#"><i class="ic _setting"></i> Настройки</a></li>
+                <li><a class="menu-link _is-blue" href="#"><i class="ic _null"></i> Выйти</a></li>
+                <li><a class="menu-link _is-blue" href="#"><i class="ic _null"></i> Удалить аккаунт</a></li>
+              </ul>
+            </nav>
+          </aside>
+        </div>
+        <div class="col _3-4">
+          <div class="container _white-bg">
+            <form class="form _pdg-l70" action="#" method="post">
+              <div class="col">
+                <fieldset class="fields-groupe">
+                  <legend class="groupe-title">
+                    Изменить пароль
+                    
+                  </legend>
+                  <div class="tf-wrapper _w-220">
+                    <input class="text-field" type="password" name="old-password" id="old-password" value=""/>
+                    <label for="old-password" data-content="Старый пароль"></label>
+                  </div>
+                  <div class="tf-wrapper _w-220">
+                    <input class="text-field" type="password" name="new-password" id="new-password" value=""/>
+                    <label for="new-password" data-content="Новый пароль"></label>
+                  </div>
+                  <div class="tf-wrapper _w-220">
+                    <input class="text-field" type="password" name="rpt-new-pasword" id="rpt-new-pasword" value=""/>
+                    <label for="rpt-new-pasword" data-content="Повторите пароль"></label>
+                  </div>
+                </fieldset>
+                <button class="btn" type="button">Изменить</button>
+              </div>
+            </form>
+            <form class="form _pdg-l70" action="#" method="post">
+              <div class="col">
+                <fieldset class="fields-groupe">
+                  <legend class="groupe-title">
+                    Адрес электронной почты
+                    
+                  </legend>
+                  <div class="tf-wrapper _w-220">
+                    <input class="text-field" type="text" name="full-name" id="full-name" value=""/>
+                    <label for="full-name" data-content="Текущий адрес"></label>
+                  </div>
+                  <div class="tf-wrapper _w-220">
+                    <input class="text-field" type="text" name="phone" id="phone" value=""/>
+                    <label for="phone" data-content="Новый адрес"></label>
+                  </div>
+                </fieldset>
+                <button class="btn" type="button">Сохранить адрес</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrapper footer-top">
+        <div class="col _1-3">
+          <div class="site-logo"><img src="media/img/site-logo.png" alt=""/></div>
+          <p>
+            Туристический портал для тех, кто 
+            путешествует или собирается 
+            путешествовать по России и за рубежом.
+            
+          </p>
+        </div>
+        <div class="col _2-3">
+          <nav class="footer-nav">
+            <ul>
+              <li class="groupe-title">Туристу</li>
+              <li><a href="#">Ж/Д билеты</a></li>
+              <li><a href="#">Авиабилеты</a></li>
+              <li><a href="#">Аренда жилья</a></li>
+              <li><a href="#">Прокат авто</a></li>
+              <li><a href="#">Страхование</a></li>
+            </ul>
+            <ul>
+              <li class="groupe-title">Интересное</li>
+              <li><a href="#">Статьи</a></li>
+              <li><a href="#">Зарубежные статьи</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Рассказы</a></li>
+            </ul>
+            <ul>
+              <li class="groupe-title">Информация</li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Условия использования</a></li>
+              <li><a href="#">Информация для гидов</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="wrapper footer-bottom"><span class="foo-copyright">
+          © Personal Guide. All rights Reserved.
+          </span>
+        <div class="social"><a class="item _vk" href="#"></a><a class="item _fb" href="#"></a><a class="item _yt" href="#"></a></div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
   </body>
-  <script src="js/script.js"></script>
 </html>
