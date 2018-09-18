@@ -6,6 +6,7 @@
 	z-index: 100
 	width: 100%
 	background: linear-gradient(to bottom, transparent 0%, transparent 39%, #fff 39%, #fff 100%)
+	overflow: hidden
 
 .site-nav .nav-wrapper
 	max-width: 1280px
@@ -106,7 +107,7 @@
 	border-radius: 0 0 50px 50px
 	flex-shrink: 0
 	margin-top: -15px
-	transition: .4s
+	transition: .3s
 
 .site-nav .choice-city-btn img
 	margin-bottom: -4px
@@ -129,7 +130,7 @@
 	box-shadow: 0 3px 10px -3px
 	margin: 0 15px
 	flex-shrink: 0
-	transition: .4s
+	transition: .3s
 
 .site-nav .search-btn img
 	width: initial
@@ -137,7 +138,5 @@
 
 .site-nav .choice-city-btn._is-hide,
 .site-nav .search-btn._is-hide
-	transform: translateY(-200px)
+	transform: translateY(-150%)
 	pointer-events: none
-	opacity: 0
-	z-index: -1

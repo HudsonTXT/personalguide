@@ -2,32 +2,11 @@
 	width: 360px
 	position: relative
 
-	&._at-header
+	&._in-header
 		position: absolute
 		left: 50%
 		margin-left: -180px
 		top: 145px
-
-	&._at-city-modal
-		width: 100%
-		margin-bottom: 20px
-
-		.serach-field
-			color: #999999
-			border-color: #999999
-
-			&::-webkit-input-placeholder
-				color: #999
-			&::-moz-placeholder
-				color: #999
-			&:-moz-placeholder
-				color: #999
-			&:-ms-input-placeholder
-				color: #999
-
-		.search-submit::before,
-		.search-submit::after
-			border-color: #000
 
 .search-form .serach-field
 	width: 100%
@@ -68,25 +47,7 @@
 	justify-content: center
 	z-index: 10
 	cursor: pointer
-	
-	&::before,
-	&::after
-		content: ""
-		display: block
-		position: absolute
 
-	&::before
-		width: 17px
-		height: 17px
-		border-radius: 50%
-		border: 3px solid #fff
-		top: 9px
-		left: 9px
-
-	&::after
-		width: 10px
-		height: 4px
-		border: 2px solid #fff
-		transform: rotate(45deg)
-		top: 24px
-		left: 21.5px
+.search-form .search-submit img
+	width: initial
+	height: initial
