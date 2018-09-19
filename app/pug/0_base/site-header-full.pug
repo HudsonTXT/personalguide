@@ -1,8 +1,26 @@
-header.site-header
+header.site-header._full
+	.full-content
+		a(href="#city-choise").btn._city-choise.mopen
+			i.ic._world
+			| Страны и города
+
+		form(action="#" method="get").search-form._at-header
+			input(type="text" name="search-request" placeholder="Куда отправитесь?").serach-field
+			button(type="submit").search-submit
+		
+		.user-block
+			a(href="#").user-pic.js-open-user-menu
+				img(src="media/img-p/1.jpg", alt="")
+
+			.user-menu-popup.js-user-menu-popup
+				ul.user-menu-list
+					li.user-menu-item: a.user-menu-link(href="#") Мой профиль
+					li.user-menu-item: a.user-menu-link(href="#") Настройки
+					li.user-menu-item: a.user-menu-link(href="#") Выйти
 
 	nav.site-nav
 		.nav-wrapper
-			a(href="#city-choise").choice-city-btn.js-down-anim.mopen: img(src="media/img/logo-icon.png", alt="")
+			a(href="#city-choise").choice-city-btn._is-hide.js-down-anim.mopen: img(src="media/img/logo-icon.png", alt="")
 
 			ul.nav-list
 				li.nav-item._is-active
@@ -37,4 +55,4 @@ header.site-header
 					a(href="#").nav-item-icon: img(src="media/img/groupe-icon-8.png", alt="", width="25", height="12")
 					a(href="#").nav-link Как добраться
 
-			a(href="#").search-btn.js-down-anim: img(src="media/img/search-icon.png", alt="")
+			a(href="#").search-btn._is-hide.js-down-anim: img(src="media/img/search-icon.png", alt="")

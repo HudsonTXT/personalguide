@@ -103,6 +103,24 @@ $(document).ready(function() {
 		257 > $(document).scrollTop() ? $('.site-header._full .js-down-anim').addClass('_is-hide') : $('.site-header._full .js-down-anim').removeClass('_is-hide');
 	});
 
+	// MODALS
+
+	$('.mopen').wmodal();
+
+	// TOGGLE ACTIVE ITEM AT CITY CHOISE LIST
+
+	$('.js-choise-city-list').children('.places-item').on('click', function() {
+		$(this).addClass('_is-active').siblings().removeClass('_is-active');
+		return false;
+	});
+
+	// TOGGLE ACTIVE ITEM AT KEYWORDS LIST
+
+	$('.keywords').children('.btn._keyword').on('click', function() {
+		$(this).addClass('_is-active').siblings().removeClass('_is-active');
+		return false;
+	});
+
 });
 
 // DROPZONE AUTODISCOVER OFF

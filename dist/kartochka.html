@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
     <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css"/>
     <script src="js/libs/redactor.min.js"></script>
@@ -16,26 +16,12 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script>
+    <script src="js/libs/modal.js"></script>
   </head>
   <body>
-    <header class="site-header _full">
-      <div class="full-content"><a class="btn _city-choise" href="#"><i class="ic _world"></i>Страны и города</a>
-        <form class="search-form _in-header" action="#" method="get">
-          <input class="serach-field" type="text" name="search-request" placeholder="Куда отправитесь?"/>
-          <button class="search-submit" type="submit"><img src="media/img/search-icon.png" alt=""/></button>
-        </form>
-        <div class="user-block"><a class="user-pic js-open-user-menu" href="#"><img src="media/img-p/1.jpg" alt=""/></a>
-          <div class="user-menu-popup js-user-menu-popup">
-            <ul class="user-menu-list">
-              <li class="user-menu-item"><a class="user-menu-link" href="#">Мой профиль</a></li>
-              <li class="user-menu-item"><a class="user-menu-link" href="#">Настройки</a></li>
-              <li class="user-menu-item"><a class="user-menu-link" href="#">Выйти</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <header class="site-header">
       <nav class="site-nav">
-        <div class="nav-wrapper"><a class="choice-city-btn _is-hide js-down-anim" href="#"><img src="media/img/logo-icon.png" alt=""/></a>
+        <div class="nav-wrapper"><a class="choice-city-btn js-down-anim mopen" href="#city-choise"><img src="media/img/logo-icon.png" alt=""/></a>
           <ul class="nav-list">
             <li class="nav-item _is-active"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-7.png" alt="" width="21" height="18"/></a><a class="nav-link" href="#">О месте</a></li>
             <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-1.png" alt="" width="21" height="22"/></a><a class="nav-link" href="#">Для Туристов</a></li>
@@ -45,7 +31,7 @@
             <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-5.png" alt="" width="23" height="23"/></a><a class="nav-link" href="#">Где отдохнуть</a></li>
             <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-6.png" alt="" width="24" height="21"/></a><a class="nav-link" href="#">Что купить</a></li>
             <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-8.png" alt="" width="25" height="12"/></a><a class="nav-link" href="#">Как добраться</a></li>
-          </ul><a class="search-btn _is-hide js-down-anim" href="#"><img src="media/img/search-icon.png" alt=""/></a>
+          </ul><a class="search-btn js-down-anim" href="#"><img src="media/img/search-icon.png" alt=""/></a>
         </div>
       </nav>
     </header>
@@ -236,6 +222,71 @@
         <div class="social"><a class="item _vk" href="#"></a><a class="item _fb" href="#"></a><a class="item _yt" href="#"></a></div>
       </div>
     </footer>
+    <div class="modal">
+      <div class="modal-container _w780" id="city-choise">
+        <div class="modal-content">
+          <h2 class="like-h2">Страны и города</h2>
+          <form class="search-form _at-city-modal" action="#" method="get">
+            <input class="serach-field" type="text" name="search-request" placeholder="Куда отправитесь?"/>
+            <button class="search-submit" type="submit"></button>
+          </form>
+          <div class="row keywords"><a class="btn _keyword" href="#">Екатеринбург</a><a class="btn _keyword" href="#">Москва</a><a class="btn _keyword" href="#">Санкт-Петербург</a><a class="btn _keyword" href="#">Новосибирск</a><a class="btn _keyword" href="#">Казань</a></div>
+          <div class="columns-grid _no-gap">
+            <div class="col _1-3"><b class="like-h3">Направления</b>
+              <ul class="places-list js-choise-city-list">
+                <li class="places-item"><a class="places-link" href="#">Европа</a></li>
+                <li class="places-item"><a class="places-link" href="#">Азия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Северная Америка</a></li>
+                <li class="places-item"><a class="places-link" href="#">Южная Америка</a></li>
+                <li class="places-item"><a class="places-link" href="#">Африка</a></li>
+                <li class="places-item"><a class="places-link" href="#">Австрия и Океания</a></li>
+              </ul>
+            </div>
+            <div class="col _1-3"><b class="like-h3">Страны</b>
+              <ul class="places-list js-choise-city-list">
+                <li class="places-item"><a class="places-link" href="#">Польша</a></li>
+                <li class="places-item"><a class="places-link" href="#">Россия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Румыния</a></li>
+                <li class="places-item"><a class="places-link" href="#">Сербия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Словакия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Словения</a></li>
+                <li class="places-item"><a class="places-link" href="#">Украина</a></li>
+                <li class="places-item"><a class="places-link" href="#">Финляндия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Франция</a></li>
+                <li class="places-item"><a class="places-link" href="#">Польша</a></li>
+                <li class="places-item"><a class="places-link" href="#">Россия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Румыния</a></li>
+                <li class="places-item"><a class="places-link" href="#">Сербия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Словакия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Словения</a></li>
+                <li class="places-item"><a class="places-link" href="#">Украина</a></li>
+                <li class="places-item"><a class="places-link" href="#">Финляндия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Франция</a></li>
+              </ul>
+            </div>
+            <div class="col _1-3"><b class="like-h3">Города</b>
+              <ul class="places-list js-choise-city-list">
+                <li class="places-item"><a class="places-link" href="#">Березовский</a></li>
+                <li class="places-item"><a class="places-link" href="#">Верхняя Пышма</a></li>
+                <li class="places-item"><a class="places-link" href="#">Верхняя Слада</a></li>
+                <li class="places-item"><a class="places-link" href="#">Екатеринбург</a></li>
+                <li class="places-item"><a class="places-link" href="#">Заречный</a></li>
+                <li class="places-item"><a class="places-link" href="#">Ирбит</a></li>
+                <li class="places-item"><a class="places-link" href="#">Каменск-Уральский</a></li>
+                <li class="places-item"><a class="places-link" href="#">Камышлов</a></li>
+                <li class="places-item"><a class="places-link" href="#">Карпинск</a></li>
+                <li class="places-item"><a class="places-link" href="#">Заречный</a></li>
+                <li class="places-item"><a class="places-link" href="#">Ирбит</a></li>
+                <li class="places-item"><a class="places-link" href="#">Каменск-Уральский</a></li>
+                <li class="places-item"><a class="places-link" href="#">Камышлов</a></li>
+                <li class="places-item"><a class="places-link" href="#">Карпинск</a></li>
+              </ul>
+            </div>
+          </div>
+        </div><a class="modal-close" href="#"></a>
+      </div>
+      <div class="modal-overlay"></div>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
