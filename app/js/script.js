@@ -121,6 +121,28 @@ $(document).ready(function() {
 		return false;
 	});
 
+	// LOGIN VIA SOCIAL UNSHORT BLOCK
+
+	$('.login-via-social').children('.unshort-link').on('click', function(){
+		$(this).siblings('.social').removeClass('_is-short');
+		$(this).remove();
+		return false;
+	});
+
+	// SEARCH POPUP
+
+	$(document).mouseup(function (e){
+		var popup = $('.search-form._at-search-popup');
+		if(!popup.is(e.target) && popup.has(e.target).length === 0) {
+			popup.addClass('_is-hide')
+		};
+	});
+
+	$('.search-popup').children('.js-search-open').on('click', function() {
+		$(this).siblings('.search-form._at-search-popup').removeClass('_is-hide');
+		return false;
+	});
+
 });
 
 // DROPZONE AUTODISCOVER OFF

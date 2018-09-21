@@ -18,13 +18,18 @@ img
 	box-sizing: inherit
 
 a
-	color: inherit
+	color: #615faf
+	font-size: inherit
+	line-height: inherit
 
 p
 	margin: 15px 0
+	
+	&._text-center
+		text-align: center
 
-p._text-center
-	text-align: center
+	&._no-mrg
+		margin: 0
 
 ol
 	padding-left: 0
@@ -36,12 +41,6 @@ ol > li::before
 	content: counter(item) '. '
 	counter-increment: item
 	font-weight: 700
-
-.link
-	color: #615faf
-	font-size: .875rem
-	line-height: 1
-	text-decoration: underline
 
 .section-title
 	font-weight: 400

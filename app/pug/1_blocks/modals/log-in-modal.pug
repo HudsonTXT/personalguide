@@ -1,0 +1,35 @@
+.modal
+	.modal-container._w310._login#signin
+		.modal-content
+			p._text-center._no-mrg войти через
+			
+			.login-via-social
+				.social._at-login-modal._is-short
+					a(href="#").item._vk-l
+					a(href="#").item._ok-l
+					a(href="#").item._mail-l
+					a(href="#").item._gp-l
+					a(href="#").item._tw-l
+
+				a(href="#").unshort-link ещё
+
+			p._text-center._no-mrg или
+			
+			form(action="#" method="post").form
+				.col
+					fieldset.fields-groupe
+						.tf-wrapper
+							input(type="email" name="email" id="email" value="").text-field
+							label(for="email" data-content="email")
+
+						.tf-wrapper
+							input(type="password" name="password" id="password" value="").text-field
+							label(for="password" data-content="пароль")
+							a(href="#") Забыли пароль?
+
+					.form-actions
+						a(href="#signup").btn._bordered._fs11.mopen зарегестрироваться
+						a(href="#").btn._fs11 войти
+
+		a(href="#").modal-close
+	.modal-overlay

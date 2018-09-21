@@ -1,0 +1,47 @@
+.signup-as
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	width: 100%
+
+.signup-as .radio-wrapper
+	width: 33.33%
+
+.signup-as .radio-wrapper input[type="radio"]
+	display: none
+
+	&:checked ~ label::before
+		border-color: #615faf
+
+	&:checked ~ label::after
+		display: block
+
+.signup-as .radio-wrapper label
+	padding-top: 75px
+	position: relative
+	text-align: center
+
+	&::before
+		content: ""
+		display: block
+		width: 67px
+		height: 67px
+		border-radius: 50%
+		border: 1px solid #cccccc
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+
+	&::after
+		content: ""
+		display: none
+		width: 18px
+		height: 18px
+		background-color: #615faf
+		border-radius: 50%
+		position: absolute
+		top: 0
+		right: 9px

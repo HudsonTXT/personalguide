@@ -1,0 +1,37 @@
+.modal
+	.modal-container._w310._login#signup
+		.modal-content
+			
+			form(action="#" method="post").form
+				.col
+					fieldset.fields-groupe
+						.tf-wrapper
+							input(type="email" name="email" id="email" value="").text-field
+							label(for="email" data-content="email")
+
+						.tf-wrapper
+							input(type="password" name="password" id="password" value="").text-field
+							label(for="password" data-content="пароль")
+
+					fieldset.fields-groupe
+						.signup-as
+							.radio-wrapper
+								input(type="radio" name="signup-as" id="like-tourist" checked)
+								label(for="like-tourist") Путешественник
+							.radio-wrapper
+								input(type="radio" name="signup-as" id="like-guide" checked)
+								label(for="like-guide") Гид
+							.radio-wrapper
+								input(type="radio" name="signup-as" id="like-company" checked)
+								label(for="like-company") Компания
+					
+					fieldset.fields-groupe
+						.chbx-wrapper._type-2
+							input(type="checkbox" name="signup-agreement" id="signup-agreement")
+							label(for="signup-agreement") принять <a href="#">условия регистрации</a>
+
+					.form-actions._btn-center
+						a(href="#").btn._bordered._fs11 зарегестрироваться
+
+		a(href="#").modal-close
+	.modal-overlay

@@ -2,10 +2,10 @@
 	margin-bottom: -65px
 	margin-top: auto
 	padding-top: 15px
-	padding-bottom: 15px
 	z-index: 100
 	width: 100%
-	background: linear-gradient(to bottom, transparent 0%, transparent 39%, #fff 39%, #fff 100%)
+	background-color: transparent
+	position: relative
 
 .site-nav .nav-wrapper
 	max-width: 1280px
@@ -32,7 +32,6 @@
 	display: -o-flex
 	display: flex
 	justify-content: space-between
-	transition: width .2s
 
 .site-nav .nav-item
 	font-size: .88rem
@@ -46,10 +45,13 @@
 	align-items: center
 	flex: 1 1 110px
 	text-align: center
+	padding-bottom: 15px
+
+	&:hover .subnav
+		transform: scaleY(1)
 
 	&._is-active
 		color: #000
-		pointer-events: none
 
 		.nav-item-icon
 			background-color: transparent
@@ -67,6 +69,15 @@
 			top: 0
 			box-shadow: 3px 3px 10px -3px
 			transform: rotate(45deg)
+
+.site-nav .subnav
+	position: absolute
+	left: 0
+	bottom: -59px
+	transition: .2s
+	max-height: 59px
+	transform-origin: top
+	transform: scaleY(0)
 
 .site-nav .nav-item-icon
 	width: 50px
@@ -90,6 +101,7 @@
 
 .site-nav .nav-link
 	text-decoration: none
+	color: inherit
 
 .site-nav .choice-city-btn
 	display: -webkit-flex
@@ -106,7 +118,6 @@
 	border-radius: 0 0 50px 50px
 	flex-shrink: 0
 	margin-top: -15px
-	transition: .4s
 
 .site-nav .choice-city-btn img
 	margin-bottom: -4px
@@ -125,19 +136,40 @@
 	height: 52px
 	background-color: #615faf
 	border: 2px solid #fff
-	border-radius: 50%
+	border-radius: 52px
 	box-shadow: 0 3px 10px -3px
 	margin: 0 15px
 	flex-shrink: 0
-	transition: .4s
+	position: relative
 
-.site-nav .search-btn img
-	width: initial
-	height: initial
+	&::before,
+	&::after
+		content: ""
+		display: block
+		position: absolute
 
-.site-nav .choice-city-btn._is-hide,
-.site-nav .search-btn._is-hide
-	transform: translateY(-200px)
-	pointer-events: none
-	opacity: 0
-	z-index: -1
+	&::before
+		width: 17px
+		height: 17px
+		border-radius: 50%
+		border: 3px solid #fff
+		top: 13px
+		left: 12px
+
+	&::after
+		width: 10px
+		height: 4px
+		background-color: #fff
+		transform: rotate(45deg)
+		top: 28px
+		left: 24.5px
+
+.site-nav .sides-items
+	transition: .4s, opacity 0s
+
+	&._is-hide
+		transform: translateY(-200px)
+		pointer-events: none
+		opacity: 0
+		z-index: -1
+		transition: .4s

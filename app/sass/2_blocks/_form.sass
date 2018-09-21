@@ -192,6 +192,23 @@
 		top: 5px
 		left: 0
 
+.chbx-wrapper._type-2
+	font-size: inherit
+
+.chbx-wrapper._type-2 label
+	padding-left: 20px
+
+	&::before
+		border-color: #6260af
+		border-radius: 50%
+
+.chbx-wrapper > input[type="checkbox"]:checked ~ label
+	&::before
+		background-color: #6260af
+
+	&::after
+		display: none
+
 .text-field,
 .select-field
 	width: 100%
@@ -229,6 +246,23 @@
 	font-size: .7rem
 	line-height: .7
 	font-weight: 400
+
+.form-actions
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+	&._btn-center
+		justify-content: center
+
+	> .btn
+		margin-right: 20px
+
+		&:last-child
+			margin-right: 0
 
 .form .dropzone
 	width: 100%

@@ -14,45 +14,108 @@ header.site-header._full
 
 			.user-menu-popup.js-user-menu-popup
 				ul.user-menu-list
+					li.user-menu-item: a.user-menu-link.mopen(href="#signin") Войти
 					li.user-menu-item: a.user-menu-link(href="#") Мой профиль
 					li.user-menu-item: a.user-menu-link(href="#") Настройки
 					li.user-menu-item: a.user-menu-link(href="#") Выйти
 
 	nav.site-nav
 		.nav-wrapper
-			a(href="#city-choise").choice-city-btn._is-hide.js-down-anim.mopen: img(src="media/img/logo-icon.png", alt="")
+			.sides-items._is-hide.js-down-anim
+				a(href="#city-choise").choice-city-btn.mopen: img(src="media/img/logo-icon.png", alt="")
 
 			ul.nav-list
 				li.nav-item._is-active
 					a(href="#").nav-item-icon: img(src="media/img/groupe-icon-7.png", alt="", width="21", height="18")
 					a(href="#").nav-link О месте
 
+					.row._grey.subnav
+						.wrapper
+							.tabs
+								a(href="#info-slide-1").item Описание
+								a(href="#info-slide-2").item Рассказы
+								a(href="#info-slide-3").item Карта
+
 				li.nav-item
 					a(href="#").nav-item-icon: img(src="media/img/groupe-icon-1.png", alt="", width="21", height="22")
 					a(href="#").nav-link Для Туристов
+
+					.row._grey.subnav
+						.wrapper
+							.tabs
+								a(href="#info-slide-1").item Описание
+								a(href="#info-slide-2").item Рассказы
+								a(href="#info-slide-3").item Карта
 
 				li.nav-item
 					a(href="#").nav-item-icon: img(src="media/img/groupe-icon-2.png", alt="", width="18", height="16")
 					a(href="#").nav-link Где поселиться
 
+					.row._grey.subnav
+						.wrapper
+							.tabs
+								a(href="#info-slide-1").item Описание
+								a(href="#info-slide-2").item Рассказы
+								a(href="#info-slide-3").item Карта
+
 				li.nav-item
 					a(href="#").nav-item-icon: img(src="media/img/groupe-icon-3.png", alt="", width="16", height="26")
 					a(href="#").nav-link Где поесть
+
+					.row._grey.subnav
+						.wrapper
+							.tabs
+								a(href="#info-slide-1").item Описание
+								a(href="#info-slide-2").item Рассказы
+								a(href="#info-slide-3").item Карта
 
 				li.nav-item
 					a(href="#").nav-item-icon: img(src="media/img/groupe-icon-4.png", alt="", width="21", height="17")
 					a(href="#").nav-link Что посмотреть
 
+					.row._grey.subnav
+						.wrapper
+							.tabs
+								a(href="#info-slide-1").item Описание
+								a(href="#info-slide-2").item Рассказы
+								a(href="#info-slide-3").item Карта
+
 				li.nav-item
 					a(href="#").nav-item-icon: img(src="media/img/groupe-icon-5.png", alt="", width="23", height="23")
 					a(href="#").nav-link Где отдохнуть
+
+					.row._grey.subnav
+						.wrapper
+							.tabs
+								a(href="#info-slide-1").item Описание
+								a(href="#info-slide-2").item Рассказы
+								a(href="#info-slide-3").item Карта
 
 				li.nav-item
 					a(href="#").nav-item-icon: img(src="media/img/groupe-icon-6.png", alt="", width="24", height="21")
 					a(href="#").nav-link Что купить
 
+					.row._grey.subnav
+						.wrapper
+							.tabs
+								a(href="#info-slide-1").item Описание
+								a(href="#info-slide-2").item Рассказы
+								a(href="#info-slide-3").item Карта
+
 				li.nav-item
 					a(href="#").nav-item-icon: img(src="media/img/groupe-icon-8.png", alt="", width="25", height="12")
 					a(href="#").nav-link Как добраться
 
-			a(href="#").search-btn._is-hide.js-down-anim: img(src="media/img/search-icon.png", alt="")
+					.row._grey.subnav
+						.wrapper
+							.tabs
+								a(href="#info-slide-1").item Описание
+								a(href="#info-slide-2").item Рассказы
+								a(href="#info-slide-3").item Карта
+			
+			.sides-items._is-hide.js-down-anim.search-popup
+				a(href="#").search-btn.js-search-open
+
+				form(action="#" method="get").search-form._at-search-popup._is-hide
+					input(type="text" name="search-request" placeholder="Куда отправитесь?").serach-field
+					button(type="submit").search-submit

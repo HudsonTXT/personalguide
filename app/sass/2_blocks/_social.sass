@@ -6,6 +6,30 @@
 	display: flex
 	align-items: flex-start
 
+	&._at-login-modal
+		flex-wrap: wrap
+		width: 190px
+		margin: 0 auto
+		transition: .3s
+		max-height: 200px
+
+		&._is-short
+			max-height: 35px
+			overflow: hidden
+
+		.item
+			width: 30px
+			height: 30px
+			margin-right: 50px
+			background-color: transparent
+			border-radius: 0
+
+			&:nth-child(3n+3)
+				margin-right: 0
+
+			&:nth-child(n+4)
+				margin-top: 30px
+
 .social .item
 	width: 24px
 	height: 24px
@@ -46,3 +70,18 @@
 	&._yt
 		background-color: #e24f42
 		background-position: 5px -967px
+
+	&._vk-l
+		background-position: 3px -1090px
+
+	&._ok-l
+		background-position: 7px -1135px
+
+	&._mail-l
+		background-position: 3px -1184px
+
+	&._gp-l
+		background-position: 3px -1231px
+
+	&._tw-l
+		background-position: 3px -1277px
