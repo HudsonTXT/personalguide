@@ -28,12 +28,14 @@ block main
 						label(for="email" data-content="email")
 
 					.tf-wrapper._w-220
-						input(type="text" name="lang" id="lang" value="").text-field
-						label(for="lang" data-content="языки")
+						input(type="text" name="lang" id="lang" value="Русский").text-field._with-cleaning
+						button(type="button").cleaner-btn
 
-					.tf-wrapper._w-220
-						input(type="text" name="excursion-lang" id="excursion-lang" value="").text-field
-						label(for="excursion-lang" data-content="язык экскурсий")
+					.tf-wrapper._select._w-220
+						select(name="excursion-lang").select-field
+							option(value="null" selected) Язык экскурсий
+							option(value="ru") Русский
+							option(value="en") Английский
 					
 				fieldset.fields-groupe
 					label(for="bio") Биография, опыт работы:

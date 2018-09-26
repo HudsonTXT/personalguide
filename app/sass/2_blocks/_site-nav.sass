@@ -43,12 +43,15 @@
 	display: flex
 	flex-direction: column
 	align-items: center
-	flex: 1 1 110px
+	flex: 0 1 110px
 	text-align: center
 	padding-bottom: 15px
 
 	&:hover .subnav
 		transform: scaleY(1)
+
+	&:hover .nav-link::before
+		display: block
 
 	&._is-active
 		color: #000
@@ -57,18 +60,7 @@
 			background-color: transparent
 
 		.nav-item-icon::before
-			content: ""
 			display: block
-			width: 50px
-			height: 50px
-			background-color: #00cc99
-			border: 3px solid #fff
-			border-radius: 50% 50% 0 50%
-			position: absolute
-			left: 0
-			top: 0
-			box-shadow: 3px 3px 10px -3px
-			transform: rotate(45deg)
 
 .site-nav .subnav
 	position: absolute
@@ -94,6 +86,20 @@
 	align-items: center
 	position: relative
 
+	&::before
+		content: ""
+		display: none
+		width: 50px
+		height: 50px
+		background-color: #00cc99
+		border: 3px solid #fff
+		border-radius: 50% 50% 0 50%
+		position: absolute
+		left: 0
+		top: 0
+		box-shadow: 3px 3px 10px -3px
+		transform: rotate(45deg)
+
 .site-nav .nav-item-icon img
 	width: unset
 	height: unset
@@ -102,6 +108,21 @@
 .site-nav .nav-link
 	text-decoration: none
 	color: inherit
+	position: relative
+
+	&::before
+		content: ""
+		display: none
+		width: 0
+		height: 0
+		border-bottom: 10px solid #f8ebff
+		border-left: 20px solid transparent
+		border-right: 20px solid transparent
+		position: absolute
+		left: 50%
+		bottom: 0
+		margin-left: -20px
+		margin-bottom: -16px
 
 .site-nav .choice-city-btn
 	display: -webkit-flex
@@ -173,3 +194,76 @@
 		opacity: 0
 		z-index: -1
 		transition: .4s
+
+.open-mobile-menu
+	display: none
+	width: 44px
+	height: 44px
+	background-color: #00cc99
+	border-radius: 50%
+	border: 2px solid #fff
+	flex-shrink: 0
+	box-shadow: 0 3px 10px -3px
+	position: relative
+	margin: 0 6px
+
+	&::before
+		content: ""
+		display: block
+		width: 20px
+		height: 15px
+		background: linear-gradient(to bottom, #fff 0%, #fff 20%, transparent 20%, transparent 40%, #fff 40%, #fff 60%, transparent 60%, transparent 80%, #fff 80%, #fff 100%)
+		position: absolute
+		left: 50%
+		top: 50%
+		margin-left: -10px
+		margin-top: -7.5px
+
+@media screen and (max-width: 940px)
+
+	.site-nav
+		padding-top: 6px
+		margin-bottom: -40px
+
+	.site-nav .nav-list
+		min-width: initial
+		justify-content: center
+	
+	.site-nav .nav-item
+		padding-bottom: 3px
+
+	.site-nav .nav-item:not(._is-active)
+		display: none
+
+	.site-nav .nav-item-icon
+		width: 44px
+		height: 44px
+
+		&::before
+			width: 44px
+			height: 44px
+
+	.site-nav .nav-link
+		display: none
+
+	.site-nav .choice-city-btn
+		display: none
+
+	.site-nav .search-btn
+		width: 44px
+		height: 44px
+		margin: 0 6px
+
+		&::before
+			top: 9px
+			left: 9px
+
+		&::after
+			top: 24px
+			left: 21px
+
+	.open-mobile-menu
+		display: block
+	
+	.site-nav .subnav
+		bottom: -35px

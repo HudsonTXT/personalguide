@@ -2,7 +2,7 @@ extends ../0_base/cabinet_like-guide
 
 block main
 	.container._white-bg
-		form(action="#" method="post").form._pdg-l70
+		form(action="#" method="post").form._pdg-both-40
 			.col
 				span.
 					Оплата
@@ -34,9 +34,10 @@ block main
 				p
 					|Техподдержка: 
 					a(href="") <b>4@personalguide.ru</b>
-
-				.tf-wrapper._w-220
-					input(type="text" name="payment-count" id="payment-count" value="").text-field
-					label(for="payment-count" data-content="Сумма оплаты")
+				
+				fieldset.fields-groupe
+					.tf-wrapper._w-220
+						input(type="text" name="payment-count" id="payment-count" value="").text-field
+						label(for="payment-count" data-content="Сумма оплаты")
 
 				button(type="button").btn Оплатить

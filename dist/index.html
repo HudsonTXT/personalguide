@@ -19,13 +19,14 @@
     <script src="js/libs/modal.js"></script>
   </head>
   <body>
-    <header class="site-header _full">
+    <header class="site-header">
       <div class="full-content"><a class="btn _city-choise mopen" href="#city-choise"><i class="ic _world"></i>Страны и города</a>
+        <div class="site-logo _at-header"><img src="media/img/site-logo.png" alt=""/></div>
         <form class="search-form _at-header" action="#" method="get">
           <input class="serach-field" type="text" name="search-request" placeholder="Куда отправитесь?"/>
           <button class="search-submit" type="submit"></button>
         </form>
-        <div class="user-block"><a class="user-pic js-open-user-menu" href="#"><img src="media/img-p/1.jpg" alt=""/></a>
+        <div class="user-block"><a class="user-pic js-open-user-menu" href="#"></a>
           <div class="user-menu-popup js-user-menu-popup">
             <ul class="user-menu-list">
               <li class="user-menu-item"><a class="user-menu-link mopen" href="#signin">Войти</a></li>
@@ -37,7 +38,7 @@
         </div>
       </div>
       <nav class="site-nav">
-        <div class="nav-wrapper">
+        <div class="nav-wrapper"><a class="open-mobile-menu" href="#"></a>
           <div class="sides-items _is-hide js-down-anim"><a class="choice-city-btn mopen" href="#city-choise"><img src="media/img/logo-icon.png" alt=""/></a></div>
           <ul class="nav-list">
             <li class="nav-item _is-active"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-7.png" alt="" width="21" height="18"/></a><a class="nav-link" href="#">О месте</a>
@@ -105,23 +106,59 @@
           </div>
         </div>
       </nav>
+      <div class="m-menu" id="mobile-menu"><a class="m-menu-close" href="#"></a>
+        <nav class="m-nav">
+          <ul class="m-nav-list">
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+          </ul>
+        </nav>
+        <div class="user-block _at-m-menu"><a class="user-pic js-open-user-menu" href="#"><img src="media/img-p/1.jpg" alt=""/></a>
+          <div class="user-menu-popup js-user-menu-popup">
+            <ul class="user-menu-list">
+              <li class="user-menu-item"><a class="user-menu-link mopen" href="#signin">Войти</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Мой профиль</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Настройки</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Выйти</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
-      <div class="index-slider">
-        <div class="wrapper slider-content">
-          <div class="slide _title-slide" id="info-slide-1">
-            <h1 class="like-h1 section-title">Екатеринбург</h1>
-            <P>
-              Город Екатеринбург является административным центром Свердловской области. Это 
-              наиболее крупный промышленный, торговый, культурный центр Урала. Он построен на 
-              восточном склоне Среднего Урала по берегам притока Тобола, а именно реки Исеть. 
-              Данный населенный пункт находится на расстоянии 1667 километров к востоку от 
-              Москвы. Здесь есть два аэропорта – один крупный, другой поменьше, работает 
-              метрополитен. Население города в 2001 году составляло более одного миллиона 259 
-              тысяч человек. Здесь есть два аэропорта – один крупный/метрополитен.
-              
-            </P><a class="link to-all" href="#">читать дальше</a>
-          </div>
+      <div class="wrapper">
+        <div class="content-block place-info">
+          <h1 class="like-h1 block-title">Екатеринбург</h1>
+          <P class="js-shorted-block _is-shorted" id="about-place-text">
+            Город Екатеринбург является административным центром Свердловской области. Это 
+            наиболее крупный промышленный, торговый, культурный центр Урала. Он построен на 
+            восточном склоне Среднего Урала по берегам притока Тобола, а именно реки Исеть. 
+            Данный населенный пункт находится на расстоянии 1667 километров к востоку от 
+            Москвы. Здесь есть два аэропорта – один крупный, другой поменьше, работает 
+            метрополитен. Население города в 2001 году составляло более одного миллиона 259 
+            тысяч человек. Здесь есть два аэропорта – один крупный/метрополитен.
+            Город Екатеринбург является административным центром Свердловской области. Это 
+            наиболее крупный промышленный, торговый, культурный центр Урала. Он построен на 
+            восточном склоне Среднего Урала по берегам притока Тобола, а именно реки Исеть. 
+            Данный населенный пункт находится на расстоянии 1667 километров к востоку от 
+            Москвы. Здесь есть два аэропорта – один крупный, другой поменьше, работает 
+            метрополитен. Население города в 2001 году составляло более одного миллиона 259 
+            тысяч человек. Здесь есть два аэропорта – один крупный/метрополитен.
+            Город Екатеринбург является административным центром Свердловской области. Это 
+            наиболее крупный промышленный, торговый, культурный центр Урала. Он построен на 
+            восточном склоне Среднего Урала по берегам притока Тобола, а именно реки Исеть. 
+            Данный населенный пункт находится на расстоянии 1667 километров к востоку от 
+            Москвы. Здесь есть два аэропорта – один крупный, другой поменьше, работает 
+            метрополитен. Население города в 2001 году составляло более одного миллиона 259 
+            тысяч человек. Здесь есть два аэропорта – один крупный/метрополитен.
+            
+          </P><a class="js-unshort-block" href="#about-place-text">читать дальше</a>
         </div>
       </div>
       <div class="index-slider">
@@ -182,7 +219,7 @@
                     </nav>
                   </div>
                 </div>
-              </div><a class="link to-all" href="#">все гиды</a>
+              </div><a class="link to-all" href="all-items_guides.html">все гиды</a>
             </div>
             <div class="slide" id="tourist-slide-2">
               <div class="row slide-items">
@@ -280,7 +317,7 @@
                     </div>
                   </article>
                 </div>
-              </div><a class="link to-all" href="#">все экскурсии</a>
+              </div><a class="link to-all" href="all-items_excurs.html">все экскурсии</a>
             </div>
             <div class="slide" id="tourist-slide-4">
               <div class="row slide-items">
@@ -714,7 +751,7 @@
                     </div>
                   </article>
                 </div>
-              </div><a class="link to-all" href="#">все фотоальбомы</a>
+              </div><a class="link to-all" href="all-items_photos.html">все фотоальбомы</a>
             </div>
           </div>
         </div>
@@ -843,7 +880,7 @@
     <footer class="site-footer">
       <div class="wrapper footer-top">
         <div class="col _1-3">
-          <div class="site-logo"><img src="media/img/site-logo.png" alt=""/></div>
+          <div class="site-logo _at-footer"><img src="media/img/site-logo.png" alt=""/></div>
           <p>
             Туристический портал для тех, кто 
             путешествует или собирается 
@@ -853,23 +890,23 @@
         </div>
         <div class="col _2-3">
           <nav class="footer-nav">
-            <ul>
-              <li class="groupe-title">Туристу</li>
+            <ul class="js-foo-nav">
+              <li class="groupe-title js-open-foo-nav">Туристу</li>
               <li><a href="#">Ж/Д билеты</a></li>
               <li><a href="#">Авиабилеты</a></li>
               <li><a href="#">Аренда жилья</a></li>
               <li><a href="#">Прокат авто</a></li>
               <li><a href="#">Страхование</a></li>
             </ul>
-            <ul>
-              <li class="groupe-title">Интересное</li>
+            <ul class="js-foo-nav">
+              <li class="groupe-title js-open-foo-nav">Интересное</li>
               <li><a href="#">Статьи</a></li>
               <li><a href="#">Зарубежные статьи</a></li>
               <li><a href="#">Новости</a></li>
               <li><a href="#">Рассказы</a></li>
             </ul>
-            <ul>
-              <li class="groupe-title">Информация</li>
+            <ul class="js-foo-nav">
+              <li class="groupe-title js-open-foo-nav">Информация</li>
               <li><a href="#">О нас</a></li>
               <li><a href="#">Условия использования</a></li>
               <li><a href="#">Информация для гидов</a></li>
@@ -892,8 +929,8 @@
             <button class="search-submit" type="submit"></button>
           </form>
           <div class="row keywords"><a class="btn _keyword" href="#">Екатеринбург</a><a class="btn _keyword" href="#">Москва</a><a class="btn _keyword" href="#">Санкт-Петербург</a><a class="btn _keyword" href="#">Новосибирск</a><a class="btn _keyword" href="#">Казань</a></div>
-          <div class="columns-grid _no-gap">
-            <div class="col _1-3"><b class="like-h3">Направления</b>
+          <div class="columns-grid _no-gap places js-places">
+            <div class="col _1-3 js-places-block"><b class="like-h3">Направления</b>
               <ul class="places-list js-choise-city-list">
                 <li class="places-item"><a class="places-link" href="#">Европа</a></li>
                 <li class="places-item"><a class="places-link" href="#">Азия</a></li>
@@ -903,7 +940,7 @@
                 <li class="places-item"><a class="places-link" href="#">Австрия и Океания</a></li>
               </ul>
             </div>
-            <div class="col _1-3"><b class="like-h3">Страны</b>
+            <div class="col _1-3 js-places-block"><b class="like-h3">Страны</b>
               <ul class="places-list js-choise-city-list">
                 <li class="places-item"><a class="places-link" href="#">Польша</a></li>
                 <li class="places-item"><a class="places-link" href="#">Россия</a></li>
@@ -925,7 +962,7 @@
                 <li class="places-item"><a class="places-link" href="#">Франция</a></li>
               </ul>
             </div>
-            <div class="col _1-3"><b class="like-h3">Города</b>
+            <div class="col _1-3 js-places-block"><b class="like-h3">Города</b>
               <ul class="places-list js-choise-city-list">
                 <li class="places-item"><a class="places-link" href="#">Березовский</a></li>
                 <li class="places-item"><a class="places-link" href="#">Верхняя Пышма</a></li>
@@ -953,7 +990,7 @@
         <div class="modal-content">
           <p class="_text-center _no-mrg">войти через</p>
           <div class="login-via-social">
-            <div class="social _at-login-modal _is-short"><a class="item _vk-l" href="#"></a><a class="item _ok-l" href="#"></a><a class="item _mail-l" href="#"></a><a class="item _gp-l" href="#"></a><a class="item _tw-l" href="#"></a></div><a class="unshort-link" href="#">ещё</a>
+            <div class="social _at-login-modal js-shorted-block _is-shorted" id="login-via-social"><a class="item _vk-l" href="#"></a><a class="item _ok-l" href="#"></a><a class="item _mail-l" href="#"></a><a class="item _gp-l" href="#"></a><a class="item _tw-l" href="#"></a></div><a class="js-unshort-block" href="#login-via-social">ещё</a>
           </div>
           <p class="_text-center _no-mrg">или</p>
           <form class="form" action="#" method="post">

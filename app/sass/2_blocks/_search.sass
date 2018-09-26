@@ -1,6 +1,7 @@
 .search-form
 	width: 360px
 	position: relative
+	font-size: 1.13rem
 
 	&._at-header
 		position: absolute
@@ -65,7 +66,7 @@
 	width: 100%
 	background-color: transparent
 	outline: none
-	font-size: 1.13rem
+	font-size: inherit
 	font-weight: 300
 	line-height: 1
 	border: 1px solid #fff
@@ -122,3 +123,28 @@
 		transform: rotate(45deg)
 		top: 24px
 		left: 21.5px
+
+@media screen and (max-width: 940px)
+	.search-form
+		&._at-city-modal
+			font-size: 1.4rem
+		&._at-header
+			width: 290px
+			margin-left: -145px
+			font-size: 1rem
+
+			.serach-field
+				padding-top: 13px
+				padding-bottom: 13px
+
+		&._at-search-popup
+			width: 310px
+			right: 6px
+			font-size: 1.05rem
+
+			.serach-field
+				padding: 11px 50px 9px 20px
+				max-height: 44px
+
+			.search-submit
+				right: 3px

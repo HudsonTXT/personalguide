@@ -2,13 +2,15 @@ header.site-header
 
 	nav.site-nav
 		.nav-wrapper
+			a(href="#").open-mobile-menu
+
 			.sides-items
 				a(href="#city-choise").choice-city-btn.mopen: img(src="media/img/logo-icon.png", alt="")
 
 			ul.nav-list
 				li.nav-item._is-active
-					a(href="#").nav-item-icon: img(src="media/img/groupe-icon-7.png", alt="", width="21", height="18")
-					a(href="#").nav-link О месте
+					a(href="/").nav-item-icon: img(src="media/img/groupe-icon-7.png", alt="", width="21", height="18")
+					a(href="/").nav-link О месте
 
 					.row._grey.subnav
 						.wrapper
@@ -100,3 +102,5 @@ header.site-header
 				form(action="#" method="get").search-form._at-search-popup._is-hide
 					input(type="text" name="search-request" placeholder="Куда отправитесь?").serach-field
 					button(type="submit").search-submit
+
+	include ../1_blocks/m-menu

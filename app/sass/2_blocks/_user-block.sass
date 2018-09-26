@@ -1,7 +1,16 @@
 .user-block
 	position: relative
 
-.user-pic
+	&._at-m-menu
+		position: absolute
+		top: 15px
+		right: 10px
+
+		.user-pic
+			width: 26px
+			height: 26px
+
+.user-block .user-pic
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -42,3 +51,9 @@
 .user-menu-link
 	text-decoration: none
 	color: #615faf
+
+@media screen and (max-width: 940px)
+
+	.user-block .user-pic
+		width: 36px
+		height: 36px

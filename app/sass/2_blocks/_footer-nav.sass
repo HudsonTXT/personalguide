@@ -37,3 +37,51 @@
 
 	&:hover
 		text-decoration: underline
+
+@media screen and (max-width: 940px)
+	.footer-nav
+		flex-direction: column
+		font-size: 1.08rem
+
+	.footer-nav ul
+		width: 100%
+		margin: 0
+		padding: 0
+		border-bottom: 1px solid #444
+		transition: .2s
+		max-height: 100%
+
+		&:first-child
+			border-top: 1px solid #444
+
+		&._is-hidden
+			height: 52px
+			overflow: hidden
+
+	.footer-nav .groupe-title
+		margin: 0
+		padding: 20px 0
+		position: relative
+		font-size: .93rem
+		letter-spacing: 1px
+		line-height: 1
+		cursor: pointer
+
+		&::before
+			content: ""
+			display: block
+			width: 0
+			height: 0
+			border-left: 4px solid transparent
+			border-right: 4px solid transparent
+			border-top: 4px solid #999
+			position: absolute
+			top: 50%
+			right: 5px
+			margin-top: -2px
+
+	.footer-nav li
+		margin-bottom: 10px
+
+		&:last-child
+			margin-bottom: 15px

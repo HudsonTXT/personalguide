@@ -1,5 +1,6 @@
 .index-slider
 	margin-bottom: 50px
+	font-size: .88rem
 
 	&:last-child
 		margin-bottom: 0
@@ -111,3 +112,54 @@
 	padding-top: 20px
 	padding-bottom: 20px
 	margin-bottom: 0
+
+@media screen and (max-width: 940px)
+	.index-slider
+		margin-bottom: 0
+
+	.index-slider .category-marker
+		width: 40px
+		height: 40px
+		margin-bottom: 5px
+
+		img
+			transform: scale(.9)
+			margin-top: -6px
+
+		&::before
+			width: 40px
+			height: 40px
+
+	.index-slider .category-title
+		font-size: 1.08rem
+		color: #000
+
+	.index-slider .slider-content
+		padding-bottom: 30px
+
+		& > .col._1-4
+			display: none
+
+		& > .col._3-4
+			width: 100%
+
+	.index-slider .slide-items
+		flex-wrap: wrap
+		justify-content: center
+
+		> .col
+			width: auto
+			flex: 1 1 280px
+			max-width: 360px
+			padding-left: 10px
+			padding-right: 10px
+			margin: 0
+			padding-bottom: 20px
+
+			&:nth-child(n+3)
+				display: none
+	
+	.index-slider .slide .to-all
+		margin-top: 0
+		margin-right: auto
+		font-size: 1rem

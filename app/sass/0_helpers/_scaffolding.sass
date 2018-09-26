@@ -5,8 +5,11 @@ body
 	box-sizing: border-box
 	font-family: 'Open Sans', sans-serif
 	font-size: 16px
-	line-height: 24px
+	line-height: 1.4
 	color: #666
+
+	@media screen and (max-width: 940px)
+		font-size: 13px
 
 img
 	width: 100%
@@ -21,6 +24,9 @@ a
 	color: #615faf
 	font-size: inherit
 	line-height: inherit
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
 
 p
 	margin: 15px 0
@@ -73,6 +79,7 @@ ol > li::before
 ::-webkit-scrollbar
 	width: 8px
 	border-radius: 8px
+	height: 3px
 
 ::-webkit-scrollbar-track
 	border: none

@@ -26,11 +26,12 @@
 			top: 15px
 			left: 0
 
-	&._pdg-l70
-		padding-left: 70px
-
 	&._pdg-l45
 		padding-left: 45px
+
+	&._pdg-both-40
+		padding-left: 40px
+		padding-right: 40px
 
 .form textarea
 	width: 100%
@@ -224,7 +225,7 @@
 	font-weight: 400
 	background-color: transparent
 
-	&:focus
+	&:focus:not(.select-field)
 		color: #615faf
 		font-weight: 700
 
@@ -232,14 +233,6 @@
 	-webkit-appearance: none
 	-moz-appearance: none
 	appearance: none
-
-	&:focus
-		font-weight: 400
-		color: inherit
-
-	&:hover
-		color: #615faf
-		font-weight: 700
 
 .field-notify
 	color: #999

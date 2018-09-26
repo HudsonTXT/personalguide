@@ -1,0 +1,56 @@
+extends ../0_base/template
+
+include ../1_blocks/card_item-row
+
+block title
+	title Все экскурсии
+
+block content
+	main.wrapper._pdg-both-60
+		.content-block
+			h2.like-h2.block-title Самые популярные экскурсии
+
+			.popular-items
+				.popular-item
+					.img
+						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+					a(href="#").title.
+						Все главные достопримечательности
+
+				.popular-item
+					.img
+						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+					a(href="#").title.
+						Все главные достопримечательности
+
+				.popular-item
+					.img
+						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+					a(href="#").title.
+						Все главные достопримечательности
+
+				.popular-item
+					.img
+						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+					a(href="#").title.
+						Все главные достопримечательности
+
+				.popular-item
+					.img
+						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+					a(href="#").title.
+						Все главные достопримечательности
+
+				.popular-item
+					.img
+						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+					a(href="#").title.
+						Все главные достопримечательности
+
+		.items-grid._1-in-row
+			+cardExcursRow()
+			+cardExcursRow()
+			+cardExcursRow()
+			+cardExcursRow()
+			+cardExcursRow()
+			+cardExcursRow()

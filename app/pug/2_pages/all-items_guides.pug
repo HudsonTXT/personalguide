@@ -1,261 +1,86 @@
 extends ../0_base/template
 
 include ../1_blocks/guide-card
-include ../1_blocks/card_item-row
-
 
 block title
 	title Все гиды
 
 block content
-	main
-		.row._grey
-			.wrapper
-				.tabs.js-tabs
-					a(href="#all_guides").item._is-active Гиды
-					a(href="#all_excurs").item Экскурсии
-					a(href="#all_photos").item Фото
-					a(href="#").item Видео
-					a(href="#").item Веб-камеры
+	main.wrapper
+		.content-block
+			h2.like-h2.block-title Самые популярные гиды
 
-		.wrapper#all_guides
-			.content-block
-				h2.like-h2.block-title Самые популярные гиды
+			.popular-items
+				.popular-item
+					.img
+						img(src="media/img-p/guide-1.jpg", alt="Фото гида")
+					a(href="#").title.
+						Иванов Иван Иванович
+					a(href="#").link.
+						Экскурсии (24)
 
-				.popular-items
-					.popular-item
-						.img
-							img(src="media/img-p/guide-1.jpg", alt="Фото гида")
-						a(href="#").title.
-							Иванов Иван Иванович
-						a(href="#").link.
-							Экскурсии (24)
+				.popular-item
+					.img
+						img(src="media/img-p/guide-1.jpg", alt="Фото гида")
+					a(href="#").title.
+						Иванов Иван Иванович
+					a(href="#").link.
+						Экскурсии (24)
 
-					.popular-item
-						.img
-							img(src="media/img-p/guide-1.jpg", alt="Фото гида")
-						a(href="#").title.
-							Иванов Иван Иванович
-						a(href="#").link.
-							Экскурсии (24)
+				.popular-item
+					.img
+						img(src="media/img-p/guide-1.jpg", alt="Фото гида")
+					a(href="#").title.
+						Иванов Иван Иванович
+					a(href="#").link.
+						Экскурсии (24)
 
-					.popular-item
-						.img
-							img(src="media/img-p/guide-1.jpg", alt="Фото гида")
-						a(href="#").title.
-							Иванов Иван Иванович
-						a(href="#").link.
-							Экскурсии (24)
+				.popular-item
+					.img
+						img(src="media/img-p/guide-1.jpg", alt="Фото гида")
+					a(href="#").title.
+						Иванов Иван Иванович
+					a(href="#").link.
+						Экскурсии (24)
 
-					.popular-item
-						.img
-							img(src="media/img-p/guide-1.jpg", alt="Фото гида")
-						a(href="#").title.
-							Иванов Иван Иванович
-						a(href="#").link.
-							Экскурсии (24)
+				.popular-item
+					.img
+						img(src="media/img-p/guide-1.jpg", alt="Фото гида")
+					a(href="#").title.
+						Иванов Иван Иванович
+					a(href="#").link.
+						Экскурсии (24)
 
-					.popular-item
-						.img
-							img(src="media/img-p/guide-1.jpg", alt="Фото гида")
-						a(href="#").title.
-							Иванов Иван Иванович
-						a(href="#").link.
-							Экскурсии (24)
+				.popular-item
+					.img
+						img(src="media/img-p/guide-1.jpg", alt="Фото гида")
+					a(href="#").title.
+						Иванов Иван Иванович
+					a(href="#").link.
+						Экскурсии (24)
 
-					.popular-item
-						.img
-							img(src="media/img-p/guide-1.jpg", alt="Фото гида")
-						a(href="#").title.
-							Иванов Иван Иванович
-						a(href="#").link.
-							Экскурсии (24)
-
-			.row
-				.ads._728x92
+		.row
+			.ads._728x92
+		
+		.content-block
+			h2.like-h2.block-title Гиды и экскурсоводы Екатеринбурга
 			
-			.content-block
-				h2.like-h2.block-title Гиды и экскурсоводы Екатеринбурга
-				
-				.columns-grid._2-cols
-					.col._1-4
-						.ads
-						.ads
+			.columns-grid._2-cols
+				.col._1-4
+					.ads
+					.ads
 
-					.col._3-4
-						+guideCard()._special
-						+guideCard()
-						+guideCard()
-						+guideCard()
-						+guideCard()
+				.col._3-4
+					+guideCard()._special
+					+guideCard()
+					+guideCard()
+					+guideCard()
+					+guideCard()
 
-						.pagination._pdg-vert40
-							a(href="#").item._is-active 1
-							a(href="#").item 2
-							a(href="#").item 3
-							a(href="#").item 4
-							a(href="#").item ...
-							a(href="#").item 8
-
-		.wrapper._pdg-both-60#all_excurs
-			.content-block
-				h2.like-h2.block-title Самые популярные экскурсии
-
-				.popular-items
-					.popular-item
-						.img
-							img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-						a(href="#").title.
-							Все главные достопримечательности
-
-					.popular-item
-						.img
-							img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-						a(href="#").title.
-							Все главные достопримечательности
-
-					.popular-item
-						.img
-							img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-						a(href="#").title.
-							Все главные достопримечательности
-
-					.popular-item
-						.img
-							img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-						a(href="#").title.
-							Все главные достопримечательности
-
-					.popular-item
-						.img
-							img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-						a(href="#").title.
-							Все главные достопримечательности
-
-					.popular-item
-						.img
-							img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-						a(href="#").title.
-							Все главные достопримечательности
-
-			.items-grid._1-in-row
-				+cardExcursRow()
-				+cardExcursRow()
-				+cardExcursRow()
-				+cardExcursRow()
-				+cardExcursRow()
-				+cardExcursRow()
-
-		.wrapper#all_photos
-			.content-block
-				h2.like-h2.block-title Все фотоальбомы
-				
-				.columns-grid._2-cols
-					.col._1-4
-						.ads
-
-					.col._3-4
-						.gallery
-							.gallery-item
-								.card-item._big
-										.card-img
-											img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-										.card-header
-											.user
-												.user-pic
-													a(href="#")
-														img(src="media/img-p/2.jpg", alt="")
-												a(href="#").user-name.
-													Рита
-
-											a(href="#").comments._good 345
-										a(href="#").card-title.
-											Санкт-Петербург
-										p.card-text.
-											О личностном и творческом становлении великого поэта на 
-											экскурсии по местам его славы. О личностном и творческом 
-											становлении великого поэта на экскурсии по местам его славы.
-
-							.gallery-item
-								.card-item
-										.card-img
-											img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-										.card-header
-											.user
-												.user-pic
-													a(href="#")
-														img(src="media/img-p/2.jpg", alt="")
-												a(href="#").user-name.
-													Рита
-
-											a(href="#").comments._good 345
-										a(href="#").card-title.
-											Санкт-Петербург
-
-							.gallery-item
-								.card-item
-										.card-img
-											img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-										.card-header
-											.user
-												.user-pic
-													a(href="#")
-														img(src="media/img-p/2.jpg", alt="")
-												a(href="#").user-name.
-													Рита
-
-											a(href="#").comments._good 345
-										a(href="#").card-title.
-											Санкт-Петербург
-
-							.gallery-item
-								.card-item
-										.card-img
-											img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-										.card-header
-											.user
-												.user-pic
-													a(href="#")
-														img(src="media/img-p/2.jpg", alt="")
-												a(href="#").user-name.
-													Рита
-
-											a(href="#").comments._good 345
-										a(href="#").card-title.
-											Санкт-Петербург
-
-							.gallery-item
-								.card-item._big
-										.card-img
-											img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-										.card-header
-											.user
-												.user-pic
-													a(href="#")
-														img(src="media/img-p/2.jpg", alt="")
-												a(href="#").user-name.
-													Рита
-
-											a(href="#").comments._good 345
-										a(href="#").card-title.
-											Санкт-Петербург
-										p.card-text.
-											О личностном и творческом становлении великого поэта на 
-											экскурсии по местам его славы. О личностном и творческом 
-											становлении великого поэта на экскурсии по местам его славы.
-
-							.gallery-item
-								.card-item
-										.card-img
-											img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-										.card-header
-											.user
-												.user-pic
-													a(href="#")
-														img(src="media/img-p/2.jpg", alt="")
-												a(href="#").user-name.
-													Рита
-
-											a(href="#").comments._good 345
-										a(href="#").card-title.
-											Санкт-Петербург
+					.pagination._pdg-vert40
+						a(href="#").item._is-active 1
+						a(href="#").item 2
+						a(href="#").item 3
+						a(href="#").item 4
+						a(href="#").item ...
+						a(href="#").item 8

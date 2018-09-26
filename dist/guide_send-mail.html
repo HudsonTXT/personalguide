@@ -21,10 +21,10 @@
   <body>
     <header class="site-header">
       <nav class="site-nav">
-        <div class="nav-wrapper">
+        <div class="nav-wrapper"><a class="open-mobile-menu" href="#"></a>
           <div class="sides-items"><a class="choice-city-btn mopen" href="#city-choise"><img src="media/img/logo-icon.png" alt=""/></a></div>
           <ul class="nav-list">
-            <li class="nav-item _is-active"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-7.png" alt="" width="21" height="18"/></a><a class="nav-link" href="#">О месте</a>
+            <li class="nav-item _is-active"><a class="nav-item-icon" href="/"><img src="media/img/groupe-icon-7.png" alt="" width="21" height="18"/></a><a class="nav-link" href="/">О месте</a>
               <div class="row _grey subnav">
                 <div class="wrapper">
                   <div class="tabs"><a class="item" href="#info-slide-1">Описание</a><a class="item" href="#info-slide-2">Рассказы</a><a class="item" href="#info-slide-3">Карта</a></div>
@@ -89,6 +89,30 @@
           </div>
         </div>
       </nav>
+      <div class="m-menu" id="mobile-menu"><a class="m-menu-close" href="#"></a>
+        <nav class="m-nav">
+          <ul class="m-nav-list">
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">О месте</a></li>
+          </ul>
+        </nav>
+        <div class="user-block _at-m-menu"><a class="user-pic js-open-user-menu" href="#"><img src="media/img-p/1.jpg" alt=""/></a>
+          <div class="user-menu-popup js-user-menu-popup">
+            <ul class="user-menu-list">
+              <li class="user-menu-item"><a class="user-menu-link mopen" href="#signin">Войти</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Мой профиль</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Настройки</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Выйти</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
     <main class="wrapper">
       <div class="page-header">
@@ -163,7 +187,7 @@
     <footer class="site-footer">
       <div class="wrapper footer-top">
         <div class="col _1-3">
-          <div class="site-logo"><img src="media/img/site-logo.png" alt=""/></div>
+          <div class="site-logo _at-footer"><img src="media/img/site-logo.png" alt=""/></div>
           <p>
             Туристический портал для тех, кто 
             путешествует или собирается 
@@ -173,23 +197,23 @@
         </div>
         <div class="col _2-3">
           <nav class="footer-nav">
-            <ul>
-              <li class="groupe-title">Туристу</li>
+            <ul class="js-foo-nav">
+              <li class="groupe-title js-open-foo-nav">Туристу</li>
               <li><a href="#">Ж/Д билеты</a></li>
               <li><a href="#">Авиабилеты</a></li>
               <li><a href="#">Аренда жилья</a></li>
               <li><a href="#">Прокат авто</a></li>
               <li><a href="#">Страхование</a></li>
             </ul>
-            <ul>
-              <li class="groupe-title">Интересное</li>
+            <ul class="js-foo-nav">
+              <li class="groupe-title js-open-foo-nav">Интересное</li>
               <li><a href="#">Статьи</a></li>
               <li><a href="#">Зарубежные статьи</a></li>
               <li><a href="#">Новости</a></li>
               <li><a href="#">Рассказы</a></li>
             </ul>
-            <ul>
-              <li class="groupe-title">Информация</li>
+            <ul class="js-foo-nav">
+              <li class="groupe-title js-open-foo-nav">Информация</li>
               <li><a href="#">О нас</a></li>
               <li><a href="#">Условия использования</a></li>
               <li><a href="#">Информация для гидов</a></li>
@@ -212,8 +236,8 @@
             <button class="search-submit" type="submit"></button>
           </form>
           <div class="row keywords"><a class="btn _keyword" href="#">Екатеринбург</a><a class="btn _keyword" href="#">Москва</a><a class="btn _keyword" href="#">Санкт-Петербург</a><a class="btn _keyword" href="#">Новосибирск</a><a class="btn _keyword" href="#">Казань</a></div>
-          <div class="columns-grid _no-gap">
-            <div class="col _1-3"><b class="like-h3">Направления</b>
+          <div class="columns-grid _no-gap places js-places">
+            <div class="col _1-3 js-places-block"><b class="like-h3">Направления</b>
               <ul class="places-list js-choise-city-list">
                 <li class="places-item"><a class="places-link" href="#">Европа</a></li>
                 <li class="places-item"><a class="places-link" href="#">Азия</a></li>
@@ -223,7 +247,7 @@
                 <li class="places-item"><a class="places-link" href="#">Австрия и Океания</a></li>
               </ul>
             </div>
-            <div class="col _1-3"><b class="like-h3">Страны</b>
+            <div class="col _1-3 js-places-block"><b class="like-h3">Страны</b>
               <ul class="places-list js-choise-city-list">
                 <li class="places-item"><a class="places-link" href="#">Польша</a></li>
                 <li class="places-item"><a class="places-link" href="#">Россия</a></li>
@@ -245,7 +269,7 @@
                 <li class="places-item"><a class="places-link" href="#">Франция</a></li>
               </ul>
             </div>
-            <div class="col _1-3"><b class="like-h3">Города</b>
+            <div class="col _1-3 js-places-block"><b class="like-h3">Города</b>
               <ul class="places-list js-choise-city-list">
                 <li class="places-item"><a class="places-link" href="#">Березовский</a></li>
                 <li class="places-item"><a class="places-link" href="#">Верхняя Пышма</a></li>
@@ -264,6 +288,77 @@
               </ul>
             </div>
           </div>
+        </div><a class="modal-close" href="#"></a>
+      </div>
+      <div class="modal-overlay"></div>
+    </div>
+    <div class="modal">
+      <div class="modal-container _w310 _login" id="signin">
+        <div class="modal-content">
+          <p class="_text-center _no-mrg">войти через</p>
+          <div class="login-via-social">
+            <div class="social _at-login-modal js-shorted-block _is-shorted" id="login-via-social"><a class="item _vk-l" href="#"></a><a class="item _ok-l" href="#"></a><a class="item _mail-l" href="#"></a><a class="item _gp-l" href="#"></a><a class="item _tw-l" href="#"></a></div><a class="js-unshort-block" href="#login-via-social">ещё</a>
+          </div>
+          <p class="_text-center _no-mrg">или</p>
+          <form class="form" action="#" method="post">
+            <div class="col">
+              <fieldset class="fields-groupe">
+                <div class="tf-wrapper">
+                  <input class="text-field" type="email" name="email" id="email" value=""/>
+                  <label for="email" data-content="email"></label>
+                </div>
+                <div class="tf-wrapper">
+                  <input class="text-field" type="password" name="password" id="password" value=""/>
+                  <label for="password" data-content="пароль"></label><a href="#">Забыли пароль?</a>
+                </div>
+              </fieldset>
+              <div class="form-actions"><a class="btn _bordered _fs11 mopen" href="#signup">зарегестрироваться</a><a class="btn _fs11" href="#">войти</a></div>
+            </div>
+          </form>
+        </div><a class="modal-close" href="#"></a>
+      </div>
+      <div class="modal-overlay"></div>
+    </div>
+    <div class="modal">
+      <div class="modal-container _w310 _login" id="signup">
+        <div class="modal-content">
+          <form class="form" action="#" method="post">
+            <div class="col">
+              <fieldset class="fields-groupe">
+                <div class="tf-wrapper">
+                  <input class="text-field" type="email" name="email" id="email" value=""/>
+                  <label for="email" data-content="email"></label>
+                </div>
+                <div class="tf-wrapper">
+                  <input class="text-field" type="password" name="password" id="password" value=""/>
+                  <label for="password" data-content="пароль"></label>
+                </div>
+              </fieldset>
+              <fieldset class="fields-groupe">
+                <div class="signup-as">
+                  <div class="radio-wrapper">
+                    <input type="radio" name="signup-as" id="like-tourist" checked="checked"/>
+                    <label for="like-tourist">Путешественник</label>
+                  </div>
+                  <div class="radio-wrapper">
+                    <input type="radio" name="signup-as" id="like-guide" checked="checked"/>
+                    <label for="like-guide">Гид</label>
+                  </div>
+                  <div class="radio-wrapper">
+                    <input type="radio" name="signup-as" id="like-company" checked="checked"/>
+                    <label for="like-company">Компания</label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="fields-groupe">
+                <div class="chbx-wrapper _type-2">
+                  <input type="checkbox" name="signup-agreement" id="signup-agreement"/>
+                  <label for="signup-agreement">принять <a href="#">условия регистрации</a></label>
+                </div>
+              </fieldset>
+              <div class="form-actions _btn-center"><a class="btn _bordered _fs11" href="#">зарегестрироваться</a></div>
+            </div>
+          </form>
         </div><a class="modal-close" href="#"></a>
       </div>
       <div class="modal-overlay"></div>

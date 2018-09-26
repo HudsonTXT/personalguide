@@ -1,5 +1,6 @@
 .places-list
 	width: calc(100% + 1px) // for side border collapse
+	min-height: 200px
 	height: 100%
 	list-style: none
 	margin: 0
@@ -11,6 +12,7 @@
 	height: 100%
 	overflow-y: auto
 	margin-top: 10px
+	font-size: .813rem
 
 	&::-webkit-scrollbar
 		width: 18px
@@ -32,7 +34,7 @@
 			background-color: rgba(0, 0, 0, .65)
 
 .places-item
-	font-size: .813rem
+	font-size: inherit
 	line-height: 1
 
 	&._is-active
@@ -45,3 +47,19 @@
 	line-height: 1
 	padding: 10px 18px
 	color: inherit
+
+@media screen and (max-width: 940px)
+	.places-list
+		border-left: none
+		border-right: none
+		border-top: 1px solid #cccccc
+		border-bottom: 1px solid #cccccc
+		font-size: 1rem
+		padding-top: 10px
+		padding-bottom: 10px
+		min-height: 322px
+		max-height: 322px
+
+	.places > .col._1-3
+		width: 100%
+		flex-shrink: 0

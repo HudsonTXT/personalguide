@@ -1,2 +1,11 @@
 .keywords
 	margin-bottom: 20px
+	min-height: 30px
+
+	@media screen and (max-width: 940px)
+		min-height: 32px
+		overflow-x: scroll
+
+		&::-webkit-scrollbar
+			height: 0
+			width: 0

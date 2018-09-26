@@ -1,8 +1,11 @@
-header.site-header._full
+header.site-header
 	.full-content
 		a(href="#city-choise").btn._city-choise.mopen
 			i.ic._world
 			| Страны и города
+
+		.site-logo._at-header
+			img(src="media/img/site-logo.png", alt="")
 
 		form(action="#" method="get").search-form._at-header
 			input(type="text" name="search-request" placeholder="Куда отправитесь?").serach-field
@@ -10,7 +13,7 @@ header.site-header._full
 		
 		.user-block
 			a(href="#").user-pic.js-open-user-menu
-				img(src="media/img-p/1.jpg", alt="")
+				
 
 			.user-menu-popup.js-user-menu-popup
 				ul.user-menu-list
@@ -21,6 +24,8 @@ header.site-header._full
 
 	nav.site-nav
 		.nav-wrapper
+			a(href="#").open-mobile-menu
+
 			.sides-items._is-hide.js-down-anim
 				a(href="#city-choise").choice-city-btn.mopen: img(src="media/img/logo-icon.png", alt="")
 
@@ -119,3 +124,5 @@ header.site-header._full
 				form(action="#" method="get").search-form._at-search-popup._is-hide
 					input(type="text" name="search-request" placeholder="Куда отправитесь?").serach-field
 					button(type="submit").search-submit
+					
+	include ../1_blocks/m-menu
