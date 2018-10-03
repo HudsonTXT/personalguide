@@ -15,27 +15,30 @@ block content
 					li: a(href="#") Рестораны Екатеринбург
 
 		.columns-grid._2-cols
-			.col._1-4
-				article.card-item
-					.card-img
-						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-					.card-header
-						a(href="#").on-map На карте
-						a(href="#").comments._good 345
-					p.card-text.
-						г. Екатеринбург, <br>
-						ул. Метталургов, д. 6 <br>
-						+7 982 <a href="#" class="link">показать</a><br>
-						<a href="#">www.manilovka-ekb.ru</a>
+			.col._1-4._m-1-1.page-aside
+				article.item-card.--at-page-aside
+					.item-card_img-wrapper
+						.item-card_img
+							img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+								
+					.item-card_content
+						.item-card_header
+							a(href="#").item-card_on-map На карте
+							a(href="#").item-card_comments 345
+						p.item-card_text.
+							г. Екатеринбург, <br>
+							ул. Метталургов, д. 6 <br>
+							+7 982 <a href="#" class="link">показать</a><br>
+							<a href="#">www.manilovka-ekb.ru</a>
 
-					.card-footer
-						p.card-price <b>1600</b> руб. средний чек
+						.item-card_footer
+							p.item-card_price <b>1600</b> руб. средний чек
 				
 				.action-btns
 					a(href="#").btn Оставить отзыв
 					a(href="#").btn._is-blue Отправить сообщение
 
-			.col._3-4
+			.col._3-4._m-1-1
 				.content-block
 					h2.like-h2.block-title О нас
 
@@ -64,19 +67,30 @@ block content
 					h2.like-h2.block-title Мексиканский зал
 
 					.gallery
-						a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item
-							img(src="media/img-p/excursion-1.jpg", alt="")
-						a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item
-							img(src="media/img-p/excursion-1.jpg", alt="")
-						a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item
-							img(src="media/img-p/excursion-1.jpg", alt="")
+						.gallery_row
+							.gallery_col.__2-3
+								a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
+							.gallery_col.__1-3
+								a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
+								a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
+
+						.gallery_row
+							.gallery_col.__1-3
+								a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
+								a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
+							.gallery_col.__2-3
+								a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
 
 				.content-block
 					h2.like-h2.block-title Центральный зал
 
 					.gallery
-						a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item
-							img(src="media/img-p/excursion-1.jpg", alt="")
+						.gallery_row
+							.gallery_col.__2-3
+								a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
+							.gallery_col.__1-3
+								a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
+								a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
 				
 				.content-block
 					h2.like-h2.block-title Меню
@@ -96,7 +110,7 @@ block content
 					h2.like-h2.block-title Оставить отзыв
 					
 					form(action="#" method="post").form._feedback
-						.col._2-3
+						.col._2-3._m-1-1
 							fieldset.fields-groupe
 								.tf-wrapper._w-220
 									input(type="text" name="name" id="name" value="").text-field
@@ -119,39 +133,39 @@ block content
 					h2.like-h2.block-title Отзывы
 
 					.feedback-item
-						p.feedback-text.
+						p.feedback-item_text.
 							Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
 							эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
 							искромётно стилизовали народные, украсили искрящимися улыбками, светом 
 							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
 						
-						.feedback-attachments
-							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+						.feedback-item_attachments
+							a(href="#").feedback-item_img
 								img(src="media/img-p/excursion-1.jpg", alt="")
-							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+							a(href="#").feedback-item_img
 								img(src="media/img-p/excursion-1.jpg", alt="")
-							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+							a(href="#").feedback-item_img
 								img(src="media/img-p/excursion-1.jpg", alt="")
-							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+							a(href="#").feedback-item_img
 								img(src="media/img-p/excursion-1.jpg", alt="")
 
-						.feedback-foo
-							.feedback-author
-								.author-pic
+						.feedback-item_foo
+							.feedback-item_author
+								.feedback-item_author-pic
 									img(src="media/img-p/1.jpg", alt="")
-								a(href="#").author-name Катерина
+								a(href="#").feedback-item_author-name Катерина
 							time(datetime="21-07-2017") 21.07.2017
 
 					.feedback-item
-						p.feedback-text.
+						p.feedback-item_text.
 							Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
 							эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
 							искромётно стилизовали народные, украсили искрящимися улыбками, светом 
-							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
+							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль.
 
-						.feedback-foo
-							.feedback-author
-								.author-pic
+						.feedback-item_foo
+							.feedback-item_author
+								.feedback-item_author-pic
 									img(src="media/img-p/1.jpg", alt="")
-								a(href="#").author-name Катерина
+								a(href="#").feedback-item_author-name Катерина
 							time(datetime="21-07-2017") 21.07.2017

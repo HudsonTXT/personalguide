@@ -1,7 +1,10 @@
-extends cabinet-template
+extends template
 
 block title
 	title Личный кабинет. Гид.
+
+block vars
+	- var isCabinetPage = true;
 
 block content
 	main.wrapper
@@ -13,41 +16,31 @@ block content
 			.col._1-4
 				aside.sidebar
 					.add-menu
-						a(href="#").btn._add добавить
+						a(href="#").add-menu_open добавить
 						
-						ul.dropdown
-							li
-								a(href="#") Карточка Гида
-							li
-								a(href="#") Экскурсия
-							li
-								a(href="#") Рассказ
-							li
-								a(href="#") Фотоальбом
-							li
-								a(href="#") Видеозапись
+						ul.add-menu_list
+							li.add-menu_item
+								a(href="#").add-menu_link Карточка Гида
+							li.add-menu_item
+								a(href="#").add-menu_link Экскурсия
+							li.add-menu_item
+								a(href="#").add-menu_link Рассказ
+							li.add-menu_item
+								a(href="#").add-menu_link Фотоальбом
+							li.add-menu_item
+								a(href="#").add-menu_link Видеозапись
 
-					nav.personal-menu
-						ul
-							li
-								a(href="#").menu-link <i class="ic _person"></i> Карточка гида
-							li
-								a(href="#").menu-link <i class="ic _horn-1"></i> Экскурсии (23)
-							li
-								a(href="#").menu-link <i class="ic _book"></i> Рассказы
-							li
-								a(href="#").menu-link <i class="ic _cam"></i> Фотоальбомы (23)
-							li
-								a(href="#").menu-link <i class="ic _vid"></i> Видеозаписи
-							li
-								a(href="#").menu-link <i class="ic _horn-2"></i> Рассылка
-							li
-								a(href="#").menu-link <i class="ic _person"></i> Оплата
-							li
-								a(href="#").menu-link._is-blue <i class="ic _setting"></i> Настройки
-							li
-								a(href="#").menu-link._is-blue <i class="ic _null"></i> Выйти
-							li
-								a(href="#").menu-link._is-blue <i class="ic _null"></i> Удалить аккаунт
+					nav.personal-menu.--at-cabinet-aside
+						ul.personal-menu_list
+							li.personal-menu_item._is-active: a(href="#").personal-menu_link <i class="ic _person"></i> Карточка гида
+							li.personal-menu_item: a(href="#").personal-menu_link <i class="ic _horn-1"></i> Экскурсии (23)
+							li.personal-menu_item: a(href="#").personal-menu_link <i class="ic _book"></i> Рассказы
+							li.personal-menu_item: a(href="#").personal-menu_link <i class="ic _cam"></i> Фотоальбомы (23)
+							li.personal-menu_item: a(href="#").personal-menu_link <i class="ic _vid"></i> Видеозаписи
+							li.personal-menu_item: a(href="#").personal-menu_link <i class="ic _horn-2"></i> Рассылка
+							li.personal-menu_item: a(href="#").personal-menu_link <i class="ic _person"></i> Оплата
+							li.personal-menu_item: a(href="#").personal-menu_link._is-blue <i class="ic _setting"></i> Настройки
+							li.personal-menu_item: a(href="#").personal-menu_link._is-blue <i class="ic _null"></i> Выйти
+							li.personal-menu_item: a(href="#").personal-menu_link._is-blue <i class="ic _null"></i> Удалить аккаунт
 			.col._3-4
 				block main

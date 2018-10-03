@@ -43,105 +43,110 @@ block page-content
 	.content-block
 		h2.like-h2.block-title Экскурсии
 
-		.items-grid._3-in-row
-			+cardExcurs()
-			+cardExcurs()
-			+cardExcurs()
-			+cardExcurs()
-			+cardExcurs()
-			+cardExcurs()
+		.items-grid._3-in-row._m-2-in-row
+			.items-grid_item: +cardExcurs()
+			.items-grid_item: +cardExcurs()
+			.items-grid_item: +cardExcurs()
+			.items-grid_item: +cardExcurs()
+			.items-grid_item: +cardExcurs()
+			.items-grid_item: +cardExcurs()
 	
 	.content-block
 		h2.like-h2.block-title Рассказы
 
-		.items-grid._3-in-row
-			+cardExcurs()
-			+cardExcurs()
-			+cardExcurs()
+		.items-grid._3-in-row._m-2-in-row
+			.items-grid_item: +cardExcurs()
+			.items-grid_item: +cardExcurs()
+			.items-grid_item: +cardExcurs()
 
 	.content-block
 		h2.like-h2.block-title Фотоальбомы
 
 		.gallery
-			.gallery-item: +cardStory()._big
-			.gallery-item: +cardPhoto()
-			.gallery-item: +cardPhoto()
-			.gallery-item: +cardPhoto()
-			.gallery-item: +cardStory()._big
-			.gallery-item: +cardPhoto()
-			.gallery-item: +cardPhoto()
-			.gallery-item: +cardPhoto()
-			.gallery-item: +cardPhoto()
+			.gallery_row
+				.gallery_col.__1-3
+					.gallery_item: +cardPhoto()
+					.gallery_item: +cardPhoto()
+
+				.gallery_col.__2-3
+					.gallery_item: +cardStory()
+
+			.gallery_row
+				.gallery_col.__2-3
+					.gallery_item: +cardStory()
+
+				.gallery_col.__1-3
+					.gallery_item: +cardPhoto()
+					.gallery_item: +cardPhoto()
 	
 	.content-block
 		h2.like-h2.block-title Видеозаписи
 
-		.items-grid._3-in-row
-			+cardExcurs()
-			+cardExcurs()
-			+cardExcurs()
+		.items-grid._3-in-row._m-2-in-row
+			.items-grid_item: +cardExcurs()
+			.items-grid_item: +cardExcurs()
+			.items-grid_item: +cardExcurs()
 
 	.content-block
 		h2.like-h2.block-title Оставить отзыв
 		
-		.col._2-3
-			form(action="#" method="post").form._feedback
-				.col
-					fieldset.fields-groupe
-						.tf-wrapper._w-220
-							input(type="text" name="name" id="name" value="").text-field
-							label(for="name" data-content="Имя")
-						.tf-wrapper._w-220
-							input(type="email" name="email" id="email" value="").text-field
-							label(for="email" data-content="email")
+		form(action="#" method="post").form._feedback
+			.col._2-3._m-1-1
+				fieldset.fields-groupe
+					.tf-wrapper._w-220
+						input(type="text" name="name" id="name" value="").text-field
+						label(for="name" data-content="Имя")
+					.tf-wrapper._w-220
+						input(type="email" name="email" id="email" value="").text-field
+						label(for="email" data-content="email")
 
-					fieldset.fields-groupe
-						textarea(name="feedback", cols="30", rows="4", placeholder="Оставьте свой отзыв")
-					
-					fieldset.fields-groupe
-						.dropzone#feedbackAttachments
-						span.field-notify.
-							тип файла jpg, jpeg, gif, png не больше 3 Мб
+				fieldset.fields-groupe
+					textarea(name="feedback", cols="30", rows="4", placeholder="Оставьте свой отзыв")
+				
+				fieldset.fields-groupe
+					.dropzone#feedbackAttachments
+					span.field-notify.
+						тип файла jpg, jpeg, gif, png не больше 3 Мб
 
-					a(href="#").btn отправить
+				a(href="#").btn отправить
 
 	.content-block
 		h2.like-h2.block-title Отзывы
 
 		.feedback-item
-			p.feedback-text.
+			p.feedback-item_text.
 				Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
 				эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
 				искромётно стилизовали народные, украсили искрящимися улыбками, светом 
 				счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
 			
-			.feedback-attachments
-				a(href="#").feedback-img
+			.feedback-item_attachments
+				a(href="#").feedback-item_img
 					img(src="media/img-p/excursion-1.jpg", alt="")
-				a(href="#").feedback-img
+				a(href="#").feedback-item_img
 					img(src="media/img-p/excursion-1.jpg", alt="")
-				a(href="#").feedback-img
+				a(href="#").feedback-item_img
 					img(src="media/img-p/excursion-1.jpg", alt="")
-				a(href="#").feedback-img
+				a(href="#").feedback-item_img
 					img(src="media/img-p/excursion-1.jpg", alt="")
 
-			.feedback-foo
-				.feedback-author
-					.author-pic
+			.feedback-item_foo
+				.feedback-item_author
+					.feedback-item_author-pic
 						img(src="media/img-p/1.jpg", alt="")
-					a(href="#").author-name Катерина
+					a(href="#").feedback-item_author-name Катерина
 				time(datetime="21-07-2017") 21.07.2017
 
 		.feedback-item
-			p.feedback-text.
+			p.feedback-item_text.
 				Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
 				эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
 				искромётно стилизовали народные, украсили искрящимися улыбками, светом 
-				счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
+				счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль.
 
-			.feedback-foo
-				.feedback-author
-					.author-pic
+			.feedback-item_foo
+				.feedback-item_author
+					.feedback-item_author-pic
 						img(src="media/img-p/1.jpg", alt="")
-					a(href="#").author-name Катерина
+					a(href="#").feedback-item_author-name Катерина
 				time(datetime="21-07-2017") 21.07.2017

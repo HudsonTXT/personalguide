@@ -1,11 +1,14 @@
 mixin cardTour()
-	article.card-item&attributes(attributes)
-		.card-img
-			img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-		.card-content
-			a(href="#").card-title.
+	article.item-card&attributes(attributes)
+		.item-card_img-wrapper
+			.item-card_img
+				img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+
+		.item-card_content
+			a(href="#").item-card_title.
 				Санкт-Петербург Есенина в компании поэта
-			p.card-text.
+
+			p.item-card_text.
 				О личностном и творческом 
 				становлении великого поэта на 
 				экскурсии по местам его славы

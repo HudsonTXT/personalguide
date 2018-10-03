@@ -9,111 +9,23 @@ block content
 			h2.like-h2.block-title Все фотоальбомы
 			
 			.columns-grid._2-cols
-				.col._1-4
+				.col._1-4.ads-container
 					.ads
 
-				.col._3-4
+				.col._3-4._m-1-1
 					.gallery
-						.gallery-item
-							.card-item._big
-									.card-img
-										img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-									.card-header
-										.user
-											.user-pic
-												a(href="#")
-													img(src="media/img-p/2.jpg", alt="")
-											a(href="#").user-name.
-												Рита
+						.gallery_row
+							.gallery_col.__1-3
+								.gallery_item: +cardPhoto()
+								.gallery_item: +cardPhoto()
 
-										a(href="#").comments._good 345
-									a(href="#").card-title.
-										Санкт-Петербург
-									p.card-text.
-										О личностном и творческом становлении великого поэта на 
-										экскурсии по местам его славы. О личностном и творческом 
-										становлении великого поэта на экскурсии по местам его славы.
+							.gallery_col.__2-3
+								.gallery_item: +cardStory()
 
-						.gallery-item
-							.card-item
-									.card-img
-										img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-									.card-header
-										.user
-											.user-pic
-												a(href="#")
-													img(src="media/img-p/2.jpg", alt="")
-											a(href="#").user-name.
-												Рита
+						.gallery_row
+							.gallery_col.__2-3
+								.gallery_item: +cardStory()
 
-										a(href="#").comments._good 345
-									a(href="#").card-title.
-										Санкт-Петербург
-
-						.gallery-item
-							.card-item
-									.card-img
-										img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-									.card-header
-										.user
-											.user-pic
-												a(href="#")
-													img(src="media/img-p/2.jpg", alt="")
-											a(href="#").user-name.
-												Рита
-
-										a(href="#").comments._good 345
-									a(href="#").card-title.
-										Санкт-Петербург
-
-						.gallery-item
-							.card-item
-									.card-img
-										img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-									.card-header
-										.user
-											.user-pic
-												a(href="#")
-													img(src="media/img-p/2.jpg", alt="")
-											a(href="#").user-name.
-												Рита
-
-										a(href="#").comments._good 345
-									a(href="#").card-title.
-										Санкт-Петербург
-
-						.gallery-item
-							.card-item._big
-									.card-img
-										img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-									.card-header
-										.user
-											.user-pic
-												a(href="#")
-													img(src="media/img-p/2.jpg", alt="")
-											a(href="#").user-name.
-												Рита
-
-										a(href="#").comments._good 345
-									a(href="#").card-title.
-										Санкт-Петербург
-									p.card-text.
-										О личностном и творческом становлении великого поэта на 
-										экскурсии по местам его славы. О личностном и творческом 
-										становлении великого поэта на экскурсии по местам его славы.
-
-						.gallery-item
-							.card-item
-									.card-img
-										img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-									.card-header
-										.user
-											.user-pic
-												a(href="#")
-													img(src="media/img-p/2.jpg", alt="")
-											a(href="#").user-name.
-												Рита
-
-										a(href="#").comments._good 345
-									a(href="#").card-title.
-										Санкт-Петербург
+							.gallery_col.__1-3
+								.gallery_item: +cardPhoto()
+								.gallery_item: +cardPhoto()

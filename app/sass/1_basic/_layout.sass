@@ -15,6 +15,10 @@ main
 		min-width: 320px
 		padding-left: 10px
 		padding-right: 10px
+		
+		&._pdg-both-60
+			padding-left: 20px
+			padding-right: 20px
 
 .container
 	position: relative
@@ -33,6 +37,10 @@ main
 			right: 0
 			bottom: 0
 			z-index: -1
+
+	@media screen and (max-width: 940px)
+		&._white-bg
+			padding: 0
 
 .row
 	width: 100%
@@ -66,6 +74,10 @@ main
 
 	&._3-4
 		width: 75%
+
+	@media screen and (max-width: 940px)
+		&._m-1-1
+			width: 100%
 
 .columns-grid
 	display: -webkit-flex
@@ -109,6 +121,22 @@ main
 	> .col:last-child
 		margin-right: 0
 
+	@media screen and (max-width: 940px)
+
+		&._2-cols
+			flex-direction: column
+
+			> .col._m-1-1
+				width: 100%
+				margin-right: 0
+				margin-left: 0
+
+		&._cabinet-page
+
+			> .col._1-4
+				width: 40px
+				margin-right: 10px
+
 .items-grid
 	display: -webkit-flex
 	display: -moz-flex
@@ -119,14 +147,14 @@ main
 	flex-wrap: wrap
 	width: 100%
 
-	&._1-in-row > *
+	&._1-in-row > .items-grid_item
 		width: 100%
 		margin-bottom: 30px
 
 		&:last-child
 			margin-bottom: 0
 
-	&._3-in-row > *
+	&._3-in-row > .items-grid_item
 		width: calc(33.33% - 13.33px)
 		margin-right: 20px
 		margin-bottom: 20px
@@ -137,7 +165,7 @@ main
 		&:nth-last-child(-n+3)
 			margin-bottom: 0
 
-	&._4-in-row > *
+	&._4-in-row > .items-grid_item
 		width: calc(25% - 13.33px)
 		margin-right: 20px
 		margin-bottom: 20px
@@ -147,3 +175,32 @@ main
 
 		&:nth-last-child(-n+4)
 			margin-bottom: 0
+
+	@media screen and (max-width: 940px)
+		&._m-1-in-row,
+		&._at-tab-slider
+			justify-content: space-between
+
+			.items-grid_item:nth-child(n+1)
+				margin: 0 auto 20px
+				width: 100%
+				max-width: 350px
+
+				&:last-child
+					margin-bottom: 0
+
+		&._m-2-in-row > .items-grid_item
+			margin-right: 0
+			width: calc(50% - 10px)
+			
+			&:nth-child(2n+1)
+				margin-right: 20px
+
+			&:nth-child(n+3)
+				margin-top: 20px
+
+		&._at-tab-slider
+
+			.items-grid_item:not(:nth-child(-n+2))
+				display: none
+			

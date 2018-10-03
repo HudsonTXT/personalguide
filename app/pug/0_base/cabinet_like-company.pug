@@ -1,7 +1,10 @@
-extends cabinet-template
+extends template
 
 block title
 	title Личный кабинет. Компания.
+
+block vars
+	- var isCabinetPage = true;
 
 block content
 	main.wrapper
@@ -13,83 +16,73 @@ block content
 			.col._1-4
 				aside.sidebar
 					.add-menu
-						a(href="#").btn._add добавить
+						a(href="#").add-menu_open добавить
 						
-						ul.dropdown
-							li._with-sub-dropdown
+						ul.add-menu_list
+							li.add-menu_item._with-submenu
 
-								a(href="#") Как добраться
+								a(href="#").add-menu_link Как добраться
 
-								ul.sub-dropdown
-									li
-										a(href="#") На такси
-									li
-										a(href="#") На автобусе
-									li
-										a(href="#") На попутке
-									li
-										a(href="#") На метро
+								ul.add-menu_submenu
+									li.add-menu_submenu-item
+										a(href="#").add-menu_submenu-link На такси
+									li.add-menu_submenu-item
+										a(href="#").add-menu_submenu-link На автобусе
+									li.add-menu_submenu-item
+										a(href="#").add-menu_submenu-link На попутке
+									li.add-menu_submenu-item
+										a(href="#").add-menu_submenu-link На метро
 
-							li._with-sub-dropdown
-								a(href="#") Где поселиться
+							li.add-menu_item._with-submenu
+								a(href="#").add-menu_link Где поселиться
 
-								ul.sub-dropdown
-									li
-										a(href="#") Гостиницы
-									li
-										a(href="#") Домашние отели
-									li
-										a(href="#") Квартиры посуточно
-									li
-										a(href="#") Кемпинги
-									li
-										a(href="#") Частный сектор
-									li
-										a(href="#") Мини отели
-									li
-										a(href="#") Мотели
-									li
-										a(href="#") Отели
-									li
-										a(href="#") Хостелы
+								ul.add-menu_submenu
+									li.add-menu_submenu-item
+										a(href="#").add-menu_submenu-link Гостиницы
+									li.add-menu_submenu-item
+										a(href="#").add-menu_submenu-link Домашние отели
+									li.add-menu_submenu-item
+										a(href="#").add-menu_submenu-link Квартиры посуточно
+									li.add-menu_submenu-item
+										a(href="#").add-menu_submenu-link Кемпинги
+									li.add-menu_submenu-item
+										a(href="#").add-menu_submenu-link Частный сектор
+									li.add-menu_submenu-item
+										a(href="#").add-menu_submenu-link Мини отели
+									li.add-menu_submenu-item
+										a(href="#").add-menu_submenu-link Мотели
+									li.add-menu_submenu-item
+										a(href="#").add-menu_submenu-link Отели
+									li.add-menu_submenu-item
+										a(href="#").add-menu_submenu-link Хостелы
 
-							li._with-sub-dropdown
-								a(href="#") Где поесть
+							li.add-menu_item._with-submenu
+								a(href="#").add-menu_link Где поесть
 
-							li._with-sub-dropdown
-								a(href="#") Что посмотреть
+							li.add-menu_item._with-submenu
+								a(href="#").add-menu_link Что посмотреть
 
-							li._with-sub-dropdown
-								a(href="#") Где отдохнуть
+							li.add-menu_item._with-submenu
+								a(href="#").add-menu_link Где отдохнуть
 
-							li._with-sub-dropdown
-								a(href="#") Что купить
+							li.add-menu_item._with-submenu
+								a(href="#").add-menu_link Что купить
 
-							li._with-sub-dropdown
-								a(href="#") Для туристов
+							li.add-menu_item._with-submenu
+								a(href="#").add-menu_link Для туристов
 
-					nav.personal-menu
-						ul
-							li
-								a(href="#").menu-link <i class="ic _person"></i> Личные данные
-							li
-								a(href="#").menu-link <i class="ic _elipsis"></i> Службы такси (3)
-							li
-								a(href="#").menu-link <i class="ic _elipsis"></i> Зоопарки (4)
-							li
-								a(href="#").menu-link <i class="ic _elipsis"></i> Отели (1)
-							li
-								a(href="#").menu-link <i class="ic _elipsis"></i> Сувениры (20)
-							li
-								a(href="#").menu-link <i class="ic _horn-2"></i> Рассылка
-							li
-								a(href="#").menu-link <i class="ic _card"></i> Оплата
-							li
-								a(href="#").menu-link._is-blue <i class="ic _setting"></i> Настройки
-							li
-								a(href="#").menu-link._is-blue <i class="ic _null"></i> Выйти
-							li
-								a(href="#").menu-link._is-blue <i class="ic _null"></i> Удалить аккаунт
+					nav.personal-menu.--at-cabinet-aside
+						ul.personal-menu_list
+							li.personal-menu_item._is-active: a(href="#").personal-menu_link <i class="ic _person"></i> Личные данные
+							li.personal-menu_item: a(href="#").personal-menu_link <i class="ic _elipsis"></i> Службы такси (3)
+							li.personal-menu_item: a(href="#").personal-menu_link <i class="ic _elipsis"></i> Зоопарки (4)
+							li.personal-menu_item: a(href="#").personal-menu_link <i class="ic _elipsis"></i> Отели (1)
+							li.personal-menu_item: a(href="#").personal-menu_link <i class="ic _elipsis"></i> Сувениры (20)
+							li.personal-menu_item: a(href="#").personal-menu_link <i class="ic _horn-2"></i> Рассылка
+							li.personal-menu_item: a(href="#").personal-menu_link <i class="ic _card"></i> Оплата
+							li.personal-menu_item: a(href="#").personal-menu_link._is-blue <i class="ic _setting"></i> Настройки
+							li.personal-menu_item: a(href="#").personal-menu_link._is-blue <i class="ic _null"></i> Выйти
+							li.personal-menu_item: a(href="#").personal-menu_link._is-blue <i class="ic _null"></i> Удалить аккаунт
 			
 			.col._3-4
 				block main

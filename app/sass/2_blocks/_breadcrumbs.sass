@@ -1,3 +1,7 @@
+.breadcrumbs
+	padding-top: 10px
+	font-size: .75rem
+
 .breadcrumbs ul
 	padding: 0
 	margin: 0
@@ -12,7 +16,7 @@
 	margin-right: 12px
 	position: relative
 	color: #999999
-	font-size: .75rem
+	font-size: inherit
 	line-height: 1
 
 	&::before
@@ -32,3 +36,16 @@
 
 	&:hover
 	 	text-decoration: underline
+
+@media screen and (max-width: 940px)
+	.breadcrumbs
+		padding-top: 0
+		padding-bottom: 7px
+		font-size: .85rem
+
+		ul
+			width: 100%
+			overflow-x: auto
+
+		li
+			flex-shrink: 0

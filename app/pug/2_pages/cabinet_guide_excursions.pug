@@ -1,15 +1,13 @@
 extends ../0_base/cabinet_like-guide
 
-include ../1_blocks/excursion-card
-
 block main
 	.content-block
 		h2.like-h2.block-title Экскурсии
 
-		.items-grid._3-in-row
-			+excursionCard._editor
-			+excursionCard._editor
-			+excursionCard._editor
-			+excursionCard._editor
-			+excursionCard._editor
-			+excursionCard._editor
+		.items-grid._3-in-row._m-1-in-row
+			.items-grid_item: +excursionCard.__editor
+			.items-grid_item: +excursionCard.__editor
+			.items-grid_item: +excursionCard.__editor
+			.items-grid_item: +excursionCard.__editor
+			.items-grid_item: +excursionCard.__editor
+			.items-grid_item: +excursionCard.__editor

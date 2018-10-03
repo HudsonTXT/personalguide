@@ -47,9 +47,27 @@ $(document).ready(function() {
 		toolbarFixedBox: true,
 	});
 
-	// ADD MENU DROPDOWN OPEN
+	// ADD MENU
 
-	$('.add-menu li._with-sub-dropdown').on('click', function() {
+	if($(window).width() < 940) {
+		$('.add-menu_open').on('click', function() {
+			$(this).toggleClass('__is-active');
+			$(this).siblings('.add-menu_list').toggleClass('__is-open');
+			return false;
+		});
+	} else {
+		$('.add-menu_open').on('click', function() {
+			return false;
+		}).on('mouseenter', function(){
+			$(this).siblings('.add-menu_list').addClass('__is-open');
+		}).on('mouseleave', function(e) {
+			if(!$(this).is(e.target) && !$(this).siblings('.add-menu_list').is(e.target)) {
+				$(this).siblings('.add-menu_list').removeClass('__is-open');
+			};
+		});
+	};
+
+	$('.add-menu_item._with-submenu').on('click', function() {
 		$(this).siblings().removeClass('_is-open');
 		$(this).toggleClass('_is-open');
 		return false;
@@ -100,13 +118,6 @@ $(document).ready(function() {
 	// MODALS
 
 	$('.mopen').wmodal();
-
-	// TOGGLE ACTIVE ITEM AT CITY CHOISE LIST
-
-	$('.js-choise-city-list').children('.places-item').on('click', function() {
-		$(this).addClass('_is-active').siblings().removeClass('_is-active');
-		return false;
-	});
 
 	// TOGGLE ACTIVE ITEM AT KEYWORDS LIST
 
@@ -162,17 +173,20 @@ $(document).ready(function() {
 
 	// STICKY HEADER
 
-	$(window).scroll(function(){
-		if ($(document).scrollTop() < $('.site-header .full-content').outerHeight()) {
-			$('.site-header').removeClass('_is-sticky');
-			$('body').css({'padding-top': 0});
-			$('.site-header .js-down-anim').addClass('_is-hide')
-		} else {
-			$('.site-header').addClass('_is-sticky')
-			$('body').css({'padding-top': $('.site-header').outerHeight()});
-			$('.site-header .js-down-anim').removeClass('_is-hide')
-		}
-	});
+	if( $('.site-header').hasClass('--at-index') > 0 ) {
+		$(window).scroll(function(){
+			if ($(document).scrollTop() < $('.site-header .full-content').outerHeight()) {
+				$('.site-header').removeClass('_is-sticky');
+				$('body').css({'padding-top': 0});
+				$('.site-header .js-down-anim').addClass('_is-hide')
+			} else {
+				$('.site-header').addClass('_is-sticky')
+				$('body').css({'padding-top': $('.site-header').outerHeight()});
+				$('.site-header .js-down-anim').removeClass('_is-hide')
+			}
+		});
+	};
+	
 
 	// SITE NAV ON MOBILE
 
@@ -212,26 +226,55 @@ $(document).ready(function() {
 		return false;
 	});
 
-	// CHOISE PLACE ON MOBILE
-
-	cityChoiseM();
+	// CHOISE PLACE
 
 	$(window).on('resize', function() {
 		cityChoiseM();
 	});
 
-	function cityChoiseM(){
-		var c = $('.js-places').find('._is-active').length,
-			b = $('.js-places').find('.js-places-block');
+	function cityChoiseM(s){
+		var f = $('.js-places'),
+			c = f.find('._is-active').length,
+			b = f.find('.js-places-block');
+
 		if($(this).width() < 940) {
 			c = c == 0 || c > 3 ? 0 : c-1;
+			c = s == undefined ? c : f.data('step') + s;
 			$(b[c]).show().siblings('.js-places-block').hide();
+			f.data('step', c);
 		} else {
 			b.show();
 		}
 	};
 
 	cityChoiseM();
+
+	$('.js-choise-city-list').children('.places-item').on('click', function() {
+		$(this).addClass('_is-active').siblings().removeClass('_is-active');
+		cityChoiseM(1);
+		return false;
+	});
+
+	$('.js-places-back').click(function(){
+		cityChoiseM(-1);
+	});
+
+	// ITEM CARD TOOLS ON MOBILE
+
+	if($(window).width() < 940) {
+		$(document).mouseup(function (e){
+			var bar = $('.item-card_tools');
+			if(!bar.is(e.target) && bar.has(e.target).length === 0) {
+				$(this).find('.item-card_tool.__show-tools').show().siblings().hide();
+			};
+		});
+
+		$('.item-card_tool.__show-tools').on('click', function() {
+			$(this).hide();
+			$(this).siblings().show();
+			return false;
+		});
+	};
 
 });
 

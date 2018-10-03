@@ -3,13 +3,13 @@ extends ../0_base/cabinet_like-guide
 block main
 	.container._white-bg
 		form(action="#" method="post").form
-			.col._1-4
-				.change-pic._userpic._top-displaced
+			.col._1-4._m-1-1
+				.change-pic._userpic._at-cabinet
 					#changeUserPic.dropzone
 					a(href="#") загрузить
 					span.field-notify не больше 3 мб.
 
-			.col._3-4
+			.col._3-4._m-1-1
 				fieldset.fields-groupe
 					.tf-wrapper._w-220
 						input(type="text" name="full-name" id="full-name" value="").text-field

@@ -18,6 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script>
     <script src="js/libs/modal.js"></script>
   </head>
+  <!-- MIXINS PUG-->
   <body>
     <header class="site-header">
       <nav class="site-nav">
@@ -150,342 +151,392 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row ads-container">
         <div class="ads _728x92"></div>
       </div>
       <div class="content-block">
         <h2 class="like-h2 block-title">Гиды и экскурсоводы Екатеринбурга</h2>
         <div class="columns-grid _2-cols">
-          <div class="col _1-4">
+          <div class="col _1-4 ads-container">
             <div class="ads"></div>
             <div class="ads"></div>
           </div>
-          <div class="col _3-4">
-            <div class="guide-card _special">
-              <div class="guide-person">
-                <div class="guide-pic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div>
-                <div class="guide-info"><a class="guide-name" href="#">Вербер Регина Фанисовна</a><span class="guide-location">
-                    Свердловская область, Екатеринбург
-                    </span></div>
-                <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div><a class="guide-licence-btn" href="#">
-                  Лицензия гида
-                  </a>
-              </div>
-              <div class="guide-excurses">
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
-                    </div>
+          <div class="col _3-4 _m-1-1">
+              <div class="guide-card --special">
+                <div class="guide-card_aside">
+                  <div class="guide-card_userpic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="guide-card_licence-btn --m-hide" href="#">
+                    Лицензия гида
+                    </a>
+                  <div class="guide-card_menu">
+                    <nav class="personal-menu --at-guide-card">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
+                      </ul>
+                    </nav>
                   </div>
                 </div>
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                <div class="guide-card_content">
+                  <div class="guide-card_header"><a class="guide-card_name" href="#">Вербер Регина Фанисовна</a><span class="guide-card_location">
+                      Свердловская область, Екатеринбург
+                      </span>
+                    <div class="gude-card_soc"><a class="guide-card_licence-btn" href="#">
+                        Лицензия гида
+                        </a>
+                      <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div>
                     </div>
                   </div>
-                </div>
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="guide-menu">
-                <div class="col _1-3">
-                  <nav class="personal-menu">
+                  <div class="guide-card_about">
                     <ul>
-                      <li><a class="menu-link"><i class="ic _phone"></i> +7 982 <a href="#" class="link">показать</a></a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _link"></i> www.prostor-gid.ru</a></li>
-                      <li><a class="menu-link"><i class="ic _lang"></i> Язык экскурсий: Русский</a></li>
+                      <li><b>Телефон:</b> +7 982 <a href="#">показать</a></li>
+                      <li><b>Веб-сайт:</b> <a href="#">www.prostor-touristic.ru</a></li>
+                      <li><b>Язык:</b> Русский, Английский</li>
                     </ul>
-                  </nav>
-                </div>
-                <div class="col _1-3">
-                  <nav class="personal-menu">
-                    <ul>
-                      <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
-                    </ul>
-                  </nav>
-                </div>
-                <div class="col _1-3">
-                  <nav class="personal-menu">
-                    <ul>
-                      <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-            <div class="guide-card">
-              <div class="guide-person">
-                <div class="guide-pic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div>
-                <div class="guide-info"><a class="guide-name" href="#">Вербер Регина Фанисовна</a><span class="guide-location">
-                    Свердловская область, Екатеринбург
-                    </span></div>
-                <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div><a class="guide-licence-btn" href="#">
-                  Лицензия гида
-                  </a>
-              </div>
-              <div class="guide-excurses">
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
-                    </div>
+                    <p>
+                      Предлагаю для гостей и жителей Екатеринбурга стандартные 
+                      обзорные и тематические экскурсии, а также собственные 
+                      авторские маршруты. Все программы аттестованы, имею 
+                      аккредитацию гида 1-й категории. Могу составить экскурсионный
+                      
+                    </p>
                   </div>
-                </div>
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                  <div class="guide-card_excurses">
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="guide-menu">
-                <div class="col _1-3">
-                  <nav class="personal-menu">
-                    <ul>
-                      <li><a class="menu-link"><i class="ic _phone"></i> +7 982 <a href="#" class="link">показать</a></a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _link"></i> www.prostor-gid.ru</a></li>
-                      <li><a class="menu-link"><i class="ic _lang"></i> Язык экскурсий: Русский</a></li>
-                    </ul>
-                  </nav>
-                </div>
-                <div class="col _1-3">
-                  <nav class="personal-menu">
-                    <ul>
-                      <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
-                    </ul>
-                  </nav>
-                </div>
-                <div class="col _1-3">
-                  <nav class="personal-menu">
-                    <ul>
-                      <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-            <div class="guide-card">
-              <div class="guide-person">
-                <div class="guide-pic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div>
-                <div class="guide-info"><a class="guide-name" href="#">Вербер Регина Фанисовна</a><span class="guide-location">
-                    Свердловская область, Екатеринбург
-                    </span></div>
-                <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div><a class="guide-licence-btn" href="#">
-                  Лицензия гида
-                  </a>
-              </div>
-              <div class="guide-excurses">
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
-                    </div>
+              <div class="guide-card">
+                <div class="guide-card_aside">
+                  <div class="guide-card_userpic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="guide-card_licence-btn --m-hide" href="#">
+                    Лицензия гида
+                    </a>
+                  <div class="guide-card_menu">
+                    <nav class="personal-menu --at-guide-card">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
+                      </ul>
+                    </nav>
                   </div>
                 </div>
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                <div class="guide-card_content">
+                  <div class="guide-card_header"><a class="guide-card_name" href="#">Вербер Регина Фанисовна</a><span class="guide-card_location">
+                      Свердловская область, Екатеринбург
+                      </span>
+                    <div class="gude-card_soc"><a class="guide-card_licence-btn" href="#">
+                        Лицензия гида
+                        </a>
+                      <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div>
                     </div>
                   </div>
-                </div>
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="guide-menu">
-                <div class="col _1-3">
-                  <nav class="personal-menu">
+                  <div class="guide-card_about">
                     <ul>
-                      <li><a class="menu-link"><i class="ic _phone"></i> +7 982 <a href="#" class="link">показать</a></a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _link"></i> www.prostor-gid.ru</a></li>
-                      <li><a class="menu-link"><i class="ic _lang"></i> Язык экскурсий: Русский</a></li>
+                      <li><b>Телефон:</b> +7 982 <a href="#">показать</a></li>
+                      <li><b>Веб-сайт:</b> <a href="#">www.prostor-touristic.ru</a></li>
+                      <li><b>Язык:</b> Русский, Английский</li>
                     </ul>
-                  </nav>
-                </div>
-                <div class="col _1-3">
-                  <nav class="personal-menu">
-                    <ul>
-                      <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
-                    </ul>
-                  </nav>
-                </div>
-                <div class="col _1-3">
-                  <nav class="personal-menu">
-                    <ul>
-                      <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-            <div class="guide-card">
-              <div class="guide-person">
-                <div class="guide-pic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div>
-                <div class="guide-info"><a class="guide-name" href="#">Вербер Регина Фанисовна</a><span class="guide-location">
-                    Свердловская область, Екатеринбург
-                    </span></div>
-                <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div><a class="guide-licence-btn" href="#">
-                  Лицензия гида
-                  </a>
-              </div>
-              <div class="guide-excurses">
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
-                    </div>
+                    <p>
+                      Предлагаю для гостей и жителей Екатеринбурга стандартные 
+                      обзорные и тематические экскурсии, а также собственные 
+                      авторские маршруты. Все программы аттестованы, имею 
+                      аккредитацию гида 1-й категории. Могу составить экскурсионный
+                      
+                    </p>
                   </div>
-                </div>
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                  <div class="guide-card_excurses">
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="guide-menu">
-                <div class="col _1-3">
-                  <nav class="personal-menu">
-                    <ul>
-                      <li><a class="menu-link"><i class="ic _phone"></i> +7 982 <a href="#" class="link">показать</a></a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _link"></i> www.prostor-gid.ru</a></li>
-                      <li><a class="menu-link"><i class="ic _lang"></i> Язык экскурсий: Русский</a></li>
-                    </ul>
-                  </nav>
+              <div class="guide-card">
+                <div class="guide-card_aside">
+                  <div class="guide-card_userpic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="guide-card_licence-btn --m-hide" href="#">
+                    Лицензия гида
+                    </a>
+                  <div class="guide-card_menu">
+                    <nav class="personal-menu --at-guide-card">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
+                      </ul>
+                    </nav>
+                  </div>
                 </div>
-                <div class="col _1-3">
-                  <nav class="personal-menu">
+                <div class="guide-card_content">
+                  <div class="guide-card_header"><a class="guide-card_name" href="#">Вербер Регина Фанисовна</a><span class="guide-card_location">
+                      Свердловская область, Екатеринбург
+                      </span>
+                    <div class="gude-card_soc"><a class="guide-card_licence-btn" href="#">
+                        Лицензия гида
+                        </a>
+                      <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div>
+                    </div>
+                  </div>
+                  <div class="guide-card_about">
                     <ul>
-                      <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                      <li><b>Телефон:</b> +7 982 <a href="#">показать</a></li>
+                      <li><b>Веб-сайт:</b> <a href="#">www.prostor-touristic.ru</a></li>
+                      <li><b>Язык:</b> Русский, Английский</li>
                     </ul>
-                  </nav>
-                </div>
-                <div class="col _1-3">
-                  <nav class="personal-menu">
-                    <ul>
-                      <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-            <div class="guide-card">
-              <div class="guide-person">
-                <div class="guide-pic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div>
-                <div class="guide-info"><a class="guide-name" href="#">Вербер Регина Фанисовна</a><span class="guide-location">
-                    Свердловская область, Екатеринбург
-                    </span></div>
-                <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div><a class="guide-licence-btn" href="#">
-                  Лицензия гида
-                  </a>
-              </div>
-              <div class="guide-excurses">
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                    <p>
+                      Предлагаю для гостей и жителей Екатеринбурга стандартные 
+                      обзорные и тематические экскурсии, а также собственные 
+                      авторские маршруты. Все программы аттестованы, имею 
+                      аккредитацию гида 1-й категории. Могу составить экскурсионный
+                      
+                    </p>
+                  </div>
+                  <div class="guide-card_excurses">
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
-                    </div>
+              </div>
+              <div class="guide-card">
+                <div class="guide-card_aside">
+                  <div class="guide-card_userpic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="guide-card_licence-btn --m-hide" href="#">
+                    Лицензия гида
+                    </a>
+                  <div class="guide-card_menu">
+                    <nav class="personal-menu --at-guide-card">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
+                      </ul>
+                    </nav>
                   </div>
                 </div>
-                <div class="col _1-3">
-                  <div class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt=""/></div><a class="card-title" href="#">Все главные достопримечательности</a>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб.</span></p>
+                <div class="guide-card_content">
+                  <div class="guide-card_header"><a class="guide-card_name" href="#">Вербер Регина Фанисовна</a><span class="guide-card_location">
+                      Свердловская область, Екатеринбург
+                      </span>
+                    <div class="gude-card_soc"><a class="guide-card_licence-btn" href="#">
+                        Лицензия гида
+                        </a>
+                      <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div>
+                    </div>
+                  </div>
+                  <div class="guide-card_about">
+                    <ul>
+                      <li><b>Телефон:</b> +7 982 <a href="#">показать</a></li>
+                      <li><b>Веб-сайт:</b> <a href="#">www.prostor-touristic.ru</a></li>
+                      <li><b>Язык:</b> Русский, Английский</li>
+                    </ul>
+                    <p>
+                      Предлагаю для гостей и жителей Екатеринбурга стандартные 
+                      обзорные и тематические экскурсии, а также собственные 
+                      авторские маршруты. Все программы аттестованы, имею 
+                      аккредитацию гида 1-й категории. Могу составить экскурсионный
+                      
+                    </p>
+                  </div>
+                  <div class="guide-card_excurses">
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="guide-menu">
-                <div class="col _1-3">
-                  <nav class="personal-menu">
-                    <ul>
-                      <li><a class="menu-link"><i class="ic _phone"></i> +7 982 <a href="#" class="link">показать</a></a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _link"></i> www.prostor-gid.ru</a></li>
-                      <li><a class="menu-link"><i class="ic _lang"></i> Язык экскурсий: Русский</a></li>
-                    </ul>
-                  </nav>
+              <div class="guide-card">
+                <div class="guide-card_aside">
+                  <div class="guide-card_userpic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="guide-card_licence-btn --m-hide" href="#">
+                    Лицензия гида
+                    </a>
+                  <div class="guide-card_menu">
+                    <nav class="personal-menu --at-guide-card">
+                      <ul>
+                        <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
+                        <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
+                      </ul>
+                    </nav>
+                  </div>
                 </div>
-                <div class="col _1-3">
-                  <nav class="personal-menu">
+                <div class="guide-card_content">
+                  <div class="guide-card_header"><a class="guide-card_name" href="#">Вербер Регина Фанисовна</a><span class="guide-card_location">
+                      Свердловская область, Екатеринбург
+                      </span>
+                    <div class="gude-card_soc"><a class="guide-card_licence-btn" href="#">
+                        Лицензия гида
+                        </a>
+                      <div class="social"><a class="item _wa" href="#"></a><a class="item _vi" href="#"></a><a class="item _tg" href="#"></a><a class="item _ins" href="#"></a></div>
+                    </div>
+                  </div>
+                  <div class="guide-card_about">
                     <ul>
-                      <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                      <li><b>Телефон:</b> +7 982 <a href="#">показать</a></li>
+                      <li><b>Веб-сайт:</b> <a href="#">www.prostor-touristic.ru</a></li>
+                      <li><b>Язык:</b> Русский, Английский</li>
                     </ul>
-                  </nav>
-                </div>
-                <div class="col _1-3">
-                  <nav class="personal-menu">
-                    <ul>
-                      <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (24)</a></li>
-                      <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (32)</a></li>
-                    </ul>
-                  </nav>
+                    <p>
+                      Предлагаю для гостей и жителей Екатеринбурга стандартные 
+                      обзорные и тематические экскурсии, а также собственные 
+                      авторские маршруты. Все программы аттестованы, имею 
+                      аккредитацию гида 1-й категории. Могу составить экскурсионный
+                      
+                    </p>
+                  </div>
+                  <div class="guide-card_excurses">
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="guide-card_excurs">
+                      <div class="item-card --at-guide-card">
+                        <div class="item-card_img-wrapper">
+                          <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt=""/></div>
+                        </div><a class="item-card_title" href="#">Все главные достопримечательности</a>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
             <div class="pagination _pdg-vert40"><a class="item _is-active" href="#">1</a><a class="item" href="#">2</a><a class="item" href="#">3</a><a class="item" href="#">4</a><a class="item" href="#">...</a><a class="item" href="#">8</a></div>
           </div>
         </div>
@@ -544,7 +595,7 @@
           </form>
           <div class="row keywords"><a class="btn _keyword" href="#">Екатеринбург</a><a class="btn _keyword" href="#">Москва</a><a class="btn _keyword" href="#">Санкт-Петербург</a><a class="btn _keyword" href="#">Новосибирск</a><a class="btn _keyword" href="#">Казань</a></div>
           <div class="columns-grid _no-gap places js-places">
-            <div class="col _1-3 js-places-block"><b class="like-h3">Направления</b>
+            <div class="col _1-3 js-places-block"><b class="places-block-title">Направления</b>
               <ul class="places-list js-choise-city-list">
                 <li class="places-item"><a class="places-link" href="#">Европа</a></li>
                 <li class="places-item"><a class="places-link" href="#">Азия</a></li>
@@ -554,7 +605,7 @@
                 <li class="places-item"><a class="places-link" href="#">Австрия и Океания</a></li>
               </ul>
             </div>
-            <div class="col _1-3 js-places-block"><b class="like-h3">Страны</b>
+            <div class="col _1-3 js-places-block"><b class="places-block-title _back js-places-back">Страны</b>
               <ul class="places-list js-choise-city-list">
                 <li class="places-item"><a class="places-link" href="#">Польша</a></li>
                 <li class="places-item"><a class="places-link" href="#">Россия</a></li>
@@ -576,7 +627,7 @@
                 <li class="places-item"><a class="places-link" href="#">Франция</a></li>
               </ul>
             </div>
-            <div class="col _1-3 js-places-block"><b class="like-h3">Города</b>
+            <div class="col _1-3 js-places-block"><b class="places-block-title _back js-places-back">Города</b>
               <ul class="places-list js-choise-city-list">
                 <li class="places-item"><a class="places-link" href="#">Березовский</a></li>
                 <li class="places-item"><a class="places-link" href="#">Верхняя Пышма</a></li>

@@ -1,7 +1,5 @@
 extends ../0_base/template
 
-include ../1_blocks/card_story
-
 block title
 	title Новости
 
@@ -11,18 +9,18 @@ block content
 			h1.page-title._grey._center Статьи
 
 		.columns-grid._2-cols
-			.col._1-4
+			.col._1-4.ads-container
 				.ads
 				.ads
 
-			.col._3-4
-				.items-grid._3-in-row
-					+cardStory()
-					+cardStory()
-					+cardStory()
-					+cardStory()
-					+cardStory()
-					+cardStory()
-					+cardStory()
-					+cardStory()
-					+cardStory()
+			.col._3-4._m-1-1
+				.items-grid._3-in-row._m-2-in-row
+					.items-grid_item: +cardStory()
+					.items-grid_item: +cardStory()
+					.items-grid_item: +cardStory()
+					.items-grid_item: +cardStory()
+					.items-grid_item: +cardStory()
+					.items-grid_item: +cardStory()
+					.items-grid_item: +cardStory()
+					.items-grid_item: +cardStory()
+					.items-grid_item: +cardStory()

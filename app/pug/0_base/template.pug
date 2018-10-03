@@ -24,12 +24,28 @@ html(lang="ru")
 
 		script(src="js/libs/modal.js")
 
-	body
-		include site-header
+	// MIXINS PUG
+	
+	include ../1_blocks/cards/card_excursion
+	include ../1_blocks/cards/card_item-row
+	include ../1_blocks/cards/card_news
+	include ../1_blocks/cards/card_person
+	include ../1_blocks/cards/card_photo
+	include ../1_blocks/cards/card_story
+	include ../1_blocks/cards/card_tour
+	include ../1_blocks/cards/card_tourfirm
+	include ../1_blocks/cards/excursion-card
+	include ../1_blocks/cards/guide-card
+
+	block vars
+	
+	body(class=isCabinetPage ? 'cabinet-page' : null)
+		block siteHeader
+			include ../1_blocks/site-header
 
 		block content
 
-		include site-footer
+		include ../1_blocks/site-footer
 
 		include ../1_blocks/modals/city-choise-modal
 		include ../1_blocks/modals/log-in-modal

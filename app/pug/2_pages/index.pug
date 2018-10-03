@@ -1,16 +1,10 @@
-extends ../0_base/index-template
-
-//- MIXIN BLOCKS
-include ../1_blocks/guide-card
-include ../1_blocks/card_person
-include ../1_blocks/card_tour
-include ../1_blocks/card_excursion
-include ../1_blocks/card_tourfirm
-include ../1_blocks/card_story
-include ../1_blocks/card_photo
+extends ../0_base/template
 
 block title
 	title Главная
+
+block siteHeader
+	include ../1_blocks/site-header-full
 
 block content
 	main
@@ -43,11 +37,11 @@ block content
 
 				a(href="#about-place-text").js-unshort-block читать дальше
 
-		.index-slider
-			.slider-header.wrapper
-				.category-marker
+		.tab-slider
+			.tab-slider_header.wrapper
+				.tab-slider_cat-marker
 					img(src="media/img/groupe-icon-1.png", alt="")
-				span.category-title Для туристов
+				span.tab-slider_cat-title Для туристов
 
 			.row._grey
 				.wrapper
@@ -60,71 +54,71 @@ block content
 						a(href="#tourist-slide-6").item Справочник
 						a(href="#tourist-slide-7").item Визы
 
-			.wrapper.slider-content
-				.col._1-4
+			.tab-slider_content.wrapper.columns-grid._2-cols
+				.col._1-4.ads-container
 						.ads
 
-				.col._3-4
+				.col._3-4._m-1-1
 
-					.slide#tourist-slide-1
+					.tab-slider_item#tourist-slide-1
 						
-						.row.slide-items
-							.col._1-3: +cardPerson()
-							.col._1-3: +cardPerson()
-							.col._1-3: +cardPerson()
+						.items-grid._3-in-row._at-tab-slider
+							.items-grid_item: +cardPerson()
+							.items-grid_item: +cardPerson()
+							.items-grid_item: +cardPerson()
 
 						a(href="all-items_guides.html").link.to-all все гиды
 
-					.slide#tourist-slide-2
+					.tab-slider_item#tourist-slide-2
 
-						.row.slide-items
-							.col._1-3: +cardTour()
-							.col._1-3: +cardTour()
-							.col._1-3: +cardTour()
+						.items-grid._3-in-row._at-tab-slider
+							.items-grid_item: +cardTour()
+							.items-grid_item: +cardTour()
+							.items-grid_item: +cardTour()
 
 						a(href="#").link.to-all все туры
 
-					.slide#tourist-slide-3
+					.tab-slider_item#tourist-slide-3
 
-						.row.slide-items
-							.col._1-3: +cardExcurs()
-							.col._1-3: +cardExcurs()
-							.col._1-3: +cardExcurs()
+						.items-grid._3-in-row._at-tab-slider
+							.items-grid_item: +cardExcurs()
+							.items-grid_item: +cardExcurs()
+							.items-grid_item: +cardExcurs()
 
 						a(href="all-items_excurs.html").link.to-all все экскурсии
 
-					.slide#tourist-slide-4
+					.tab-slider_item#tourist-slide-4
 
-						.row.slide-items
-							.col._1-3: +cardTourfirm()
-							.col._1-3: +cardTourfirm()
-							.col._1-3: +cardTourfirm()
+						.items-grid._3-in-row._at-tab-slider
+							.items-grid_item: +cardTourfirm()
+							.items-grid_item: +cardTourfirm()
+							.items-grid_item: +cardTourfirm()
 
 						a(href="#").link.to-all все турфирмы
 
-					.slide#tourist-slide-5
+					.tab-slider_item#tourist-slide-5
 						
-						.row.slide-items
-							.col._1-3: +cardStory()
-							.col._1-3: +cardStory()
-							.col._1-3: +cardStory()
+						.items-grid._3-in-row._at-tab-slider
+							.items-grid_item: +cardStory()
+							.items-grid_item: +cardStory()
+							.items-grid_item: +cardStory()
 
 						a(href="#").link.to-all все рассказы
 
-					.slide#tourist-slide-6
+					.tab-slider_item#tourist-slide-6
 						
-						.row.slide-items
-							.col._1-3: +cardStory()
-							.col._1-3: +cardStory()
-							.col._1-3: +cardStory()
+						.items-grid._3-in-row._at-tab-slider
+							.items-grid_item: +cardStory()
+							.items-grid_item: +cardStory()
+							.items-grid_item: +cardStory()
 
 						a(href="#").link.to-all все справочники
 
-		.index-slider
-			.slider-header.wrapper
-				.category-marker
+		.tab-slider
+			.tab-slider_header.wrapper
+				.tab-slider_cat-marker
 					img(src="media/img/groupe-icon-2.png", alt="")
-				span.category-title Где поселиться
+				span.tab-slider_cat-title Где поселиться
 
 			.row._grey
 				.wrapper
@@ -136,25 +130,25 @@ block content
 						a(href="#settle-slide-5").item Хостелы
 						a(href="#settle-slide-6").item Аренда жилья
 
-			.wrapper.slider-content
-				.col._1-4
+			.tab-slider_content.wrapper.columns-grid._2-cols
+				.col._1-4.ads-container
 					.ads
 
-				.col._3-4
-					.slide#settle-slide-1
+				.col._3-4._m-1-1
+					.tab-slider_item#settle-slide-1
 						
-						.row.slide-items
-							.col._1-3: +cardExcurs()
-							.col._1-3: +cardExcurs()
-							.col._1-3: +cardExcurs()
+						.items-grid._3-in-row._at-tab-slider
+							.items-grid_item: +cardExcurs()
+							.items-grid_item: +cardExcurs()
+							.items-grid_item: +cardExcurs()
 
 						a(href="#").link.to-all все отели Екатеринбурга
 
-		.index-slider
-			.slider-header.wrapper
-				.category-marker
+		.tab-slider
+			.tab-slider_header.wrapper
+				.tab-slider_cat-marker
 					img(src="media/img/groupe-icon-3.png", alt="")
-				span.category-title Где поесть
+				span.tab-slider_cat-title Где поесть
 
 			.row._grey
 				.wrapper
@@ -163,25 +157,25 @@ block content
 						a(href="#eating-slide-2").item Кафе
 						a(href="#eating-slide-3").item Бары
 
-			.wrapper.slider-content
-				.col._1-4
+			.tab-slider_content.wrapper.columns-grid._2-cols
+				.col._1-4.ads-container
 					.ads
 
-				.col._3-4
-					.slide#eating-slide-1
+				.col._3-4._m-1-1
+					.tab-slider_item#eating-slide-1
 						
-						.row.slide-items
-							.col._1-3: +cardTourfirm()
-							.col._1-3: +cardTourfirm()
-							.col._1-3: +cardTourfirm()
+						.items-grid._3-in-row._at-tab-slider
+							.items-grid_item: +cardTourfirm()
+							.items-grid_item: +cardTourfirm()
+							.items-grid_item: +cardTourfirm()
 
 						a(href="#").link.to-all все рестораны Екатеринбурга
 
-		.index-slider
-			.slider-header.wrapper
-				.category-marker
+		.tab-slider
+			.tab-slider_header.wrapper
+				.tab-slider_cat-marker
 					img(src="media/img/groupe-icon-4.png", alt="")
-				span.category-title Что посмотреть
+				span.tab-slider_cat-title Что посмотреть
 
 			.row._grey
 				.wrapper
@@ -194,47 +188,49 @@ block content
 						a(href="#entertainment-slide-6").item Веб-камеры
 						a(href="#entertainment-slide-7").item Фотогалерея
 
-			.wrapper.slider-content
-				.col._1-4
+			.tab-slider_content.wrapper.columns-grid._2-cols
+				.col._1-4.ads-container
 					.ads
 
-				.col._3-4
-					.slide#entertainment-slide-1
+				.col._3-4._m-1-1
+					.tab-slider_item#entertainment-slide-1
 
-						.row.slide-items
-							.col._1-3: +cardTourfirm()
-							.col._1-3: +cardTourfirm()
-							.col._1-3: +cardTourfirm()
+						.items-grid._3-in-row._at-tab-slider
+							.items-grid_item: +cardTourfirm()
+							.items-grid_item: +cardTourfirm()
+							.items-grid_item: +cardTourfirm()
 
 						a(href="#").link.to-all все рестораны Екатеринбурга
 
-					.slide#entertainment-slide-6
+					.tab-slider_item#entertainment-slide-6
 
-						.row.slide-items._masonry
-							.col._2-3
-								+cardStory()._big
-							.col._1-3
-								+cardPhoto()
-								+cardPhoto()
+						.gallery
+							.gallery_row
+								.gallery_col.__2-3
+									.gallery_item: +cardStory()
+								.gallery_col.__1-3
+									.gallery_item: +cardPhoto()
+									.gallery_item: +cardPhoto()
 
 						a(href="#").link.to-all все веб-камеры
 
-					.slide#entertainment-slide-7
+					.tab-slider_item#entertainment-slide-7
 
-						.row.slide-items._masonry
-							.col._1-3
-								+cardPhoto()
-								+cardPhoto()
-							.col._2-3
-								+cardStory()._big
+						.gallery
+							.gallery_row
+								.gallery_col.__1-3
+									.gallery_item: +cardPhoto()
+									.gallery_item: +cardPhoto()
+								.gallery_col.__2-3
+									.gallery_item: +cardStory()
 
 						a(href="all-items_photos.html").link.to-all все фотоальбомы
 
-		.index-slider
-			.slider-header.wrapper
-				.category-marker
+		.tab-slider
+			.tab-slider_header.wrapper
+				.tab-slider_cat-marker
 					img(src="media/img/groupe-icon-5.png", alt="")
-				span.category-title Где отдохнуть
+				span.tab-slider_cat-title Где отдохнуть
 
 			.row._grey
 				.wrapper
@@ -246,41 +242,41 @@ block content
 						a(href="#recreation-slide-5").item Турбазы
 						a(href="#recreation-slide-6").item Развлечения
 
-			.wrapper.slider-content
-				.col._1-4
+			.tab-slider_content.wrapper.columns-grid._2-cols
+				.col._1-4.ads-container
 					.ads
 
-				.col._3-4
-					.slide#recreation-slide-1
+				.col._3-4._m-1-1
+					.tab-slider_item#recreation-slide-1
 
-						.row.slide-items
-							.col._1-3: +cardTourfirm()
-							.col._1-3: +cardTourfirm()
-							.col._1-3: +cardTourfirm()
+						.items-grid._3-in-row._at-tab-slider
+							.items-grid_item: +cardTourfirm()
+							.items-grid_item: +cardTourfirm()
+							.items-grid_item: +cardTourfirm()
 
 						a(href="#").link.to-all все рестораны Екатеринбурга
 
-		.index-slider
-			.slider-header.wrapper
-				.category-marker
+		.tab-slider
+			.tab-slider_header.wrapper
+				.tab-slider_cat-marker
 					img(src="media/img/groupe-icon-6.png", alt="")
-				span.category-title Что купить
+				span.tab-slider_cat-title Что купить
 
 			.row._grey
 				.wrapper
 					.tabs.js-tabs
 						a(href="#buying-slide-1").item._is-active Сувениры
 
-			.wrapper.slider-content
-				.col._1-4
+			.tab-slider_content.wrapper.columns-grid._2-cols
+				.col._1-4.ads-container
 					.ads
 
-				.col._3-4
-					.slide#buying-slide-1
+				.col._3-4._m-1-1
+					.tab-slider_item#buying-slide-1
 
-						.row.slide-items
-							.col._1-3: +cardTourfirm()
-							.col._1-3: +cardTourfirm()
-							.col._1-3: +cardTourfirm()
+						.items-grid._3-in-row._at-tab-slider
+							.items-grid_item: +cardTourfirm()
+							.items-grid_item: +cardTourfirm()
+							.items-grid_item: +cardTourfirm()
 
 						a(href="#").link.to-all все сувениры

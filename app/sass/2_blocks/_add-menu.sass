@@ -9,13 +9,40 @@
 	align-items: flex-start
 	flex-direction: column
 	width: 100%
+	font-size: 0.88rem
 
-.add-menu > .btn
+.add-menu_open
 	margin: 0 auto
 	z-index: 10
 	cursor: pointer
+	display: inline-block
+	vertical-align: top
+	padding: 8px 18px 8px 35px
+	font-size: .813rem
+	line-height: 1
+	text-decoration: none
+	color: #fff
+	background-color: #00cc99
+	border-radius: 50px	
+	font-weight: 700
+	position: relative
+	border: none
+	cursor: pointer
 
-.add-menu .dropdown
+	&::before
+		content: '+'
+		font-size: 20px
+		line-height: 20px
+		position: absolute
+		top: 50%
+		left: 12px
+		transform: translateY(-50%)
+
+	&.__is-active
+		transform: rotate(45deg)
+
+
+.add-menu_list
 	list-style: none
 	margin: 0
 	padding: 35px 25px 25px
@@ -28,13 +55,16 @@
 	right: 0
 	display: none
 
-.add-menu .dropdown li
+	&.__is-open
+		display: block
+
+.add-menu_item
 	margin-bottom: 25px
 
 	&:last-child
 		margin-bottom: 0
 
-	&._with-sub-dropdown
+	&._with-submenu
 		position: relative
 		padding-right: 15px
 
@@ -61,35 +91,55 @@
 			top: 12px
 			border-color: #615faf
 
-		&._is-open .sub-dropdown
+		&._is-open .add-menu_submenu
 			opacity: 1
-			height: 100%
+			max-height: 100%
 
-.add-menu .dropdown a
+.add-menu_link
 	text-decoration: none
-	font-size: 0.88rem
+	font-size: inherit
 	color: inherit
 
 	&:hover
 		color: #615faf
 
-.add-menu > .btn._add:hover ~ .dropdown,
-.add-menu .dropdown:hover
-	display: block
-
-.add-menu .sub-dropdown
+.add-menu_submenu
 	width: 100%
 	margin: 0
 	padding: 0
 	list-style: none
 	opacity: 0
-	height: 0
+	max-height: 0
 	transition: .2s
 
-.add-menu .sub-dropdown li
+.add-menu_submenu-item
 	margin-bottom: 0
 
-.add-menu .sub-dropdown a
+.add-menu_submenu-link
 	font-size: .75rem
 	line-height: 1.5
 	color: inherit
+
+@media screen and (max-width: 940px)
+	.add-menu
+		font-size: 1rem
+
+	.add-menu_open
+		padding: 14px
+		font-size: 0
+		line-height: 0
+		margin: 0
+		margin-left: -5px
+		z-index: 901
+
+		&::before
+			width: 12px
+			left: 50%
+			margin-left: -6px
+
+	.add-menu_list
+		position: absolute
+		top: 8px
+		left: 8px
+		width: 170px
+		z-index: 900

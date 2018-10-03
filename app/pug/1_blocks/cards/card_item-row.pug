@@ -1,0 +1,25 @@
+mixin cardExcursRow()
+	article.item-card.--row&attributes(attributes)
+		.item-card_img-wrapper
+			.item-card_img
+				img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+
+		.item-card_content
+			.item-card_header
+				.item-card_user
+					a(href="#").item-card_user-pic: img(src="media/img-p/2.jpg", alt="")
+					a(href="#").user-name Рита
+
+				a(href="#").item-card_comments 345
+
+			a(href="#").item-card_title.
+				Санкт-Петербург Есенина в компании поэта
+
+			p.item-card_text.
+				О личностном и творческом 
+				становлении великого поэта на 
+				экскурсии по местам его славы
+
+			.item-card_footer
+				p.item-card_price <b>1600</b> руб. за экскурсию
+				a(href="#").link Подробнее

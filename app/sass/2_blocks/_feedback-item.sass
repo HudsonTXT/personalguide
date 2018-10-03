@@ -16,11 +16,11 @@
 	+ .feedback-item
 		margin-top: 35px
 
-.feedback-text
+.feedback-item_text
 	margin: 0
-	margin-bottom: 10px
+	padding-bottom: 10px
 
-.feedback-attachments
+.feedback-item_attachments
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -29,7 +29,7 @@
 	overflow: hidden
 	margin-bottom: 10px
 
-.feedback-img
+.feedback-item_img
 	flex-shrink: 0
 	flex-grow: 0
 	width: calc(25% - 3.75px)
@@ -50,7 +50,7 @@
 	&:nth-child(4n+4)
 		margin-right: 0
 
-.feedback-foo
+.feedback-item_foo
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -59,7 +59,7 @@
 	align-items: center
 	font-size: .69rem
 
-.feedback-author
+.feedback-item_author
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -68,7 +68,7 @@
 	align-items: center
 	margin-right: 20px
 
-.author-pic
+.feedback-item_author-pic
 	width: 23px
 	height: 23px
 	display: -webkit-flex
@@ -83,9 +83,22 @@
 	border-radius: 50%
 	margin-right: 6px
 
-.author-name
+.feedback-item_author-name
 	text-decoration: none
 	color: inherit
 
 	&:hover
 		text-decoration: underline
+
+@media screen and (max-width: 940px)
+	.feedback-item
+		padding-left: 0
+
+		&::before
+			display: none
+
+		+ .feedback-item
+			margin-top: 25px
+
+	.feedback-item_foo
+		font-size: .85rem

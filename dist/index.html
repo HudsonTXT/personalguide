@@ -18,8 +18,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script>
     <script src="js/libs/modal.js"></script>
   </head>
+  <!-- MIXINS PUG-->
   <body>
-    <header class="site-header">
+    <header class="site-header --at-index">
       <div class="full-content"><a class="btn _city-choise mopen" href="#city-choise"><i class="ic _world"></i>Страны и города</a>
         <div class="site-logo _at-header"><img src="media/img/site-logo.png" alt=""/></div>
         <form class="search-form _at-header" action="#" method="get">
@@ -161,715 +162,855 @@
           </P><a class="js-unshort-block" href="#about-place-text">читать дальше</a>
         </div>
       </div>
-      <div class="index-slider">
-        <div class="slider-header wrapper">
-          <div class="category-marker"><img src="media/img/groupe-icon-1.png" alt=""/></div><span class="category-title">Для туристов</span>
+      <div class="tab-slider">
+        <div class="tab-slider_header wrapper">
+          <div class="tab-slider_cat-marker"><img src="media/img/groupe-icon-1.png" alt=""/></div><span class="tab-slider_cat-title">Для туристов</span>
         </div>
         <div class="row _grey">
           <div class="wrapper">
             <div class="tabs js-tabs"><a class="item _is-active" href="#tourist-slide-1">Гиды</a><a class="item" href="#tourist-slide-2">Туры</a><a class="item" href="#tourist-slide-3">Экскурсии</a><a class="item" href="#tourist-slide-4">Турфирмы</a><a class="item" href="#tourist-slide-5">Рассказы</a><a class="item" href="#tourist-slide-6">Справочник</a><a class="item" href="#tourist-slide-7">Визы</a></div>
           </div>
         </div>
-        <div class="wrapper slider-content">
-          <div class="col _1-4">
+        <div class="tab-slider_content wrapper columns-grid _2-cols">
+          <div class="col _1-4 ads-container">
             <div class="ads"></div>
           </div>
-          <div class="col _3-4">
-            <div class="slide" id="tourist-slide-1">
-              <div class="row slide-items">
-                <div class="col _1-3">
-                  <div class="person-card">
-                    <div class="person-img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="person-name" href="#">Иванов Иван Иванович</a>
-                    <nav class="personal-menu">
-                      <ul>
-                        <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
-                        <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
-                        <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
-                        <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (4)</a></li>
-                        <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (4)</a></li>
-                      </ul>
-                    </nav>
-                  </div>
+          <div class="col _3-4 _m-1-1">
+            <div class="tab-slider_item" id="tourist-slide-1">
+              <div class="items-grid _3-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <div class="person-card">
+                      <div class="person-card_img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="person-card_name" href="#">
+                        Иванов Иван Иванович
+                        </a>
+                      <nav class="personal-menu">
+                        <ul>
+                          <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (4)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (4)</a></li>
+                        </ul>
+                      </nav>
+                    </div>
                 </div>
-                <div class="col _1-3">
-                  <div class="person-card">
-                    <div class="person-img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="person-name" href="#">Иванов Иван Иванович</a>
-                    <nav class="personal-menu">
-                      <ul>
-                        <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
-                        <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
-                        <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
-                        <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (4)</a></li>
-                        <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (4)</a></li>
-                      </ul>
-                    </nav>
-                  </div>
+                <div class="items-grid_item">
+                    <div class="person-card">
+                      <div class="person-card_img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="person-card_name" href="#">
+                        Иванов Иван Иванович
+                        </a>
+                      <nav class="personal-menu">
+                        <ul>
+                          <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (4)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (4)</a></li>
+                        </ul>
+                      </nav>
+                    </div>
                 </div>
-                <div class="col _1-3">
-                  <div class="person-card">
-                    <div class="person-img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="person-name" href="#">Иванов Иван Иванович</a>
-                    <nav class="personal-menu">
-                      <ul>
-                        <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
-                        <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
-                        <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
-                        <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (4)</a></li>
-                        <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (4)</a></li>
-                      </ul>
-                    </nav>
-                  </div>
+                <div class="items-grid_item">
+                    <div class="person-card">
+                      <div class="person-card_img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="person-card_name" href="#">
+                        Иванов Иван Иванович
+                        </a>
+                      <nav class="personal-menu">
+                        <ul>
+                          <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (4)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (4)</a></li>
+                        </ul>
+                      </nav>
+                    </div>
                 </div>
               </div><a class="link to-all" href="all-items_guides.html">все гиды</a>
             </div>
-            <div class="slide" id="tourist-slide-2">
-              <div class="row slide-items">
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content"><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+            <div class="tab-slider_item" id="tourist-slide-2">
+              <div class="items-grid _3-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content"><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content"><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content"><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content"><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content"><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
               </div><a class="link to-all" href="#">все туры</a>
             </div>
-            <div class="slide" id="tourist-slide-3">
-              <div class="row slide-items">
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-header">
-                      <div class="user">
-                        <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                      </div><a class="comments _good" href="#">345</a>
-                    </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                    <p class="card-text">
-                      О личностном и творческом 
-                      становлении великого поэта на 
-                      экскурсии по местам его славы
-                    </p>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб. </span><span>за экскурсию</span></p>
-                    </div>
-                  </article>
+            <div class="tab-slider_item" id="tourist-slide-3">
+              <div class="items-grid _3-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб. за экскурсию</p>
+                        </div>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-header">
-                      <div class="user">
-                        <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                      </div><a class="comments _good" href="#">345</a>
-                    </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                    <p class="card-text">
-                      О личностном и творческом 
-                      становлении великого поэта на 
-                      экскурсии по местам его славы
-                    </p>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб. </span><span>за экскурсию</span></p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб. за экскурсию</p>
+                        </div>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-header">
-                      <div class="user">
-                        <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                      </div><a class="comments _good" href="#">345</a>
-                    </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                    <p class="card-text">
-                      О личностном и творческом 
-                      становлении великого поэта на 
-                      экскурсии по местам его славы
-                    </p>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб. </span><span>за экскурсию</span></p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб. за экскурсию</p>
+                        </div>
+                      </div>
+                    </article>
                 </div>
               </div><a class="link to-all" href="all-items_excurs.html">все экскурсии</a>
             </div>
-            <div class="slide" id="tourist-slide-4">
-              <div class="row slide-items">
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+            <div class="tab-slider_item" id="tourist-slide-4">
+              <div class="items-grid _3-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
               </div><a class="link to-all" href="#">все турфирмы</a>
             </div>
-            <div class="slide" id="tourist-slide-5">
-              <div class="row slide-items">
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header">
-                        <div class="user">
-                          <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                        </div><a class="comments _good" href="#">345</a>
-                      </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+            <div class="tab-slider_item" id="tourist-slide-5">
+              <div class="items-grid _3-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a class="user-name" href="#">Рита</a></div><a class="item-card_comments _good" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header">
-                        <div class="user">
-                          <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                        </div><a class="comments _good" href="#">345</a>
-                      </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a class="user-name" href="#">Рита</a></div><a class="item-card_comments _good" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header">
-                        <div class="user">
-                          <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                        </div><a class="comments _good" href="#">345</a>
-                      </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a class="user-name" href="#">Рита</a></div><a class="item-card_comments _good" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
               </div><a class="link to-all" href="#">все рассказы</a>
             </div>
-            <div class="slide" id="tourist-slide-6">
-              <div class="row slide-items">
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header">
-                        <div class="user">
-                          <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                        </div><a class="comments _good" href="#">345</a>
-                      </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+            <div class="tab-slider_item" id="tourist-slide-6">
+              <div class="items-grid _3-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a class="user-name" href="#">Рита</a></div><a class="item-card_comments _good" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header">
-                        <div class="user">
-                          <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                        </div><a class="comments _good" href="#">345</a>
-                      </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a class="user-name" href="#">Рита</a></div><a class="item-card_comments _good" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header">
-                        <div class="user">
-                          <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                        </div><a class="comments _good" href="#">345</a>
-                      </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a class="user-name" href="#">Рита</a></div><a class="item-card_comments _good" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
               </div><a class="link to-all" href="#">все справочники</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="index-slider">
-        <div class="slider-header wrapper">
-          <div class="category-marker"><img src="media/img/groupe-icon-2.png" alt=""/></div><span class="category-title">Где поселиться</span>
+      <div class="tab-slider">
+        <div class="tab-slider_header wrapper">
+          <div class="tab-slider_cat-marker"><img src="media/img/groupe-icon-2.png" alt=""/></div><span class="tab-slider_cat-title">Где поселиться</span>
         </div>
         <div class="row _grey">
           <div class="wrapper">
             <div class="tabs js-tabs"><a class="item _is-active" href="#settle-slide-1">Гостиницы</a><a class="item" href="#settle-slide-2">Квартиры посуточно</a><a class="item" href="#settle-slide-3">Частный сектор</a><a class="item" href="#settle-slide-4">Мини-отели</a><a class="item" href="#settle-slide-5">Хостелы</a><a class="item" href="#settle-slide-6">Аренда жилья</a></div>
           </div>
         </div>
-        <div class="wrapper slider-content">
-          <div class="col _1-4">
+        <div class="tab-slider_content wrapper columns-grid _2-cols">
+          <div class="col _1-4 ads-container">
             <div class="ads"></div>
           </div>
-          <div class="col _3-4">
-            <div class="slide" id="settle-slide-1">
-              <div class="row slide-items">
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-header">
-                      <div class="user">
-                        <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                      </div><a class="comments _good" href="#">345</a>
-                    </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                    <p class="card-text">
-                      О личностном и творческом 
-                      становлении великого поэта на 
-                      экскурсии по местам его славы
-                    </p>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб. </span><span>за экскурсию</span></p>
-                    </div>
-                  </article>
+          <div class="col _3-4 _m-1-1">
+            <div class="tab-slider_item" id="settle-slide-1">
+              <div class="items-grid _3-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб. за экскурсию</p>
+                        </div>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-header">
-                      <div class="user">
-                        <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                      </div><a class="comments _good" href="#">345</a>
-                    </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                    <p class="card-text">
-                      О личностном и творческом 
-                      становлении великого поэта на 
-                      экскурсии по местам его славы
-                    </p>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб. </span><span>за экскурсию</span></p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб. за экскурсию</p>
+                        </div>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-header">
-                      <div class="user">
-                        <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                      </div><a class="comments _good" href="#">345</a>
-                    </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                    <p class="card-text">
-                      О личностном и творческом 
-                      становлении великого поэта на 
-                      экскурсии по местам его славы
-                    </p>
-                    <div class="card-footer">
-                      <p class="card-price"><b>1600 </b><span>руб. </span><span>за экскурсию</span></p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб. за экскурсию</p>
+                        </div>
+                      </div>
+                    </article>
                 </div>
               </div><a class="link to-all" href="#">все отели Екатеринбурга</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="index-slider">
-        <div class="slider-header wrapper">
-          <div class="category-marker"><img src="media/img/groupe-icon-3.png" alt=""/></div><span class="category-title">Где поесть</span>
+      <div class="tab-slider">
+        <div class="tab-slider_header wrapper">
+          <div class="tab-slider_cat-marker"><img src="media/img/groupe-icon-3.png" alt=""/></div><span class="tab-slider_cat-title">Где поесть</span>
         </div>
         <div class="row _grey">
           <div class="wrapper">
             <div class="tabs js-tabs"><a class="item _is-active" href="#eating-slide-1">Рестораны</a><a class="item" href="#eating-slide-2">Кафе</a><a class="item" href="#eating-slide-3">Бары</a></div>
           </div>
         </div>
-        <div class="wrapper slider-content">
-          <div class="col _1-4">
+        <div class="tab-slider_content wrapper columns-grid _2-cols">
+          <div class="col _1-4 ads-container">
             <div class="ads"></div>
           </div>
-          <div class="col _3-4">
-            <div class="slide" id="eating-slide-1">
-              <div class="row slide-items">
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+          <div class="col _3-4 _m-1-1">
+            <div class="tab-slider_item" id="eating-slide-1">
+              <div class="items-grid _3-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
               </div><a class="link to-all" href="#">все рестораны Екатеринбурга</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="index-slider">
-        <div class="slider-header wrapper">
-          <div class="category-marker"><img src="media/img/groupe-icon-4.png" alt=""/></div><span class="category-title">Что посмотреть</span>
+      <div class="tab-slider">
+        <div class="tab-slider_header wrapper">
+          <div class="tab-slider_cat-marker"><img src="media/img/groupe-icon-4.png" alt=""/></div><span class="tab-slider_cat-title">Что посмотреть</span>
         </div>
         <div class="row _grey">
           <div class="wrapper">
             <div class="tabs js-tabs"><a class="item _is-active" href="#entertainment-slide-1">Музеи</a><a class="item" href="#entertainment-slide-2">Выставки</a><a class="item" href="#entertainment-slide-3">Видеогид</a><a class="item" href="#entertainment-slide-4">Карты</a><a class="item" href="#entertainment-slide-5">Праздники</a><a class="item" href="#entertainment-slide-6">Веб-камеры</a><a class="item" href="#entertainment-slide-7">Фотогалерея</a></div>
           </div>
         </div>
-        <div class="wrapper slider-content">
-          <div class="col _1-4">
+        <div class="tab-slider_content wrapper columns-grid _2-cols">
+          <div class="col _1-4 ads-container">
             <div class="ads"></div>
           </div>
-          <div class="col _3-4">
-            <div class="slide" id="entertainment-slide-1">
-              <div class="row slide-items">
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+          <div class="col _3-4 _m-1-1">
+            <div class="tab-slider_item" id="entertainment-slide-1">
+              <div class="items-grid _3-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
               </div><a class="link to-all" href="#">все рестораны Екатеринбурга</a>
             </div>
-            <div class="slide" id="entertainment-slide-6">
-              <div class="row slide-items _masonry">
-                <div class="col _2-3">
-                  <article class="card-item _big">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header">
-                        <div class="user">
-                          <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                        </div><a class="comments _good" href="#">345</a>
-                      </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
+            <div class="tab-slider_item" id="entertainment-slide-6">
+              <div class="gallery">
+                <div class="gallery_row">
+                  <div class="gallery_col __2-3">
+                    <div class="gallery_item">
+                        <article class="item-card">
+                          <div class="item-card_img-wrapper">
+                            <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                          </div>
+                          <div class="item-card_content">
+                            <div class="item-card_header">
+                              <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a class="user-name" href="#">Рита</a></div><a class="item-card_comments _good" href="#">345</a>
+                            </div><a class="item-card_title" href="#">
+                              Санкт-Петербург Есенина в компании поэта
+                              </a>
+                            <p class="item-card_text">
+                              О личностном и творческом 
+                              становлении великого поэта на 
+                              экскурсии по местам его славы
+                            </p>
+                          </div>
+                        </article>
                     </div>
-                  </article>
-                </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header">
-                        <div class="user">
-                          <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                        </div><a class="comments _good" href="#">345</a>
-                      </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+                  </div>
+                  <div class="gallery_col __1-3">
+                    <div class="gallery_item">
+                        <article class="item-card">
+                          <div class="item-card_img-wrapper">
+                            <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                          </div>
+                          <div class="item-card_content">
+                            <div class="item-card_header">
+                              <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                            </div><a class="item-card_title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+                          </div>
+                        </article>
                     </div>
-                  </article>
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header">
-                        <div class="user">
-                          <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                        </div><a class="comments _good" href="#">345</a>
-                      </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+                    <div class="gallery_item">
+                        <article class="item-card">
+                          <div class="item-card_img-wrapper">
+                            <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                          </div>
+                          <div class="item-card_content">
+                            <div class="item-card_header">
+                              <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                            </div><a class="item-card_title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+                          </div>
+                        </article>
                     </div>
-                  </article>
+                  </div>
                 </div>
               </div><a class="link to-all" href="#">все веб-камеры</a>
             </div>
-            <div class="slide" id="entertainment-slide-7">
-              <div class="row slide-items _masonry">
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header">
-                        <div class="user">
-                          <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                        </div><a class="comments _good" href="#">345</a>
-                      </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+            <div class="tab-slider_item" id="entertainment-slide-7">
+              <div class="gallery">
+                <div class="gallery_row">
+                  <div class="gallery_col __1-3">
+                    <div class="gallery_item">
+                        <article class="item-card">
+                          <div class="item-card_img-wrapper">
+                            <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                          </div>
+                          <div class="item-card_content">
+                            <div class="item-card_header">
+                              <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                            </div><a class="item-card_title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+                          </div>
+                        </article>
                     </div>
-                  </article>
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header">
-                        <div class="user">
-                          <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                        </div><a class="comments _good" href="#">345</a>
-                      </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+                    <div class="gallery_item">
+                        <article class="item-card">
+                          <div class="item-card_img-wrapper">
+                            <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                          </div>
+                          <div class="item-card_content">
+                            <div class="item-card_header">
+                              <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                            </div><a class="item-card_title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+                          </div>
+                        </article>
                     </div>
-                  </article>
-                </div>
-                <div class="col _2-3">
-                  <article class="card-item _big">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header">
-                        <div class="user">
-                          <div class="user-pic"><a href="#"><img src="media/img-p/2.jpg" alt=""/></a></div><a class="user-name" href="#">Рита</a>
-                        </div><a class="comments _good" href="#">345</a>
-                      </div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
+                  </div>
+                  <div class="gallery_col __2-3">
+                    <div class="gallery_item">
+                        <article class="item-card">
+                          <div class="item-card_img-wrapper">
+                            <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                          </div>
+                          <div class="item-card_content">
+                            <div class="item-card_header">
+                              <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a class="user-name" href="#">Рита</a></div><a class="item-card_comments _good" href="#">345</a>
+                            </div><a class="item-card_title" href="#">
+                              Санкт-Петербург Есенина в компании поэта
+                              </a>
+                            <p class="item-card_text">
+                              О личностном и творческом 
+                              становлении великого поэта на 
+                              экскурсии по местам его славы
+                            </p>
+                          </div>
+                        </article>
                     </div>
-                  </article>
+                  </div>
                 </div>
               </div><a class="link to-all" href="all-items_photos.html">все фотоальбомы</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="index-slider">
-        <div class="slider-header wrapper">
-          <div class="category-marker"><img src="media/img/groupe-icon-5.png" alt=""/></div><span class="category-title">Где отдохнуть</span>
+      <div class="tab-slider">
+        <div class="tab-slider_header wrapper">
+          <div class="tab-slider_cat-marker"><img src="media/img/groupe-icon-5.png" alt=""/></div><span class="tab-slider_cat-title">Где отдохнуть</span>
         </div>
         <div class="row _grey">
           <div class="wrapper">
             <div class="tabs js-tabs"><a class="item _is-active" href="#recreation-slide-1">SPA</a><a class="item" href="#recreation-slide-2">Базы отдыха</a><a class="item" href="#recreation-slide-3">Горнолыжные комплексы</a><a class="item" href="#recreation-slide-4">Загородные лагеря</a><a class="item" href="#recreation-slide-5">Турбазы</a><a class="item" href="#recreation-slide-6">Развлечения</a></div>
           </div>
         </div>
-        <div class="wrapper slider-content">
-          <div class="col _1-4">
+        <div class="tab-slider_content wrapper columns-grid _2-cols">
+          <div class="col _1-4 ads-container">
             <div class="ads"></div>
           </div>
-          <div class="col _3-4">
-            <div class="slide" id="recreation-slide-1">
-              <div class="row slide-items">
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+          <div class="col _3-4 _m-1-1">
+            <div class="tab-slider_item" id="recreation-slide-1">
+              <div class="items-grid _3-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
               </div><a class="link to-all" href="#">все рестораны Екатеринбурга</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="index-slider">
-        <div class="slider-header wrapper">
-          <div class="category-marker"><img src="media/img/groupe-icon-6.png" alt=""/></div><span class="category-title">Что купить</span>
+      <div class="tab-slider">
+        <div class="tab-slider_header wrapper">
+          <div class="tab-slider_cat-marker"><img src="media/img/groupe-icon-6.png" alt=""/></div><span class="tab-slider_cat-title">Что купить</span>
         </div>
         <div class="row _grey">
           <div class="wrapper">
             <div class="tabs js-tabs"><a class="item _is-active" href="#buying-slide-1">Сувениры</a></div>
           </div>
         </div>
-        <div class="wrapper slider-content">
-          <div class="col _1-4">
+        <div class="tab-slider_content wrapper columns-grid _2-cols">
+          <div class="col _1-4 ads-container">
             <div class="ads"></div>
           </div>
-          <div class="col _3-4">
-            <div class="slide" id="buying-slide-1">
-              <div class="row slide-items">
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+          <div class="col _3-4 _m-1-1">
+            <div class="tab-slider_item" id="buying-slide-1">
+              <div class="items-grid _3-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
-                <div class="col _1-3">
-                  <article class="card-item">
-                    <div class="card-img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
-                    <div class="card-content">
-                      <div class="card-header"><a class="on-map" href="#">На карте</a><a class="comments _good" href="#">345</a></div><a class="card-title" href="#">Санкт-Петербург Есенина в компании поэта</a>
-                      <p class="card-text">
-                        О личностном и творческом 
-                        становлении великого поэта на 
-                        экскурсии по местам его славы
-                      </p>
-                    </div>
-                  </article>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">На карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
                 </div>
               </div><a class="link to-all" href="#">все сувениры</a>
             </div>
@@ -930,7 +1071,7 @@
           </form>
           <div class="row keywords"><a class="btn _keyword" href="#">Екатеринбург</a><a class="btn _keyword" href="#">Москва</a><a class="btn _keyword" href="#">Санкт-Петербург</a><a class="btn _keyword" href="#">Новосибирск</a><a class="btn _keyword" href="#">Казань</a></div>
           <div class="columns-grid _no-gap places js-places">
-            <div class="col _1-3 js-places-block"><b class="like-h3">Направления</b>
+            <div class="col _1-3 js-places-block"><b class="places-block-title">Направления</b>
               <ul class="places-list js-choise-city-list">
                 <li class="places-item"><a class="places-link" href="#">Европа</a></li>
                 <li class="places-item"><a class="places-link" href="#">Азия</a></li>
@@ -940,7 +1081,7 @@
                 <li class="places-item"><a class="places-link" href="#">Австрия и Океания</a></li>
               </ul>
             </div>
-            <div class="col _1-3 js-places-block"><b class="like-h3">Страны</b>
+            <div class="col _1-3 js-places-block"><b class="places-block-title _back js-places-back">Страны</b>
               <ul class="places-list js-choise-city-list">
                 <li class="places-item"><a class="places-link" href="#">Польша</a></li>
                 <li class="places-item"><a class="places-link" href="#">Россия</a></li>
@@ -962,7 +1103,7 @@
                 <li class="places-item"><a class="places-link" href="#">Франция</a></li>
               </ul>
             </div>
-            <div class="col _1-3 js-places-block"><b class="like-h3">Города</b>
+            <div class="col _1-3 js-places-block"><b class="places-block-title _back js-places-back">Города</b>
               <ul class="places-list js-choise-city-list">
                 <li class="places-item"><a class="places-link" href="#">Березовский</a></li>
                 <li class="places-item"><a class="places-link" href="#">Верхняя Пышма</a></li>

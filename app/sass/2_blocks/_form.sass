@@ -313,3 +313,27 @@
 .form .dropzone .dz-preview .dz-error-message
 	top: 70px
 	left: -40px
+
+input,
+textarea,
+button
+	-webkit-appearance: none
+	appearance: none
+
+@media screen and (max-width: 940px)
+	.form
+		flex-direction: column
+		
+		&._feedback
+			padding-left: 0
+
+			&::before
+				display: none
+
+		&._pdg-l45
+			padding-left: 0
+
+	.tf-wrapper
+
+		&._w-220
+			width: 100%

@@ -1,7 +1,5 @@
 extends ../0_base/template
 
-include ../1_blocks/guide-card
-
 block title
 	title Все гиды
 
@@ -59,19 +57,19 @@ block content
 					a(href="#").link.
 						Экскурсии (24)
 
-		.row
+		.row.ads-container
 			.ads._728x92
 		
 		.content-block
 			h2.like-h2.block-title Гиды и экскурсоводы Екатеринбурга
 			
 			.columns-grid._2-cols
-				.col._1-4
+				.col._1-4.ads-container
 					.ads
 					.ads
 
-				.col._3-4
-					+guideCard()._special
+				.col._3-4._m-1-1
+					+guideCard().--special
 					+guideCard()
 					+guideCard()
 					+guideCard()

@@ -1,61 +1,79 @@
 .guide-card
 	width: 100%
 	border-bottom: 1px solid #eeeff4
-	padding: 15px 20px
-
-	&._special
-		background-color: #f4f5fa
-
-	&._col
-		padding: 0
-		border-bottom: none
-
-		.guide-person
-			flex-direction: column
-
-		.guide-pic
-			width: 146px
-			height: 146px
-			margin-right: 0
-			margin-bottom: 15px
-
-		.guide-info
-			text-align: center
-			margin-bottom: 10px
-
-		.social
-			margin-bottom: 10px
-
-		.personal-menu
-			padding-top: 0
-
-.guide-person,
-.guide-excurses,
-.guide-menu
+	padding: 20px
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
 	display: -o-flex
 	display: flex
-	align-items: center
-	flex-direction: row
+	font-size: .813rem
 
-.guide-person
-	padding-bottom: 15px
+	&.--special
+		background-color: #f4f5fa
 
-.guide-excurses,
-.guide-menu
-	> .col._1-3
-		width: calc(33.33% - 13.33px)
-		margin-right: 20px
+	&.--col,
+	&.--at-page-aside
+		padding: 0
+		border-bottom: none
+		flex-direction: column
 
-		&:last-child
+		.guide-card_person
+			flex-direction: column
+
+		.guide-card_pic
+			width: 146px
+			height: 146px
 			margin-right: 0
+			margin-bottom: 15px
 
-.guide-pic
-	width: 56px
-	height: 56px
-	margin: 0
+		.guide-card_info
+			text-align: center
+			margin-bottom: 10px
+
+		.personal-menu
+			padding-top: 0
+
+	&.--at-page-aside
+		.guide-card_aside
+			padding: 0
+			margin: 0 auto
+
+		.guide-card_content
+			min-width: auto
+			padding: 0
+
+		.guide-card_header
+			padding-right: 0
+
+		.gude-card_soc
+			position: static
+			align-items: center
+			flex-direction: column-reverse
+			padding: 10px 0 15px
+
+		.guide-card_licence-btn
+			display: block
+			margin-top: 10px
+			margin-bottom: 0
+
+		.guide-card_location
+			text-align: center
+
+.guide-card_aside
+	width: 186px
+	padding: 0 20px
+	flex: 0 0
+
+.guide-card_content
+	min-width: 440px
+	flex: 1 1
+	padding-left: 20px
+
+.guide-card_userpic
+	width: 146px
+	height: 146px
+	margin: 0 auto 18px
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -66,10 +84,8 @@
 	overflow: hidden
 	border-radius: 50%
 	flex-shrink: 0
-	margin-right: 15px
 
-.guide-info
-	margin-right: auto
+.guide-card_header
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -77,21 +93,53 @@
 	display: flex
 	flex-direction: column
 	line-height: 1.3
+	position: relative
+	padding-right: 160px
 
-.guide-name
-	font-size: 1rem
+.guide-card_name
+	font-size: 1.13rem
 	font-weight: 700
 	text-decoration: none
 	color: #6563a4
 
-.guide-location
+.guide-card_location
 	font-size: .75rem
 
-.guide-card .social
-	margin-right: 12px
+.gude-card_soc
+	position: absolute
+	top: 5px
+	right: 0
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-start
 
-.guide-licence-btn
-	display: block
+.guide-card_about
+	margin-bottom: 15px
+
+	ul
+		list-style: none
+		padding: 0
+
+.guide-card_excurses
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.guide-card_excurs
+	width: 33.33%
+	min-width: 143px
+	margin-right: 5px
+
+	&:last-child
+		margin-right: 0
+
+.guide-card_licence-btn
+	display: none
 	font-size: .813rem
 	line-height: 1
 	text-decoration: none
@@ -100,38 +148,73 @@
 	border: 1px solid #c8c8c8
 	border-radius: 10px
 	background: url(../media/img/icons.png) no-repeat 7px -728px
+	margin-bottom: 20px
 
-.guide-card .card-item
-	position: relative
+	&.--m-hide
+		display: block
 
-.guide-card .card-item .card-title,
-.guide-card .card-item .card-footer
-	position: absolute
-	left: 15px
-	right: 15px
+@media screen and (max-width: 940px)
+	.guide-card
+		flex-direction: column
+		font-size: 1rem
 
-.guide-card .card-item .card-title
-	top: 15px
-	word-wrap: break-word
-	max-height: 77px
-	overflow: hidden
+		&.--at-page-aside
+			.guide-card_menu
+				display: block
+				max-width: 400px
+				margin: 0 auto
 
-.guide-card .card-item .card-footer
-	bottom: 15px
+			.guide-card_userpic
+				margin-bottom: 10px
 
-.guide-card .card-item .card-img::before
-	content: ""
-	display: block
-	position: absolute
-	top: 0
-	bottom: 0
-	left: 0
-	right: 0
-	background-color: rgba(255, 255, 255, .7)
+	.guide-card_aside
+		width: 100%
+		margin-bottom: 15px
+		padding: 0
 
-.guide-card .personal-menu
-	font-size: .8rem
-	padding-top: 15px
+	.guide-card_userpic
+		width: 130px
+		height: 130px
+		margin-bottom: 0
 
-.guide-card .personal-menu li
-	margin-bottom: 0
+	.guide-card_menu
+		display: none
+	
+	.guide-card_licence-btn
+		display: block
+		margin: 0
+		max-width: 150px
+		font-size: 1rem
+		padding-left: 27px
+		padding-right: 8px
+		
+		&.--m-hide
+			display: none
+
+	.guide-card_content
+		min-width: 100%
+		width: 100%
+		padding: 0
+
+	.guide-card_header
+		padding-right: 0
+		text-align: center
+
+
+	.guide-card_name
+		font-size: 1.4rem
+
+	.guide-card_location
+		font-size: .9rem
+
+	.gude-card_soc
+		padding-top: 12px
+		position: static
+		justify-content: center
+
+	.guide-card_licence-btn
+		margin-right: 10px
+
+	.guide-card_excurses
+		overflow-y: hidden
+		overflow-x: scroll

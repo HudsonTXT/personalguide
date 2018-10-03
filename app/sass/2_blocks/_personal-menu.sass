@@ -2,19 +2,29 @@
 	width: 100%
 	font-size: 0.9rem
 
-.personal-menu ul
+	&.--at-guide-card
+		font-size: .813rem
+
+		.personal-menu_item
+			margin-bottom: 10px
+
+.personal-menu_list
 	list-style: none
 	padding: 0
 	margin: 0
 
-.personal-menu li
+.personal-menu_item
 	margin-bottom: 20px
 	vertical-align: top
 
 	&:last-child
 		margin-bottom: 0
 
-.personal-menu li > .menu-link
+	&._is-active
+		font-weight: 700
+		color: #615faf
+
+.personal-menu_link
 	text-decoration: none
 	color: inherit
 
@@ -24,13 +34,30 @@
 	&._is-blue
 		color: #615faf
 
-	&._is-active
-		font-weight: 700
-		color: #615faf
-
-.personal-menu li > .menu-link > .ic
+.personal-menu_link > .ic
 	margin-right: 5px
 
 @media screen and (max-width: 940px)
 	.personal-menu
 		font-size: 1rem
+
+		&.--at-guide-card
+			font-size: 1rem
+
+		&.--at-cabinet-aside
+			font-size: 0
+
+			.personal-menu_item._is-active
+				position: relative
+
+				&::before
+					content: ""
+					position: absolute
+					display: block
+					width: 3px
+					height: 40px
+					left: 0
+					top: 50%
+					margin-top: -20px
+					margin-left: -10px
+					background-color: #0c9

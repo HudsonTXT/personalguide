@@ -16,29 +16,31 @@ block content
 					li: a(href="#") Сувениры Екатеринбург
 
 		.columns-grid._2-cols
-			.col._1-4
-				article.card-item
-					.card-img
-						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+			.col._1-4._m-1-1.page-aside
+				article.item-card.--at-page-aside
+					.item-card_img-wrapper
+						.item-card_img
+							img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+					
+					.item-card_content
+						.item-card_header
+							span Свердловская область, Екатеринбург
 
-					.card-header
-						span Свердловская область, Екатеринбург
-
-					ul.card-params
-						li
-							b Материал:<br>
-							span Чугун
-						li
-							b Размер:<br>
-							span 100х7х2 см
-						li
-							b Вес:<br>
-							span 100 гр
+						ul.item-card_params
+							li
+								b Материал:<br>
+								span Чугун
+							li
+								b Размер:<br>
+								span 100х7х2 см
+							li
+								b Вес:<br>
+								span 100 гр
 				
 				.action-btns
 					a(href="#").btn Купить
 
-			.col._3-4
+			.col._3-4._m-1-1
 				.content-block
 					h2.like-h2.block-title Описание
 
@@ -50,7 +52,7 @@ block content
 					h2.like-h2.block-title Оставить отзыв
 					
 					form(action="#" method="post").form._feedback
-						.col._2-3
+						.col._2-3._m-1-1
 							fieldset.fields-groupe
 								.tf-wrapper._w-220
 									input(type="text" name="name" id="name" value="").text-field
@@ -73,39 +75,39 @@ block content
 					h2.like-h2.block-title Отзывы
 
 					.feedback-item
-						p.feedback-text.
+						p.feedback-item_text.
 							Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
 							эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
 							искромётно стилизовали народные, украсили искрящимися улыбками, светом 
 							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
 						
-						.feedback-attachments
-							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+						.feedback-item_attachments
+							a(href="#").feedback-item_img
 								img(src="media/img-p/excursion-1.jpg", alt="")
-							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+							a(href="#").feedback-item_img
 								img(src="media/img-p/excursion-1.jpg", alt="")
-							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+							a(href="#").feedback-item_img
 								img(src="media/img-p/excursion-1.jpg", alt="")
-							a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").feedback-img
+							a(href="#").feedback-item_img
 								img(src="media/img-p/excursion-1.jpg", alt="")
 
-						.feedback-foo
-							.feedback-author
-								.author-pic
+						.feedback-item_foo
+							.feedback-item_author
+								.feedback-item_author-pic
 									img(src="media/img-p/1.jpg", alt="")
-								a(href="#").author-name Катерина
+								a(href="#").feedback-item_author-name Катерина
 							time(datetime="21-07-2017") 21.07.2017
 
 					.feedback-item
-						p.feedback-text.
+						p.feedback-item_text.
 							Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
 							эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
 							искромётно стилизовали народные, украсили искрящимися улыбками, светом 
-							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
+							счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль.
 
-						.feedback-foo
-							.feedback-author
-								.author-pic
+						.feedback-item_foo
+							.feedback-item_author
+								.feedback-item_author-pic
 									img(src="media/img-p/1.jpg", alt="")
-								a(href="#").author-name Катерина
+								a(href="#").feedback-item_author-name Катерина
 							time(datetime="21-07-2017") 21.07.2017

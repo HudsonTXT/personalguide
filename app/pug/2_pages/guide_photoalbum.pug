@@ -10,18 +10,25 @@ block page-content
 			славы. О личностном и творческом становлении великого поэта на экскурсии по местам его славы.
 
 		.gallery
-			a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item: img(src="media/img-p/excursion-1.jpg", alt="")
-			a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item: img(src="media/img-p/excursion-1.jpg", alt="")
-			a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item: img(src="media/img-p/excursion-1.jpg", alt="")
-			a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item: img(src="media/img-p/excursion-1.jpg", alt="")
-			a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item: img(src="media/img-p/excursion-1.jpg", alt="")
-			a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery-item: img(src="media/img-p/excursion-1.jpg", alt="")
+			.gallery_row
+				.gallery_col.__2-3
+					a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
+				.gallery_col.__1-3
+					a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
+					a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
+
+			.gallery_row
+				.gallery_col.__1-3
+					a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
+					a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
+				.gallery_col.__2-3
+					a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
 
 	.content-block
 		h2.like-h2.block-title Оставить отзыв
 
 		form(action="#" method="post").form._feedback
-			.col._2-3
+			.col._2-3._m-1-1
 				fieldset.fields-groupe
 					.tf-wrapper._w-220
 						input(type="text" name="name" id="name" value="").text-field
@@ -44,15 +51,15 @@ block page-content
 		h2.like-h2.block-title Отзывы
 
 		.feedback-item
-			p.feedback-text.
+			p.feedback-item_text.
 				Взяли за основу великолепных профессиональных танцовщиц, добавили взрыв 
 				эмоций и фонтан бешеной энергетики, смешали стили кабаре и латино, 
 				искромётно стилизовали народные, украсили искрящимися улыбками, светом 
 				счастливых глаз наших зрителей, шармом и браво - получился шикарный коктейль. 
 
-			.feedback-foo
-				.feedback-author
-					.author-pic
+			.feedback-item_foo
+				.feedback-item_author
+					.feedback-item_author-pic
 						img(src="media/img-p/1.jpg", alt="")
-					a(href="#").author-name Катерина
+					a(href="#").feedback-item_author-name Катерина
 				time(datetime="21-07-2017") 21.07.2017

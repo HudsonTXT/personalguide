@@ -1,12 +1,10 @@
 extends ../0_base/template
 
-include ../1_blocks/card_item-row
-
 block title
 	title Все экскурсии
 
 block content
-	main.wrapper._pdg-both-60
+	main.wrapper
 		.content-block
 			h2.like-h2.block-title Самые популярные экскурсии
 
@@ -47,10 +45,22 @@ block content
 					a(href="#").title.
 						Все главные достопримечательности
 
-		.items-grid._1-in-row
-			+cardExcursRow()
-			+cardExcursRow()
-			+cardExcursRow()
-			+cardExcursRow()
-			+cardExcursRow()
-			+cardExcursRow()
+		.row.ads-container
+			.ads._728x92
+		
+		.content-block
+			h2.like-h2.block-title Гиды и экскурсоводы Екатеринбурга
+			
+			.columns-grid._2-cols
+				.col._1-4.ads-container
+					.ads
+					.ads
+
+				.col._3-4._m-1-1
+					.items-grid._1-in-row._m-1-in-row
+						.items-grid_item: +cardExcursRow()
+						.items-grid_item: +cardExcursRow()
+						.items-grid_item: +cardExcursRow()
+						.items-grid_item: +cardExcursRow()
+						.items-grid_item: +cardExcursRow()
+						.items-grid_item: +cardExcursRow()
