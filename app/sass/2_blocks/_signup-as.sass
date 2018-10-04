@@ -24,7 +24,7 @@
 	text-align: center
 
 	&::before
-		content: ""
+		content: " "
 		display: block
 		width: 67px
 		height: 67px
@@ -40,8 +40,19 @@
 		display: none
 		width: 18px
 		height: 18px
-		background-color: #615faf
+		background: #615faf url("../media/img/icon-check.png") center no-repeat
 		border-radius: 50%
 		position: absolute
 		top: 0
 		right: 9px
+
+.signup-as
+	.sign-as__user
+		label::before
+			background: url("../media/img/icon tourist.png") center no-repeat
+	.sign-as__guide
+		label::before
+			background: url("../media/img/icon-guide.png") center no-repeat
+	.sign-as__company
+		label::before
+			background: url("../media/img/icon-company.png") center no-repeat

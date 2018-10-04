@@ -816,7 +816,8 @@ main {
     border-radius: 50%; }
 
 .chbx-wrapper > input[type="checkbox"]:checked ~ label::before {
-  background-color: #6260af; }
+  background: #6260af url("../media/img/icon-check.png") center no-repeat;
+  background-size: 6px; }
 
 .chbx-wrapper > input[type="checkbox"]:checked ~ label::after {
   display: none; }
@@ -2978,7 +2979,7 @@ button {
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
-  padding: 20px 0 30px; }
+  padding: 20px 0 60px; }
 
 .signup-as {
   display: -webkit-flex;
@@ -3003,7 +3004,7 @@ button {
   position: relative;
   text-align: center; }
   .signup-as .radio-wrapper label::before {
-    content: "";
+    content: " ";
     display: block;
     width: 67px;
     height: 67px;
@@ -3018,11 +3019,20 @@ button {
     display: none;
     width: 18px;
     height: 18px;
-    background-color: #615faf;
+    background: #615faf url("../media/img/icon-check.png") center no-repeat;
     border-radius: 50%;
     position: absolute;
     top: 0;
     right: 9px; }
+
+.signup-as .sign-as__user label::before {
+  background: url("../media/img/icon tourist.png") center no-repeat; }
+
+.signup-as .sign-as__guide label::before {
+  background: url("../media/img/icon-guide.png") center no-repeat; }
+
+.signup-as .sign-as__company label::before {
+  background: url("../media/img/icon-company.png") center no-repeat; }
 
 .search-popup {
   position: relative; }
