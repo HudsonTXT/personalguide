@@ -1,0 +1,15 @@
+mixin cardFindElement(head, text, tag, city, img, imgType)
+	.find-result&attributes(attributes)
+		.find-result__info
+			.find-result__head=head
+			.find-result__text=text
+			.find-result__footer
+				a(href="#").find-result__more Подробнее
+				if tag
+					a(href="#").find-result__tag=tag
+				if city
+					a(href="#").find-result__city=city
+		if img
+			.find-result__right
+					img(src=img, alt="" class=imgType)
+
