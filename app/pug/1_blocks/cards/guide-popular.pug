@@ -1,0 +1,14 @@
+mixin guidePopular()
+    .popular-item&attributes(attributes)
+        .img
+            img(src="media/img-p/guide-1.jpg", alt="Фото гида")
+        a(href="#").title.
+            Иван Константинович Константинопольский
+        .guide-card_menu
+            nav.personal-menu.--at-guide-card
+                ul
+                    li: span.menu-link.phone-link.
+                        <i class="ic _phone"></i> +7 982 <a href="#">показать</a>
+                    li: a(href="#").menu-link <i class="ic _horn-1"></i> Экскурсии (24)
+                    li: a(href="#").menu-link <i class="ic _fdb-grn"></i> Отзывы (32)
+        a(href="#").btn отправить сообщение

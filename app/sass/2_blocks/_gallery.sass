@@ -1,80 +1,108 @@
 .gallery
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
-	flex-direction: column
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  width: 100%
 
 .gallery_row
-	width: 100%
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
-	margin-bottom: 20px
+  width: 100%
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  margin-bottom: 20px
 
-	&:last-child
-		margin-bottom: 0
+  &:last-child
+    margin-bottom: 0
 
 .gallery_col
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
-	flex-direction: column
-	align-items: flex-start
-	margin-right: 20px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  margin-right: 20px
 
-	&:last-child
-		margin-right: 0
+  &:last-child
+    margin-right: 0
 
-	&.__1-3
-		width:  calc(33.33% - 10px)
+  &.__1-3
+    width: calc(33.33% - 10px)
 
-	&.__2-3
-		width:  calc(66.66% - 10px)
+  &.__2-3
+    width: calc(66.66% - 10px)
 
-	.gallery_item
-		width: 100%
-		margin-bottom: 20px
+  .gallery_item
+    width: 100%
+    margin-bottom: 20px
 
-		&:last-child
-			margin-bottom: 0
+    &:last-child
+      margin-bottom: 0
 
 @media screen and (max-width: 940px)
 
-	.gallery_row
-		flex-direction: column
-		margin-bottom: 0
+  .gallery_row
+    flex-direction: column
+    margin-bottom: 0
 
-		&:last-child > .gallery_col:last-child
-			margin-bottom: 0
+    &:last-child > .gallery_col:last-child
+      margin-bottom: 0
 
-	.gallery_col
-		flex-direction: row
-		margin-bottom: 20px
+  .gallery_col
+    flex-direction: row
+    margin-bottom: 20px
 
-		&.__1-3,
-		&.__2-3
-			width: 100%
-			margin-right: 0
+    &.__1-3,
+    &.__2-3
+      width: 100%
+      margin-right: 0
 
-		&.__1-3
-			order: 1
+    &.__1-3
+      order: 1
 
-		&.__1-3 .gallery_item
-			width: calc(50% - 10px)
-			margin-right: 20px
-			margin-bottom: 0
+    &.__1-3 .gallery_item
+      width: calc(50% - 10px)
+      margin-right: 20px
+      margin-bottom: 0
 
-			&:last-child
-				margin-right: 0
+      &:last-child
+        margin-right: 0
 
-		&.__2-3 .gallery_item
-			width: 100%
-			max-width: 400px
-			margin-right: auto
-			margin-left: auto
+    &.__2-3 .gallery_item
+      width: 100%
+      max-width: 400px
+      margin-right: auto
+      margin-left: auto
+
+.video_section
+  .gallery_item, .items-grid_item
+    .item-card_img-wrapper
+    position: relative
+    cursor: pointer
+
+    &::after
+      content: ' '
+      position: absolute
+      display: block
+      width: 77px
+      height: 77px
+      z-index: 1
+      top: 50%
+      left: 50%
+      transform: translateY(-50%) translateX(-50%)
+      margin-top: -20px
+      background: url(../media/img/icon-play.svg) center no-repeat
+      transition: all .2s ease-in-out
+    &:hover
+      &::after
+        background: rgba(0, 0, 0, 0.3) url(../media/img/icon-play.svg) center no-repeat
+        border-radius: 100%
+        width: 87px
+        height: 87px
+        transform: translateY(-50%) translateX(-50%) scale(1.2)

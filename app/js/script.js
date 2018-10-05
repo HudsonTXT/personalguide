@@ -276,6 +276,15 @@ $(document).ready(function() {
 		});
 	};
 
+	// FILTER BY LANGUAGE. OPEN POPUP.
+	$('.filter-by').on('click', 'span', function (e) {
+		e.preventDefault();
+		$(this).closest('.filter-by').find('.filter-by-items').slideToggle();
+    });
+	$('.filter-by').on('click', '.filter-by__close', function (e) {
+		e.preventDefault();
+        $(this).closest('.filter-by').find('.filter-by-items').slideToggle();
+    })
 });
 
 // DROPZONE AUTODISCOVER OFF

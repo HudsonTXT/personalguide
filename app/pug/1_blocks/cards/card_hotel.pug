@@ -1,0 +1,19 @@
+mixin cardHotel()
+    article.item-card&attributes(attributes)
+        .item-card_img-wrapper
+            .item-card_img
+                img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
+
+        .item-card_content
+            .item-card_header
+                a(href="#").item-card_on-map на карте
+                a(href="#").item-card_comments 345
+
+            a(href="#").item-card_title.
+                Lounge cafe & Art club «DolceAmaro»
+
+            p.item-card_text.
+                В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+
+            .item-card_footer
+                p.item-card_price от <b>1600</b> руб.

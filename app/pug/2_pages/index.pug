@@ -1,282 +1,315 @@
 extends ../0_base/template
 
 block title
-	title Главная
+    title Главная
 
 block siteHeader
-	include ../1_blocks/site-header-full
+    include ../1_blocks/site-header-full
 
 block content
-	main
-		.wrapper
-			.content-block.place-info
-				h1.like-h1.block-title Екатеринбург
+    main
+        .wrapper
+            .content-block.place-info
+                h1.like-h1.block-title Екатеринбург
 
-				P.js-shorted-block._is-shorted#about-place-text.
-					Город Екатеринбург является административным центром Свердловской области. Это 
-					наиболее крупный промышленный, торговый, культурный центр Урала. Он построен на 
-					восточном склоне Среднего Урала по берегам притока Тобола, а именно реки Исеть. 
-					Данный населенный пункт находится на расстоянии 1667 километров к востоку от 
-					Москвы. Здесь есть два аэропорта – один крупный, другой поменьше, работает 
-					метрополитен. Население города в 2001 году составляло более одного миллиона 259 
-					тысяч человек. Здесь есть два аэропорта – один крупный/метрополитен.
-					Город Екатеринбург является административным центром Свердловской области. Это 
-					наиболее крупный промышленный, торговый, культурный центр Урала. Он построен на 
-					восточном склоне Среднего Урала по берегам притока Тобола, а именно реки Исеть. 
-					Данный населенный пункт находится на расстоянии 1667 километров к востоку от 
-					Москвы. Здесь есть два аэропорта – один крупный, другой поменьше, работает 
-					метрополитен. Население города в 2001 году составляло более одного миллиона 259 
-					тысяч человек. Здесь есть два аэропорта – один крупный/метрополитен.
-					Город Екатеринбург является административным центром Свердловской области. Это 
-					наиболее крупный промышленный, торговый, культурный центр Урала. Он построен на 
-					восточном склоне Среднего Урала по берегам притока Тобола, а именно реки Исеть. 
-					Данный населенный пункт находится на расстоянии 1667 километров к востоку от 
-					Москвы. Здесь есть два аэропорта – один крупный, другой поменьше, работает 
-					метрополитен. Население города в 2001 году составляло более одного миллиона 259 
-					тысяч человек. Здесь есть два аэропорта – один крупный/метрополитен.
+                P.js-shorted-block._is-shorted#about-place-text.
+                    Город Екатеринбург является административным центром Свердловской области. Это
+                    наиболее крупный промышленный, торговый, культурный центр Урала. Он построен на
+                    восточном склоне Среднего Урала по берегам притока Тобола, а именно реки Исеть.
+                    Данный населенный пункт находится на расстоянии 1667 километров к востоку от
+                    Москвы. Здесь есть два аэропорта – один крупный, другой поменьше, работает
+                    метрополитен. Население города в 2001 году составляло более одного миллиона 259
+                    тысяч человек. Здесь есть два аэропорта – один крупный/метрополитен.
+                    Город Екатеринбург является административным центром Свердловской области. Это
+                    наиболее крупный промышленный, торговый, культурный центр Урала. Он построен на
+                    восточном склоне Среднего Урала по берегам притока Тобола, а именно реки Исеть.
+                    Данный населенный пункт находится на расстоянии 1667 километров к востоку от
+                    Москвы. Здесь есть два аэропорта – один крупный, другой поменьше, работает
+                    метрополитен. Население города в 2001 году составляло более одного миллиона 259
+                    тысяч человек. Здесь есть два аэропорта – один крупный/метрополитен.
+                    Город Екатеринбург является административным центром Свердловской области. Это
+                    наиболее крупный промышленный, торговый, культурный центр Урала. Он построен на
+                    восточном склоне Среднего Урала по берегам притока Тобола, а именно реки Исеть.
+                    Данный населенный пункт находится на расстоянии 1667 километров к востоку от
+                    Москвы. Здесь есть два аэропорта – один крупный, другой поменьше, работает
+                    метрополитен. Население города в 2001 году составляло более одного миллиона 259
+                    тысяч человек. Здесь есть два аэропорта – один крупный/метрополитен.
 
-				a(href="#about-place-text").js-unshort-block читать дальше
+                a(href="#about-place-text").js-unshort-block читать дальше
 
-		.tab-slider
-			.tab-slider_header.wrapper
-				.tab-slider_cat-marker
-					img(src="media/img/groupe-icon-1.png", alt="")
-				span.tab-slider_cat-title Для туристов
+        .tab-slider
+            .tab-slider_header.wrapper
+                .tab-slider_cat-marker
+                    img(src="media/img/groupe-icon-1.png", alt="")
+                span.tab-slider_cat-title Для туристов
 
-			.row._grey
-				.wrapper
-					.tabs.js-tabs
-						a(href="#tourist-slide-1").item._is-active Гиды
-						a(href="#tourist-slide-2").item Туры
-						a(href="#tourist-slide-3").item Экскурсии
-						a(href="#tourist-slide-4").item Турфирмы
-						a(href="#tourist-slide-5").item Рассказы
-						a(href="#tourist-slide-6").item Справочник
-						a(href="#tourist-slide-7").item Визы
+            .row._grey
+                .wrapper
+                    // add to tabs .js-tabs class and carousel will be work
+                    .tabs
+                        a(href="#tourist-slide-1").item._is-active Гиды
+                        a(href="#tourist-slide-2").item Туры
+                        a(href="#tourist-slide-3").item Экскурсии
+                        a(href="#tourist-slide-4").item Турфирмы
+                        a(href="#tourist-slide-5").item Рассказы
+                        a(href="#tourist-slide-6").item Справочник
+                        a(href="#tourist-slide-7").item Визы
 
-			.tab-slider_content.wrapper.columns-grid._2-cols
-				.col._1-4.ads-container
-						.ads
+            .tab-slider_content.wrapper.columns-grid._2-cols
+                .col._4-4
 
-				.col._3-4._m-1-1
+                    .tab-slider_item#tourist-slide-1-off
 
-					.tab-slider_item#tourist-slide-1
-						
-						.items-grid._3-in-row._at-tab-slider
-							.items-grid_item: +cardPerson()
-							.items-grid_item: +cardPerson()
-							.items-grid_item: +cardPerson()
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item
+                                .ads-container
+                                    .ads
+                            .items-grid_item: +cardPerson()
+                            .items-grid_item: +cardPerson()
+                            .items-grid_item: +cardPerson()
 
-						a(href="all-items_guides.html").link.to-all все гиды
+                        a(href="all-items_guides.html").link.to-all все гиды
 
-					.tab-slider_item#tourist-slide-2
+                    .ads-container
+                        .ads._728x92
 
-						.items-grid._3-in-row._at-tab-slider
-							.items-grid_item: +cardTour()
-							.items-grid_item: +cardTour()
-							.items-grid_item: +cardTour()
+                    .tab-slider_item#tourist-slide-2-off
 
-						a(href="#").link.to-all все туры
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item
+                                .ads-container
+                                    .ads
+                            .items-grid_item: +cardTour()
+                            .items-grid_item: +cardTour()
+                            .items-grid_item: +cardTour()
 
-					.tab-slider_item#tourist-slide-3
+                        a(href="#").link.to-all все туры
+                    .tab-slider_item#tourist-slide-3-off
 
-						.items-grid._3-in-row._at-tab-slider
-							.items-grid_item: +cardExcurs()
-							.items-grid_item: +cardExcurs()
-							.items-grid_item: +cardExcurs()
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardExcurs()
+                            .items-grid_item: +cardExcurs()
+                            .items-grid_item: +cardExcurs()
+                            .items-grid_item: +cardExcurs()
 
-						a(href="all-items_excurs.html").link.to-all все экскурсии
+                        a(href="all-items_excurs.html").link.to-all все экскурсии
+                    .tab-slider_item#tourist-slide-4-off
 
-					.tab-slider_item#tourist-slide-4
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardTourfirm()
+                            .items-grid_item: +cardTourfirm()
+                            .items-grid_item: +cardTourfirm()
+                            .items-grid_item: +cardTourfirm()
 
-						.items-grid._3-in-row._at-tab-slider
-							.items-grid_item: +cardTourfirm()
-							.items-grid_item: +cardTourfirm()
-							.items-grid_item: +cardTourfirm()
+                        a(href="#").link.to-all все турфирмы
+                    .tab-slider_item#tourist-slide-5
 
-						a(href="#").link.to-all все турфирмы
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardStory()
+                            .items-grid_item: +cardStory()
+                            .items-grid_item: +cardStory()
+                            .items-grid_item: +cardStory()
 
-					.tab-slider_item#tourist-slide-5
-						
-						.items-grid._3-in-row._at-tab-slider
-							.items-grid_item: +cardStory()
-							.items-grid_item: +cardStory()
-							.items-grid_item: +cardStory()
+                        a(href="#").link.to-all все рассказы
+                    .tab-slider_item#tourist-slide-6
 
-						a(href="#").link.to-all все рассказы
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardStory()
+                            .items-grid_item: +cardStory()
+                            .items-grid_item: +cardStory()
+                            .items-grid_item: +cardStory()
 
-					.tab-slider_item#tourist-slide-6
-						
-						.items-grid._3-in-row._at-tab-slider
-							.items-grid_item: +cardStory()
-							.items-grid_item: +cardStory()
-							.items-grid_item: +cardStory()
+                        a(href="#").link.to-all все справочники
 
-						a(href="#").link.to-all все справочники
+        .tab-slider
+            .tab-slider_header.wrapper
+                .tab-slider_cat-marker
+                    img(src="media/img/groupe-icon-2.png", alt="")
+                span.tab-slider_cat-title Где поселиться
 
-		.tab-slider
-			.tab-slider_header.wrapper
-				.tab-slider_cat-marker
-					img(src="media/img/groupe-icon-2.png", alt="")
-				span.tab-slider_cat-title Где поселиться
+            .row._grey
+                .wrapper
+                    .tabs.js-tabs
+                        a(href="#settle-slide-1").item._is-active Гостиницы
+                        a(href="#settle-slide-2").item Квартиры посуточно
+                        a(href="#settle-slide-3").item Частный сектор
+                        a(href="#settle-slide-4").item Мини-отели
+                        a(href="#settle-slide-5").item Хостелы
+                        a(href="#settle-slide-6").item Аренда жилья
 
-			.row._grey
-				.wrapper
-					.tabs.js-tabs
-						a(href="#settle-slide-1").item._is-active Гостиницы
-						a(href="#settle-slide-2").item Квартиры посуточно
-						a(href="#settle-slide-3").item Частный сектор
-						a(href="#settle-slide-4").item Мини-отели
-						a(href="#settle-slide-5").item Хостелы
-						a(href="#settle-slide-6").item Аренда жилья
+            .tab-slider_content.wrapper.columns-grid._2-cols
 
-			.tab-slider_content.wrapper.columns-grid._2-cols
-				.col._1-4.ads-container
-					.ads
+                .col._4-4._m-1-1
+                    .tab-slider_item#settle-slide-1
 
-				.col._3-4._m-1-1
-					.tab-slider_item#settle-slide-1
-						
-						.items-grid._3-in-row._at-tab-slider
-							.items-grid_item: +cardExcurs()
-							.items-grid_item: +cardExcurs()
-							.items-grid_item: +cardExcurs()
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
 
-						a(href="#").link.to-all все отели Екатеринбурга
+                        a(href="#").link.to-all все гостиницы Екатеринбурга
 
-		.tab-slider
-			.tab-slider_header.wrapper
-				.tab-slider_cat-marker
-					img(src="media/img/groupe-icon-3.png", alt="")
-				span.tab-slider_cat-title Где поесть
+        .tab-slider
+            .tab-slider_header.wrapper
+                .tab-slider_cat-marker
+                    img(src="media/img/groupe-icon-3.png", alt="")
+                span.tab-slider_cat-title Где поесть
 
-			.row._grey
-				.wrapper
-					.tabs.js-tabs
-						a(href="#eating-slide-1").item._is-active Рестораны
-						a(href="#eating-slide-2").item Кафе
-						a(href="#eating-slide-3").item Бары
+            .row._grey
+                .wrapper
+                    .tabs.js-tabs
+                        a(href="#eating-slide-1").item._is-active Рестораны
+                        a(href="#eating-slide-2").item Кафе
+                        a(href="#eating-slide-3").item Бары
 
-			.tab-slider_content.wrapper.columns-grid._2-cols
-				.col._1-4.ads-container
-					.ads
+            .tab-slider_content.wrapper.columns-grid._2-cols
 
-				.col._3-4._m-1-1
-					.tab-slider_item#eating-slide-1
-						
-						.items-grid._3-in-row._at-tab-slider
-							.items-grid_item: +cardTourfirm()
-							.items-grid_item: +cardTourfirm()
-							.items-grid_item: +cardTourfirm()
+                .col._4-4._m-1-1
+                    .tab-slider_item#eating-slide-1
 
-						a(href="#").link.to-all все рестораны Екатеринбурга
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
 
-		.tab-slider
-			.tab-slider_header.wrapper
-				.tab-slider_cat-marker
-					img(src="media/img/groupe-icon-4.png", alt="")
-				span.tab-slider_cat-title Что посмотреть
+                        a(href="#").link.to-all все рестораны Екатеринбурга
 
-			.row._grey
-				.wrapper
-					.tabs.js-tabs
-						a(href="#entertainment-slide-1").item._is-active Музеи
-						a(href="#entertainment-slide-2").item Выставки
-						a(href="#entertainment-slide-3").item Видеогид
-						a(href="#entertainment-slide-4").item Карты
-						a(href="#entertainment-slide-5").item Праздники
-						a(href="#entertainment-slide-6").item Веб-камеры
-						a(href="#entertainment-slide-7").item Фотогалерея
+        .tab-slider
+            .tab-slider_header.wrapper
+                .tab-slider_cat-marker
+                    img(src="media/img/groupe-icon-4.png", alt="")
+                span.tab-slider_cat-title Что посмотреть
 
-			.tab-slider_content.wrapper.columns-grid._2-cols
-				.col._1-4.ads-container
-					.ads
+            .row._grey
+                .wrapper
+                    .tabs
+                        a(href="#entertainment-slide-1").item._is-active Музеи
+                        a(href="#entertainment-slide-2").item Выставки
+                        a(href="#entertainment-slide-3").item Видеогид
+                        a(href="#entertainment-slide-4").item Карты
+                        a(href="#entertainment-slide-5").item Праздники
+                        a(href="#entertainment-slide-6").item Веб-камеры
+                        a(href="#entertainment-slide-7").item Фотогалерея
 
-				.col._3-4._m-1-1
-					.tab-slider_item#entertainment-slide-1
+            .tab-slider_content.wrapper.columns-grid._2-cols
 
-						.items-grid._3-in-row._at-tab-slider
-							.items-grid_item: +cardTourfirm()
-							.items-grid_item: +cardTourfirm()
-							.items-grid_item: +cardTourfirm()
+                .col._4-4._m-1-1
+                    .tab-slider_item#entertainment-slide-1
 
-						a(href="#").link.to-all все рестораны Екатеринбурга
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
 
-					.tab-slider_item#entertainment-slide-6
+                        a(href="#").link.to-all все музеи
 
-						.gallery
-							.gallery_row
-								.gallery_col.__2-3
-									.gallery_item: +cardStory()
-								.gallery_col.__1-3
-									.gallery_item: +cardPhoto()
-									.gallery_item: +cardPhoto()
+                    .tab-slider_item#entertainment-slide-2
 
-						a(href="#").link.to-all все веб-камеры
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
 
-					.tab-slider_item#entertainment-slide-7
+                        a(href="#").link.to-all все выставки
 
-						.gallery
-							.gallery_row
-								.gallery_col.__1-3
-									.gallery_item: +cardPhoto()
-									.gallery_item: +cardPhoto()
-								.gallery_col.__2-3
-									.gallery_item: +cardStory()
 
-						a(href="all-items_photos.html").link.to-all все фотоальбомы
+                    .tab-slider_item#entertainment-slide-6
 
-		.tab-slider
-			.tab-slider_header.wrapper
-				.tab-slider_cat-marker
-					img(src="media/img/groupe-icon-5.png", alt="")
-				span.tab-slider_cat-title Где отдохнуть
+                        .gallery
+                            .gallery_row.video_section
+                                .gallery_col.__2-3
+                                    .gallery_item: +card_videocam()
+                                .gallery_col.__1-3
+                                    .gallery_item: +card_videocam-min()
+                                    .gallery_item: +card_videocam-min()
 
-			.row._grey
-				.wrapper
-					.tabs.js-tabs
-						a(href="#recreation-slide-1").item._is-active SPA
-						a(href="#recreation-slide-2").item Базы отдыха
-						a(href="#recreation-slide-3").item Горнолыжные комплексы
-						a(href="#recreation-slide-4").item Загородные лагеря
-						a(href="#recreation-slide-5").item Турбазы
-						a(href="#recreation-slide-6").item Развлечения
+                        a(href="#").link.to-all веб-камеры он-лайн
 
-			.tab-slider_content.wrapper.columns-grid._2-cols
-				.col._1-4.ads-container
-					.ads
+                    .tab-slider_item#entertainment-slide-7
 
-				.col._3-4._m-1-1
-					.tab-slider_item#recreation-slide-1
+                        .gallery
+                            .gallery_row
+                                .gallery_col.__1-3
+                                    .gallery_item: +cardPhoto()
+                                    .gallery_item: +cardPhoto()
+                                .gallery_col.__2-3
+                                    .gallery_item: +cardStory()
 
-						.items-grid._3-in-row._at-tab-slider
-							.items-grid_item: +cardTourfirm()
-							.items-grid_item: +cardTourfirm()
-							.items-grid_item: +cardTourfirm()
+                        a(href="all-items_photos.html").link.to-all все фотоальбомы Екатеринбурга
 
-						a(href="#").link.to-all все рестораны Екатеринбурга
+                    .tab-slider_item#entertainment-slide-9
 
-		.tab-slider
-			.tab-slider_header.wrapper
-				.tab-slider_cat-marker
-					img(src="media/img/groupe-icon-6.png", alt="")
-				span.tab-slider_cat-title Что купить
+                        .items-grid._4-in-row._at-tab-slider.video_section
+                            .items-grid_item: +card_videocam()
+                            .items-grid_item: +card_videocam()
+                            .items-grid_item: +card_videocam()
+                            .items-grid_item: +card_videocam()
 
-			.row._grey
-				.wrapper
-					.tabs.js-tabs
-						a(href="#buying-slide-1").item._is-active Сувениры
+                        a(href="#").link.to-all все видео Екатеринбурга
 
-			.tab-slider_content.wrapper.columns-grid._2-cols
-				.col._1-4.ads-container
-					.ads
+        .tab-slider
+            .tab-slider_header.wrapper
+                .tab-slider_cat-marker
+                    img(src="media/img/groupe-icon-5.png", alt="")
+                span.tab-slider_cat-title Где отдохнуть
 
-				.col._3-4._m-1-1
-					.tab-slider_item#buying-slide-1
+            .row._grey
+                .wrapper
+                    .tabs.js-tabs
+                        a(href="#recreation-slide-1").item._is-active SPA
+                        a(href="#recreation-slide-2").item Базы отдыха
+                        a(href="#recreation-slide-3").item Горнолыжные комплексы
+                        a(href="#recreation-slide-4").item Загородные лагеря
+                        a(href="#recreation-slide-5").item Турбазы
+                        a(href="#recreation-slide-6").item Развлечения
 
-						.items-grid._3-in-row._at-tab-slider
-							.items-grid_item: +cardTourfirm()
-							.items-grid_item: +cardTourfirm()
-							.items-grid_item: +cardTourfirm()
+            .tab-slider_content.wrapper.columns-grid._2-cols
+                .col._4-4._m-1-1
+                    .tab-slider_item#recreation-slide-1
 
-						a(href="#").link.to-all все сувениры
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all все SPA
+
+            .tab-slider_content.wrapper.columns-grid._2-cols
+                .col._4-4._m-1-1
+                    .tab-slider_item#recreation-slide-2
+
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all все выставки
+
+        .tab-slider
+            .tab-slider_header.wrapper
+                .tab-slider_cat-marker
+                    img(src="media/img/groupe-icon-6.png", alt="")
+                span.tab-slider_cat-title Что купить
+
+            .row._grey
+                .wrapper
+                    .tabs.js-tabs
+                        a(href="#buying-slide-1").item._is-active Сувениры
+
+            .tab-slider_content.wrapper.columns-grid._2-cols
+                .col._4-4._m-1-1
+                    .tab-slider_item#buying-slide-1
+
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all все сувениры
