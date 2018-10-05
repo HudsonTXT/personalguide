@@ -3325,7 +3325,7 @@ button {
   width: 100%;
   overflow: hidden;
   position: relative;
-  height: 32px;
+  min-height: 34px;
   padding: 0 30px; }
   .global-search .row.keywords .keywords-carousel {
     position: absolute;
@@ -3341,6 +3341,7 @@ button {
     transform: translateY(-50%); }
     .global-search .row.keywords .keywords-scroll:first-child {
       transform: rotate(180deg) translateY(50%);
+      display: none;
       left: -29px; }
     .global-search .row.keywords .keywords-scroll:last-child {
       right: -29px; }

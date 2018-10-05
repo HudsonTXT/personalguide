@@ -295,7 +295,7 @@ $(document).ready(function () {
         $(this).closest('.filter-by').find('.filter-by-items').slideToggle();
     });
 
-    // SEARCH TOGGLE TAGS
+    // SEARCH SCROLL TAGS
     $('.keywords-scroll').on('click', function (e) {
         e.preventDefault();
         leftOrRight = $(this).index();
@@ -304,13 +304,15 @@ $(document).ready(function () {
             if (parseInt(el.css('left')) > (el.width() / 4)*-1 ) {
                 el.animate({left: "-=200"}, 'ease');
             }
-            console.log(el.css('left'));
+            $('.keywords-scroll').fadeIn();
         } else {
             if (parseInt(el.css('left')) < 30) {
-
                 el.animate({left: "+=200"}, 'ease');
+            }else{
+                $(this).fadeOut();
             }
         }
+
     });
 });
 
