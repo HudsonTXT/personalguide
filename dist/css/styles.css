@@ -246,6 +246,11 @@ main {
       margin-right: 0; }
     .items-grid._4-in-row > .items-grid_item:nth-last-child(-n+4) {
       margin-bottom: 0; }
+  .items-grid .items-grid_item.excursion-card {
+    margin-bottom: 0; }
+    .items-grid .items-grid_item.excursion-card .--inlist {
+      padding: 20px 0;
+      margin-top: -1px; }
   @media screen and (max-width: 940px) {
     .items-grid._m-1-in-row, .items-grid._at-tab-slider {
       justify-content: space-between; }
@@ -339,7 +344,10 @@ main {
   font-weight: 700;
   position: relative;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .2s ease-out; }
+  .btn:hover {
+    transform: scale(1.04); }
   .btn._blue {
     background-color: #615faf; }
   .btn._bordered {
@@ -392,12 +400,12 @@ main {
   background-color: #eeeff4;
   width: 100%;
   min-height: 340px;
-  margin: 0 auto; }
-  .ads + .ads {
-    margin-top: 20px; }
+  margin: 0 auto;
+  margin-bottom: 20px; }
   .ads._728x92 {
     max-width: 728px;
-    min-height: 90px; }
+    min-height: 90px;
+    margin-bottom: 0; }
 
 @media screen and (max-width: 940px) {
   .ads-container {
@@ -1100,6 +1108,11 @@ button {
       margin-bottom: 10px; }
     .item-card.--row .item-card_img-wrapper {
       max-width: 220px; }
+    .item-card.--row.--inlist {
+      border-top: 1px solid #eeeff4;
+      border-bottom: 1px solid #eeeff4; }
+      .item-card.--row.--inlist .user-name span {
+        color: #999; }
   .item-card.--at-guide-card .item-card_title {
     font-size: .813rem;
     overflow: hidden;
@@ -1376,6 +1389,9 @@ button {
   .item-card_tool.__show-tools {
     display: block; } }
 
+.item-card.card-news {
+  margin-bottom: 20px; }
+
 .guide-card {
   width: 100%;
   border-bottom: 1px solid #eeeff4;
@@ -1392,7 +1408,9 @@ button {
   .guide-card.--col, .guide-card.--at-page-aside {
     padding: 0;
     border-bottom: none;
-    flex-direction: column; }
+    flex-direction: column;
+    border-bottom: none;
+    border-top: none; }
     .guide-card.--col .guide-card_person, .guide-card.--at-page-aside .guide-card_person {
       flex-direction: column; }
     .guide-card.--col .guide-card_pic, .guide-card.--at-page-aside .guide-card_pic {
@@ -3145,8 +3163,8 @@ button {
   .place-info:nth-child(n+1) {
     padding-bottom: 40px; }
 
-.place-info p._is-shorted {
-  max-height: 145px; }
+.place-info ._is-shorted {
+  max-height: 225px; }
 
 .place-info p:nth-child(n+1) {
   text-align: left;
@@ -3159,6 +3177,10 @@ button {
     padding-right: 0; }
     .place-info:nth-child(n+1) {
       padding-bottom: 30px; } }
+
+#about-place-text {
+  font-size: 18px;
+  line-height: 32px; }
 
 .site-logo {
   width: 155px;
@@ -3294,6 +3316,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .filter-items.--centered .filter-by {
+    text-align: center !important; }
   .filter-items .filter-by {
     position: relative;
     text-decoration: none;
@@ -3465,6 +3489,145 @@ button {
     @media screen and (max-width: 940px) {
       .find-result .find-result__right {
         display: none; } }
+
+.js-toggle-text-content._is-shorted {
+  max-height: 250px; }
+
+.full-width-lines {
+  position: relative; }
+  .full-width-lines::before {
+    content: ' ';
+    width: 999%;
+    height: 1px;
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f8ebff; }
+  .full-width-lines::after {
+    content: ' ';
+    width: 999%;
+    height: 1px;
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f8ebff; }
+
+.about-place-country p {
+  font-size: 18px;
+  line-height: 32px; }
+
+.about-place-country h2 {
+  font-weight: normal;
+  font-size: 24px; }
+
+.country__city-list {
+  border-bottom: 1px solid #f8ebff;
+  padding-left: 0;
+  padding-top: 35px;
+  padding-bottom: 40px;
+  font-size: 14px;
+  color: #666;
+  list-style: none;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: 445px; }
+  @media screen and (max-width: 900px) {
+    .country__city-list {
+      flex-flow: row wrap;
+      height: auto; } }
+  .country__city-list a {
+    font-size: 16px;
+    color: #6563a4;
+    text-decoration: none;
+    font-weight: bold; }
+  .country__city-list li {
+    margin-bottom: 3px;
+    width: 143px; }
+  .country__city-list ul {
+    margin-bottom: 15px;
+    list-style: none;
+    margin-right: 15px;
+    padding-left: 0; }
+    .country__city-list ul li:first-child {
+      margin-bottom: 10px; }
+
+.country__all-city-list {
+  display: flex;
+  flex-flow: column nowrap; }
+  .country__all-city-list ul {
+    padding-left: 0;
+    width: 100%;
+    list-style: none;
+    line-height: 24px; }
+    .country__all-city-list ul.cities_row {
+      display: flex;
+      flex-flow: row; }
+  .country__all-city-list li {
+    display: block;
+    font-size: 14px;
+    list-style: none;
+    color: #666;
+    margin-right: 3px; }
+    .country__all-city-list li:last-child {
+      margin-right: 0; }
+    .country__all-city-list li a {
+      font-size: 14px;
+      color: #666;
+      text-decoration: none; }
+      .country__all-city-list li a:hover {
+        color: #615faf; }
+  .country__all-city-list .city_litera {
+    font-weight: bold;
+    color: #615faf;
+    width: 32px;
+    margin-bottom: auto;
+    align-self: flex-start; }
+  .country__all-city-list .cities_row-elements {
+    display: flex;
+    flex-flow: row wrap; }
+
+.country__all-city-list ._is-shorted {
+  max-height: 250px;
+  position: relative; }
+  .country__all-city-list ._is-shorted:before {
+    content: ' ';
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: linear-gradient(rgba(0, 0, 0, 0), #fff); }
+
+.country__all-city-list .js-toggle-text {
+  text-align: center; }
+
+.popular-item.popular-excurs {
+  background: #ffffff;
+  border: 1px solid #eeeff4;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: left;
+  padding: 18px 15px; }
+  .popular-item.popular-excurs .img {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    width: 189px;
+    height: 124px;
+    margin-bottom: 0; }
+  .popular-item.popular-excurs .title, .popular-item.popular-excurs .item-card_footer {
+    text-align: left;
+    align-self: start; }
+  .popular-item.popular-excurs .title {
+    height: 57px;
+    word-break: normal; }
+  .popular-item.popular-excurs .item-card_header {
+    width: 100%;
+    margin-bottom: 5px; }
 
 .js-shorted-block {
   overflow: hidden; }

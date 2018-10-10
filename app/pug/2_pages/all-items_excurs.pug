@@ -12,49 +12,44 @@ block content
 				li: a(href="#") Экскурсии Екатеринбург
 	main.wrapper
 		.content-block
-			h2.like-h2.block-title Самые популярные экскурсии
+			h2.like-h2.block-title Популярные экскурсии в Екатеринбурге
 
 			.popular-items
-				.popular-item
-					.img
-						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-					a(href="#").title.
-						Все главные достопримечательности
-
-				.popular-item
-					.img
-						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-					a(href="#").title.
-						Все главные достопримечательности
-
-				.popular-item
-					.img
-						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-					a(href="#").title.
-						Все главные достопримечательности
-
-				.popular-item
-					.img
-						img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
-					a(href="#").title.
-						Все главные достопримечательности
+				+excursionPopular()
+				+excursionPopular()
+				+excursionPopular()
+				+excursionPopular()
 
 		.row.ads-container
 			.ads._728x92
 		
 		.content-block
-			h2.like-h2.block-title Гиды и экскурсоводы Екатеринбурга
-			
+			h2.like-h2.block-title Экскурсии в Екатеринбурге
+			+filterItems(false, true).--centered
 			.columns-grid._2-cols
-				.col._1-4.ads-container
-					.ads
-					.ads
+
 
 				.col._3-4._m-1-1
 					.items-grid._1-in-row._m-1-in-row
-						.items-grid_item: +cardExcursRow()
-						.items-grid_item: +cardExcursRow()
-						.items-grid_item: +cardExcursRow()
-						.items-grid_item: +cardExcursRow()
-						.items-grid_item: +cardExcursRow()
-						.items-grid_item: +cardExcursRow()
+						.items-grid_item.excursion-card: +cardExcursRow(true).--inlist
+						.items-grid_item.excursion-card: +cardExcursRow(true).--inlist
+						.items-grid_item.excursion-card: +cardExcursRow(true).--inlist
+						.items-grid_item.excursion-card: +cardExcursRow(true).--inlist
+						.items-grid_item.excursion-card: +cardExcursRow(true).--inlist
+						.items-grid_item.excursion-card: +cardExcursRow(true).--inlist
+						.items-grid_item.excursion-card: +cardExcursRow(true).--inlist
+						.items-grid_item.excursion-card: +cardExcursRow(true).--inlist
+				.col._1-4.ads-container
+					.ads
+					+cardNews()
+					+cardNews()
+					.ads
+
+			.pagination._pdg-vert40
+				a(href="#").item._is-active 1
+				a(href="#").item 2
+				a(href="#").item 3
+				a(href="#").item 4
+				a(href="#").item ...
+				a(href="#").item 8
+				a(href="#").item._load-more Загрузить ещё...

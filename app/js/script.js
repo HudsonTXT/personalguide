@@ -140,7 +140,7 @@ $(document).ready(function () {
 
         function blockUnshort(e, o) {
             var e = typeof e == 'string' ? $(e) : $($(e).attr('href'));
-            e.removeClass('_is-shorted');
+            e.toggleClass('_is-shorted');
         }
 
         $.fn.unshortBlock = function (s) {
@@ -151,7 +151,12 @@ $(document).ready(function () {
             else
                 $(this).click(function () {
                     blockUnshort(this, o);
-                    (this).remove();
+                    if($(this).hasClass("js-toggle-text")){
+                        $(this).text($(this).text() == "свернуть" ? "читать дальше" : "свернуть");
+
+                    }else{
+                        $(this).remove();
+                    }
                     return false;
                 });
         }

@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Страна: Россия</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css"/>
+    <script src="js/libs/redactor.min.js"></script>
+    <link rel="stylesheet" href="css/libs/redactor.css"/>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"/>
+    <link href="css/libs/fotorama-custom.css" rel="stylesheet"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script>
+    <script src="js/libs/modal.js"></script>
+  </head>
+  <!-- MIXINS PUG-->
+  <body>
+    <header class="site-header">
+      <nav class="site-nav">
+        <div class="nav-wrapper"><a class="open-mobile-menu" href="#"></a>
+          <div class="sides-items"><a class="choice-city-btn mopen" href="#city-choise"><img src="media/img/logo-icon.png" alt=""/></a></div>
+          <ul class="nav-list">
+            <li class="nav-item _is-active"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-1.png" alt="" width="21" height="22"/></a><a class="nav-link" href="#">Для Туристов</a>
+              <div class="row _grey subnav">
+                <div class="wrapper">
+                  <div class="tabs"><a class="item" href="#info-slide-1">Описание</a><a class="item" href="#info-slide-2">Рассказы</a><a class="item" href="#info-slide-3">Карта</a></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-2.png" alt="" width="18" height="16"/></a><a class="nav-link" href="#">Где поселиться</a>
+              <div class="row _grey subnav">
+                <div class="wrapper">
+                  <div class="tabs"><a class="item" href="#info-slide-1">Описание</a><a class="item" href="#info-slide-2">Рассказы</a><a class="item" href="#info-slide-3">Карта</a></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-3.png" alt="" width="16" height="26"/></a><a class="nav-link" href="#">Где поесть</a>
+              <div class="row _grey subnav">
+                <div class="wrapper">
+                  <div class="tabs"><a class="item" href="#info-slide-1">Описание</a><a class="item" href="#info-slide-2">Рассказы</a><a class="item" href="#info-slide-3">Карта</a></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-4.png" alt="" width="21" height="17"/></a><a class="nav-link" href="#">Что посмотреть</a>
+              <div class="row _grey subnav">
+                <div class="wrapper">
+                  <div class="tabs"><a class="item" href="#info-slide-1">Описание</a><a class="item" href="#info-slide-2">Рассказы</a><a class="item" href="#info-slide-3">Карта</a></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-5.png" alt="" width="23" height="23"/></a><a class="nav-link" href="#">Где отдохнуть</a>
+              <div class="row _grey subnav">
+                <div class="wrapper">
+                  <div class="tabs"><a class="item" href="#info-slide-1">Описание</a><a class="item" href="#info-slide-2">Рассказы</a><a class="item" href="#info-slide-3">Карта</a></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-6.png" alt="" width="24" height="21"/></a><a class="nav-link" href="#">Что купить</a>
+              <div class="row _grey subnav">
+                <div class="wrapper">
+                  <div class="tabs"><a class="item" href="#info-slide-1">Описание</a><a class="item" href="#info-slide-2">Рассказы</a><a class="item" href="#info-slide-3">Карта</a></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-8.png" alt="" width="25" height="12"/></a><a class="nav-link" href="#">Как добраться</a>
+              <div class="row _grey subnav">
+                <div class="wrapper">
+                  <div class="tabs"><a class="item" href="#info-slide-1">Описание</a><a class="item" href="#info-slide-2">Рассказы</a><a class="item" href="#info-slide-3">Карта</a></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="sides-items search-popup"><a class="search-btn js-search-open" href="#"></a>
+            <form class="search-form _at-search-popup _is-hide" action="#" method="get">
+              <input class="serach-field" type="text" name="search-request" placeholder="Куда отправитесь?"/>
+              <button class="search-submit" type="submit"></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="m-menu" id="mobile-menu"><a class="m-menu-close" href="#"></a>
+        <nav class="m-nav">
+          <ul class="m-nav-list">
+            <li class="m-nav-item"><a class="m-nav-link" href="#">Для туристов</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">Где поселиться</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">Где поесть</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">Что посмотреть</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">Где отдохнуть</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">Что купить</a></li>
+            <li class="m-nav-item"><a class="m-nav-link" href="#">Как добраться</a></li>
+          </ul>
+        </nav>
+        <div class="user-block _at-m-menu"><a class="user-pic js-open-user-menu" href="#"><img src="media/img-p/1.jpg" alt=""/></a>
+          <div class="user-menu-popup js-user-menu-popup">
+            <ul class="user-menu-list">
+              <li class="user-menu-item"><a class="user-menu-link mopen" href="#signin">Войти</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Мой профиль</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Настройки</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Выйти</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper">
+        <div class="content-block place-info">
+          <h1 class="like-h1 block-title">Россия</h1>
+          <div class="js-shorted-block about-place-country" id="about-place-text">
+            <p>Столица России - город Москва.  Российская Федерация находится на востоке Европы и в Северной Азии. России принадлежит первая позиция в мире по территории 17 125 191 км².</p>
+            <p>В состав Российской Федерации вошли 85 субъектов: края, области, города федерального значения, автономные области и округа), и примерно 157 тысяч населённых пунктов. У России есть границы с 20 странами, это наибольшее мировое значение.</p><img src="media/img-p/russia.png"/>
+            <h2>   Время</h2>
+            <p>   В октябре 2014 года в России было установлено 11 часовых зон. Переход на летнее время в стране был отменён в 2011 году.</p>
+            <h2>   Население</h2>
+            <p>   По данным 2018 года население России 146 877 088 человек. Россия - полиэтническое государство,в стране проживает 7 народов с численностью населения более одного миллиона человек: русские, татары, украинцы, башкиры, чуваши, чеченцы и армяне.</p>
+            <h2>   Климат</h2>
+            <p>   Климат на территории страны отчетливо поделен на холодный и тёплый сезоны и серьезные перепады температур. Среднегодовая температура воздуха в РФ равна −5.5 °С. В отдельных регионах страны разница температуры равна 36 градусов (от −23 до +13). Холодный абсолютный максимум температуры равняется +8.7 °С на острове Визе, тёплый абсолютный минимум  −13.4 °С в Сочи.</p>
+            <h2>   Визовый режим</h2>
+            <p>   Граждане 106 стран могут заезжать в Россию без визы, жители 36 стран визу получают в упрощенном режиме, с 40 странами идут переговоры по упрощению формальностей. В Россию можно заехать с разными визами: обыкновенной; дипломатической; служебной; транзитной и временной.</p>
+          </div><a class="js-unshort-block js-toggle-text" href="#about-place-text">свернуть</a>
+        </div>
+      </div>
+      <div class="tab-slider">
+        <div class="tab-slider_header wrapper">
+          <div class="tab-slider_cat-marker"><img src="media/img/i-mappoint.svg" alt=""/></div><span class="tab-slider_cat-title">Города</span>
+        </div>
+        <div class="tab-slider_content wrapper columns-grid _2-cols">
+          <div class="col _4-4">
+            <div class="tab-slider_item">
+              <div class="items-grid _4-in-row _at-tab-slider full-width-lines">
+                <ul class="country__city-list">
+                  <ul>
+                    <li>А</li>
+                    <li><a href="#">Абакан</a></li>
+                    <li><a href="#">Анапа</a></li>
+                    <li><a href="#">Астрахань</a></li>
+                  </ul>
+                  <ul>
+                    <li>Б</li>
+                    <li><a href="#">Балклава</a></li>
+                    <li><a href="#">Балтийск</a></li>
+                    <li><a href="#">Барнаул</a></li>
+                    <li><a href="#">Бахчисарай</a></li>
+                    <li><a href="#">Белгород</a></li>
+                    <li><a href="#">Белореченск</a></li>
+                  </ul>
+                  <ul>
+                    <li>В</li>
+                    <li><a href="#">Владивосток</a></li>
+                    <li><a href="#">Владимир</a></li>
+                    <li><a href="#">Волгоград</a></li>
+                    <li><a href="#">Выборг</a></li>
+                  </ul>
+                  <ul>
+                    <li>Г</li>
+                    <li><a href="#">Гвардейск</a></li>
+                    <li><a href="#">Геленджик</a></li>
+                    <li><a href="#">Горно-Алтайск</a></li>
+                    <li><a href="#">Городец</a></li>
+                    <li><a href="#">Грозный</a></li>
+                  </ul>
+                  <ul>
+                    <li>Д</li>
+                    <li><a href="#">Дзержинск</a></li>
+                  </ul>
+                  <ul>
+                    <li>Е</li>
+                    <li><a href="#">Евпатория</a></li>
+                    <li><a href="#">Екатеринбург</a></li>
+                    <li><a href="#">Ессентуки</a></li>
+                  </ul>
+                  <ul>
+                    <li>Ж</li>
+                    <li><a href="#">Железноводск</a></li>
+                  </ul>
+                  <ul>
+                    <li>З</li>
+                    <li><a href="#">Зелендоградск</a></li>
+                  </ul>
+                  <ul>
+                    <li>И</li>
+                    <li><a href="#">Иноземцево</a></li>
+                    <li><a href="#">Ирбит</a></li>
+                    <li><a href="#">Иркутск</a></li>
+                  </ul>
+                  <ul>
+                    <li>К</li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Калининград</a></li>
+                    <li><a href="#">Керчь</a></li>
+                    <li><a href="#">Киров</a></li>
+                    <li><a href="#">Кисловодск</a></li>
+                    <li><a href="#">Коктебель</a></li>
+                  </ul>
+                  <ul>
+                    <li>Л</li>
+                    <li><a href="#">Ливадия</a></li>
+                    <li><a href="#">Ломоносов</a></li>
+                  </ul>
+                  <ul>
+                    <li>М</li>
+                    <li><a href="#">Минеральные воды</a></li>
+                    <li><a href="#">Москва</a></li>
+                    <li><a href="#">Муром</a></li>
+                  </ul>
+                  <ul>
+                    <li>Н</li>
+                    <li><a href="#">Нижний Новгород</a></li>
+                    <li><a href="#">Новосибирск</a></li>
+                  </ul>
+                  <ul>
+                    <li>П</li>
+                    <li><a href="#">Павловск</a></li>
+                    <li><a href="#">Пермь</a></li>
+                  </ul>
+                  <ul>
+                    <li>Р</li>
+                    <li><a href="#">Ростов Великий</a></li>
+                    <li><a href="#">Ростов-на-Дону</a></li>
+                  </ul>
+                  <ul>
+                    <li>С</li>
+                    <li><a href="#">Самара</a></li>
+                    <li><a href="#">Санкт-Петербург</a></li>
+                    <li><a href="#">Светлогорск</a></li>
+                    <li><a href="#">Севастополь</a></li>
+                  </ul>
+                </ul>
+                <div class="country__all-city-list">
+                  <ul class="js-shorted-block _is-shorted" id="all-list-cities">
+                    <ul class="cities_row">
+                      <li class="city_litera">A</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Азнакаево, </a>
+                        </li>
+                        <li><a href="#">Азов, </a>
+                        </li>
+                        <li><a href="#">Алатырь, </a>
+                        </li>
+                        <li><a href="#">Александров, </a>
+                        </li>
+                        <li><a href="#">Александровское, </a>
+                        </li>
+                        <li><a href="#">Алексеевка, </a>
+                        </li>
+                        <li><a href="#">Алексеевское, </a>
+                        </li>
+                        <li><a href="#">Аткарск, </a>
+                        </li>
+                        <li><a href="#">Ахтубинск, </a>
+                        </li>
+                        <li><a href="#">Ачинск</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">Б</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Балаково, </a>
+                        </li>
+                        <li><a href="#">Балашиха, </a>
+                        </li>
+                        <li><a href="#">Балашов, </a>
+                        </li>
+                        <li><a href="#">Барнаул, </a>
+                        </li>
+                        <li><a href="#">Белгород, </a>
+                        </li>
+                        <li><a href="#">Белебей, </a>
+                        </li>
+                        <li><a href="#">Белорецк, </a>
+                        </li>
+                        <li><a href="#">Белореченск, </a>
+                        </li>
+                        <li><a href="#">Бердск, </a>
+                        </li>
+                        <li><a href="#">Березники, </a>
+                        </li>
+                        <li><a href="#">Берёзовский, </a>
+                        </li>
+                        <li><a href="#">Бирск, </a>
+                        </li>
+                        <li><a href="#">Благовещенск, </a>
+                        </li>
+                        <li><a href="#">Богородицк, </a>
+                        </li>
+                        <li><a href="#">Богородск, </a>
+                        </li>
+                        <li><a href="#">Большая Елань</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">В</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Валуйки, </a>
+                        </li>
+                        <li><a href="#">Великий Новгород, </a>
+                        </li>
+                        <li><a href="#">Верхняя Пышма, </a>
+                        </li>
+                        <li><a href="#">Верхняя Салда, </a>
+                        </li>
+                        <li><a href="#">Видное, </a>
+                        </li>
+                        <li><a href="#">Вичуга, </a>
+                        </li>
+                        <li><a href="#">Владикавказ, </a>
+                        </li>
+                        <li><a href="#">Владимир, </a>
+                        </li>
+                        <li><a href="#">Волгоград, </a>
+                        </li>
+                        <li><a href="#">Волгодонск</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">Г</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Гатчина, </a>
+                        </li>
+                        <li><a href="#">Геленджик, </a>
+                        </li>
+                        <li><a href="#">Георгиевск, </a>
+                        </li>
+                        <li><a href="#">Головинщино, </a>
+                        </li>
+                        <li><a href="#">Городец, </a>
+                        </li>
+                        <li><a href="#">Гатчина, </a>
+                        </li>
+                        <li><a href="#">Геленджик</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">Д</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Давлеканово, </a>
+                        </li>
+                        <li><a href="#">Дзержинск, </a>
+                        </li>
+                        <li><a href="#">Дивеево, </a>
+                        </li>
+                        <li><a href="#">Димитровград, </a>
+                        </li>
+                        <li><a href="#">Дмитров, </a>
+                        </li>
+                        <li><a href="#">Долгопрудный, </a>
+                        </li>
+                        <li><a href="#">Домодедово</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">Е</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Егорьевск, </a>
+                        </li>
+                        <li><a href="#">Ейск, </a>
+                        </li>
+                        <li><a href="#">Екатеринбург, </a>
+                        </li>
+                        <li><a href="#">Елабуга, </a>
+                        </li>
+                        <li><a href="#">Елец, </a>
+                        </li>
+                        <li><a href="#">Ессентуки, </a>
+                        </li>
+                        <li><a href="#">Ефремов</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">Ж</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Железноводск, </a>
+                        </li>
+                        <li><a href="#">Железногорск, </a>
+                        </li>
+                        <li><a href="#">Железнодорожный, </a>
+                        </li>
+                        <li><a href="#">Жигулевск, </a>
+                        </li>
+                        <li><a href="#">Жирновск, </a>
+                        </li>
+                        <li><a href="#">Жуковский</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">З</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Заволжье, </a>
+                        </li>
+                        <li><a href="#">Закамск, </a>
+                        </li>
+                        <li><a href="#">Засечное, </a>
+                        </li>
+                        <li><a href="#">Зеленогорск, </a>
+                        </li>
+                        <li><a href="#">Зеленоград, </a>
+                        </li>
+                        <li><a href="#">Зеленодольск</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">И</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Иваново, </a>
+                        </li>
+                        <li><a href="#">Ивантеевка, </a>
+                        </li>
+                        <li><a href="#">Ижевск, </a>
+                        </li>
+                        <li><a href="#">Изобильный, </a>
+                        </li>
+                        <li><a href="#">Иловля, </a>
+                        </li>
+                        <li><a href="#">Иноземцево, </a>
+                        </li>
+                        <li><a href="#">Ипатово, </a>
+                        </li>
+                        <li><a href="#">Ишимбай</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">К</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Калач-на-Дону, </a>
+                        </li>
+                        <li><a href="#">Калуга, </a>
+                        </li>
+                        <li><a href="#">Каменка, </a>
+                        </li>
+                        <li><a href="#">Каменск-Уральский, </a>
+                        </li>
+                        <li><a href="#">Каменск-Шахтинский, </a>
+                        </li>
+                        <li><a href="#">Камышин, </a>
+                        </li>
+                        <li><a href="#">Канаш, </a>
+                        </li>
+                        <li><a href="#">Каневская, </a>
+                        </li>
+                        <li><a href="#">Канск, </a>
+                        </li>
+                        <li><a href="#">Кемерово, </a>
+                        </li>
+                        <li><a href="#">Кинель, </a>
+                        </li>
+                        <li><a href="#">Кинешма, </a>
+                        </li>
+                        <li><a href="#">Кириши, </a>
+                        </li>
+                        <li><a href="#">Киров, </a>
+                        </li>
+                        <li><a href="#">Кирово-Чепецк, </a>
+                        </li>
+                        <li><a href="#">Кисловодск, </a>
+                        </li>
+                        <li><a href="#">Клин, </a>
+                        </li>
+                        <li><a href="#">Ковров, </a>
+                        </li>
+                        <li><a href="#">Коломна, </a>
+                        </li>
+                        <li><a href="#">Колпино, </a>
+                        </li>
+                        <li><a href="#">Колышлей, </a>
+                        </li>
+                        <li><a href="#">Константиновка</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">Л</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Ленинградская, </a>
+                        </li>
+                        <li><a href="#">Лениногорск, </a>
+                        </li>
+                        <li><a href="#">Ленинск, </a>
+                        </li>
+                        <li><a href="#">Ленинск Кузнецкий, </a>
+                        </li>
+                        <li><a href="#">Лермонтов, </a>
+                        </li>
+                        <li><a href="#">Липецк, </a>
+                        </li>
+                        <li><a href="#">Лиски, </a>
+                        </li>
+                        <li><a href="#">Лобня, </a>
+                        </li>
+                        <li><a href="#">Лысково, </a>
+                        </li>
+                        <li><a href="#">Лысьва, </a>
+                        </li>
+                        <li><a href="#">Люберцы</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">М</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Магнитогорск, </a>
+                        </li>
+                        <li><a href="#">Майкоп, </a>
+                        </li>
+                        <li><a href="#">Маркс, </a>
+                        </li>
+                        <li><a href="#">Махалино, </a>
+                        </li>
+                        <li><a href="#">Мелеуз, </a>
+                        </li>
+                        <li><a href="#">Михайловск, </a>
+                        </li>
+                        <li><a href="#">Можга, </a>
+                        </li>
+                        <li><a href="#">Моршанск, </a>
+                        </li>
+                        <li><a href="#">Москва, </a>
+                        </li>
+                        <li><a href="#">Муром</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">Н</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Набережные Челны, </a>
+                        </li>
+                        <li><a href="#">Нижний Новгород, </a>
+                        </li>
+                        <li><a href="#">Новоаннинский, </a>
+                        </li>
+                        <li><a href="#">Нововоронеж, </a>
+                        </li>
+                        <li><a href="#">Новокуйбышевск, </a>
+                        </li>
+                        <li><a href="#">Новомосковск, </a>
+                        </li>
+                        <li><a href="#">Новороссийск, </a>
+                        </li>
+                        <li><a href="#">Новосибирск, </a>
+                        </li>
+                        <li><a href="#">Новоуральск, </a>
+                        </li>
+                        <li><a href="#">Новочебоксарск, </a>
+                        </li>
+                        <li><a href="#">Новочеркасск, </a>
+                        </li>
+                        <li><a href="#">Новошахтинск, </a>
+                        </li>
+                        <li><a href="#">Новый Рогачик, </a>
+                        </li>
+                        <li><a href="#">Ногинск</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">О</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Обнинск, </a>
+                        </li>
+                        <li><a href="#">Одинцово, </a>
+                        </li>
+                        <li><a href="#">Озёрск, </a>
+                        </li>
+                        <li><a href="#">Октябрьский, </a>
+                        </li>
+                        <li><a href="#">Омск, </a>
+                        </li>
+                        <li><a href="#">Орел, </a>
+                        </li>
+                        <li><a href="#">Оренбург, </a>
+                        </li>
+                        <li><a href="#">Орехово-Зуево, </a>
+                        </li>
+                        <li><a href="#">Орск, </a>
+                        </li>
+                        <li><a href="#">Отрадный</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">П</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Павловская, </a>
+                        </li>
+                        <li><a href="#">Павловский, </a>
+                        </li>
+                        <li><a href="#">Посад, </a>
+                        </li>
+                        <li><a href="#">Палласовка, </a>
+                        </li>
+                        <li><a href="#">Пенза, </a>
+                        </li>
+                        <li><a href="#">Первоуральск, </a>
+                        </li>
+                        <li><a href="#">Пермь, </a>
+                        </li>
+                        <li><a href="#">Петергоф, </a>
+                        </li>
+                        <li><a href="#">Петровск, </a>
+                        </li>
+                        <li><a href="#">Плавск, </a>
+                        </li>
+                        <li><a href="#">Подгорное, </a>
+                        </li>
+                        <li><a href="#">Подольск, </a>
+                        </li>
+                        <li><a href="#">Похвистнево, </a>
+                        </li>
+                        <li><a href="#">Приволжск, </a>
+                        </li>
+                        <li><a href="#">Приморско-Ахтарск, </a>
+                        </li>
+                        <li><a href="#">Псков, </a>
+                        </li>
+                        <li><a href="#">Пугачев, </a>
+                        </li>
+                        <li><a href="#">Пушкин, </a>
+                        </li>
+                        <li><a href="#">Пушкино</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">Р</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Раевский, </a>
+                        </li>
+                        <li><a href="#">Раменское, </a>
+                        </li>
+                        <li><a href="#">Рамзай, </a>
+                        </li>
+                        <li><a href="#">Реутов, </a>
+                        </li>
+                        <li><a href="#">Родники, </a>
+                        </li>
+                        <li><a href="#">Россошь, </a>
+                        </li>
+                        <li><a href="#">Ростов-на-Дону, </a>
+                        </li>
+                        <li><a href="#">Ростов Ярославский, </a>
+                        </li>
+                        <li><a href="#">Ртищево, </a>
+                        </li>
+                        <li><a href="#">Рузаевка, </a>
+                        </li>
+                        <li><a href="#">Рыбинск, </a>
+                        </li>
+                        <li><a href="#">Рязань</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">С</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Саров, </a>
+                        </li>
+                        <li><a href="#">Сатка, </a>
+                        </li>
+                        <li><a href="#">Светлоград, </a>
+                        </li>
+                        <li><a href="#">Светлый Яр, </a>
+                        </li>
+                        <li><a href="#">Сергиев Посад, </a>
+                        </li>
+                        <li><a href="#">Сердобск, </a>
+                        </li>
+                        <li><a href="#">Серов, </a>
+                        </li>
+                        <li><a href="#">Серпухов, </a>
+                        </li>
+                        <li><a href="#">Сибай, </a>
+                        </li>
+                        <li><a href="#">Славянск-на-Кубани, </a>
+                        </li>
+                        <li><a href="#">Слободской, </a>
+                        </li>
+                        <li><a href="#">Снежинск, </a>
+                        </li>
+                        <li><a href="#">Соликамск, </a>
+                        </li>
+                        <li><a href="#">Солнечногорск, </a>
+                        </li>
+                        <li><a href="#">Сосновый Бор</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">Т</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Тейково, </a>
+                        </li>
+                        <li><a href="#">Темрюк, </a>
+                        </li>
+                        <li><a href="#">Тимашевск, </a>
+                        </li>
+                        <li><a href="#">Тихорецк, </a>
+                        </li>
+                        <li><a href="#">Толбазы, </a>
+                        </li>
+                        <li><a href="#">Тольятти, </a>
+                        </li>
+                        <li><a href="#">Торжок, </a>
+                        </li>
+                        <li><a href="#">Тосно, </a>
+                        </li>
+                        <li><a href="#">Троицк, </a>
+                        </li>
+                        <li><a href="#">Туапсе, </a>
+                        </li>
+                        <li><a href="#">Туймазы, </a>
+                        </li>
+                        <li><a href="#">Тула, </a>
+                        </li>
+                        <li><a href="#">Тутаев</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">У</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Углич, </a>
+                        </li>
+                        <li><a href="#">Ульяновск, </a>
+                        </li>
+                        <li><a href="#">Урюпинск, </a>
+                        </li>
+                        <li><a href="#">Усть-Лабинск, </a>
+                        </li>
+                        <li><a href="#">Уфа, </a>
+                        </li>
+                        <li><a href="#">Учалы</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">Ч</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Чаадаевка, </a>
+                        </li>
+                        <li><a href="#">Чайковский, </a>
+                        </li>
+                        <li><a href="#">Чапаевск, </a>
+                        </li>
+                        <li><a href="#">Чебаркуль, </a>
+                        </li>
+                        <li><a href="#">Чебоксары, </a>
+                        </li>
+                        <li><a href="#">Челябинск, </a>
+                        </li>
+                        <li><a href="#">Черепаново, </a>
+                        </li>
+                        <li><a href="#">Череповец, </a>
+                        </li>
+                        <li><a href="#">Черкесск, </a>
+                        </li>
+                        <li><a href="#">Чехов, </a>
+                        </li>
+                        <li><a href="#">Чистополь, </a>
+                        </li>
+                        <li><a href="#">Чишмы, </a>
+                        </li>
+                        <li><a href="#">Чкаловск, </a>
+                        </li>
+                        <li><a href="#">Чусовой</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">Ш</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Шахты, </a>
+                        </li>
+                        <li><a href="#">Шумерля, </a>
+                        </li>
+                        <li><a href="#">Шуя</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">Э</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Электросталь, </a>
+                        </li>
+                        <li><a href="#">Элиста, </a>
+                        </li>
+                        <li><a href="#">Энгельс</a>
+                        </li>
+                      </ul>
+                    </ul>
+                    <ul class="cities_row">
+                      <li class="city_litera">Я</li>
+                      <ul class="cities_row-elements">
+                        <li><a href="#">Ялуторовск, </a>
+                        </li>
+                        <li><a href="#">Ярославль</a>
+                        </li>
+                      </ul>
+                    </ul>
+                  </ul><a class="js-unshort-block js-toggle-text" href="#all-list-cities">свернуть</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-slider">
+        <div class="tab-slider_header wrapper">
+          <div class="tab-slider_cat-marker"><img src="media/img/groupe-icon-1.png" alt=""/></div><span class="tab-slider_cat-title">Для туристов</span>
+        </div>
+        <div class="row _grey">
+          <div class="wrapper">
+            <!-- add to tabs .js-tabs class and carousel will be work-->
+            <div class="tabs"><a class="item _is-active" href="#tourist-slide-1">Гиды</a><a class="item" href="#tourist-slide-2">Туры</a><a class="item" href="#tourist-slide-3">Экскурсии</a><a class="item" href="#tourist-slide-4">Турфирмы</a><a class="item" href="#tourist-slide-5">Рассказы</a><a class="item" href="#tourist-slide-6">Справочник</a><a class="item" href="#tourist-slide-7">Визы</a></div>
+          </div>
+        </div>
+        <div class="tab-slider_content wrapper columns-grid _2-cols">
+          <div class="col _4-4">
+            <div class="tab-slider_item" id="tourist-slide-1-off">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                  <div class="ads-container">
+                    <div class="ads"></div>
+                  </div>
+                </div>
+                <div class="items-grid_item">
+                    <div class="person-card">
+                      <div class="person-card_img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="person-card_name" href="#">
+                        Иванов Иван Иванович
+                        </a>
+                      <nav class="personal-menu">
+                        <ul>
+                          <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (4)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (4)</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                </div>
+                <div class="items-grid_item">
+                    <div class="person-card">
+                      <div class="person-card_img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="person-card_name" href="#">
+                        Иванов Иван Иванович
+                        </a>
+                      <nav class="personal-menu">
+                        <ul>
+                          <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (4)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (4)</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                </div>
+                <div class="items-grid_item">
+                    <div class="person-card">
+                      <div class="person-card_img"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div><a class="person-card_name" href="#">
+                        Иванов Иван Иванович
+                        </a>
+                      <nav class="personal-menu">
+                        <ul>
+                          <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _vid"></i> Видеозаписи (4)</a></li>
+                          <li><a class="menu-link" href="#"><i class="ic _fdb-grn"></i> Отзывы (4)</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                </div>
+              </div><a class="link to-all" href="all-items_guides.html">все гиды</a>
+            </div>
+            <div class="ads-container">
+              <div class="ads _728x92"></div>
+            </div>
+            <div class="tab-slider_item" id="tourist-slide-2-off">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                  <div class="ads-container">
+                    <div class="ads"></div>
+                  </div>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content"><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content"><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content"><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                        </p>
+                      </div>
+                    </article>
+                </div>
+              </div><a class="link to-all" href="#">все туры</a>
+            </div>
+            <div class="tab-slider_item" id="tourist-slide-3-off">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб. за экскурсию</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб. за экскурсию</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб. за экскурсию</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header">
+                          <div class="item-card_user"><a class="item-card_user-pic" href="#"><img src="media/img-p/2.jpg" alt=""/></a><a href="#">Рита</a></div><a class="item-card_comments" href="#">345</a>
+                        </div><a class="item-card_title" href="#">
+                          Санкт-Петербург Есенина в компании поэта
+                          </a>
+                        <p class="item-card_text">
+                          О личностном и творческом 
+                          становлении великого поэта на 
+                          экскурсии по местам его славы
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price"><b>1600</b> руб. за экскурсию</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+              </div><a class="link to-all" href="all-items_excurs.html">все экскурсии</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrapper footer-top">
+        <div class="col _1-3">
+          <div class="site-logo _at-footer"><img src="media/img/site-logo.png" alt=""/></div>
+          <p>
+            Туристический портал для тех, кто 
+            путешествует или собирается 
+            путешествовать по России и за рубежом.
+            
+          </p>
+        </div>
+        <div class="col _2-3">
+          <nav class="footer-nav">
+            <ul class="js-foo-nav">
+              <li class="groupe-title js-open-foo-nav">Туристу</li>
+              <li><a href="#">Ж/Д билеты</a></li>
+              <li><a href="#">Авиабилеты</a></li>
+              <li><a href="#">Аренда жилья</a></li>
+              <li><a href="#">Прокат авто</a></li>
+              <li><a href="#">Страхование</a></li>
+            </ul>
+            <ul class="js-foo-nav">
+              <li class="groupe-title js-open-foo-nav">Интересное</li>
+              <li><a href="#">Статьи</a></li>
+              <li><a href="#">Зарубежные статьи</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Рассказы</a></li>
+            </ul>
+            <ul class="js-foo-nav">
+              <li class="groupe-title js-open-foo-nav">Информация</li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Условия использования</a></li>
+              <li><a href="#">Информация для гидов</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="wrapper footer-bottom"><span class="foo-copyright">
+          © Personal Guide. All rights Reserved.
+          </span>
+        <div class="social"><a class="item _vk" href="#"></a><a class="item _fb" href="#"></a><a class="item _yt" href="#"></a></div>
+      </div>
+    </footer>
+    <div class="modal">
+      <div class="modal-container _w780" id="city-choise">
+        <div class="modal-content">
+          <h2 class="like-h2">Страны и города</h2>
+          <form class="search-form _at-city-modal" action="#" method="get">
+            <input class="serach-field" type="text" name="search-request" placeholder="Куда отправитесь?"/>
+            <button class="search-submit" type="submit"></button>
+          </form>
+          <div class="row keywords"><a class="btn _keyword" href="#">Екатеринбург</a><a class="btn _keyword" href="#">Москва</a><a class="btn _keyword" href="#">Санкт-Петербург</a><a class="btn _keyword" href="#">Новосибирск</a><a class="btn _keyword" href="#">Казань</a></div>
+          <div class="columns-grid _no-gap places js-places">
+            <div class="col _1-3 js-places-block"><b class="places-block-title">Направления</b>
+              <ul class="places-list js-choise-city-list">
+                <li class="places-item"><a class="places-link" href="#">Европа</a></li>
+                <li class="places-item"><a class="places-link" href="#">Азия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Северная Америка</a></li>
+                <li class="places-item"><a class="places-link" href="#">Южная Америка</a></li>
+                <li class="places-item"><a class="places-link" href="#">Африка</a></li>
+                <li class="places-item"><a class="places-link" href="#">Австрия и Океания</a></li>
+              </ul>
+            </div>
+            <div class="col _1-3 js-places-block"><b class="places-block-title _back js-places-back">Страны</b>
+              <ul class="places-list js-choise-city-list">
+                <li class="places-item"><a class="places-link" href="#">Польша</a></li>
+                <li class="places-item"><a class="places-link" href="#">Россия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Румыния</a></li>
+                <li class="places-item"><a class="places-link" href="#">Сербия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Словакия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Словения</a></li>
+                <li class="places-item"><a class="places-link" href="#">Украина</a></li>
+                <li class="places-item"><a class="places-link" href="#">Финляндия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Франция</a></li>
+                <li class="places-item"><a class="places-link" href="#">Польша</a></li>
+                <li class="places-item"><a class="places-link" href="#">Россия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Румыния</a></li>
+                <li class="places-item"><a class="places-link" href="#">Сербия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Словакия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Словения</a></li>
+                <li class="places-item"><a class="places-link" href="#">Украина</a></li>
+                <li class="places-item"><a class="places-link" href="#">Финляндия</a></li>
+                <li class="places-item"><a class="places-link" href="#">Франция</a></li>
+              </ul>
+            </div>
+            <div class="col _1-3 js-places-block"><b class="places-block-title _back js-places-back">Города</b>
+              <ul class="places-list js-choise-city-list">
+                <li class="places-item"><a class="places-link" href="#">Березовский</a></li>
+                <li class="places-item"><a class="places-link" href="#">Верхняя Пышма</a></li>
+                <li class="places-item"><a class="places-link" href="#">Верхняя Слада</a></li>
+                <li class="places-item"><a class="places-link" href="#">Екатеринбург</a></li>
+                <li class="places-item"><a class="places-link" href="#">Заречный</a></li>
+                <li class="places-item"><a class="places-link" href="#">Ирбит</a></li>
+                <li class="places-item"><a class="places-link" href="#">Каменск-Уральский</a></li>
+                <li class="places-item"><a class="places-link" href="#">Камышлов</a></li>
+                <li class="places-item"><a class="places-link" href="#">Карпинск</a></li>
+                <li class="places-item"><a class="places-link" href="#">Заречный</a></li>
+                <li class="places-item"><a class="places-link" href="#">Ирбит</a></li>
+                <li class="places-item"><a class="places-link" href="#">Каменск-Уральский</a></li>
+                <li class="places-item"><a class="places-link" href="#">Камышлов</a></li>
+                <li class="places-item"><a class="places-link" href="#">Карпинск</a></li>
+              </ul>
+            </div>
+          </div>
+        </div><a class="modal-close" href="#"></a>
+      </div>
+      <div class="modal-overlay"></div>
+    </div>
+    <div class="modal">
+      <div class="modal-container _w310 _login" id="signin">
+        <div class="modal-content">
+          <p class="_text-center _no-mrg">войти через</p>
+          <div class="login-via-social">
+            <div class="social _at-login-modal js-shorted-block _is-shorted" id="login-via-social"><a class="item _vk-l" href="#"></a><a class="item _ok-l" href="#"></a><a class="item _mail-l" href="#"></a><a class="item _gp-l" href="#"></a><a class="item _tw-l" href="#"></a></div><a class="js-unshort-block" href="#login-via-social">ещё</a>
+          </div>
+          <p class="_text-center _no-mrg">или</p>
+          <form class="form" action="#" method="post">
+            <div class="col">
+              <fieldset class="fields-groupe">
+                <div class="tf-wrapper">
+                  <input class="text-field" type="email" name="email" id="email" value=""/>
+                  <label for="email" data-content="email"></label>
+                </div>
+                <div class="tf-wrapper">
+                  <input class="text-field" type="password" name="password" id="password" value=""/>
+                  <label for="password" data-content="пароль"></label><a href="#">Забыли пароль?</a>
+                </div>
+              </fieldset>
+              <div class="form-actions"><a class="btn _bordered _fs11 mopen" href="#signup">зарегистрироваться</a><a class="btn _fs11" href="#">войти</a></div>
+            </div>
+          </form>
+        </div><a class="modal-close" href="#"></a>
+      </div>
+      <div class="modal-overlay"></div>
+    </div>
+    <div class="modal">
+      <div class="modal-container _w310 _login" id="signup">
+        <div class="modal-content">
+          <form class="form" action="#" method="post">
+            <div class="col">
+              <fieldset class="fields-groupe">
+                <div class="tf-wrapper">
+                  <input class="text-field" type="email" name="email" id="email" value=""/>
+                  <label for="email" data-content="email"></label>
+                </div>
+                <div class="tf-wrapper">
+                  <input class="text-field" type="password" name="password" id="password" value=""/>
+                  <label for="password" data-content="пароль"></label>
+                </div>
+              </fieldset>
+              <fieldset class="fields-groupe">
+                <div class="signup-as">
+                  <div class="radio-wrapper sign-as__user">
+                    <input type="radio" name="signup-as" id="like-tourist" checked="checked"/>
+                    <label for="like-tourist">Путешественник</label>
+                  </div>
+                  <div class="radio-wrapper sign-as__guide">
+                    <input type="radio" name="signup-as" id="like-guide" checked="checked"/>
+                    <label for="like-guide">Гид</label>
+                  </div>
+                  <div class="radio-wrapper sign-as__company">
+                    <input type="radio" name="signup-as" id="like-company" checked="checked"/>
+                    <label for="like-company">Компания</label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="fields-groupe">
+                <div class="chbx-wrapper _type-2">
+                  <input type="checkbox" name="signup-agreement" id="signup-agreement"/>
+                  <label for="signup-agreement">принять <a href="#">условия регистрации</a></label>
+                </div>
+              </fieldset>
+              <div class="form-actions _btn-center"><a class="btn _bordered _fs11" href="#">зарегистрироваться</a></div>
+            </div>
+          </form>
+        </div><a class="modal-close" href="#"></a>
+      </div>
+      <div class="modal-overlay"></div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

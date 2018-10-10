@@ -1,24 +1,25 @@
-mixin filterItems()
-    .filter-items
-        .filter-by
-            span    Фильтр по языку
-            .filter-by-items
-                .filter-by__head Выберите язык
-                    a(href="#").filter-by__close
-                fieldset.fields-groupe
-                    form
-                        - var langs = ["Английский", "Французский", "Японский", "Азербайджанский", "Венгерский", "Еврейский (Hebrew)", "Русский", "Арабский", "Узбекский", "Казахский", "Испанский", "Корейский", "Вьетнамский", "Румынский", "Греческий", "Португальский", "Турецкий", "Украинский", "Индонезийский", "Татарский","Немецкий", "Китайский", "Тайский", "Тагальский", "Сербский",  "Итальянский",  "Хинди", "Польский", "Непальский", "Хорватский"]
-                        each val, index in langs
-                            .chbx-wrapper
-                                input(type="checkbox" name="lang-"+index id="lang-"+index)
-                                label(for="lang-"+index)= val
+mixin filterItems(filter, sort)
+    .filter-items&attributes(attributes)
+        if filter
+            .filter-by
+                span    Фильтр по языку
+                .filter-by-items
+                    .filter-by__head Выберите язык
+                        a(href="#").filter-by__close
+                    fieldset.fields-groupe
+                        form
+                            - var langs = ["Английский", "Французский", "Японский", "Азербайджанский", "Венгерский", "Еврейский (Hebrew)", "Русский", "Арабский", "Узбекский", "Казахский", "Испанский", "Корейский", "Вьетнамский", "Румынский", "Греческий", "Португальский", "Турецкий", "Украинский", "Индонезийский", "Татарский","Немецкий", "Китайский", "Тайский", "Тагальский", "Сербский",  "Итальянский",  "Хинди", "Польский", "Непальский", "Хорватский"]
+                            each val, index in langs
+                                .chbx-wrapper
+                                    input(type="checkbox" name="lang-"+index id="lang-"+index)
+                                    label(for="lang-"+index)= val
 
-                        input(type="submit" value="выбрать").btn
-                        input(type="reset" value="отмена").btn._bordered
-
-        .filter-by Сортировать
-            <select class="" name="sort-by">
-            <option value="null" selected="selected">по рейтингу</option>
-            <option value="ru">по экскурсиям</option>
-            <option value="en">по цене</option>
-            </select>
+                            input(type="submit" value="выбрать").btn
+                            input(type="reset" value="отмена").btn._bordered
+        if sort
+            .filter-by Сортировать
+                <select class="" name="sort-by">
+                <option value="null" selected="selected">по рейтингу</option>
+                <option value="ru">по экскурсиям</option>
+                <option value="en">по цене</option>
+                </select>

@@ -1,0 +1,128 @@
+.js-toggle-text-content
+  &._is-shorted
+    max-height: 250px
+
+.full-width-lines
+  position: relative
+  &::before
+    content: ' '
+    width: 999%
+    height: 1px
+    position: absolute
+    top: 14px
+    left: 50%
+    transform: translateX(-50%)
+    background: #f8ebff
+
+  &::after
+    content: ' '
+    width: 999%
+    height: 1px
+    position: absolute
+    bottom: -14px
+    left: 50%
+    transform: translateX(-50%)
+    background: #f8ebff
+
+.about-place-country p
+  font-size: 18px
+  line-height: 32px
+
+.about-place-country h2
+  font-weight: normal
+  font-size: 24px
+
+.country__city-list
+  border-bottom: 1px solid #f8ebff
+  //border-top: 1px solid #f8ebff
+  //margin-left: -40px
+  padding-left: 0
+  padding-top: 35px
+  padding-bottom: 40px
+  font-size: 14px
+  color: #666
+  list-style: none
+  display: flex
+  flex-flow: column wrap
+  width: 100%
+  height: 445px
+  @media screen and (max-width: 900px)
+    flex-flow: row wrap
+    height: auto
+  a
+    font-size: 16px
+    color: #6563a4
+    text-decoration: none
+    font-weight: bold
+
+  li
+    margin-bottom: 3px
+    width: 143px
+
+  ul
+    margin-bottom: 15px
+    //margin-left: -40px
+    list-style: none
+    margin-right: 15px
+    padding-left: 0
+    //flex: 16.66666%
+    li:first-child
+      margin-bottom: 10px
+
+.country__all-city-list
+  display: flex
+  flex-flow: column nowrap
+  ul
+    padding-left: 0
+    //display: flex
+    //flex-flow: row wrap
+    width: 100%
+    list-style: none
+    line-height: 24px
+    &.cities_row
+      display: flex
+      flex-flow: row
+
+  li
+    display: block
+    font-size: 14px
+    list-style: none
+    color: #666
+    margin-right: 3px
+
+    &:last-child
+      margin-right: 0
+    a
+      font-size: 14px
+      color: #666
+      text-decoration: none
+      &:hover
+        color: #615faf
+
+  .city_litera
+    font-weight: bold
+    color: #615faf
+    width: 32px
+    margin-bottom: auto
+    align-self: flex-start
+
+  .cities_row-elements
+    display: flex
+    flex-flow: row wrap
+
+.country__all-city-list
+  ._is-shorted
+    max-height: 250px
+    position: relative
+    &:before
+      content: ' '
+      width: 100%
+      height: 40px
+      position: absolute
+      left: 0
+      bottom: 0px
+      background: linear-gradient(rgba(0, 0, 0, 0), #fff)
+  .js-toggle-text
+    text-align: center
+
+

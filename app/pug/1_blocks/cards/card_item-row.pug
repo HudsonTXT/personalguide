@@ -1,4 +1,4 @@
-mixin cardExcursRow()
+mixin cardExcursRow(inlist)
 	article.item-card.--row&attributes(attributes)
 		.item-card_img-wrapper
 			.item-card_img
@@ -9,6 +9,8 @@ mixin cardExcursRow()
 				.item-card_user
 					a(href="#").item-card_user-pic: img(src="media/img-p/2.jpg", alt="")
 					a(href="#").user-name Рита
+						if inlist
+							span  / Свердловская область, Екатеринбург
 
 				a(href="#").item-card_comments 345
 
