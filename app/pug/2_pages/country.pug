@@ -27,7 +27,7 @@ block content
 		.tab-slider
 			.tab-slider_header.wrapper
 				.tab-slider_cat-marker
-					img(src="media/img/i-mappoint.svg", alt="")
+					img(src="media/img/i-mappoint_big.png", alt="")
 				span.tab-slider_cat-title Города
 
 
@@ -95,7 +95,7 @@ block content
 										{"Я": ["Ялуторовск", "Ярославль" ]}
 									];
 							.country__all-city-list
-								ul.js-shorted-block._is-shorted#all-list-cities
+								ul.js-shorted-block#all-list-cities
 									each val, index in AllCities
 										each cit, lit in val
 											ul.cities_row
@@ -112,7 +112,7 @@ block content
 		.tab-slider
 			.tab-slider_header.wrapper
 				.tab-slider_cat-marker
-					img(src="media/img/groupe-icon-1.png", alt="")
+					img(src="media/img/groupe-icon-1_big.png", alt="")
 				span.tab-slider_cat-title Для туристов
 
 			.row._grey
@@ -159,9 +159,9 @@ block content
 					.tab-slider_item#tourist-slide-3-off
 
 						.items-grid._4-in-row._at-tab-slider
+							.items-grid_item: +cardExcurs(true)
 							.items-grid_item: +cardExcurs()
 							.items-grid_item: +cardExcurs()
-							.items-grid_item: +cardExcurs()
-							.items-grid_item: +cardExcurs()
+							.items-grid_item: +cardExcurs(true)
 
 						a(href="all-items_excurs.html").link.to-all все экскурсии

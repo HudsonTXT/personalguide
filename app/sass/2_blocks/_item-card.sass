@@ -9,6 +9,18 @@
 	font-size: .813rem
 	line-height: 1
 	position: relative
+	&.--news
+		.item-card_footer
+			justify-content: flex-end
+
+	.star-line
+		display: flex
+		flex-direction: row
+		margin-right: 10px
+		.star
+			margin-left: 3px
+			&:first-child
+				margin-left: 0
 
 	&.__editor
 		background-color: #fff
@@ -76,6 +88,7 @@
 	width: 100%
 	margin: 0 auto
 	position: relative
+	margin-bottom: 5px
 
 	&::before
 		content: ""
@@ -154,6 +167,10 @@
 	display: flex
 	align-items: center
 	margin-right: auto
+	.user-name
+		text-decoration: none
+		font-size: 11px
+		color: #666
 
 .item-card_user-pic
 	width: 24px
@@ -183,7 +200,7 @@
 		height: 20px
 		position: absolute
 		top: 50%
-		margin-top: -10px
+		margin-top: -12px
 		right: 0
 		background: url(../media/img/icons.png) no-repeat 2px -527px
 
@@ -211,7 +228,7 @@
 	text-decoration: none
 	padding-top: 5px
 	&.item-card_title__min
-		font-size: 0.8125rem !important
+		font-size: 14px
 
 .item-card_text
 	padding-top: 5px
@@ -300,6 +317,14 @@
 		margin-left: auto
 		display: none
 
+.item-card
+	&.--at-page-aside
+		.item-card_header
+			.user
+				display: flex
+				justify-content: center
+				align-items: center
+
 @media screen and (max-width: 940px)
 	.item-card
 		font-size: 1rem
@@ -335,6 +360,7 @@
 			margin-right: auto
 			margin-left: auto
 			max-width: 340px
+
 
 			.item-card_img
 				max-width: 280px

@@ -1,0 +1,62 @@
+.mobile-left-side
+  display: none
+
+@media screen and (max-width: 940px)
+  ._with-left-side
+
+    padding-left: 50px
+    padding-right: 20px
+    .page-header
+      text-align: center
+      font-size: 18px
+      margin-top: 30px
+    .page-aside
+      padding: 0 !important
+      .item-card
+        width: 90%
+
+    .item-card_img
+      width: 100%
+      max-width: 100% !important
+    .action-btns
+      max-width: 100%
+      margin: 0 !important
+      margin-top: 20px !important
+      margin-bottom: 20px !important
+    .mobile-left-side
+      position: fixed
+      left: 10px
+      top: 140px
+      display: flex
+      flex-direction: column
+      .mobile-left-side_link
+        width: 28px
+        height: 28px
+        margin-bottom: 20px
+        background: #00cc99
+        -webkit-border-radius: 100%
+        -moz-border-radius: 100%
+        border-radius: 100%
+        background-size: cover !important
+        &._is-active
+          position: relative
+          &:before
+            content: ' '
+            position: absolute
+            left: -10px
+            width: 3px
+            height: 150%
+            top: 50%
+            transform: translateY(-50%)
+            background: #00cc99
+        &.mobile-left-side__map
+          background: url("../media/img/icon-location.svg") center no-repeat
+          background-size: auto !important
+        &.mobile-left-side__comment
+          background: url("../media/img/icon-comment.svg") center no-repeat
+          background-size: auto !important
+          &._is-green
+            background: #00cc99 url("../media/img/icon-comment_w.svg") center no-repeat
+        &.mobile-left-side__message
+          background: #615faf url("../media/img/mail.svg") center no-repeat
+          background-size: auto !important

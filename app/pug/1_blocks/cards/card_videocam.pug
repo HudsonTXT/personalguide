@@ -1,5 +1,5 @@
-mixin card_videocam()
-    article.item-card&attributes(attributes)
+mixin card_videocam(text, comments)
+    article.item-card._is-video&attributes(attributes)
 
         .item-card_img-wrapper
             a(href="#").item-play
@@ -7,8 +7,21 @@ mixin card_videocam()
                 img(src="media/img-p/excursion-1.jpg", alt="Фото экскурсии")
 
         .item-card_content
+            if text
+                .item-card_header
+                    .item-card_user
+                        a(href="#").item-card_user-pic: img(src="media/img-p/2.jpg", alt="")
+                        a(href="#").user-name Рита
+
+                    if comments
+                        a(href="#").item-card_comments._good 345
 
 
             a(href="#").item-card_title.
-                Пересечение проспекта Ленина и улицы Луначарского
+                Санкт-Петербург Есенина в компании поэта
+            if text
+                p.item-card_text.
+                    О личностном и творческом
+                    становлении великого поэта на
+                    экскурсии по местам его славы
 

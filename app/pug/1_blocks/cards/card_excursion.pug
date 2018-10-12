@@ -1,4 +1,4 @@
-mixin cardExcurs()
+mixin cardExcurs(stars)
 	article.item-card&attributes(attributes)
 		.item-card_img-wrapper
 			.item-card_img
@@ -10,6 +10,18 @@ mixin cardExcurs()
 					a(href="#").item-card_user-pic: img(src="media/img-p/2.jpg", alt="")
 					a(href="#") Рита
 
+				if stars
+					.star-line
+						.star
+							img(src="media/img/star.svg")
+						.star
+							img(src="media/img/star.svg")
+						.star
+							img(src="media/img/star.svg")
+						.star
+							img(src="media/img/star.svg")
+						.star
+							img(src="media/img/star.svg")
 				a(href="#").item-card_comments 345
 
 			a(href="#").item-card_title.

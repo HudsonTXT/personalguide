@@ -1,3 +1,8 @@
+.sidebar
+	.personal-menu
+		li
+			margin-bottom: 15px
+
 .personal-menu
 	width: 100%
 	font-size: 0.9rem
@@ -7,7 +12,7 @@
 		list-style: none
 		li
 			margin-bottom: 5px
-		a
+		a:not(.link):not(._is-blue)
 			text-decoration: none
 			color: #666 !important
 			font-size: 13px
@@ -20,6 +25,15 @@
 		font-size: .813rem
 		ul
 			margin-left: -40px
+			
+			.about-me
+				border-radius: 100%
+				width: 18px
+				height: 18px
+				overflow: hidden
+				display: inline-block
+				vertical-align: middle
+				margin-right: 10px
 
 		.personal-menu_item
 			margin-bottom: 10px
@@ -45,10 +59,10 @@
 	color: inherit
 
 	&[href]:hover
-		color: #615faf
+		color: #615faf !important
 
 	&._is-blue
-		color: #615faf
+		color: #615faf !important
 
 .personal-menu_link > .ic
 	margin-right: 5px
@@ -61,10 +75,20 @@
 			font-size: 1rem
 
 		&.--at-cabinet-aside
-			font-size: 0
+			font-size: 0 !important
+
+
 
 			.personal-menu_link
-				font-size: 0
+				font-size: 0 !important
+				position: relative
+				._is-notify-num
+					font-size: 0
+					width: 10px
+					height: 10px
+					position: absolute
+					right: 0
+
 
 			.personal-menu_item
 				margin-bottom: 20px !important
@@ -83,3 +107,21 @@
 					margin-top: -20px
 					margin-left: -10px
 					background-color: #0c9
+
+.wrapper.guide-card-info
+	.guide-title
+		display: none
+
+	@media screen and (max-width: 940px)
+		.guide-card_aside
+			margin-top: 20px !important
+		.page-header
+			display: none
+
+		.guide-title
+			display: block
+			font-weight: 700
+			color: #615faf
+			margin: 0
+			font-size: 1.5rem
+			margin-right: 20px

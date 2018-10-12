@@ -2,7 +2,8 @@
 	display: inline-block
 	vertical-align: top
 	padding: 8px 18px
-	font-size: .813rem
+	//font-size: .813rem
+	font-size: 13px
 	line-height: 1
 	text-decoration: none
 	color: #fff
@@ -13,13 +14,23 @@
 	border: none
 	cursor: pointer
 	transition: all .2s ease-out
+	&._just-text
+		color: #615faf !important
+		font-weight: normal
+		background: transparent !important
+
 	&:hover
 		transform: scale(1.04)
 
-	&._blue
+	&._blue, &._is-blue
 		background-color: #615faf
 
-	&._bordered
+
+
+
+
+
+	&._bordered, &._is-bordered
 		background: #fff
 		border: 1px solid #615faf
 		color: #615faf

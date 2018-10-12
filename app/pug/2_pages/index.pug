@@ -40,7 +40,7 @@ block content
         .tab-slider
             .tab-slider_header.wrapper
                 .tab-slider_cat-marker
-                    img(src="media/img/groupe-icon-1.png", alt="")
+                    img(src="media/img/groupe-icon-1_big.png", alt="")
                 span.tab-slider_cat-title Для туристов
 
             .row._grey
@@ -89,8 +89,8 @@ block content
                         .items-grid._4-in-row._at-tab-slider
                             .items-grid_item: +cardExcurs()
                             .items-grid_item: +cardExcurs()
-                            .items-grid_item: +cardExcurs()
-                            .items-grid_item: +cardExcurs()
+                            .items-grid_item: +cardExcurs(true)
+                            .items-grid_item: +cardExcurs(true)
 
                         a(href="all-items_excurs.html").link.to-all все экскурсии
                     .tab-slider_item#tourist-slide-4-off
@@ -105,26 +105,26 @@ block content
                     .tab-slider_item#tourist-slide-5
 
                         .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardStory(true)
                             .items-grid_item: +cardStory()
-                            .items-grid_item: +cardStory()
-                            .items-grid_item: +cardStory()
+                            .items-grid_item: +cardStory(true)
                             .items-grid_item: +cardStory()
 
                         a(href="#").link.to-all все рассказы
                     .tab-slider_item#tourist-slide-6
 
                         .items-grid._4-in-row._at-tab-slider
-                            .items-grid_item: +cardStory()
-                            .items-grid_item: +cardStory()
-                            .items-grid_item: +cardStory()
-                            .items-grid_item: +cardStory()
+                            .items-grid_item: +cardTourfirm()
+                            .items-grid_item: +cardTourfirm()
+                            .items-grid_item: +cardTourfirm()
+                            .items-grid_item: +cardTourfirm()
 
                         a(href="#").link.to-all все справочники
 
         .tab-slider
             .tab-slider_header.wrapper
                 .tab-slider_cat-marker
-                    img(src="media/img/groupe-icon-2.png", alt="")
+                    img(src="media/img/groupe-icon-2_big.png", alt="")
                 span.tab-slider_cat-title Где поселиться
 
             .row._grey
@@ -153,7 +153,7 @@ block content
         .tab-slider
             .tab-slider_header.wrapper
                 .tab-slider_cat-marker
-                    img(src="media/img/groupe-icon-3.png", alt="")
+                    img(src="media/img/groupe-icon-3_big.png", alt="")
                 span.tab-slider_cat-title Где поесть
 
             .row._grey
@@ -179,7 +179,7 @@ block content
         .tab-slider
             .tab-slider_header.wrapper
                 .tab-slider_cat-marker
-                    img(src="media/img/groupe-icon-4.png", alt="")
+                    img(src="media/img/groupe-icon-4_big.png", alt="")
                 span.tab-slider_cat-title Что посмотреть
 
             .row._grey
@@ -224,8 +224,8 @@ block content
                                 .gallery_col.__2-3
                                     .gallery_item: +card_videocam()
                                 .gallery_col.__1-3
-                                    .gallery_item: +card_videocam-min()
-                                    .gallery_item: +card_videocam-min()
+                                    .gallery_item: +card_videocam()
+                                    .gallery_item: +card_videocam()
 
                         a(href="#").link.to-all веб-камеры он-лайн
 
@@ -244,17 +244,17 @@ block content
                     .tab-slider_item#entertainment-slide-9
 
                         .items-grid._4-in-row._at-tab-slider.video_section
-                            .items-grid_item: +card_videocam()
-                            .items-grid_item: +card_videocam()
-                            .items-grid_item: +card_videocam()
-                            .items-grid_item: +card_videocam()
+                            .items-grid_item: +card_videocam(true, true)
+                            .items-grid_item: +card_videocam(true, true)
+                            .items-grid_item: +card_videocam(true, true)
+                            .items-grid_item: +card_videocam(true, true)
 
                         a(href="#").link.to-all все видео Екатеринбурга
 
         .tab-slider
             .tab-slider_header.wrapper
                 .tab-slider_cat-marker
-                    img(src="media/img/groupe-icon-5.png", alt="")
+                    img(src="media/img/groupe-icon-5_big.png", alt="")
                 span.tab-slider_cat-title Где отдохнуть
 
             .row._grey
@@ -294,7 +294,7 @@ block content
         .tab-slider
             .tab-slider_header.wrapper
                 .tab-slider_cat-marker
-                    img(src="media/img/groupe-icon-6.png", alt="")
+                    img(src="media/img/groupe-icon-6_big.png", alt="")
                 span.tab-slider_cat-title Что купить
 
             .row._grey
@@ -307,9 +307,9 @@ block content
                     .tab-slider_item#buying-slide-1
 
                         .items-grid._4-in-row._at-tab-slider
-                            .items-grid_item: +cardHotel()
-                            .items-grid_item: +cardHotel()
-                            .items-grid_item: +cardHotel()
-                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel(true)
+                            .items-grid_item: +cardHotel(true)
+                            .items-grid_item: +cardHotel(true)
+                            .items-grid_item: +cardHotel(true)
 
                         a(href="#").link.to-all все сувениры

@@ -6,6 +6,11 @@
 	display: -o-flex
 	display: flex
 	align-items: flex-start
+	@media screen and (max-width: 940px)
+		flex-wrap: wrap
+		justify-content: center
+		width: 87%
+		margin: 0 auto
 
 	&._pdg-vert40
 		padding-top: 40px
@@ -15,12 +20,15 @@
 	display: block
 	text-decoration: none
 	font-size: .813rem
-	line-height: 1
+	//line-height: 1
 	max-width: 32px
 	max-height: 32px
-	height: 100%
-	width: 100%
-	padding: 9.5px 5px
+	//height: 100%
+	//width: 100%
+	width: 32px
+	height: 32px
+	line-height: 32px
+	//padding: 9.5px 5px
 	text-align: center
 	background-color: #615faf
 	color: #fff
@@ -41,3 +49,7 @@
 		background-color: #0c9
 		padding-left: 15px
 		padding-right: 15px
+		@media screen and (max-width: 940px)
+			display: block
+			width: 100%
+			margin-top: 20px

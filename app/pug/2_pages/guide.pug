@@ -1,6 +1,10 @@
 extends ../0_base/guide-page
 
+prepend content
+	- menu = false;
+
 block page-content
+
 	.content-block
 		h2.like-h2.block-title Биография, опыт работы:
 
@@ -11,7 +15,7 @@ block page-content
 			Российская международная академия туризма.<br>
 			Мое кредо: каждый гость - это VIP!<br>
 			Буду рада каждой встрече!<br>
-			Контакты: мой сайт <a href="#">www.rndv.3dn.ru</a>
+			Контакты: мой сайт www.rndv.3dn.ru
 
 	.content-block
 		h2.like-h2.block-title Описание:
@@ -78,14 +82,14 @@ block page-content
 				.gallery_col.__1-3
 					.gallery_item: +cardPhoto()
 					.gallery_item: +cardPhoto()
-	
+
 	.content-block
 		h2.like-h2.block-title Видеозаписи
 
 		.items-grid._3-in-row._m-2-in-row
-			.items-grid_item: +cardExcurs()
-			.items-grid_item: +cardExcurs()
-			.items-grid_item: +cardExcurs()
+			.items-grid_item: +card_videocam(true, true)
+			.items-grid_item: +card_videocam(true, true)
+			.items-grid_item: +card_videocam(true, true)
 
 	.content-block
 		h2.like-h2.block-title Оставить отзыв
@@ -106,9 +110,16 @@ block page-content
 				fieldset.fields-groupe
 					.dropzone#feedbackAttachments
 					span.field-notify.
-						тип файла jpg, jpeg, gif, png не больше 3 Мб
+						<i class="ic _pin"></i> тип файла jpg, jpeg, gif, png не больше 3 Мб
 
-				a(href="#").btn отправить
+				fieldset.fields-groupe
+					.captcha
+						.captcha-img
+							img(src="media/img/captcha.png")
+							a(href="#").captha-update
+						input(type="text" name="name" id="captcha" value="")
+
+				button(type="submit").btn отправить
 
 	.content-block
 		h2.like-h2.block-title Отзывы

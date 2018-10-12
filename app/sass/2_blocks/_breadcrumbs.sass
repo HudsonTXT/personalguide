@@ -45,13 +45,32 @@
 @media screen and (max-width: 940px)
 	.breadcrumbs
 
-		padding-top: 0
-		padding-bottom: 7px
-		font-size: .85rem
+		//padding-top: 0
+		//padding-bottom: 7px
+		//font-size: .85rem
+		padding: 10px 0
+		font-size: 12px
+		margin-top: 0
 
 		ul
 			width: 100%
 			overflow-x: auto
+			position: relative
+			padding-left: 20px
+			&:before
+				content: ' '
+				position: absolute
+				width: 7px
+				height: 12px
+				background: url("../media/img/green-arrow.svg")
+				left: 0
+				top: 0
+
 
 		li
 			flex-shrink: 0
+			display: none
+			&:last-child
+				display: block
+
+

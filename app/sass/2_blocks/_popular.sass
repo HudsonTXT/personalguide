@@ -7,6 +7,38 @@
 	display: flex
 	overflow: hidden
 	overflow-x: auto
+	@media screen and (max-width: 940px)
+		flex-flow: row wrap
+		.popular-item
+			width: calc(50% - 7.5px) !important
+			min-width: auto !important
+			padding: 15px 10px !important
+			margin-bottom: 10px !important
+			margin-right: 15px !important
+			&:nth-child(2n)
+				margin-right: 0 !important
+
+			.img
+				width: 100px !important
+				height: 100px !important
+				margin-bottom: 10px !important
+				border-radius: 100% !important
+				img
+					object-fit: cover
+
+			.title
+				font-size: 14px
+				height: 68px
+				overflow: hidden
+				//line-height: normal
+				-ms-text-overflow: ellipsis
+				text-overflow: ellipsis
+
+			.item-card_header
+				display: none
+
+			.item-card_price span
+				display: none
 
 .popular-item
 	display: -webkit-flex

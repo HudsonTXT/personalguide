@@ -1,5 +1,10 @@
+*
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
 main
 	padding-bottom: 40px
+	overflow: hidden
 
 .wrapper
 	min-width: 940px
@@ -165,7 +170,7 @@ main
 		&:last-child
 			margin-bottom: 0
 
-	&._3-in-row > .items-grid_item
+	&._3-in-row > .items-grid_item, &._3-in-row > .item-card
 		width: calc(33.33% - 13.33px)
 		margin-right: 20px
 		margin-bottom: 20px
@@ -195,6 +200,10 @@ main
 			margin-top: -1px
 
 	@media screen and (max-width: 940px)
+		.item-card_header
+			margin-top: 10px
+			margin-bottom: 0 !important
+
 		&._m-1-in-row,
 		&._at-tab-slider
 			justify-content: space-between
@@ -207,7 +216,7 @@ main
 				&:last-child
 					margin-bottom: 0
 
-		&._m-2-in-row > .items-grid_item
+		&._m-2-in-row > .items-grid_item, &._m-2-in-row > .item-card
 			margin-right: 0
 			width: calc(50% - 10px)
 			
@@ -221,6 +230,14 @@ main
 
 			.items-grid_item:not(:nth-child(-n+2))
 				display: none
+		.items-grid_item.excursion-card
+			.item-card_header .item-card_user .user-name span
+				display: none
+			.item-card_footer
+				margin-top: 10px
+				.link
+					display: none
+
 
 .mt-20
 	margin-top: 20px

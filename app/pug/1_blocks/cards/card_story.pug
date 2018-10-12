@@ -1,4 +1,4 @@
-mixin cardStory()
+mixin cardStory(stars)
 	article.item-card&attributes(attributes)
 		.item-card_img-wrapper
 			.item-card_img
@@ -9,6 +9,19 @@ mixin cardStory()
 				.item-card_user
 					a(href="#").item-card_user-pic: img(src="media/img-p/2.jpg", alt="")
 					a(href="#").user-name Рита
+
+				if stars
+					.star-line
+						.star
+							img(src="media/img/star.svg")
+						.star
+							img(src="media/img/star.svg")
+						.star
+							img(src="media/img/star.svg")
+						.star
+							img(src="media/img/star.svg")
+						.star
+							img(src="media/img/star.svg")
 
 				a(href="#").item-card_comments._good 345
 

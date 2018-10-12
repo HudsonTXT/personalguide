@@ -10,11 +10,17 @@ block content
 				li: a(href="#") Главная
 				li: a(href="#") Гиды России
 				li: a(href="#") Гиды Екатеринбурга
-	main.wrapper
+
+	main.wrapper.guide-card-info(class=menu ? "_with-left-side" : null)
 		.page-header
 			h1.page-title Хусанова Рита Бинсыровна
-
-
+		if menu
+			.mobile-left-side._is-sticky
+				a(href="#").mobile-left-side_link.mobile-left-side__map._is-active
+				a(href="#", style="background-image: url('../media/img-p/excursion-1.jpg')").mobile-left-side_link.mobile-left-side__place
+				a(href="#").mobile-left-side_link.mobile-left-side__comment
+				a(href="#").mobile-left-side_link.mobile-left-side__comment._is-green
+				a(href="#").mobile-left-side_link.mobile-left-side__message
 		.columns-grid._2-cols
 			.col._1-4._m-1-1.page-aside
 				.guide-card.--at-page-aside
@@ -24,6 +30,7 @@ block content
 
 					.guide-card_content
 						.guide-card_header
+							h1.guide-title Хусанова Рита Бинсыровна
 							span.guide-card_location.
 								Свердловская область, Екатеринбург,
 								Челябинск, Миасс, Златоуст
@@ -41,7 +48,8 @@ block content
 						.guide-card_menu
 							nav.personal-menu.--at-guide-card
 								ul
-									li: a.menu-link <i class="ic _phone"></i> +7 982 <a href="#" class="link">показать</a>
+									li: a.menu-link <i class="ic _phone"></i> +7 (982) 2... <a href="#" class="link">показать</a>
+									li: a(href="#").menu-link <div class="about-me"><img src="media/img-p/guide-1.jpg" alt=""></div> Обо мне
 									li: a(href="#").menu-link <i class="ic _horn-1"></i> Экскурсии (24)
 									li: a(href="#").menu-link <i class="ic _book"></i> Рассказы (2)
 									li: a(href="#").menu-link <i class="ic _cam"></i> Фотоальбомы (4)
@@ -49,8 +57,8 @@ block content
 									li: a(href="#").menu-link <i class="ic _fdb-grn"></i> Отзывы (32)
 				
 				.action-btns
-					a(href="#").btn Оставить отзыв
-					a(href="#").btn._is-blue Отправить сообщение
+					a(href="#").btn оставить отзыв
+					a(href="#").btn._is-blue отправить сообщение
 
 			.col._3-4._m-1-1
 				block page-content

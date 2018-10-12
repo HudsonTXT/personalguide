@@ -12,13 +12,14 @@ header.site-header.--at-index
 			button(type="submit").search-submit
 		
 		.user-block
-			a(href="#").user-pic.js-open-user-menu
+			a(href="#").user-pic.js-open-user-menu._is-notify
 				
 
 			.user-menu-popup.js-user-menu-popup
 				ul.user-menu-list
 					li.user-menu-item: a.user-menu-link.mopen(href="#signin") Войти
 					li.user-menu-item: a.user-menu-link(href="#") Мой профиль
+						span._is-notify-num 4
 					li.user-menu-item: a.user-menu-link(href="#") Настройки
 					li.user-menu-item: a.user-menu-link(href="#") Выйти
 
@@ -41,9 +42,9 @@ header.site-header.--at-index
 								a(href="#info-slide-2").item Рассказы
 								a(href="#info-slide-3").item Карта
 
-				li.nav-item._is-active
+				li.nav-item
 					a(href="#").nav-item-icon: img(src="media/img/groupe-icon-1.png", alt="", width="21", height="22")
-					a(href="#").nav-link Для Туристов
+					a(href="#").nav-link Для туристов
 
 					.row._grey.subnav
 						.wrapper

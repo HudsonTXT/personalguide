@@ -12,7 +12,7 @@ block content
 				li: a(href="#") Рестораны Екатеринбург
 	main.wrapper
 		.page-header
-			h1.page-title Карточка отеля
+			h1.page-title Малиновка
 
 
 
@@ -30,15 +30,15 @@ block content
 						p.item-card_text.
 							г. Екатеринбург, <br>
 							ул. Метталургов, д. 6 <br>
-							+7 982 <a href="#" class="link">показать</a><br>
-							<a href="#">www.manilovka-ekb.ru</a>
+							+7 (982) 2... <a href="#" class="link">показать</a><br>
+							http://manilovka-ekb.ru
 
 						.item-card_footer
-							p.item-card_price <b>1600</b> руб. средний чек
+							p.item-card_price <b>1800</b> руб. средний чек
 				
 				.action-btns
-					a(href="#").btn Оставить отзыв
-					a(href="#").btn._is-blue Отправить сообщение
+					a(href="#").btn оставить отзыв
+					a(href="#").btn._is-blue отправить сообщение
 
 			.col._3-4._m-1-1
 				.content-block
@@ -90,9 +90,6 @@ block content
 						.gallery_row
 							.gallery_col.__2-3
 								a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
-							.gallery_col.__1-3
-								a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
-								a(data-fancybox="gallery" href="media/img-p/excursion-1.jpg").gallery_item: img(src="media/img-p/excursion-1.jpg", alt="")
 				
 				.content-block
 					h2.like-h2.block-title Меню
@@ -116,7 +113,7 @@ block content
 							fieldset.fields-groupe
 								.tf-wrapper._w-220
 									input(type="text" name="name" id="name" value="").text-field
-									label(for="name" data-content="Имя")
+									label(for="name" data-content="Ваше имя")
 								.tf-wrapper._w-220
 									input(type="email" name="email" id="email" value="").text-field
 									label(for="email" data-content="email")
@@ -127,7 +124,13 @@ block content
 							fieldset.fields-groupe
 								.dropzone#feedbackAttachments
 								span.field-notify.
-									тип файла jpg, jpeg, gif, png не больше 3 Мб
+									<i class="ic _pin"></i> тип файла jpg, jpeg, gif, png не больше 3 Мб
+							fieldset.fields-groupe
+								.captcha
+									.captcha-img
+										img(src="media/img/captcha.png")
+										a(href="#").captha-update
+									input(type="text" name="name" id="captcha" value="")
 
 							button(type="submit").btn отправить
 

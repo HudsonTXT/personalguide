@@ -1,6 +1,8 @@
 .content-block
 	width: 100%
 	padding-bottom: 40px
+	@media screen and (max-width: 940px)
+		padding-bottom: 20px
 
 	&:last-of-type
 		padding-bottom: 0
@@ -13,11 +15,13 @@
 	text-align: center
 	padding: 0
 	margin: 0
-	margin-bottom: 20px
+	margin-bottom: 20px !important
 
 	&._blue
 		color: #615faf
 
 	&._pdg-t30
 		padding-top: 30px
-	
+.columns-grid
+	.content-block .block-title
+		margin-top: 0 !important

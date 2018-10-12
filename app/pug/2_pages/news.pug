@@ -9,18 +9,30 @@ block content
 			h1.page-title._grey._center Статьи
 
 		.columns-grid._2-cols
+
+
+			.col._3-4._m-1-1
+				.items-grid._1-in-row._m-1-in-row
+					.items-grid_item: +cardFullStory()
+					.items-grid_item: +cardFullStory()
+					.items-grid_item: +cardFullStory()
+					.items-grid_item: +cardFullStory()
+					.items-grid_item: +cardFullStory()
+					.items-grid_item: +cardFullStory()
+					.items-grid_item: +cardFullStory()
+					.items-grid_item: +cardFullStory()
+					.items-grid_item: +cardFullStory()
+					.items-grid_item: +cardFullStory()
+					.items-grid_item: +cardFullStory()
 			.col._1-4.ads-container
 				.ads
 				.ads
 
-			.col._3-4._m-1-1
-				.items-grid._3-in-row._m-2-in-row
-					.items-grid_item: +cardStory()
-					.items-grid_item: +cardStory()
-					.items-grid_item: +cardStory()
-					.items-grid_item: +cardStory()
-					.items-grid_item: +cardStory()
-					.items-grid_item: +cardStory()
-					.items-grid_item: +cardStory()
-					.items-grid_item: +cardStory()
-					.items-grid_item: +cardStory()
+		.pagination._pdg-vert40
+			a(href="#").item._is-active 1
+			a(href="#").item 2
+			a(href="#").item 3
+			a(href="#").item 4
+			a(href="#").item ...
+			a(href="#").item 8
+			a(href="#").item._load-more Загрузить ещё...

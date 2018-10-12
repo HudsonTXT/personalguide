@@ -278,8 +278,7 @@ $(document).ready(function () {
             var bar = $('.item-card_tools');
             if (!bar.is(e.target) && bar.has(e.target).length === 0) {
                 $(this).find('.item-card_tool.__show-tools').show().siblings().hide();
-            }
-            ;
+            };
         });
 
         $('.item-card_tool.__show-tools').on('click', function () {
@@ -287,8 +286,8 @@ $(document).ready(function () {
             $(this).siblings().show();
             return false;
         });
-    }
-    ;
+    };
+
 
     // FILTER BY LANGUAGE. OPEN POPUP.
     $('.filter-by').on('click', 'span', function (e) {

@@ -40,7 +40,7 @@ block content
 								span 100 гр
 				
 				.action-btns
-					a(href="#").btn Купить
+					a(href="#").btn купить
 
 			.col._3-4._m-1-1
 				.content-block
@@ -69,7 +69,13 @@ block content
 							fieldset.fields-groupe
 								.dropzone#feedbackAttachments
 								span.field-notify.
-									тип файла jpg, jpeg, gif, png не больше 3 Мб
+									<i class="ic _pin"></i> тип файла jpg, jpeg, gif, png не больше 3 Мб
+							fieldset.fields-groupe
+								.captcha
+									.captcha-img
+										img(src="media/img/captcha.png")
+										a(href="#").captha-update
+									input(type="text" name="name" id="captcha" value="")
 
 							button(type="submit").btn отправить
 

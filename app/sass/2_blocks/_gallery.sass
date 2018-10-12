@@ -18,6 +18,8 @@
 
   &:last-child
     margin-bottom: 0
+    @media screen and (max-width: 940px)
+      margin-bottom: 20px !important
 
 .gallery_col
   display: -webkit-flex
@@ -34,6 +36,8 @@
 
   &.__1-3
     width: calc(33.33% - 10px)
+    a.item-card_title
+      font-size: 13px
 
   &.__2-3
     width: calc(66.66% - 10px)
@@ -53,6 +57,8 @@
 
     &:last-child > .gallery_col:last-child
       margin-bottom: 0
+      @media screen and (max-width: 940px)
+        margin-bottom: 20px
 
   .gallery_col
     flex-direction: row
@@ -80,9 +86,10 @@
       margin-right: auto
       margin-left: auto
 
-.video_section
-  .gallery_item, .items-grid_item
-    .item-card_img-wrapper
+
+
+._is-video
+  .item-card_img-wrapper
     position: relative
     cursor: pointer
 
@@ -96,7 +103,7 @@
       top: 50%
       left: 50%
       transform: translateY(-50%) translateX(-50%)
-      margin-top: -20px
+      //margin-top: -20px
       background: url(../media/img/icon-play.svg) center no-repeat
       transition: all .2s ease-in-out
     &:hover

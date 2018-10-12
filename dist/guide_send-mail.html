@@ -25,7 +25,7 @@
         <div class="nav-wrapper"><a class="open-mobile-menu" href="#"></a>
           <div class="sides-items"><a class="choice-city-btn mopen" href="#city-choise"><img src="media/img/logo-icon.png" alt=""/></a></div>
           <ul class="nav-list">
-            <li class="nav-item _is-active"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-1.png" alt="" width="21" height="22"/></a><a class="nav-link" href="#">Для Туристов</a>
+            <li class="nav-item _is-active"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-1.png" alt="" width="21" height="22"/></a><a class="nav-link" href="#">Для туристов</a>
               <div class="row _grey subnav">
                 <div class="wrapper">
                   <div class="tabs"><a class="item" href="#info-slide-1">Описание</a><a class="item" href="#info-slide-2">Рассказы</a><a class="item" href="#info-slide-3">Карта</a></div>
@@ -116,10 +116,11 @@
         </ul>
       </div>
     </nav>
-    <main class="wrapper">
+    <main class="wrapper guide-card-info _with-left-side">
       <div class="page-header">
         <h1 class="page-title">Хусанова Рита Бинсыровна</h1>
       </div>
+      <div class="mobile-left-side _is-sticky"><a class="mobile-left-side_link mobile-left-side__map _is-active" href="#"></a><a class="mobile-left-side_link mobile-left-side__place" href="#" style="background-image: url('../media/img-p/excursion-1.jpg')"></a><a class="mobile-left-side_link mobile-left-side__comment" href="#"></a><a class="mobile-left-side_link mobile-left-side__comment _is-green" href="#"></a><a class="mobile-left-side_link mobile-left-side__message" href="#"></a></div>
       <div class="columns-grid _2-cols">
         <div class="col _1-4 _m-1-1 page-aside">
           <div class="guide-card --at-page-aside">
@@ -127,7 +128,8 @@
               <div class="guide-card_userpic"><img src="media/img-p/guide-1.jpg" alt="Фото гида"/></div>
             </div>
             <div class="guide-card_content">
-              <div class="guide-card_header"><span class="guide-card_location">
+              <div class="guide-card_header">
+                <h1 class="guide-title">Хусанова Рита Бинсыровна</h1><span class="guide-card_location">
                   Свердловская область, Екатеринбург,
                   Челябинск, Миасс, Златоуст
                   </span>
@@ -140,7 +142,8 @@
               <div class="guide-card_menu">
                 <nav class="personal-menu --at-guide-card">
                   <ul>
-                    <li><a class="menu-link"><i class="ic _phone"></i> +7 982 <a href="#" class="link">показать</a></a></li>
+                    <li><a class="menu-link"><i class="ic _phone"></i> +7 (982) 2... <a href="#" class="link">показать</a></a></li>
+                    <li><a class="menu-link" href="#"><div class="about-me"><img src="media/img-p/guide-1.jpg" alt=""></div> Обо мне</a></li>
                     <li><a class="menu-link" href="#"><i class="ic _horn-1"></i> Экскурсии (24)</a></li>
                     <li><a class="menu-link" href="#"><i class="ic _book"></i> Рассказы (2)</a></li>
                     <li><a class="menu-link" href="#"><i class="ic _cam"></i> Фотоальбомы (4)</a></li>
@@ -151,7 +154,7 @@
               </div>
             </div>
           </div>
-          <div class="action-btns"><a class="btn" href="#">Оставить отзыв</a><a class="btn _is-blue" href="#">Отправить сообщение</a></div>
+          <div class="action-btns"><a class="btn" href="#">оставить отзыв</a><a class="btn _is-blue" href="#">отправить сообщение</a></div>
         </div>
         <div class="col _3-4 _m-1-1">
           <div class="content-block">
@@ -362,6 +365,15 @@
             </div>
           </form>
         </div><a class="modal-close" href="#"></a>
+      </div>
+      <div class="modal-overlay"></div>
+    </div>
+    <div class="modal">
+      <div class="modal-container _w780" id="delete-modal">
+        <div class="modal-content">
+          <h2 class="_text-center page-title">Вы действитель хотите удалить экскурсию?</h2>
+          <div class="btn-select"><a class="btn" href="#">Да</a><a class="btn _just-text" href="">Отмена</a></div>
+        </div>
       </div>
       <div class="modal-overlay"></div>
     </div>
