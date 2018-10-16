@@ -20,12 +20,29 @@
   </head>
   <!-- MIXINS PUG-->
   <body>
-    <header class="site-header">
+    <header class="site-header --at-index">
+      <div class="full-content"><a class="btn _city-choise mopen" href="#city-choise"><i class="ic _world"></i>Страны и города</a>
+        <div class="site-logo _at-header"><a href="/"><img src="media/img/site-logo.png" alt=""/></a></div>
+        <form class="search-form _at-header" action="#" method="get">
+          <input class="serach-field" type="text" name="search-request" placeholder="куда отправитесь?"/>
+          <button class="search-submit" type="submit"></button>
+        </form>
+        <div class="user-block"><a class="user-pic js-open-user-menu _is-notify" href="#"></a>
+          <div class="user-menu-popup js-user-menu-popup">
+            <ul class="user-menu-list">
+              <li class="user-menu-item"><a class="user-menu-link mopen" href="#signin">Войти</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Мой профиль<span class="_is-notify-num">4</span></a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Настройки</a></li>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Выйти</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <nav class="site-nav">
         <div class="nav-wrapper"><a class="open-mobile-menu" href="#"></a>
-          <div class="sides-items"><a class="choice-city-btn mopen" href="#city-choise"><img src="media/img/logo-icon.png" alt=""/></a></div>
+          <div class="sides-items _is-hide js-down-anim"><a class="choice-city-btn mopen" href="#city-choise"><img src="media/img/logo-icon.png" alt=""/></a></div>
           <ul class="nav-list">
-            <li class="nav-item _is-active"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-1.png" alt="" width="21" height="22"/></a><a class="nav-link" href="#">Для туристов</a>
+            <li class="nav-item"><a class="nav-item-icon" href="#"><img src="media/img/groupe-icon-1.png" alt="" width="21" height="22"/></a><a class="nav-link" href="#">Для туристов</a>
               <div class="row _grey subnav">
                 <div class="wrapper">
                   <div class="tabs"><a class="item" href="#info-slide-1">Описание</a><a class="item" href="#info-slide-2">Рассказы</a><a class="item" href="#info-slide-3">Карта</a></div>
@@ -75,7 +92,7 @@
               </div>
             </li>
           </ul>
-          <div class="sides-items search-popup"><a class="search-btn js-search-open" href="#"></a>
+          <div class="sides-items _is-hide js-down-anim search-popup"><a class="search-btn js-search-open" href="#"></a>
             <form class="search-form _at-search-popup _is-hide" action="#" method="get">
               <input class="serach-field" type="text" name="search-request" placeholder="Куда отправитесь?"/>
               <button class="search-submit" type="submit"></button>
