@@ -213,8 +213,19 @@ $(document).ready(function () {
     // MOBILE MENU
 
     $('.open-mobile-menu').on('click', function () {
-        $('#mobile-menu').addClass('_is-open')
+        $('#mobile-menu').addClass('_is-open');
+        $(document).mouseup(function (e){ // событие клика по веб-документу
+            var div = $("#mobile-menu"); // тут указываем ID элемента
+            if (!div.is(e.target) // если клик был не по нашему блоку
+                && div.has(e.target).length === 0) { // и не по его дочерним элементам
+                div.removeClass('_is-open'); // скрываем его
+            }
+        });
         return false;
+    });
+
+    jQuery(function($){
+
     });
 
     $('#mobile-menu').children('.m-menu-close').on('click', function () {
@@ -226,8 +237,9 @@ $(document).ready(function () {
         $('body').css({'overflow-y': 'hidden'});
     } else {
         $('body').css({'overflow-y': 'auto'});
-    }
-    ;
+    };
+
+
 
     // FOOTER NAV ON MOBILE
 
