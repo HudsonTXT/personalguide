@@ -360,6 +360,22 @@ main {
     margin-top: 5px;
     vertical-align: middle;
     margin-right: 5px; }
+  .ic._about {
+    background: url("../media/img/about-purple.png") center no-repeat; }
+  .ic._buy {
+    background: url("../media/img/buy-purple.png") center no-repeat; }
+  .ic._eat {
+    background: url("../media/img/eat-purple.png") center no-repeat; }
+  .ic._ent {
+    background: url("../media/img/entertaiments-purple.png") center no-repeat; }
+  .ic._flight {
+    background: url("../media/img/flight-purple.png") center no-repeat; }
+  .ic._home {
+    background: url("../media/img/home-purple.png") center no-repeat; }
+  .ic._see {
+    background: url("../media/img/see-purple.png") center no-repeat; }
+  .ic._turistik {
+    background: url("../media/img/turistik-purple.png") center no-repeat; }
 
 .btn {
   display: inline-block;
@@ -488,7 +504,7 @@ main {
   .breadcrumbs {
     padding: 10px 0;
     font-size: 12px;
-    margin-top: 0; }
+    margin-top: -12px; }
     .breadcrumbs ul {
       width: 100%;
       overflow-x: auto;
@@ -623,7 +639,7 @@ main {
     color: #615faf;
     margin: 0;
     font-size: 1.5rem;
-    margin-right: 20px; } }
+    margin-bottom: 10px; } }
 
 .add-menu {
   position: relative;
@@ -1158,6 +1174,9 @@ button {
   position: relative; }
   .item-card.--news .item-card_footer {
     justify-content: flex-end; }
+    @media screen and (max-width: 940px) {
+      .item-card.--news .item-card_footer {
+        display: none; } }
   .item-card .star-line {
     display: flex;
     flex-direction: row;
@@ -1540,10 +1559,16 @@ button {
     align-items: center;
     flex-direction: column;
     padding: 10px 0 15px; }
+    @media screen and (max-width: 940px) {
+      .guide-card.--at-page-aside .gude-card_soc {
+        flex-direction: column-reverse; } }
   .guide-card.--at-page-aside .guide-card_licence-btn {
     display: block;
     margin-top: 10px;
     margin-bottom: 10px; }
+    @media screen and (max-width: 940px) {
+      .guide-card.--at-page-aside .guide-card_licence-btn {
+        margin-right: 0; } }
   .guide-card.--at-page-aside .guide-card_location {
     text-align: center; }
 
@@ -1632,6 +1657,7 @@ button {
   padding: 4.5px 9px 4.5px 34px;
   border: 1px solid #c8c8c8;
   border-radius: 10px;
+  min-width: 132px;
   background: url(../media/img/icons.png) no-repeat 10px -728px;
   margin-bottom: 20px; }
   .guide-card_licence-btn.--m-hide {
@@ -1694,16 +1720,24 @@ button {
   .guide-card_name {
     font-size: 1.4rem; }
   .guide-card_location {
-    font-size: .9rem; }
+    margin-left: -35px;
+    margin-right: -35px;
+    color: #999;
+    font-size: 11px; }
   .gude-card_soc {
     padding-top: 12px;
     position: static;
     justify-content: center; }
   .guide-card_licence-btn {
-    margin-right: 10px; }
+    margin-right: 10px;
+    color: #999; }
   .guide-card_excurses {
     overflow-y: hidden;
     overflow-x: scroll; } }
+
+._with-left-side .guide-card_location {
+  margin-left: 0;
+  margin-right: 0; }
 
 .tabs {
   width: 100%;
@@ -2135,10 +2169,9 @@ button {
     flex-direction: column; }
   .page-header .page-title {
     order: 1;
+    font-size: 1.39rem;
     margin-right: 0;
-    font-size: 1.39rem; }
-    .page-header .page-title._grey._center {
-      margin-top: 15px; } }
+    margin-top: 15px; } }
 
 .page-content {
   display: -webkit-flex;
@@ -2502,7 +2535,8 @@ button {
     padding-bottom: 40px;
     background-size: cover, cover;
     background-attachment: local, local;
-    background-position: 0 0, 0 0; }
+    background-position: 0 0, 0 0;
+    margin-bottom: 40px; }
     .site-header._is-sticky {
       top: -220px; }
   .site-header .full-content {
@@ -2570,7 +2604,8 @@ button {
     .site-nav .nav-item._is-active .nav-item-icon {
       background-color: transparent; }
     .site-nav .nav-item._is-active .nav-item-icon::before {
-      display: block; }
+      display: block;
+      border-width: 2px; }
 
 .site-nav .subnav {
   position: absolute;
@@ -2724,7 +2759,8 @@ button {
 @media screen and (max-width: 940px) {
   .site-nav {
     padding-top: 6px;
-    margin-bottom: -40px !important; }
+    margin-bottom: -65px;
+    padding-bottom: 0; }
   .site-nav .nav-list {
     min-width: initial;
     justify-content: center; }
@@ -2739,7 +2775,12 @@ button {
       width: 44px;
       height: 44px; }
   .site-nav .nav-link {
-    display: none; }
+    display: block;
+    padding-bottom: 12px;
+    font-size: 14px;
+    color: #666666; }
+  .site-header._is-sticky .site-nav {
+    margin-bottom: -50px; }
   .site-nav .choice-city-btn {
     display: none; }
   .site-nav .search-btn {
@@ -3846,9 +3887,9 @@ button {
       margin-top: 20px !important;
       margin-bottom: 20px !important; }
     ._with-left-side .mobile-left-side {
-      position: fixed;
+      position: absolute;
       left: 10px;
-      top: 140px;
+      top: 380px;
       display: flex;
       flex-direction: column; }
       ._with-left-side .mobile-left-side .mobile-left-side_link {

@@ -63,6 +63,7 @@
 
     .nav-item-icon::before
       display: block
+      border-width: 2px
 
 .site-nav .subnav
   position: absolute
@@ -226,7 +227,9 @@
 
   .site-nav
     padding-top: 6px
-    margin-bottom: -40px !important
+    //margin-bottom: -40px !important
+    margin-bottom: -65px
+    padding-bottom: 0
 
   .site-nav .nav-list
     min-width: initial
@@ -247,7 +250,22 @@
       height: 44px
 
   .site-nav .nav-link
-    display: none
+    //display: none
+
+    display: block
+    padding-bottom: 12px
+    font-size: 14px
+    color: #666666
+
+  .site-header._is-sticky
+    .site-nav
+      margin-bottom: -50px
+
+    //.site-nav .nav-link
+    //  display: block
+    //  padding-bottom: 12px
+    //  font-size: 14px
+    //  color: #666666
 
   .site-nav .choice-city-btn
     display: none

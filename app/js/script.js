@@ -172,10 +172,18 @@ $(document).ready(function () {
         if (!popup.is(e.target) && popup.has(e.target).length === 0) {
             popup.addClass('_is-hide')
         }
-        ;
+    });
+    $(document).scroll(function (e) {
+        var popup = $('.search-form._at-search-popup');
+        if($(window).scrollTop() < 300){
+            popup.addClass('_is-hide');
+        }
     });
 
     $('.search-popup').children('.js-search-open').on('click', function () {
+        if($(window).scrollTop() < 300){
+            $(window).scrollTop(300);
+        }
         $(this).siblings('.search-form._at-search-popup').removeClass('_is-hide');
         return false;
     });

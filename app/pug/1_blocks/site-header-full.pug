@@ -119,10 +119,12 @@ header.site-header.--at-index
 								a(href="#info-slide-1").item Описание
 								a(href="#info-slide-2").item Рассказы
 								a(href="#info-slide-3").item Карта
-			
-			.sides-items._is-hide.js-down-anim.search-popup
+
+			// ._is-hide.js-down-anim
+			.sides-items.search-popup
 				a(href="#").search-btn.js-search-open
 
+				// ._is-hide
 				form(action="#" method="get").search-form._at-search-popup._is-hide
 					input(type="text" name="search-request" placeholder="Куда отправитесь?").serach-field
 					button(type="submit").search-submit
