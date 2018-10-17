@@ -56,6 +56,7 @@ $(document).ready(function () {
             return false;
         });
     } else {
+        //.add-menu_open
         $('.add-menu_open').on('click', function () {
             return false;
         }).on('mouseenter', function () {
@@ -63,11 +64,23 @@ $(document).ready(function () {
         }).on('mouseleave', function (e) {
             if (!$(this).is(e.target) && !$(this).siblings('.add-menu_list').is(e.target)) {
                 $(this).siblings('.add-menu_list').removeClass('__is-open');
+                // console.log("leave");
             }
-            ;
         });
+        $('.add-menu').mouseleave(function (e) {
+            $(this).find(".add-menu_list").removeClass("__is-open");
+        });
+
     }
-    ;
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        var div = $(".add-menu"); // тут указываем ID элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            div.find(".add-menu_open").removeClass('__is-active');
+            div.find(".add-menu_list").removeClass('__is-open'); // скрываем его
+        }
+    });
 
     $('.add-menu_item._with-submenu').on('click', function () {
         $(this).siblings().removeClass('_is-open');
@@ -151,10 +164,10 @@ $(document).ready(function () {
             else
                 $(this).click(function () {
                     blockUnshort(this, o);
-                    if($(this).hasClass("js-toggle-text")){
+                    if ($(this).hasClass("js-toggle-text")) {
                         $(this).text($(this).text() == "свернуть" ? "читать дальше" : "свернуть");
 
-                    }else{
+                    } else {
                         $(this).remove();
                     }
                     return false;
@@ -175,13 +188,13 @@ $(document).ready(function () {
     });
     $(document).scroll(function (e) {
         var popup = $('.search-form._at-search-popup');
-        if($(window).scrollTop() < 300){
+        if ($(window).scrollTop() < 300) {
             popup.addClass('_is-hide');
         }
     });
 
     $('.search-popup').children('.js-search-open').on('click', function () {
-        if($(window).scrollTop() < 300){
+        if ($(window).scrollTop() < 300) {
             $(window).scrollTop(300);
         }
         $(this).siblings('.search-form._at-search-popup').removeClass('_is-hide');
@@ -192,7 +205,7 @@ $(document).ready(function () {
 
     if ($('.site-header').hasClass('--at-index') > 0) {
         $(window).scroll(function () {
-            if ($(document).scrollTop() < $('.site-header .full-content').outerHeight()) {
+            if ($(document).scrollTop() <= $('.site-header .full-content').outerHeight()-30) {
                 $('.site-header').removeClass('_is-sticky');
                 $('body').css({'padding-top': 0});
                 $('.site-header .js-down-anim').addClass('_is-hide')
@@ -222,7 +235,7 @@ $(document).ready(function () {
 
     $('.open-mobile-menu').on('click', function () {
         $('#mobile-menu').addClass('_is-open');
-        $(document).mouseup(function (e){ // событие клика по веб-документу
+        $(document).mouseup(function (e) { // событие клика по веб-документу
             var div = $("#mobile-menu"); // тут указываем ID элемента
             if (!div.is(e.target) // если клик был не по нашему блоку
                 && div.has(e.target).length === 0) { // и не по его дочерним элементам
@@ -232,7 +245,7 @@ $(document).ready(function () {
         return false;
     });
 
-    jQuery(function($){
+    jQuery(function ($) {
 
     });
 
@@ -245,8 +258,8 @@ $(document).ready(function () {
         $('body').css({'overflow-y': 'hidden'});
     } else {
         $('body').css({'overflow-y': 'auto'});
-    };
-
+    }
+    ;
 
 
     // FOOTER NAV ON MOBILE
@@ -298,7 +311,8 @@ $(document).ready(function () {
             var bar = $('.item-card_tools');
             if (!bar.is(e.target) && bar.has(e.target).length === 0) {
                 $(this).find('.item-card_tool.__show-tools').show().siblings().hide();
-            };
+            }
+            ;
         });
 
         $('.item-card_tool.__show-tools').on('click', function () {
@@ -306,7 +320,8 @@ $(document).ready(function () {
             $(this).siblings().show();
             return false;
         });
-    };
+    }
+    ;
 
 
     // FILTER BY LANGUAGE. OPEN POPUP.
@@ -325,20 +340,59 @@ $(document).ready(function () {
         leftOrRight = $(this).index();
         el = $(this).closest('.row.keywords').find('.keywords-carousel');
         if (leftOrRight) {
-            if (parseInt(el.css('left')) > (el.width() / 4)*-1 ) {
+            if (parseInt(el.css('left')) > (el.width() / 4) * -1) {
                 el.animate({left: "-=200"}, 'ease');
             }
             $('.keywords-scroll').fadeIn();
         } else {
             if (parseInt(el.css('left')) < 30) {
                 el.animate({left: "+=200"}, 'ease');
-            }else{
+            } else {
                 $(this).fadeOut();
             }
         }
 
     });
+
+    //MOBILE SIDEBAR FIX on MOBILE
+    if ($(window).width() < 940) {
+        var sticky_block = $(".js-make-sticky");
+        if (sticky_block.length) {
+            var defTop = sticky_block.css("top");
+            var defPos = sticky_block.css("position");
+            var footerPos = $("footer").offset().top;
+            $(document).on("scroll", function (e) {
+                if ($(document).scrollTop() >= 300) {
+                    if (($(document).scrollTop() + sticky_block.height() + 100) < footerPos) {
+                        sticky_block.css({position: "absolute", top: $(document).scrollTop() + 100 + "px"});
+                    }
+                } else {
+                    sticky_block.css({position: defPos, top: defTop});
+                }
+            });
+        }
+    }
+
+    // press to hide text
+    $(".fotorama__stage").on("mouseenter mousemove", function (e) {
+        $(".fotorama__caption__wrap").fadeOut();
+    }).on("mouseleave", function (e) {
+        $(".fotorama__caption__wrap").fadeIn();
+    });
+
+    $('.fotorama__stage').bind('touchstart', function () {
+        $(".fotorama__caption__wrap").fadeToggle();
+    });
+    $('.fotorama').on('fotorama:show', function () {
+            if ($(".fotorama__caption__wrap").css("display") == "none") {
+                $(".fotorama__caption__wrap").fadeIn(0);
+            }
+        }
+    );
+
+
 });
+
 
 // DROPZONE AUTODISCOVER OFF
 

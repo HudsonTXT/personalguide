@@ -106,7 +106,7 @@ ol > li::before {
 
 main {
   padding-bottom: 40px;
-  overflow: hidden; }
+  overflow: visible; }
 
 .wrapper {
   min-width: 940px;
@@ -1105,8 +1105,6 @@ button {
   text-decoration: none;
   border: none;
   background-color: transparent; }
-  .change-pic._at-cabinet {
-    margin-top: -45px; }
   @media screen and (max-width: 940px) {
     .change-pic {
       margin: 0 auto; }
@@ -2507,7 +2505,7 @@ button {
   flex-direction: column; }
   .site-header._is-sticky {
     position: fixed;
-    z-index: 100;
+    z-index: 9000;
     top: -257px;
     box-shadow: 0 0 15px -8px; }
     .site-header._is-sticky .site-nav {
