@@ -9,9 +9,10 @@
 
 .fotorama__arr
 	background: none
-	width: 11px
-	height: 19px
-	
+	width: 32px
+	height: 32px
+	opacity: 1 !important
+
 	&::before,
 	&::after
 		content: ""
@@ -28,3 +29,9 @@
 
 	&--prev::after
 		translate: rotate(-45deg)
+
+.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr
+	opacity: 1 !important
+
+.fotorama__wrap--css3 .fotorama__arr:not(:focus)
+	transform: none

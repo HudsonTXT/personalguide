@@ -388,6 +388,7 @@ $(document).ready(function () {
                 $(".fotorama__caption__wrap").fadeIn(0);
             }
         }
+
     );
 
 

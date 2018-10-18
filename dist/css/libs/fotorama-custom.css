@@ -13,6 +13,7 @@
 	width: 11px;
 	height: 19px;
 }
+
 	
 .fotorama__arr::before,
 .fotorama__arr::after {
@@ -52,4 +53,17 @@
 .fotorama__arr--next::after {
 	transform: rotate(-45deg);
 	margin-top: 5px;
+}
+
+@media screen and (max-width: 940px){
+	.fotorama__arr{
+		width: 32px;
+		height: 32px;
+	}
+	.fotorama__arr--prev {
+		left: 8px;
+	}
+	.fotorama__arr--next {
+		right: -8px;
+	}
 }
