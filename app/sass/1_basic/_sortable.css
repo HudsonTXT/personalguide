@@ -1,0 +1,45 @@
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+
+.dragged {
+  position: absolute;
+  opacity: 0.8;
+  z-index: 2000;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.24);
+  transition: all .05s ease;
+}
+
+.js-sortable li.placeholder {
+  position: relative;
+  list-style: none;
+  display: block;
+  width: calc(33.33% - 13.33px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 1px dashed #666;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  box-sizing: border-box;
+  color: #666;
+  /** More li styles **/
+}
+@media screen and (max-width: 940px) {
+  .js-sortable li.placeholder{
+    width: 100%;
+    margin: 0 auto 20px;
+    max-width: 350px
+  }
+
+
+}
+
+.js-sortable li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/
+}

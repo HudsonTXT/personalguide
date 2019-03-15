@@ -16,6 +16,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script>
+    <script src="js/libs/jquery-sortable-min.js"></script>
     <script src="js/libs/modal.js"></script>
   </head>
   <!-- MIXINS PUG-->
@@ -28,7 +29,7 @@
           <button class="search-submit" type="submit"></button>
         </form>
         <div class="header__right-side"><a class="btn _city-choise mopen" href="#city-choise"><i class="ic _world"></i>Страны и города</a>
-          <div class="user-block"><a class="user-pic js-open-user-menu _is-notify" href="#"></a>
+          <div class="user-block"><a class="user-pic js-open-user-menu _is-notify" href="#" style="background-image: url('media/img-p/guide-1.jpg')"></a>
             <div class="user-menu-popup js-user-menu-popup">
               <ul class="user-menu-list">
                 <li class="user-menu-item"><a class="user-menu-link mopen" href="#signin">Войти</a></li>
@@ -117,7 +118,7 @@
             <li class="m-nav-item"><a class="m-nav-link" href="#">Как добраться</a></li>
           </ul>
         </nav>
-        <div class="user-block _at-m-menu"><a class="user-pic js-open-user-menu" href="#"><img src="media/img-p/1.jpg" alt=""/></a>
+        <div class="user-block _at-m-menu"><a class="user-pic js-open-user-menu" href="#" style="background-image: url('media/img-p/guide-1.jpg')"></a>
           <div class="user-menu-popup js-user-menu-popup">
             <ul class="user-menu-list">
               <li class="user-menu-item"><a class="user-menu-link mopen" href="#signin">Войти</a></li>
@@ -166,12 +167,12 @@
         <div class="row _grey">
           <div class="wrapper">
             <!-- add to tabs .js-tabs class and carousel will be work-->
-            <div class="tabs"><a class="item _is-active" href="#tourist-slide-1">Гиды</a><a class="item" href="#tourist-slide-2">Туры</a><a class="item" href="#tourist-slide-3">Экскурсии</a><a class="item" href="#tourist-slide-4">Турфирмы</a><a class="item" href="#tourist-slide-5">Рассказы</a><a class="item" href="#tourist-slide-6">Справочник</a><a class="item" href="#tourist-slide-7">Визы</a></div>
+            <div class="tabs js-tabs"><a class="item _is-active" href="#tourist-guides">Гиды</a><a class="item" href="#tourist-tours">Туры</a><a class="item" href="#tourist-excursions">Экскурсии</a><a class="item" href="#tourist-companies">Турфирмы</a><a class="item" href="#tourist-story">Рассказы</a><a class="item" href="#tourist-help">Справочник</a><a class="item" href="#tourist-visa">Визы</a></div>
           </div>
         </div>
         <div class="tab-slider_content wrapper columns-grid _2-cols">
           <div class="col _4-4">
-            <div class="tab-slider_item" id="tourist-slide-1-off">
+            <div class="tab-slider_item" id="tourist-guides">
               <div class="items-grid _4-in-row _at-tab-slider">
                 <div class="items-grid_item">
                   <div class="ads-container">
@@ -228,10 +229,7 @@
                 </div>
               </div><a class="link to-all" href="all-items_guides.html">все гиды</a>
             </div>
-            <div class="ads-container">
-              <div class="ads _728x92"></div>
-            </div>
-            <div class="tab-slider_item" id="tourist-slide-2-off">
+            <div class="tab-slider_item" id="tourist-tours">
               <div class="items-grid _4-in-row _at-tab-slider">
                 <div class="items-grid_item">
                   <div class="ads-container">
@@ -288,7 +286,7 @@
                 </div>
               </div><a class="link to-all" href="#">все туры</a>
             </div>
-            <div class="tab-slider_item" id="tourist-slide-3-off">
+            <div class="tab-slider_item" id="tourist-excursions">
               <div class="items-grid _4-in-row _at-tab-slider">
                 <div class="items-grid_item">
                     <article class="item-card">
@@ -398,7 +396,7 @@
                 </div>
               </div><a class="link to-all" href="all-items_excurs.html">все экскурсии</a>
             </div>
-            <div class="tab-slider_item" id="tourist-slide-4-off">
+            <div class="tab-slider_item" id="tourist-companies">
               <div class="items-grid _4-in-row _at-tab-slider">
                 <div class="items-grid_item">
                     <article class="item-card">
@@ -470,7 +468,7 @@
                 </div>
               </div><a class="link to-all" href="#">все турфирмы</a>
             </div>
-            <div class="tab-slider_item" id="tourist-slide-5">
+            <div class="tab-slider_item" id="tourist-story">
               <div class="items-grid _4-in-row _at-tab-slider">
                 <div class="items-grid_item">
                     <article class="item-card">
@@ -564,7 +562,7 @@
                 </div>
               </div><a class="link to-all" href="#">все рассказы</a>
             </div>
-            <div class="tab-slider_item" id="tourist-slide-6">
+            <div class="tab-slider_item" id="tourist-help">
               <div class="items-grid _4-in-row _at-tab-slider">
                 <div class="items-grid_item">
                     <article class="item-card">
@@ -636,6 +634,9 @@
                 </div>
               </div><a class="link to-all" href="#">все справочники</a>
             </div>
+            <div class="ads-container">
+              <div class="ads _728x92"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -645,12 +646,12 @@
         </div>
         <div class="row _grey">
           <div class="wrapper">
-            <div class="tabs js-tabs"><a class="item _is-active" href="#settle-slide-1">Гостиницы</a><a class="item" href="#settle-slide-2">Квартиры посуточно</a><a class="item" href="#settle-slide-3">Частный сектор</a><a class="item" href="#settle-slide-4">Мини-отели</a><a class="item" href="#settle-slide-5">Хостелы</a><a class="item" href="#settle-slide-6">Аренда жилья</a></div>
+            <div class="tabs js-tabs"><a class="item _is-active" href="#settle-hotels">Гостиницы</a><a class="item" href="#settle-house">Квартиры посуточно</a><a class="item" href="#settle-sector">Частный сектор</a><a class="item" href="#settle-mini-hotels">Мини-отели</a><a class="item" href="#settle-hostels">Хостелы</a><a class="item" href="#settle-arenda">Аренда жилья</a></div>
           </div>
         </div>
         <div class="tab-slider_content wrapper columns-grid _2-cols">
           <div class="col _4-4 _m-1-1">
-            <div class="tab-slider_item" id="settle-slide-1">
+            <div class="tab-slider_item" id="settle-hotels">
               <div class="items-grid _4-in-row _at-tab-slider">
                 <div class="items-grid_item">
                     <article class="item-card">
@@ -730,6 +731,406 @@
                 </div>
               </div><a class="link to-all" href="#">все гостиницы Екатеринбурга</a>
             </div>
+            <div class="tab-slider_item" id="settle-house">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+              </div><a class="link to-all" href="#">все квартиры</a>
+            </div>
+            <div class="tab-slider_item" id="settle-sector">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+              </div><a class="link to-all" href="#">все частные секторы</a>
+            </div>
+            <div class="tab-slider_item" id="settle-mini-hotels">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+              </div><a class="link to-all" href="#">все мини-отели</a>
+            </div>
+            <div class="tab-slider_item" id="settle-hostels">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+              </div><a class="link to-all" href="#">все хостелы</a>
+            </div>
+            <div class="tab-slider_item" id="settle-arenda">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+              </div><a class="link to-all" href="#">все аренды</a>
+            </div>
           </div>
         </div>
       </div>
@@ -739,12 +1140,12 @@
         </div>
         <div class="row _grey">
           <div class="wrapper">
-            <div class="tabs js-tabs"><a class="item _is-active" href="#eating-slide-1">Рестораны</a><a class="item" href="#eating-slide-2">Кафе</a><a class="item" href="#eating-slide-3">Бары</a></div>
+            <div class="tabs js-tabs"><a class="item _is-active" href="#eating-rest">Рестораны</a><a class="item" href="#eating-cafe">Кафе</a><a class="item" href="#eating-bars">Бары</a></div>
           </div>
         </div>
         <div class="tab-slider_content wrapper columns-grid _2-cols">
           <div class="col _4-4 _m-1-1">
-            <div class="tab-slider_item" id="eating-slide-1">
+            <div class="tab-slider_item" id="eating-rest">
               <div class="items-grid _4-in-row _at-tab-slider">
                 <div class="items-grid_item">
                     <article class="item-card">
@@ -824,6 +1225,166 @@
                 </div>
               </div><a class="link to-all" href="#">все рестораны Екатеринбурга</a>
             </div>
+            <div class="tab-slider_item" id="eating-cafe">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+              </div><a class="link to-all" href="#">все кафе Екатеринбурга</a>
+            </div>
+            <div class="tab-slider_item" id="eating-bars">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+              </div><a class="link to-all" href="#">все бары Екатеринбурга</a>
+            </div>
           </div>
         </div>
       </div>
@@ -833,7 +1394,7 @@
         </div>
         <div class="row _grey">
           <div class="wrapper">
-            <div class="tabs"><a class="item _is-active" href="#entertainment-slide-1">Музеи</a><a class="item" href="#entertainment-slide-2">Выставки</a><a class="item" href="#entertainment-slide-3">Видеогид</a><a class="item" href="#entertainment-slide-4">Карты</a><a class="item" href="#entertainment-slide-5">Праздники</a><a class="item" href="#entertainment-slide-6">Веб-камеры</a><a class="item" href="#entertainment-slide-7">Фотогалерея</a></div>
+            <div class="tabs js-tabs"><a class="item _is-active" href="#entertainment-slide-1">Музеи</a><a class="item" href="#entertainment-slide-2">Выставки</a><a class="item" href="#entertainment-slide-3">Видеогид</a><a class="item" href="#entertainment-slide-4">Карты</a><a class="item" href="#entertainment-slide-5">Праздники</a><a class="item" href="#entertainment-slide-6">Веб-камеры</a><a class="item" href="#entertainment-slide-7">Фотогалерея</a></div>
           </div>
         </div>
         <div class="tab-slider_content wrapper columns-grid _2-cols">
@@ -998,7 +1559,7 @@
                 </div>
               </div><a class="link to-all" href="#">все выставки</a>
             </div>
-            <div class="tab-slider_item" id="entertainment-slide-6">
+            <div class="tab-slider_item" id="entertainment-slide-3">
               <div class="gallery">
                 <div class="gallery_row video_section">
                   <div class="gallery_col __2-3">
@@ -1033,7 +1594,44 @@
                     </div>
                   </div>
                 </div>
-              </div><a class="link to-all" href="#">веб-камеры он-лайн</a>
+              </div><a class="link to-all" href="#">видеогиды он-лайн</a>
+            </div>
+            <div class="tab-slider_item" id="entertainment-slide-4">
+              <div class="gallery">
+                <div class="gallery_row video_section">
+                  <div class="gallery_col __2-3">
+                    <div class="gallery_item">
+                        <article class="item-card _is-video">
+                          <div class="item-card_img-wrapper"><a class="item-play" href="#"></a>
+                            <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                          </div>
+                          <div class="item-card_content"><a class="item-card_title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+                          </div>
+                        </article>
+                    </div>
+                  </div>
+                  <div class="gallery_col __1-3">
+                    <div class="gallery_item">
+                        <article class="item-card _is-video">
+                          <div class="item-card_img-wrapper"><a class="item-play" href="#"></a>
+                            <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                          </div>
+                          <div class="item-card_content"><a class="item-card_title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+                          </div>
+                        </article>
+                    </div>
+                    <div class="gallery_item">
+                        <article class="item-card _is-video">
+                          <div class="item-card_img-wrapper"><a class="item-play" href="#"></a>
+                            <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                          </div>
+                          <div class="item-card_content"><a class="item-card_title" href="#">Санкт-Петербург Есенина в компании поэта</a>
+                          </div>
+                        </article>
+                    </div>
+                  </div>
+                </div>
+              </div><a class="link to-all" href="#">все карты</a>
             </div>
             <div class="tab-slider_item" id="entertainment-slide-7">
               <div class="gallery">
@@ -1088,7 +1686,7 @@
                 </div>
               </div><a class="link to-all" href="all-items_photos.html">все фотоальбомы Екатеринбурга</a>
             </div>
-            <div class="tab-slider_item" id="entertainment-slide-9">
+            <div class="tab-slider_item" id="entertainment-slide-5">
               <div class="items-grid _4-in-row _at-tab-slider video_section">
                 <div class="items-grid_item">
                     <article class="item-card _is-video">
@@ -1254,10 +1852,6 @@
                 </div>
               </div><a class="link to-all" href="#">все SPA</a>
             </div>
-          </div>
-        </div>
-        <div class="tab-slider_content wrapper columns-grid _2-cols">
-          <div class="col _4-4 _m-1-1">
             <div class="tab-slider_item" id="recreation-slide-2">
               <div class="items-grid _4-in-row _at-tab-slider">
                 <div class="items-grid_item">
@@ -1337,6 +1931,326 @@
                     </article>
                 </div>
               </div><a class="link to-all" href="#">все выставки</a>
+            </div>
+            <div class="tab-slider_item" id="recreation-slide-3">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+              </div><a class="link to-all" href="#">горнлоыжные комплексы</a>
+            </div>
+            <div class="tab-slider_item" id="recreation-slide-4">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+              </div><a class="link to-all" href="#">загородные лагеря</a>
+            </div>
+            <div class="tab-slider_item" id="recreation-slide-5">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+              </div><a class="link to-all" href="#">все турбазы</a>
+            </div>
+            <div class="tab-slider_item" id="recreation-slide-6">
+              <div class="items-grid _4-in-row _at-tab-slider">
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+                <div class="items-grid_item">
+                    <article class="item-card">
+                      <div class="item-card_img-wrapper">
+                        <div class="item-card_img"><img src="media/img-p/excursion-1.jpg" alt="Фото экскурсии"/></div>
+                      </div>
+                      <div class="item-card_content">
+                        <div class="item-card_header"><a class="item-card_on-map" href="#">на карте</a><a class="item-card_comments" href="#">345</a></div><a class="item-card_title" href="#">
+                          Lounge cafe & Art club «DolceAmaro»
+                          </a>
+                        <p class="item-card_text">
+                          В поисках подходящего варианта для проведения веселой вечеринки или торжественного ...
+                          
+                        </p>
+                        <div class="item-card_footer">
+                          <p class="item-card_price">от <b>1600</b> руб.</p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+              </div><a class="link to-all" href="#">все развлечения</a>
             </div>
           </div>
         </div>
@@ -1551,16 +2465,19 @@
           <form class="form" action="#" method="post">
             <div class="col">
               <fieldset class="fields-groupe">
+                <!-- - add ._error to .tf_wrapper and .tf-error inside-->
                 <div class="tf-wrapper">
-                  <input class="text-field" type="email" name="email" id="email" value=""/>
-                  <label for="email" data-content="email"></label>
+                  <input class="text-field" type="email" name="email" id="login-email" value="" data-validation="required email"/>
+                  <label for="login-email" data-content="email"></label>
                 </div>
                 <div class="tf-wrapper">
-                  <input class="text-field" type="password" name="password" id="password" value=""/>
-                  <label for="password" data-content="пароль"></label><a href="#">Забыли пароль?</a>
-                </div>
+                  <input class="text-field" type="password" name="password" id="login-password" value="" data-validation="required length" data-validation-length="min6"/>
+                  <label for="login-password" data-content="пароль"></label>
+                </div><a class="login-modal__link" href="#">Забыли пароль?</a>
               </fieldset>
-              <div class="form-actions"><a class="btn _bordered _fs11 mopen" href="#signup">зарегистрироваться</a><a class="btn _fs11" href="#">войти</a></div>
+              <div class="form-actions"><a class="btn _bordered _fs11 mopen" href="#signup">зарегистрироваться</a>
+                <button class="btn _fs11" type="submit">войти</button>
+              </div>
             </div>
           </form>
         </div><a class="modal-close" href="#"></a>
@@ -1574,12 +2491,12 @@
             <div class="col">
               <fieldset class="fields-groupe">
                 <div class="tf-wrapper">
-                  <input class="text-field" type="email" name="email" id="email" value=""/>
-                  <label for="email" data-content="email"></label>
+                  <input class="text-field" type="email" name="email" id="signup-email" value="" data-validation="required email"/>
+                  <label for="signup-email" data-content="email"></label>
                 </div>
                 <div class="tf-wrapper">
-                  <input class="text-field" type="password" name="password" id="password" value=""/>
-                  <label for="password" data-content="пароль"></label>
+                  <input class="text-field" type="password" name="password" id="signup-password" value="" data-validation="required length" data-validation-length="min6"/>
+                  <label for="signup-password" data-content="пароль"></label>
                 </div>
               </fieldset>
               <fieldset class="fields-groupe">
@@ -1600,11 +2517,13 @@
               </fieldset>
               <fieldset class="fields-groupe">
                 <div class="chbx-wrapper _type-2">
-                  <input type="checkbox" name="signup-agreement" id="signup-agreement"/>
+                  <input type="checkbox" name="signup-agreement" id="signup-agreement" data-validation="required"/>
                   <label for="signup-agreement">принять <a href="#">условия регистрации</a></label>
                 </div>
               </fieldset>
-              <div class="form-actions _btn-center"><a class="btn _bordered _fs11" href="#">зарегистрироваться</a></div>
+              <div class="form-actions _btn-center">
+                <button class="btn _bordered _fs11" type="submit">зарегистрироваться</button>
+              </div>
             </div>
           </form>
         </div><a class="modal-close" href="#"></a>
@@ -1620,6 +2539,7 @@
       </div>
       <div class="modal-overlay"></div>
     </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

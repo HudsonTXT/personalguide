@@ -20,7 +20,7 @@ block main
 						label(for="excursion-city" data-content="Город")
 
 					.tf-wrapper._w-220
-						input(type="text" name="excursion-price" id="excursion-price" value="").text-field
+						input(type="text" name="excursion-price" id="excursion-price" value="" data-validation="number").text-field
 						label(for="excursion-price" data-content="Стоимость")
 					
 				fieldset.fields-groupe
@@ -33,4 +33,4 @@ block main
 					span.field-notify.
 						тип файла jpg, jpeg, gif, png не больше 3 Мб
 
-				button(type="button").btn Сохранить
+				button(type="submit").btn Сохранить

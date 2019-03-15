@@ -75,19 +75,56 @@
 	font-size: .75rem
 	position: relative
 
-	&._select::before
-		content: ""
-		width: 12px
-		height: 12px
-		border-bottom: 2px solid #cccccc
-		border-left: 2px solid #cccccc
-		transform: rotate(-45deg)
-		position: absolute
-		top: 9px
-		right: 2px
+	&.has-error
+		input
+			border-color: red
+		
+		label
+			color: red
+	&.has-success
+		input
+			border-color: green
+		
+		label
+			color: green
 
-		&:hover::before
-			border-color: #615faf
+	.help-block
+		display: block
+		margin-top: -7px
+		font-size: 0.9em
+		font-weight: bold
+
+		&.form-error
+			color: red
+
+
+	&._error
+		input
+			border-color: red
+			color: red
+		label
+			color: red
+		.tf-error
+			color: red
+			font-weight: bold
+			font-size: 12px
+			margin-top: -5px
+
+	&._select
+		background: url("../media/img/select.png") right center no-repeat
+	// &._select::before
+	// 	content: ""
+	// 	width: 12px
+	// 	height: 12px
+	// 	border-bottom: 2px solid #cccccc
+	// 	border-left: 2px solid #cccccc
+	// 	transform: rotate(-45deg)
+	// 	position: absolute
+	// 	top: 9px
+	// 	right: 2px
+
+	// 	&:hover::before
+	// 		border-color: #615faf
 
 	&._w-220
 		width: 220px

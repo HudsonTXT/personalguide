@@ -377,6 +377,45 @@ main {
   .ic._turistik {
     background: url("../media/img/turistik-purple.png") center no-repeat; }
 
+body.dragging, body.dragging * {
+  cursor: move !important; }
+
+.dragged {
+  position: absolute;
+  opacity: 0.8;
+  z-index: 2000;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.24);
+  transition: all .05s ease; }
+
+.js-sortable li.placeholder {
+  position: relative;
+  list-style: none;
+  display: block;
+  width: calc(33.33% - 13.33px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 1px dashed #666;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  box-sizing: border-box;
+  color: #666;
+  /** More li styles **/ }
+
+@media screen and (max-width: 940px) {
+  .js-sortable li.placeholder {
+    width: 100%;
+    margin: 0 auto 20px;
+    max-width: 350px; } }
+
+.js-sortable li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/ }
+
 .btn {
   display: inline-block;
   vertical-align: top;
@@ -847,18 +886,33 @@ main {
   width: 100%;
   font-size: .75rem;
   position: relative; }
-  .tf-wrapper._select::before {
-    content: "";
-    width: 12px;
-    height: 12px;
-    border-bottom: 2px solid #cccccc;
-    border-left: 2px solid #cccccc;
-    transform: rotate(-45deg);
-    position: absolute;
-    top: 9px;
-    right: 2px; }
-    .tf-wrapper._select::before:hover::before {
-      border-color: #615faf; }
+  .tf-wrapper.has-error input {
+    border-color: red; }
+  .tf-wrapper.has-error label {
+    color: red; }
+  .tf-wrapper.has-success input {
+    border-color: green; }
+  .tf-wrapper.has-success label {
+    color: green; }
+  .tf-wrapper .help-block {
+    display: block;
+    margin-top: -7px;
+    font-size: 0.9em;
+    font-weight: bold; }
+    .tf-wrapper .help-block.form-error {
+      color: red; }
+  .tf-wrapper._error input {
+    border-color: red;
+    color: red; }
+  .tf-wrapper._error label {
+    color: red; }
+  .tf-wrapper._error .tf-error {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: -5px; }
+  .tf-wrapper._select {
+    background: url("../media/img/select.png") right center no-repeat; }
   .tf-wrapper._w-220 {
     width: 220px; }
 
@@ -1156,6 +1210,38 @@ button {
 .change-pic._userpic .dropzone .dz-preview .dz-image {
   border-radius: 50%; }
 
+#changeUserPic .dz-remove, #dzImgsAddGuide .dz-remove, #feedbackAttachments .dz-remove, #dzLicenceAddGuide .dz-remove {
+  width: 30px;
+  height: 30px;
+  background: #00cc99;
+  position: relative;
+  border-radius: 30px;
+  font-size: 0;
+  text-decoration: none;
+  color: #fff;
+  transition: all .2s ease-in-out;
+  top: -100%;
+  left: 80%;
+  z-index: 20; }
+  #changeUserPic .dz-remove:hover, #dzImgsAddGuide .dz-remove:hover, #feedbackAttachments .dz-remove:hover, #dzLicenceAddGuide .dz-remove:hover {
+    background: darkred; }
+  #changeUserPic .dz-remove:before, #dzImgsAddGuide .dz-remove:before, #feedbackAttachments .dz-remove:before, #dzLicenceAddGuide .dz-remove:before {
+    content: '\00d7';
+    font-size: 24px;
+    line-height: 30px; }
+
+#dzImgsAddGuide .dz-remove, #feedbackAttachments .dz-remove, #dzLicenceAddGuide .dz-remove {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0; }
+  #dzImgsAddGuide .dz-remove:before, #feedbackAttachments .dz-remove:before, #dzLicenceAddGuide .dz-remove:before {
+    font-size: 15px;
+    line-height: 20px; }
+
+#dzImgsAddGuide .dz-image, #feedbackAttachments .dz-image, #dzLicenceAddGuide .dz-image {
+  margin-top: 5px; }
+
 .change-pic._userpic .dropzone {
   height: 140px; }
 
@@ -1437,6 +1523,19 @@ button {
       background-position-x: -32px; }
       .item-card_tool.__view:hover::before {
         content: "просмотр"; }
+  .item-card_tool.__drag {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 15px;
+    color: #666;
+    background: transparent;
+    text-align: center;
+    line-height: 1; }
+    .item-card_tool.__drag:hover {
+      color: #000; }
+      .item-card_tool.__drag:hover::before {
+        content: "перетащить";
+        font-weight: normal; }
   .item-card_tool.__edit {
     background-position: 4px -335px; }
     .item-card_tool.__edit:hover {
@@ -1508,7 +1607,7 @@ button {
     padding-bottom: 10px; }
   .item-card_tool:hover::before, .item-card_tool:hover::after {
     display: none; }
-  .item-card_tool.__del, .item-card_tool.__view, .item-card_tool.__edit {
+  .item-card_tool.__del, .item-card_tool.__view, .item-card_tool.__edit, .item-card_tool.__drag {
     display: none; }
   .item-card_tool.__show-tools {
     display: block; } }
@@ -3091,7 +3190,8 @@ button {
   background-color: #eee;
   border-radius: 50%;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  background-size: cover; }
 
 .user-menu-popup {
   position: absolute;
@@ -3134,6 +3234,8 @@ button {
   z-index: 997;
   background-color: rgba(97, 95, 175, 0.5);
   display: none; }
+  .modal .login-modal__link {
+    font-size: .75rem; }
 
 .modal-overlay {
   position: fixed;

@@ -46,19 +46,19 @@ block content
             .row._grey
                 .wrapper
                     // add to tabs .js-tabs class and carousel will be work
-                    .tabs
-                        a(href="#tourist-slide-1").item._is-active Гиды
-                        a(href="#tourist-slide-2").item Туры
-                        a(href="#tourist-slide-3").item Экскурсии
-                        a(href="#tourist-slide-4").item Турфирмы
-                        a(href="#tourist-slide-5").item Рассказы
-                        a(href="#tourist-slide-6").item Справочник
-                        a(href="#tourist-slide-7").item Визы
+                    .tabs.js-tabs
+                        a(href="#tourist-guides").item._is-active Гиды
+                        a(href="#tourist-tours").item Туры
+                        a(href="#tourist-excursions").item Экскурсии
+                        a(href="#tourist-companies").item Турфирмы
+                        a(href="#tourist-story").item Рассказы
+                        a(href="#tourist-help").item Справочник
+                        a(href="#tourist-visa").item Визы
 
             .tab-slider_content.wrapper.columns-grid._2-cols
                 .col._4-4
 
-                    .tab-slider_item#tourist-slide-1-off
+                    .tab-slider_item#tourist-guides
 
                         .items-grid._4-in-row._at-tab-slider
                             .items-grid_item
@@ -70,10 +70,9 @@ block content
 
                         a(href="all-items_guides.html").link.to-all все гиды
 
-                    .ads-container
-                        .ads._728x92
+                    
 
-                    .tab-slider_item#tourist-slide-2-off
+                    .tab-slider_item#tourist-tours
 
                         .items-grid._4-in-row._at-tab-slider
                             .items-grid_item
@@ -84,7 +83,7 @@ block content
                             .items-grid_item: +cardTour()
 
                         a(href="#").link.to-all все туры
-                    .tab-slider_item#tourist-slide-3-off
+                    .tab-slider_item#tourist-excursions
 
                         .items-grid._4-in-row._at-tab-slider
                             .items-grid_item: +cardExcurs()
@@ -93,7 +92,7 @@ block content
                             .items-grid_item: +cardExcurs(true)
 
                         a(href="all-items_excurs.html").link.to-all все экскурсии
-                    .tab-slider_item#tourist-slide-4-off
+                    .tab-slider_item#tourist-companies
 
                         .items-grid._4-in-row._at-tab-slider
                             .items-grid_item: +cardTourfirm()
@@ -102,7 +101,7 @@ block content
                             .items-grid_item: +cardTourfirm()
 
                         a(href="#").link.to-all все турфирмы
-                    .tab-slider_item#tourist-slide-5
+                    .tab-slider_item#tourist-story
 
                         .items-grid._4-in-row._at-tab-slider
                             .items-grid_item: +cardStory(true)
@@ -111,7 +110,7 @@ block content
                             .items-grid_item: +cardStory()
 
                         a(href="#").link.to-all все рассказы
-                    .tab-slider_item#tourist-slide-6
+                    .tab-slider_item#tourist-help
 
                         .items-grid._4-in-row._at-tab-slider
                             .items-grid_item: +cardTourfirm()
@@ -120,6 +119,9 @@ block content
                             .items-grid_item: +cardTourfirm()
 
                         a(href="#").link.to-all все справочники
+                        
+                    .ads-container
+                        .ads._728x92
 
         .tab-slider
             .tab-slider_header.wrapper
@@ -130,17 +132,17 @@ block content
             .row._grey
                 .wrapper
                     .tabs.js-tabs
-                        a(href="#settle-slide-1").item._is-active Гостиницы
-                        a(href="#settle-slide-2").item Квартиры посуточно
-                        a(href="#settle-slide-3").item Частный сектор
-                        a(href="#settle-slide-4").item Мини-отели
-                        a(href="#settle-slide-5").item Хостелы
-                        a(href="#settle-slide-6").item Аренда жилья
+                        a(href="#settle-hotels").item._is-active Гостиницы
+                        a(href="#settle-house").item Квартиры посуточно
+                        a(href="#settle-sector").item Частный сектор
+                        a(href="#settle-mini-hotels").item Мини-отели
+                        a(href="#settle-hostels").item Хостелы
+                        a(href="#settle-arenda").item Аренда жилья
 
             .tab-slider_content.wrapper.columns-grid._2-cols
 
                 .col._4-4._m-1-1
-                    .tab-slider_item#settle-slide-1
+                    .tab-slider_item#settle-hotels
 
                         .items-grid._4-in-row._at-tab-slider
                             .items-grid_item: +cardHotel()
@@ -149,6 +151,51 @@ block content
                             .items-grid_item: +cardHotel()
 
                         a(href="#").link.to-all все гостиницы Екатеринбурга
+                    .tab-slider_item#settle-house
+
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all все квартиры
+                    .tab-slider_item#settle-sector
+
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all все частные секторы
+                    .tab-slider_item#settle-mini-hotels
+
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all все мини-отели
+                    .tab-slider_item#settle-hostels
+
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all все хостелы
+                    .tab-slider_item#settle-arenda
+
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all все аренды
 
         .tab-slider
             .tab-slider_header.wrapper
@@ -159,14 +206,14 @@ block content
             .row._grey
                 .wrapper
                     .tabs.js-tabs
-                        a(href="#eating-slide-1").item._is-active Рестораны
-                        a(href="#eating-slide-2").item Кафе
-                        a(href="#eating-slide-3").item Бары
+                        a(href="#eating-rest").item._is-active Рестораны
+                        a(href="#eating-cafe").item Кафе
+                        a(href="#eating-bars").item Бары
 
             .tab-slider_content.wrapper.columns-grid._2-cols
 
                 .col._4-4._m-1-1
-                    .tab-slider_item#eating-slide-1
+                    .tab-slider_item#eating-rest
 
                         .items-grid._4-in-row._at-tab-slider
                             .items-grid_item: +cardHotel()
@@ -175,6 +222,24 @@ block content
                             .items-grid_item: +cardHotel()
 
                         a(href="#").link.to-all все рестораны Екатеринбурга
+                    .tab-slider_item#eating-cafe
+
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all все кафе Екатеринбурга
+                    .tab-slider_item#eating-bars
+
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all все бары Екатеринбурга
 
         .tab-slider
             .tab-slider_header.wrapper
@@ -184,7 +249,7 @@ block content
 
             .row._grey
                 .wrapper
-                    .tabs
+                    .tabs.js-tabs
                         a(href="#entertainment-slide-1").item._is-active Музеи
                         a(href="#entertainment-slide-2").item Выставки
                         a(href="#entertainment-slide-3").item Видеогид
@@ -217,7 +282,7 @@ block content
                         a(href="#").link.to-all все выставки
 
 
-                    .tab-slider_item#entertainment-slide-6
+                    .tab-slider_item#entertainment-slide-3
 
                         .gallery
                             .gallery_row.video_section
@@ -227,7 +292,19 @@ block content
                                     .gallery_item: +card_videocam()
                                     .gallery_item: +card_videocam()
 
-                        a(href="#").link.to-all веб-камеры он-лайн
+                        a(href="#").link.to-all видеогиды он-лайн
+
+                    .tab-slider_item#entertainment-slide-4
+
+                        .gallery
+                            .gallery_row.video_section
+                                .gallery_col.__2-3
+                                    .gallery_item: +card_videocam()
+                                .gallery_col.__1-3
+                                    .gallery_item: +card_videocam()
+                                    .gallery_item: +card_videocam()
+
+                        a(href="#").link.to-all все карты
 
                     .tab-slider_item#entertainment-slide-7
 
@@ -241,7 +318,7 @@ block content
 
                         a(href="all-items_photos.html").link.to-all все фотоальбомы Екатеринбурга
 
-                    .tab-slider_item#entertainment-slide-9
+                    .tab-slider_item#entertainment-slide-5
 
                         .items-grid._4-in-row._at-tab-slider.video_section
                             .items-grid_item: +card_videocam(true, true)
@@ -279,8 +356,6 @@ block content
 
                         a(href="#").link.to-all все SPA
 
-            .tab-slider_content.wrapper.columns-grid._2-cols
-                .col._4-4._m-1-1
                     .tab-slider_item#recreation-slide-2
 
                         .items-grid._4-in-row._at-tab-slider
@@ -290,6 +365,42 @@ block content
                             .items-grid_item: +cardHotel()
 
                         a(href="#").link.to-all все выставки
+                    .tab-slider_item#recreation-slide-3
+
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all горнлоыжные комплексы
+                    .tab-slider_item#recreation-slide-4
+
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all загородные лагеря
+                    .tab-slider_item#recreation-slide-5
+
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all все турбазы
+                    .tab-slider_item#recreation-slide-6
+
+                        .items-grid._4-in-row._at-tab-slider
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+                            .items-grid_item: +cardHotel()
+
+                        a(href="#").link.to-all все развлечения
 
         .tab-slider
             .tab-slider_header.wrapper

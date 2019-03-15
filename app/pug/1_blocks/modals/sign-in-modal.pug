@@ -6,12 +6,12 @@
 				.col
 					fieldset.fields-groupe
 						.tf-wrapper
-							input(type="email" name="email" id="email" value="").text-field
-							label(for="email" data-content="email")
+							input(type="email" name="email" id="signup-email" value="" data-validation="required email").text-field
+							label(for="signup-email" data-content="email")
 
 						.tf-wrapper
-							input(type="password" name="password" id="password" value="").text-field
-							label(for="password" data-content="пароль")
+							input(type="password" name="password" id="signup-password" value="" data-validation="required length" data-validation-length="min6").text-field
+							label(for="signup-password" data-content="пароль")
 
 					fieldset.fields-groupe
 						.signup-as
@@ -27,11 +27,11 @@
 					
 					fieldset.fields-groupe
 						.chbx-wrapper._type-2
-							input(type="checkbox" name="signup-agreement" id="signup-agreement")
+							input(type="checkbox" name="signup-agreement" id="signup-agreement" data-validation="required")
 							label(for="signup-agreement") принять <a href="#">условия регистрации</a>
 
 					.form-actions._btn-center
-						a(href="#").btn._bordered._fs11 зарегистрироваться
+						button(type="submit").btn._bordered._fs11 зарегистрироваться
 
 		a(href="#").modal-close
 	.modal-overlay

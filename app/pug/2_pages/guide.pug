@@ -5,7 +5,7 @@ prepend content
 
 block page-content
 
-	.content-block
+	.content-block#about-me
 		h2.like-h2.block-title Биография, опыт работы:
 
 		p.
@@ -44,7 +44,7 @@ block page-content
 		p.
 			По вашему желанию можно заказать пешеходные экскурсии, на легковом автомобиле (мой стаж вождения 12 лет), а также автобус для любого количества экскурсантов.
 
-	.content-block
+	.content-block#excursions
 		h2.like-h2.block-title Экскурсии
 
 		.items-grid._3-in-row._m-2-in-row
@@ -55,7 +55,7 @@ block page-content
 			.items-grid_item: +cardExcurs()
 			.items-grid_item: +cardExcurs()
 	
-	.content-block
+	.content-block#story
 		h2.like-h2.block-title Рассказы
 
 		.items-grid._3-in-row._m-2-in-row
@@ -63,7 +63,7 @@ block page-content
 			.items-grid_item: +cardExcurs()
 			.items-grid_item: +cardExcurs()
 
-	.content-block
+	.content-block#photo
 		h2.like-h2.block-title Фотоальбомы
 
 		.gallery
@@ -83,7 +83,7 @@ block page-content
 					.gallery_item: +cardPhoto()
 					.gallery_item: +cardPhoto()
 
-	.content-block
+	.content-block#video
 		h2.like-h2.block-title Видеозаписи
 
 		.items-grid._3-in-row._m-2-in-row
@@ -91,7 +91,7 @@ block page-content
 			.items-grid_item: +card_videocam(true, true)
 			.items-grid_item: +card_videocam(true, true)
 
-	.content-block
+	.content-block#comments
 		h2.like-h2.block-title Оставить отзыв
 		
 		form(action="#" method="post").form._feedback

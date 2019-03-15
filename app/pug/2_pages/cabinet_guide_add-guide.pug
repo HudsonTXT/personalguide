@@ -12,30 +12,30 @@ block main
 			.col._3-4._m-1-1
 				fieldset.fields-groupe
 					.tf-wrapper._w-220
-						input(type="text" name="full-name" id="full-name" value="").text-field
+						input(type="text" name="full-name" id="full-name" value="" data-validation="required").text-field
 						label(for="full-name" data-content="ФИО")
 
 					.tf-wrapper._w-220
-						input(type="text" name="phone" id="phone" value="").text-field
+						input(type="text" name="phone" id="phone" value="" data-validation="number").text-field
 						label(for="phone" data-content="телефон")
 
 					.tf-wrapper._w-220
-						input(type="text" name="web-site" id="web-site" value="").text-field
+						input(type="text" name="web-site" id="web-site" value="" data-validation="url").text-field
 						label(for="web-site" data-content="веб-сайт")
 
 					.tf-wrapper._w-220
-						input(type="email" name="email" id="email" value="").text-field
+						input(type="email" name="email" id="email" value="" data-validation="email").text-field
 						label(for="email" data-content="email")
 
 					.tf-wrapper._w-220
-						input(type="text" name="lang" id="lang" value="Русский").text-field._with-cleaning
+						input(type="text" name="lang" id="lang" value="Русский" disabled).text-field._with-cleaning
 						button(type="button").cleaner-btn
 
 					.tf-wrapper._select._w-220
 						select(name="excursion-lang").select-field
-							option(value="null" selected) Язык экскурсий
-							option(value="ru") Русский
-							option(value="en") Английский
+							option(value="null" selected disabled) Язык экскурсий
+							option(value="Немецкий") Немецкий
+							option(value="Английский") Английский
 					
 				fieldset.fields-groupe
 					label(for="bio") Биография, опыт работы:
@@ -53,4 +53,4 @@ block main
 					span.field-notify.
 						<i class="ic _pin"></i> тип файла jpg, jpeg, gif, png не больше 3 Мб
 
-				button(type="button").btn сохранить
+				button(type="submit").btn сохранить

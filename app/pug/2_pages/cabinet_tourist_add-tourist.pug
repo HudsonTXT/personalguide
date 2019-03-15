@@ -12,15 +12,15 @@ block main
 			.col._3-4._m-1-1
 				fieldset.fields-groupe
 					.tf-wrapper._w-220
-						input(type="text" name="full-name" id="full-name" value="").text-field
+						input(type="text" name="full-name" id="full-name" value="" data-validation="required").text-field
 						label(for="full-name" data-content="ФИО")
 
 					.tf-wrapper._w-220
-						input(type="text" name="phone" id="phone" value="").text-field
+						input(type="text" name="phone" id="phone" value="" data-validation="number").text-field
 						label(for="phone" data-content="телефон")
 
 					.tf-wrapper._w-220
-						input(type="email" name="email" id="email" value="").text-field
+						input(type="email" name="email" id="email" value="" data-validation="email").text-field
 						label(for="email" data-content="email")
 
-				button(type="button").btn Сохранить
+				button(type="submit").btn Сохранить

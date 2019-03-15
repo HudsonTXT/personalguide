@@ -18,18 +18,20 @@
 			form(action="#" method="post").form
 				.col
 					fieldset.fields-groupe
+						// - add ._error to .tf_wrapper and .tf-error inside
 						.tf-wrapper
-							input(type="email" name="email" id="email" value="").text-field
-							label(for="email" data-content="email")
+							input(type="email" name="email" id="login-email" value="" data-validation="required email").text-field
+							label(for="login-email" data-content="email")
+							
 
 						.tf-wrapper
-							input(type="password" name="password" id="password" value="").text-field
-							label(for="password" data-content="пароль")
-							a(href="#") Забыли пароль?
+							input(type="password" name="password" id="login-password" value="" data-validation="required length" data-validation-length="min6").text-field
+							label(for="login-password" data-content="пароль")
 
+						a(href="#" class="login-modal__link") Забыли пароль?
 					.form-actions
 						a(href="#signup").btn._bordered._fs11.mopen зарегистрироваться
-						a(href="#").btn._fs11 войти
+						button(type="submit").btn._fs11 войти
 
 		a(href="#").modal-close
 	.modal-overlay

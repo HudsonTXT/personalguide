@@ -49,7 +49,8 @@ gulp.task('pug', function() {
 
 gulp.task('uglify', function() {
 	return gulp.src('./app/js/*.js')
-		.pipe(uglify())
+		.pipe(plumber())
+		// .pipe(uglify())
 		.pipe(gulp.dest('./dist/js'))
 		.pipe(browserSync.stream());
 });

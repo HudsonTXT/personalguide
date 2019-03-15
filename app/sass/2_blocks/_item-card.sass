@@ -304,6 +304,20 @@
 
 			&::before
 				content: "просмотр"
+	&.__drag
+		text-decoration: none
+		font-weight: bolder
+		font-size: 15px
+		color: #666
+		background: transparent
+		text-align: center
+		line-height: 1
+		&:hover
+			color: #000
+
+			&::before
+				content: "перетащить"
+				font-weight: normal
 
 	&.__edit
 		background-position: 4px -335px
@@ -406,7 +420,8 @@
 
 		&.__del,
 		&.__view,
-		&.__edit
+		&.__edit,
+		&.__drag
 			display: none
 
 		&.__show-tools

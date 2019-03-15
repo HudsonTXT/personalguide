@@ -65,6 +65,40 @@
 .change-pic._userpic .dropzone .dz-preview .dz-image
 	border-radius: 50%
 
+
+#changeUserPic .dz-remove, #dzImgsAddGuide .dz-remove, #feedbackAttachments .dz-remove, #dzLicenceAddGuide .dz-remove
+	width: 30px
+	height: 30px
+	background: #00cc99
+	position: relative
+	border-radius: 30px	
+	font-size: 0
+	text-decoration: none
+	color: #fff
+	transition: all .2s ease-in-out
+	top: -100%
+	left: 80%
+	z-index: 20
+	&:hover
+		background: darkred
+	&:before
+		content: '\00d7'
+		font-size: 24px
+		line-height: 30px
+		// font-weight: bold
+#dzImgsAddGuide .dz-remove, #feedbackAttachments .dz-remove, #dzLicenceAddGuide .dz-remove
+	width: 20px
+	height: 20px
+	position: absolute
+	top: 0
+	&:before
+		font-size: 15px
+		line-height: 20px
+#dzImgsAddGuide .dz-image, #feedbackAttachments .dz-image, #dzLicenceAddGuide .dz-image
+	margin-top: 5px
+	
+
+
 .change-pic._userpic .dropzone
 	height: 140px
 

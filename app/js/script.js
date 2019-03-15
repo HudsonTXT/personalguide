@@ -24,7 +24,7 @@ $(document).ready(function () {
         url: '#',
         maxFilesize: 3,
         maxFiles: 1,
-        addRemoveLinks: false
+        addRemoveLinks: true
     });
 
     // DROPZONE FEEDBACK ATTACHMENTS
@@ -33,7 +33,7 @@ $(document).ready(function () {
         url: '#',
         maxFilesize: 3,
         maxFiles: 4,
-        addRemoveLinks: false
+        addRemoveLinks: true
     });
 
     // TEXTAREA EDITOR
@@ -90,10 +90,33 @@ $(document).ready(function () {
 
     // FORM TEXT FIELD CLEANER
 
-    $('.text-field._with-cleaning').siblings('.cleaner-btn').on('click', function () {
-        $(this).siblings('.text-field').val('');
-        return false;
-    });
+    $(document).on("click", ".tf-wrapper .cleaner-btn", function (e) { 
+        e.preventDefault();
+        if($(this).parent().find(".text-field").attr("name") == "lang") {
+            valInp = $(this).parent().find(".text-field").val();
+            $(this).closest("fieldset").find("[name='excursion-lang']").append("<option value="+valInp+">"+valInp+"</option>")
+            $(this).closest(".tf-wrapper").get(0).remove();
+            
+        }else{
+            $(this).parent().find(".text-field").val('');
+        }
+     });
+
+    /**
+     * Excursion lang
+     */
+    $(document).on("change", "[name='excursion-lang']", function (e) { 
+        e.preventDefault();
+        // console.log("thisHTML: ", $(this).closest(".tf-wrapper"));
+        $(this).closest(".tf-wrapper").clone().appendTo($(this).closest("fieldset")).find("option[value="+$(this).val()+"]").remove();
+        // $(this).
+        val = $(this).val();
+        $(this).closest(".tf-wrapper").replaceWith('<div class="tf-wrapper _w-220">\
+                    <input class="text-field _with-cleaning" type="text" name="lang" id="lang" value="'+val+'" disabled="disabled">\
+                    <button class="cleaner-btn" type="button"></button>\
+                  </div>');
+        $(this).closest(".tf-wrapper").remove();
+     });
 
     // FORM TEXT FIELD VALUE SAVE ON FOCUSOUT
 
@@ -102,8 +125,8 @@ $(document).ready(function () {
         return false;
     });
 
-    // TABS TOGGLE
 
+    // TABS TOGGLE
     $('.js-tabs').on('click', 'a', function () {
         $(this).addClass('_is-active').siblings('a').removeClass('_is-active');
         $($(this).attr('href')).show().siblings('[id]').hide();
@@ -391,6 +414,59 @@ $(document).ready(function () {
 
     );
 
+
+    /**
+     * Show error in  input, when popup login click "LOGIN"
+     * add TO .tf_wrapper class ._error
+     * AND
+     * add inside .tf-error ERROR TEXT
+     */
+    // $(document).on("click", "#signin .btn._fs11", function(e){
+    //     e.preventDefault();
+    //     wrap = $(this).closest(".modal").find(".tf-wrapper");
+    //     if(!wrap.hasClass("_error")){
+    //         wrap.addClass("_error");
+    //         wrap.append('<div class="tf-error">e-mail введен неверно</div>');
+    //     }
+    // });
+
+    $.validate({
+        lang : 'ru', 
+        modules : 'date, security, file',
+        onModulesLoaded : function() {
+        //   $('#country').suggestCountry();
+        }
+      });
+
+
+
+    /**
+     * Jquery Sortable Init. Check cabinet_guide_exursions
+     */
+    $(".js-sortable").sortable({
+        containerSelector: '.js-sortable',
+        // itemPath: '> tbody',
+        itemSelector: '.items-grid_item',
+        placeholder: '<li class="placeholder">Отпустите мышь, чтобы поменять порядок элементов</li>',
+        pullPlaceholder: false,
+        tolerance: 6,
+        distance: 10,
+        handle: ".__drag"
+        
+    });
+
+     /** Scroll to anchor */
+     $(".personal-menu.--at-guide-card a[href^=\\#]").on("click", function(e){
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top-$(".site-nav").height()-40
+        }, 500);
+        // $(document).find(".menu__mobile").removeClass("menu_opened");
+        // $(document).find(".menu__hamburger").removeClass("menu_opened");
+        e.preventDefault();
+        // return false;
+    });
+    
 
 });
 

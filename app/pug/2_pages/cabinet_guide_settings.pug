@@ -9,18 +9,18 @@ block main
 						Изменить пароль
 
 					.tf-wrapper._w-220
-						input(type="password" name="old-password" id="old-password" value="").text-field
+						input(type="password" name="old-password" id="old-password" value="" data-validation="length" data-validation-length="min6").text-field
 						label(for="old-password" data-content="Старый пароль")
 
 					.tf-wrapper._w-220
-						input(type="password" name="new-password" id="new-password" value="").text-field
+						input(type="password" name="new-password" id="new-password" value="" data-validation="length" data-validation-length="min6").text-field
 						label(for="new-password" data-content="Новый пароль")
 
 					.tf-wrapper._w-220
-						input(type="password" name="rpt-new-pasword" id="rpt-new-pasword" value="").text-field
+						input(type="password" name="rpt-new-pasword" id="rpt-new-pasword" value="" data-validation="confirmation" data-validation-confirm="new-password").text-field
 						label(for="rpt-new-pasword" data-content="Повторите пароль")
 
-				button(type="button").btn Изменить
+				button(type="submit").btn Изменить
 
 		form(action="#" method="post").form._pdg-both-40
 			.col
@@ -29,11 +29,11 @@ block main
 						Адрес электронной почты
 
 					.tf-wrapper._w-220
-						input(type="text" name="full-name" id="full-name" value="").text-field
-						label(for="full-name" data-content="Текущий адрес")
+						input(type="text" name="email" id="email" value="" data-validation="email").text-field
+						label(for="email" data-content="Текущий адрес")
 
 					.tf-wrapper._w-220
-						input(type="text" name="phone" id="phone" value="").text-field
-						label(for="phone" data-content="Новый адрес")
+						input(type="text" name="new-email" id="new-email" value="" data-validation="confirmation" data-validation-confirm="email").text-field
+						label(for="new-email" data-content="Новый адрес")
 
-				button(type="button").btn Сохранить адрес
+				button(type="submit").btn Сохранить адрес

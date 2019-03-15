@@ -16,6 +16,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script>
+    <script src="js/libs/jquery-sortable-min.js"></script>
     <script src="js/libs/modal.js"></script>
   </head>
   <!-- MIXINS PUG-->
@@ -28,7 +29,7 @@
           <button class="search-submit" type="submit"></button>
         </form>
         <div class="header__right-side"><a class="btn _city-choise mopen" href="#city-choise"><i class="ic _world"></i>Страны и города</a>
-          <div class="user-block"><a class="user-pic js-open-user-menu _is-notify" href="#"></a>
+          <div class="user-block"><a class="user-pic js-open-user-menu _is-notify" href="#" style="background-image: url('media/img-p/guide-1.jpg')"></a>
             <div class="user-menu-popup js-user-menu-popup">
               <ul class="user-menu-list">
                 <li class="user-menu-item"><a class="user-menu-link mopen" href="#signin">Войти</a></li>
@@ -117,7 +118,7 @@
             <li class="m-nav-item"><a class="m-nav-link" href="#">Как добраться</a></li>
           </ul>
         </nav>
-        <div class="user-block _at-m-menu"><a class="user-pic js-open-user-menu" href="#"><img src="media/img-p/1.jpg" alt=""/></a>
+        <div class="user-block _at-m-menu"><a class="user-pic js-open-user-menu" href="#" style="background-image: url('media/img-p/guide-1.jpg')"></a>
           <div class="user-menu-popup js-user-menu-popup">
             <ul class="user-menu-list">
               <li class="user-menu-item"><a class="user-menu-link mopen" href="#signin">Войти</a></li>
@@ -141,7 +142,6 @@
           <aside class="sidebar">
             <div class="add-menu"><a class="add-menu_open" href="#">добавить</a>
               <ul class="add-menu_list">
-                <li class="add-menu_item"><a class="add-menu_link" href="#">Карточка Гида</a></li>
                 <li class="add-menu_item"><a class="add-menu_link" href="#">Экскурсия</a></li>
                 <li class="add-menu_item"><a class="add-menu_link" href="#">Рассказ</a></li>
                 <li class="add-menu_item"><a class="add-menu_link" href="#">Фотоальбом</a></li>
@@ -183,7 +183,7 @@
                     <label for="excursion-city" data-content="Город"></label>
                   </div>
                   <div class="tf-wrapper _w-220">
-                    <input class="text-field" type="text" name="excursion-price" id="excursion-price" value=""/>
+                    <input class="text-field" type="text" name="excursion-price" id="excursion-price" value="" data-validation="number"/>
                     <label for="excursion-price" data-content="Стоимость"></label>
                   </div>
                 </fieldset>
@@ -197,7 +197,7 @@
                     тип файла jpg, jpeg, gif, png не больше 3 Мб
                     </span>
                 </fieldset>
-                <button class="btn" type="button">Сохранить</button>
+                <button class="btn" type="submit">Сохранить</button>
               </div>
             </form>
           </div>
@@ -323,16 +323,19 @@
           <form class="form" action="#" method="post">
             <div class="col">
               <fieldset class="fields-groupe">
+                <!-- - add ._error to .tf_wrapper and .tf-error inside-->
                 <div class="tf-wrapper">
-                  <input class="text-field" type="email" name="email" id="email" value=""/>
-                  <label for="email" data-content="email"></label>
+                  <input class="text-field" type="email" name="email" id="login-email" value="" data-validation="required email"/>
+                  <label for="login-email" data-content="email"></label>
                 </div>
                 <div class="tf-wrapper">
-                  <input class="text-field" type="password" name="password" id="password" value=""/>
-                  <label for="password" data-content="пароль"></label><a href="#">Забыли пароль?</a>
-                </div>
+                  <input class="text-field" type="password" name="password" id="login-password" value="" data-validation="required length" data-validation-length="min6"/>
+                  <label for="login-password" data-content="пароль"></label>
+                </div><a class="login-modal__link" href="#">Забыли пароль?</a>
               </fieldset>
-              <div class="form-actions"><a class="btn _bordered _fs11 mopen" href="#signup">зарегистрироваться</a><a class="btn _fs11" href="#">войти</a></div>
+              <div class="form-actions"><a class="btn _bordered _fs11 mopen" href="#signup">зарегистрироваться</a>
+                <button class="btn _fs11" type="submit">войти</button>
+              </div>
             </div>
           </form>
         </div><a class="modal-close" href="#"></a>
@@ -346,12 +349,12 @@
             <div class="col">
               <fieldset class="fields-groupe">
                 <div class="tf-wrapper">
-                  <input class="text-field" type="email" name="email" id="email" value=""/>
-                  <label for="email" data-content="email"></label>
+                  <input class="text-field" type="email" name="email" id="signup-email" value="" data-validation="required email"/>
+                  <label for="signup-email" data-content="email"></label>
                 </div>
                 <div class="tf-wrapper">
-                  <input class="text-field" type="password" name="password" id="password" value=""/>
-                  <label for="password" data-content="пароль"></label>
+                  <input class="text-field" type="password" name="password" id="signup-password" value="" data-validation="required length" data-validation-length="min6"/>
+                  <label for="signup-password" data-content="пароль"></label>
                 </div>
               </fieldset>
               <fieldset class="fields-groupe">
@@ -372,11 +375,13 @@
               </fieldset>
               <fieldset class="fields-groupe">
                 <div class="chbx-wrapper _type-2">
-                  <input type="checkbox" name="signup-agreement" id="signup-agreement"/>
+                  <input type="checkbox" name="signup-agreement" id="signup-agreement" data-validation="required"/>
                   <label for="signup-agreement">принять <a href="#">условия регистрации</a></label>
                 </div>
               </fieldset>
-              <div class="form-actions _btn-center"><a class="btn _bordered _fs11" href="#">зарегистрироваться</a></div>
+              <div class="form-actions _btn-center">
+                <button class="btn _bordered _fs11" type="submit">зарегистрироваться</button>
+              </div>
             </div>
           </form>
         </div><a class="modal-close" href="#"></a>
@@ -392,6 +397,7 @@
       </div>
       <div class="modal-overlay"></div>
     </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
